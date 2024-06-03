@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{857EBDDC-D2BE-4AB4-9645-85143B6618E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurApp</RootNamespace>
+    <AssemblyName>clubApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\universidad\lpl\2023\LenguajeC#\instalacion\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>770E760AC578A521F1B81539BF7C94E04D264DC2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>clubApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.91, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db\AccessDB.cs" />
+    <Compile Include="db\IAccessDB.cs" />
+    <Compile Include="db\IAuditable.cs" />
+    <Compile Include="db\Impl\Agencia.cs" />
+    <Compile Include="db\Impl\Actividad.cs" />
+    <Compile Include="db\Impl\AgenciaTipoPaquete.cs" />
+    <Compile Include="db\Impl\Destino.cs" />
+    <Compile Include="db\Impl\DetalleFacturaTurista.cs" />
+    <Compile Include="db\Impl\FacturaTurista.cs" />
+    <Compile Include="db\Impl\PaqueteActividad.cs" />
+    <Compile Include="db\Impl\Paquete.cs" />
+    <Compile Include="db\Impl\Transporte.cs" />
+    <Compile Include="db\Impl\TipoPaqueteTipoActividad.cs" />
+    <Compile Include="db\Impl\TipoActividad.cs" />
+    <Compile Include="db\Impl\TipoPaquete.cs" />
+    <Compile Include="db\Impl\Turista.cs" />
+    <Compile Include="db\Impl\FormaPago.cs" />
+    <Compile Include="db\Impl\Pais.cs" />
+    <Compile Include="db\Impl\Localidad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="db\Model\Agencia.cs" />
+    <Compile Include="db\Model\Actividad.cs" />
+    <Compile Include="db\Model\AgenciaTipoPaquete.cs" />
+    <Compile Include="db\Model\Destino.cs" />
+    <Compile Include="db\Model\DetalleFacturaTurista.cs" />
+    <Compile Include="db\Model\FacturaTurista.cs" />
+    <Compile Include="db\Model\PaqueteActividad.cs" />
+    <Compile Include="db\Model\Paquete.cs" />
+    <Compile Include="db\Model\Transporte.cs" />
+    <Compile Include="db\Model\TipoPaqueteTipoActividad.cs" />
+    <Compile Include="db\Model\TipoActividad.cs" />
+    <Compile Include="db\Model\TipoPaquete.cs" />
+    <Compile Include="db\Model\FormaPago.cs" />
+    <Compile Include="db\Model\Pais.cs" />
+    <Compile Include="db\orm\Logger.cs" />
+    <Compile Include="db\Model\Turista.cs" />
+    <Compile Include="db\Model\Localidad.cs" />
+    <Compile Include="db\ORMDB.cs" />
+    <Compile Include="db\MetaDataClasses.cs" />
+    <Compile Include="db\orm\Orm.cs" />
+    <Compile Include="db\Secure\Funcion.cs" />
+    <Compile Include="db\Secure\FuncionRol.cs" />
+    <Compile Include="db\Secure\Rol.cs" />
+    <Compile Include="db\Secure\Usuario.cs" />
+    <Compile Include="db\Secure\UsuarioRol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Agencias\FrmAgenciaAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaAM.Designer.cs">
+      <DependentUpon>FrmAgenciaAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaBusq.Designer.cs">
+      <DependentUpon>FrmAgenciaBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaList.Designer.cs">
+      <DependentUpon>FrmAgenciaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\CommonView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CtlCargaInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CtlCargaInfo.Designer.cs">
+      <DependentUpon>CtlCargaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Turista\FrmListadoTuristas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turista\FrmListadoTuristas.Designer.cs">
+      <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaBusq.Designer.cs">
+      <DependentUpon>FrmTuristaBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaList.Designer.cs">
+      <DependentUpon>FrmTuristaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Turista\FrmTuristaAM.Designer.cs">
+      <DependentUpon>FrmTuristaAM.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Agencias\FrmAgenciaAM.resx">
+      <DependentUpon>FrmAgenciaAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Agencias\FrmAgenciaBusq.resx">
+      <DependentUpon>FrmAgenciaBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Agencias\FrmAgenciaList.resx">
+      <DependentUpon>FrmAgenciaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CtlCargaInfo.resx">
+      <DependentUpon>CtlCargaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
+      <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turista\FrmTuristaBusq.resx">
+      <DependentUpon>FrmTuristaBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turista\FrmTuristaList.resx">
+      <DependentUpon>FrmTuristaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Turista\FrmTuristaAM.resx">
+      <DependentUpon>FrmTuristaAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="references\de\Npgsql.resources.dll" />
+    <Content Include="references\es\Npgsql.resources.dll" />
+    <Content Include="references\fi\Npgsql.resources.dll" />
+    <Content Include="references\fr\Npgsql.resources.dll" />
+    <Content Include="references\ja\Npgsql.resources.dll" />
+    <Content Include="references\Mono.Security.dll" />
+    <Content Include="references\Newtonsoft.Json.dll" />
+    <Content Include="references\Npgsql.dll" />
+    <Content Include="references\Npgsql.pdb" />
+    <Content Include="references\Npgsql.XML" />
+    <Content Include="references\zh-CN\Npgsql.resources.dll" />
+    <None Include="Resources\img_vac2.jpg" />
+    <None Include="Resources\img_vac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Script\" />
+    <Folder Include="Views\Actividad\" />
+    <Folder Include="Views\Detinos\" />
+    <Folder Include="Views\Facturas\" />
+    <Folder Include="Views\FormasPago\" />
+    <Folder Include="Views\Localidades\" />
+    <Folder Include="Views\Paises\" />
+    <Folder Include="Views\Paquete\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

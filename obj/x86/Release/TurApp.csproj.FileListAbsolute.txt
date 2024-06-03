@@ -1,0 +1,13 @@
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\bin\Release\clubApp.exe.config
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Properties.Resources.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmAgenciaAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmAgenciaBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmAgenciaList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.CtlCargaInfo.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmLogin.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.MainView.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmListadoTuristas.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmTuristaBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmTuristaList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.Views.FrmTuristaAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Release\TurApp.csproj.GenerateResource.Cache
