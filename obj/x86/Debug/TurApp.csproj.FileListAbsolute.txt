@@ -33,3 +33,6 @@ C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Debug\clubApp.application
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Debug\clubApp.exe
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalC#\obj\x86\Debug\clubApp.pdb
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\bin\Debug\clubApp.exe.config
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Debug\clubApp.exe
+C:\Users\gonza\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Debug\clubApp.pdb
