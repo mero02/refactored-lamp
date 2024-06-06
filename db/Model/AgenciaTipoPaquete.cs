@@ -12,7 +12,9 @@ namespace TurApp.db
     {
         #region variables locales
         private int _cod_agencia;
-        private int _cod_tipo_paquete;        
+        private int _cod_tipo_paquete;
+        private Agencia codAgencia;
+        private TipoPaquete codTipoPaquete;
         #endregion
 
         #region propiedades publicas
@@ -31,9 +33,34 @@ namespace TurApp.db
             set { _cod_tipo_paquete = value; }
         }
         
-        #endregion        
+        #endregion 
+       
+
         // -- TODO --
         #region Relaciones con otras entidades
+
+
+        public TipoPaquete TipoPaqueteObj
+        {
+            get {
+                if (codTipoPaquete == null && this.CodTipoPaquete != 0)
+                {
+                    codTipoPaquete = TipoPaquete.FindByKeyStatic(this.CodTipoPaquete);
+                }
+                return codTipoPaquete;
+            }
+        }
+
+        public Agencia AgenciaObj
+        {
+            get {
+                if (codAgencia == null && this.CodAgencia != 0)
+                {
+                    codAgencia = Agencia.FindByKeyStatic(this.CodAgencia);
+                }
+                return codAgencia;
+            }
+        }
         #endregion
 
     }
