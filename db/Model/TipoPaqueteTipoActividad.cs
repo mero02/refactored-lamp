@@ -32,17 +32,28 @@ namespace TurApp.db
             set { _CodTipoActividad = value; }
         }
         #endregion     
-       
+
         // -- TODO --        
         #region Relaciones con otras entidades
         public TipoPaquete TipoPaqueteObj
         {
-            get { throw new NotImplementedException(); }
+            get {
+                if (tipo_paquete == null && this.CodTipoPaquete != 0)
+                {
+                    tipo_paquete = TipoPaquete.FindByKeyStatic(this.CodTipoPaquete);
+                }
+                return tipo_paquete;
+            }
         }
 
         public TipoActividad TipoActividadObj
         {
-            get { throw new NotImplementedException(); }
+            get {
+                if (tipo_actividad == null && this.CodTipoActividad != 0) {
+                    tipo_actividad = TipoActividad.FindByKeyStatic(this.CodTipoActividad);
+                }
+                return tipo_actividad;
+            }
         }
 
         #endregion
