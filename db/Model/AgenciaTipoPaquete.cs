@@ -13,8 +13,8 @@ namespace TurApp.db
         #region variables locales
         private int _cod_agencia;
         private int _cod_tipo_paquete;
-        private Agencia codAgencia;
-        private TipoPaquete codTipoPaquete;
+        private Agencia codAgencia = null;
+        private TipoPaquete codTipoPaquete = null;
         #endregion
 
         #region propiedades publicas
