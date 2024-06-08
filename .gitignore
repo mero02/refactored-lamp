@@ -1,0 +1,8 @@
+# Ignorar el archivo TurApp.suo
+TurApp.suo
+
+# Ignorar todo el contenido de bin/Debug
+bin/Debug/
+
+# Ignorar todo el contenido de obj/x86/Debug
+obj/x86/Debug/
