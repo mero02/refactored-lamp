@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.TuristasGrd = new System.Windows.Forms.DataGridView();
+            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaisCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ApellidoTxt = new System.Windows.Forms.TextBox();
             this.NombreChk = new System.Windows.Forms.CheckBox();
@@ -37,9 +40,6 @@
             this.PaisCbo = new System.Windows.Forms.ComboBox();
             this.PaisChk = new System.Windows.Forms.CheckBox();
             this.ExportarBtn = new System.Windows.Forms.Button();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaisCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +67,28 @@
             this.TuristasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
             this.TuristasGrd.DoubleClick += new System.EventHandler(this.TuristasGrd_DoubleClick);
+            // 
+            // DniCol
+            // 
+            this.DniCol.DataPropertyName = "NroDocumento";
+            this.DniCol.HeaderText = "Dni";
+            this.DniCol.Name = "DniCol";
+            this.DniCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.HeaderText = "Nombres";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 150;
+            // 
+            // PaisCol
+            // 
+            this.PaisCol.DataPropertyName = "Pais";
+            this.PaisCol.HeaderText = "Pais";
+            this.PaisCol.Name = "PaisCol";
+            this.PaisCol.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -151,36 +173,13 @@
             // 
             // ExportarBtn
             // 
-            this.ExportarBtn.Enabled = false;
-            this.ExportarBtn.Location = new System.Drawing.Point(736, 458);
+            this.ExportarBtn.Location = new System.Drawing.Point(732, 458);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 7;
+            this.ExportarBtn.TabIndex = 9;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
-            // 
-            // DniCol
-            // 
-            this.DniCol.DataPropertyName = "NroDocumento";
-            this.DniCol.HeaderText = "Dni";
-            this.DniCol.Name = "DniCol";
-            this.DniCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombres";
-            this.NombreCol.HeaderText = "Nombres";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
-            // 
-            // PaisCol
-            // 
-            this.PaisCol.DataPropertyName = "Pais";
-            this.PaisCol.HeaderText = "Pais";
-            this.PaisCol.Name = "PaisCol";
-            this.PaisCol.ReadOnly = true;
             // 
             // FrmListadoTuristas
             // 
@@ -217,9 +216,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox PaisCbo;
         private System.Windows.Forms.CheckBox PaisChk;
-        private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaisCol;
+        private System.Windows.Forms.Button ExportarBtn;
     }
 }

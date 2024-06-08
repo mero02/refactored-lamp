@@ -150,8 +150,8 @@ namespace TurApp.Views
 
         private void ListadoAgencias_Click(object sender, EventArgs e)
         {
-            //FrmListadoAgencias frm = new FrmListadoAgencias();
-            //frm.Show();
+            FrmListadoAgencias frm = new FrmListadoAgencias();
+            frm.Show();
         }
 
         private void IngresoAgencia_Click(object sender, EventArgs e)
