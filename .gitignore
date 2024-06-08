@@ -6,3 +6,6 @@ bin/Debug/
 
 # Ignorar todo el contenido de obj/x86/Debug
 obj/x86/Debug/
+
+# Ignorar App.Config
+App.Config
