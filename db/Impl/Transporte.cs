@@ -35,7 +35,8 @@ namespace TurApp.db
                 if (this.ValidacionTransporteGuardar != null)
                 {
                     // Validaciones de los datos que deben estar cargados para tener una tupla de datos valida
-                   
+                    if (Dominio == "")
+                        ValidacionTransporteGuardar("No se puede poner Dominio vacio");
                 }
             }
             return ORMDB<Transporte>.SaveObject(this);
