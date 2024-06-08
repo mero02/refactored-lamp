@@ -179,6 +179,24 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.Designer.cs">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteAM.Designer.cs">
+      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteAM.resx">
+      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
@@ -302,7 +323,6 @@
     <Folder Include="Views\FormasPago\" />
     <Folder Include="Views\Localidades\" />
     <Folder Include="Views\Paises\" />
-    <Folder Include="Views\Paquete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
