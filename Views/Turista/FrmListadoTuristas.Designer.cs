@@ -38,9 +38,8 @@
             this.PaisChk = new System.Windows.Forms.CheckBox();
             this.ExportarBtn = new System.Windows.Forms.Button();
             this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaisCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,11 +52,10 @@
             this.TuristasGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TuristasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DniCol,
-            this.ApellidoCol,
             this.NombreCol,
-            this.LocCol});
+            this.PaisCol});
             this.TuristasGrd.Location = new System.Drawing.Point(9, 69);
-            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TuristasGrd.MultiSelect = false;
             this.TuristasGrd.Name = "TuristasGrd";
             this.TuristasGrd.ReadOnly = true;
@@ -75,9 +73,9 @@
             this.groupBox1.Controls.Add(this.ApellidoTxt);
             this.groupBox1.Controls.Add(this.NombreChk);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(227, 42);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -86,7 +84,7 @@
             // 
             this.ApellidoTxt.Enabled = false;
             this.ApellidoTxt.Location = new System.Drawing.Point(69, 15);
-            this.ApellidoTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoTxt.Name = "ApellidoTxt";
             this.ApellidoTxt.Size = new System.Drawing.Size(146, 20);
             this.ApellidoTxt.TabIndex = 1;
@@ -95,7 +93,7 @@
             // 
             this.NombreChk.AutoSize = true;
             this.NombreChk.Location = new System.Drawing.Point(4, 17);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2);
             this.NombreChk.Name = "NombreChk";
             this.NombreChk.Size = new System.Drawing.Size(63, 17);
             this.NombreChk.TabIndex = 0;
@@ -106,7 +104,7 @@
             // FiltroBtn
             // 
             this.FiltroBtn.Location = new System.Drawing.Point(719, 18);
-            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
             this.FiltroBtn.TabIndex = 2;
@@ -119,9 +117,9 @@
             this.groupBox3.Controls.Add(this.PaisCbo);
             this.groupBox3.Controls.Add(this.PaisChk);
             this.groupBox3.Location = new System.Drawing.Point(268, 10);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(225, 41);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
@@ -133,7 +131,7 @@
             this.PaisCbo.Enabled = false;
             this.PaisCbo.FormattingEnabled = true;
             this.PaisCbo.Location = new System.Drawing.Point(90, 15);
-            this.PaisCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PaisCbo.Margin = new System.Windows.Forms.Padding(2);
             this.PaisCbo.Name = "PaisCbo";
             this.PaisCbo.Size = new System.Drawing.Size(115, 21);
             this.PaisCbo.TabIndex = 1;
@@ -143,7 +141,7 @@
             // 
             this.PaisChk.AutoSize = true;
             this.PaisChk.Location = new System.Drawing.Point(10, 15);
-            this.PaisChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PaisChk.Margin = new System.Windows.Forms.Padding(2);
             this.PaisChk.Name = "PaisChk";
             this.PaisChk.Size = new System.Drawing.Size(46, 17);
             this.PaisChk.TabIndex = 0;
@@ -169,14 +167,6 @@
             this.DniCol.Name = "DniCol";
             this.DniCol.ReadOnly = true;
             // 
-            // ApellidoCol
-            // 
-            this.ApellidoCol.DataPropertyName = "Apellido";
-            this.ApellidoCol.HeaderText = "Apellido";
-            this.ApellidoCol.Name = "ApellidoCol";
-            this.ApellidoCol.ReadOnly = true;
-            this.ApellidoCol.Width = 150;
-            // 
             // NombreCol
             // 
             this.NombreCol.DataPropertyName = "Nombres";
@@ -185,11 +175,12 @@
             this.NombreCol.ReadOnly = true;
             this.NombreCol.Width = 150;
             // 
-            // LocCol
+            // PaisCol
             // 
-            this.LocCol.HeaderText = "Localidad";
-            this.LocCol.Name = "LocCol";
-            this.LocCol.ReadOnly = true;
+            this.PaisCol.DataPropertyName = "Pais";
+            this.PaisCol.HeaderText = "Pais";
+            this.PaisCol.Name = "PaisCol";
+            this.PaisCol.ReadOnly = true;
             // 
             // FrmListadoTuristas
             // 
@@ -201,7 +192,7 @@
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TuristasGrd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmListadoTuristas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -228,8 +219,7 @@
         private System.Windows.Forms.CheckBox PaisChk;
         private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LocCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaisCol;
     }
 }

@@ -205,5 +205,15 @@ namespace TurApp.Views
             // debe mostrar un formulario con un listado de las facturas que se le han hecho al turista
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TelefonoTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
