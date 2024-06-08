@@ -16,6 +16,9 @@ namespace TurApp.db
         private int _nro_renglon;
         private int _cod_paquete;
         private float _importe;
+
+        //instancias internas de FacturaTurista
+        private FacturaTurista _facturaTurista = null;
                 #endregion
 
         #region propiedades publicas
@@ -64,6 +67,18 @@ namespace TurApp.db
         #endregion        
         // -- TODO --
         #region Relaciones con otras entidades  
+
+        public FacturaTurista FacturaTuristaObj
+        {
+            get {
+                if (_facturaTurista == null && this.NroFactura != 0 && this.SerieFactura != 0 && this.LetraFactura != null)
+                {
+                    _facturaTurista = FacturaTurista.FindByKeyStatic(this.NroFactura, this.SerieFactura, this.LetraFactura);
+                }
+                return _facturaTurista;
+            }
+        }
+
         #endregion
     }
 
