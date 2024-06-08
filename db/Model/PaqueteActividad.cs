@@ -16,6 +16,8 @@ namespace TurApp.db
         private DateTime _fecha_hora_desde;
         private DateTime _fecha_hora_hasta;
         private string _detalle;
+        private Paquete _paquete = null;
+        private Actividad _actividad = null;  
         #endregion
 
         #region propiedades publicas
@@ -67,6 +69,30 @@ namespace TurApp.db
 
         // -- TODO --
         #region Relaciones con otras entidades
+
+        public Paquete PaqueteObj
+        {
+            get
+            {
+                if (_paquete == null && this.CodPaquete != 0)
+                {
+                    _paquete = Paquete.FindByKeyStatic(this.CodPaquete);
+                }
+                return _paquete;
+            }
+        }
+
+        public Actividad ActividadObj
+        {
+            get
+            {
+                if (_actividad == null && this.CodActividad != 0)
+                {
+                    _actividad = Actividad.FindByKeyStatic(this.CodActividad);
+                }
+                return _actividad;
+            }
+        }
         #endregion
     }
 
