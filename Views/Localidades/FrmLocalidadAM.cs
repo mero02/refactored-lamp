@@ -7,18 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TurApp.db;
-using Newtonsoft;
 
 namespace TurApp.Views
 {
-    [Permiso(ClaseBaseForm="Turista", FuncionPermiso = "AltaTurista,ModificaTurista,ConsultaTurista", RolUsuario = "administrador,operadorTurista,operadorTurno,consulta,operador")]
-    public partial class FrmTuristaAM : FormBase
+     [Permiso(ClaseBaseForm = "Localidad", FuncionPermiso = "AltaLocalidad,ModificaLocalidad,ConsultaLocalidad", RolUsuario = "administrador,operadorTurista,operadorTurno,consulta,operador")]
+    public partial class FrmLocalidadAM : FormBase
     {
-        // Requerida override para poder agregarle un handler
         public override event FormEvent DoCompleteOperationForm;
-        private Turista _Turista_modif = null;
-        private string TuristaLog = "";
-        public FrmTuristaAM()
+        private Localidad _Localidad_modif = null;
+        private string LocalidadLog = "";
+
+        public FrmLocalidadAM()
         {
             InitializeComponent();
         }
@@ -36,17 +35,12 @@ namespace TurApp.Views
                 }
             }
         }
-        private void FrmpTuristaAM_Load(object sender, EventArgs e)
+
+        private void FrmLocalidadAM_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void LoadCombos()
-        {
-            this.PaisCbo.DataSource =  Pais.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
-
-            //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
-        }
         public override FrmOperacion OperacionForm
         {
             get
@@ -56,24 +50,23 @@ namespace TurApp.Views
             set
             {
                 base.OperacionForm = value;
-                LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
-                    this.Text = "Ingreso de nuevo Turista...";
-                    this.PaisCbo.SelectedIndex = -1;
+                    this.Text = "Ingreso de nueva Localidad...";
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
-                    this.Text = "Actualizacion de datos de Turista...";
-                    
+                    this.Text = "Actualizacion de datos de Localidad...";
+
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
-                    this.Text = "Consulta de datos de Turista...";
+                    this.Text = "Consulta de datos de Localidad...";
                     this.GuardarBtn.Visible = false;
                 }
             }
         }
+
         private void CancelarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -81,16 +74,22 @@ namespace TurApp.Views
 
         private void GuardarBtn_Click(object sender, EventArgs e)
         {
-            Turista Turista = null;
+            Localidad Localidad = null;
             string errMsj = "";
             string operacionLog = "";
-            string detalleLog="";
-            MainView.Instance.Cursor = Cursors.WaitCursor;                       
-            
-            if (DniTxt.Text == "")
+            string detalleLog = "";
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+
+            if (CodPosTxt.Text == "")
             {
-                MessageBox.Show("Ingrese dni", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DniTxt.Focus();
+                MessageBox.Show("Ingrese Codigo postal", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CodPosTxt.Focus();
+                return;
+            }
+            if (NombreTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre de la localidad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NombreTxt.Focus();
                 return;
             }
             // validar...
@@ -98,16 +97,18 @@ namespace TurApp.Views
             //....
             if (OperacionForm == FrmOperacion.frmAlta)
             {
-                Turista = new Turista();
+                Localidad = new Localidad();
                 operacionLog = "ALTA";
                 // cargar la info de la Turista antes de dar de alta.
+                Localidad.Codigo = int.Parse(CodPosTxt.Text);
+                Localidad.Nombre = NombreTxt.Text;
             }
-            
+
             if (OperacionForm == FrmOperacion.frmModificacion)
             {
                 operacionLog = "MODIFICACION";
-                Turista = _Turista_modif;
-                detalleLog = "OBJ-Antes:" + TuristaLog + " - OBJ-MOD";                
+                Localidad = _Localidad_modif;
+                detalleLog = "OBJ-Antes:" + LocalidadLog + " - OBJ-MOD";
             }
             if (OperacionForm == FrmOperacion.frmConsulta)
             {
@@ -116,7 +117,7 @@ namespace TurApp.Views
 
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
-            ReadDataFromForm(this, Turista);
+            ReadDataFromForm(this, Localidad);
             /*
             Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
             Turista.Nombre = NombreTxt.Text;            
@@ -125,11 +126,11 @@ namespace TurApp.Views
             Turista.Observaciones = ObservacionesTxt.Text;
             Turista.Telefono = TelefonoTxt.Text;
              * */
-            detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Turista);
+            detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Localidad);
             // intentar guardar en la Base de datos.
             try
             {
-                Turista.SaveObj();
+                Localidad.SaveObj();
                 Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
             }
             catch (Exception ex)
@@ -140,9 +141,9 @@ namespace TurApp.Views
             if (DoCompleteOperationForm != null)
             {
                 if (errMsj == "")
-                    DoCompleteOperationForm(Turista, new EventArgDom { ObjProcess = Turista, Status = TipoOperacionStatus.stOK });
+                    DoCompleteOperationForm(Localidad, new EventArgDom { ObjProcess = Localidad, Status = TipoOperacionStatus.stOK });
                 else
-                    DoCompleteOperationForm(Turista, new EventArgDom { ObjProcess = Turista, Mensaje = errMsj, Status = TipoOperacionStatus.stError });
+                    DoCompleteOperationForm(Localidad, new EventArgDom { ObjProcess = Localidad, Mensaje = errMsj, Status = TipoOperacionStatus.stError });
             }
 
             if (this.InvokerForm != null)
@@ -151,67 +152,52 @@ namespace TurApp.Views
             }
             MainView.Instance.Cursor = Cursors.Default;
             this.Close();
+            
         }
-        // Notificara al Invocador que recargue algun cambio de datos.
-        public void ShowModificarTurista(FormBase Invoker, Turista Tur_modif)
+
+        public void ShowModificarLocalidad(FormBase Invoker, Localidad Loc_modif)
         {
-            ShowInfoTuristaInForm(Tur_modif, Invoker);
+            ShowInfoLocalidadInForm(Loc_modif, Invoker);
         }
-        public void ShowModificarTurista(Turista Tur_modif)
+        public void ShowModificarLocalidad(Localidad Loc_modif)
         {
-            ShowInfoTuristaInForm(Tur_modif, null);
+            ShowInfoLocalidadInForm(Loc_modif, null);
         }
-        private void ShowInfoTuristaInForm(Turista Tur_modif, FormBase Invoker)
+        private void ShowInfoLocalidadInForm(Localidad Loc_modif, FormBase Invoker)
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
-            _Turista_modif = Tur_modif;
-            TuristaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Turista_modif);
+            _Localidad_modif = Loc_modif;
+            LocalidadLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Localidad_modif);
             // cargar cada control con informacion del Turista....            
-            FormBase.ShowDataFromModel(this, Tur_modif);
+            FormBase.ShowDataFromModel(this, Loc_modif);
             this.InvokerForm = Invoker;
-            this.CancelarBtn.Click+=new EventHandler(CancelarBtn_Click);
+            this.CancelarBtn.Click += new EventHandler(CancelarBtn_Click);
             this.ShowDialog();
         }
-        public void ShowIngresoTurista(FormBase Invoker)
+        public void ShowIngresoLocalidad(FormBase Invoker)
         {
             this.InvokerForm = Invoker;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
         }
-        public void ShowIngresoTurista()
+        public void ShowIngresoLocalidad()
         {
             this.InvokerForm = null;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
         }
 
-        private void FrmTuristaAM_Deactivate(object sender, EventArgs e)
-        {
-            MainView.Instance.Cursor = Cursors.Default;   
-        }
-
-        private void DniTxt_KeyPress(object sender, KeyPressEventArgs e)
+        private void CodPosTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&(e.KeyChar != '.'))
             {
                 e.Handled = true;
-            }            
+            }  
         }
 
-
-        private void MisFactBtn_Click(object sender, EventArgs e)
+        private void FrmLocalidadAM_Deactivate(object sender, EventArgs e)
         {
-            // debe mostrar un formulario con un listado de las facturas que se le han hecho al turista
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TelefonoTxt_TextChanged(object sender, EventArgs e)
-        {
-
+            MainView.Instance.Cursor = Cursors.Default; 
         }
 
     }

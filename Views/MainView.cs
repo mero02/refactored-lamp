@@ -186,6 +186,24 @@ namespace TurApp.Views
         private void Turistas_mnu_top_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void localidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmListadoLocalidades frm = new FrmListadoLocalidades();
+            frm.Show();
+        }
+
+        private void LocalidadAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmLocalidadAM frm = new FrmLocalidadAM();
+            frm.ShowIngresoLocalidad();
+        }
+
+        private void BuscarLocalidad_mnu_Click(object sender, EventArgs e)
+        {
+            FrmLocalidadBusq frm = new FrmLocalidadBusq();
+            frm.ShowBuscar();
         }       
         
     }
