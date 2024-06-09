@@ -53,7 +53,7 @@
             this.LocalidadesGrd.ShowEditingIcon = false;
             this.LocalidadesGrd.Size = new System.Drawing.Size(294, 76);
             this.LocalidadesGrd.TabIndex = 8;
-            this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
+            this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
             // 
             // LocalidadCol

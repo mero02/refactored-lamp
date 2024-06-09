@@ -35,9 +35,9 @@ namespace TurApp.Views
             if (this.PaisChk.Checked)
             {
                 if(criterio==null)
-                    criterio = String.Format("cod_pais = {0} ", (PaisCbo.SelectedValue as Pais).Codigo);
+                    criterio = String.Format("cod_pais = {0} ", (PaisCbo.SelectedValue));
                 else
-                    criterio += String.Format(" and cod_pais = {0}", (PaisCbo.SelectedValue as Pais).Codigo);
+                    criterio += String.Format(" and cod_pais = {0}", (PaisCbo.SelectedValue));
             }
 
             try

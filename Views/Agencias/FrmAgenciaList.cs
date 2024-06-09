@@ -47,5 +47,10 @@ namespace TurApp.Views
                 item.Cells[2].Value = ag.LocalidadObj.Nombre;
             }
         }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

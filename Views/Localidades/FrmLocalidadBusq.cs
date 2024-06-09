@@ -54,9 +54,9 @@ namespace TurApp.Views
             if (this.LocalidadChk.Checked)
             {
                 if (criterio == null)
-                    criterio = String.Format("cod_Localidad = {0} ", (LocalidadCbo.SelectedValue as Localidad).Codigo);
+                    criterio = String.Format("cod_postal = {0} ", (LocalidadCbo.SelectedValue));
                 else
-                    criterio += String.Format(" and cod_Localidad = {0}", (LocalidadCbo.SelectedValue as Localidad).Codigo);
+                    criterio += String.Format(" and cod_postal = {0}", (LocalidadCbo.SelectedValue));
             }
 
             try
@@ -70,7 +70,7 @@ namespace TurApp.Views
                 }
                 // invocar Formulario de Listado.
                 FrmLocalidadList frm = new FrmLocalidadList();
-                //frm.ShowListado(lista, this, null);
+                frm.ShowListado(lista, this, null);
             }
             catch (Exception ex)
             {

@@ -41,22 +41,23 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(651, 363);
-            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CerrarBtn.Location = new System.Drawing.Point(488, 295);
+            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(72, 33);
+            this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
             this.CerrarBtn.TabIndex = 9;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.AgenciasGrd);
-            this.groupBox1.Location = new System.Drawing.Point(12, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(738, 327);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(554, 266);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -74,14 +75,14 @@
             this.Nombre,
             this.Domicilio,
             this.Pais});
-            this.AgenciasGrd.Location = new System.Drawing.Point(5, 21);
-            this.AgenciasGrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AgenciasGrd.Location = new System.Drawing.Point(4, 17);
+            this.AgenciasGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AgenciasGrd.MultiSelect = false;
             this.AgenciasGrd.Name = "AgenciasGrd";
             this.AgenciasGrd.ReadOnly = true;
             this.AgenciasGrd.RowTemplate.Height = 24;
             this.AgenciasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AgenciasGrd.Size = new System.Drawing.Size(694, 292);
+            this.AgenciasGrd.Size = new System.Drawing.Size(520, 237);
             this.AgenciasGrd.TabIndex = 0;
             this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
             // 
@@ -112,11 +113,12 @@
             // 
             // FrmAgenciaList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 416);
+            this.ClientSize = new System.Drawing.Size(586, 338);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAgenciaList";
             this.Text = "Listado de agencias";
             this.Load += new System.EventHandler(this.FrmAgenciaList_Load);
