@@ -204,7 +204,18 @@ namespace TurApp.Views
         {
             FrmLocalidadBusq frm = new FrmLocalidadBusq();
             frm.ShowBuscar();
-        }       
-        
+        }
+
+        private void FormaPagoAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmFormaPagoAM frm = new FrmFormaPagoAM();
+            frm.ShowIngresoFormaPago();
+        }
+
+        private void BuscarFormaPago_mnu_Click(object sender, EventArgs e)
+        {
+            FrmFormaPagoBusq frm = new FrmFormaPagoBusq();
+            frm.ShowBuscar();
+        } 
     }
 }

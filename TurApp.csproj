@@ -167,6 +167,24 @@
     <Compile Include="Views\CtlCargaInfo.Designer.cs">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoAM.Designer.cs">
+      <DependentUpon>FrmFormaPagoAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoBusq.Designer.cs">
+      <DependentUpon>FrmFormaPagoBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoList.Designer.cs">
+      <DependentUpon>FrmFormaPagoList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +288,15 @@
     <EmbeddedResource Include="Views\CtlCargaInfo.resx">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormasPago\FrmFormaPagoAM.resx">
+      <DependentUpon>FrmFormaPagoAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormasPago\FrmFormaPagoBusq.resx">
+      <DependentUpon>FrmFormaPagoBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormasPago\FrmFormaPagoList.resx">
+      <DependentUpon>FrmFormaPagoList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,7 +383,6 @@
     <Folder Include="Views\Actividad\" />
     <Folder Include="Views\Detinos\" />
     <Folder Include="Views\Facturas\" />
-    <Folder Include="Views\FormasPago\" />
     <Folder Include="Views\Paises\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -181,7 +181,7 @@
             this.NombresLbl.Name = "NombresLbl";
             this.NombresLbl.Size = new System.Drawing.Size(44, 13);
             this.NombresLbl.TabIndex = 2;
-            this.NombresLbl.Text = "No&mbre";
+            this.NombresLbl.Text = "&Nombre";
             // 
             // CancelarBtn
             // 

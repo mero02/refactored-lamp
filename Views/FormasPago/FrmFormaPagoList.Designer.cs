@@ -1,6 +1,6 @@
 ﻿namespace TurApp.Views
 {
-    partial class FrmLocalidadList
+    partial class FrmFormaPagoList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,82 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LocalidadesGrd = new System.Windows.Forms.DataGridView();
+            this.FormaPagosGrd = new System.Windows.Forms.DataGridView();
             this.LocalidadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CerrarBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FormaPagosGrd)).BeginInit();
             this.SuspendLayout();
             // 
-            // LocalidadesGrd
+            // FormaPagosGrd
             // 
-            this.LocalidadesGrd.AllowUserToAddRows = false;
-            this.LocalidadesGrd.AllowUserToDeleteRows = false;
-            this.LocalidadesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LocalidadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FormaPagosGrd.AllowUserToAddRows = false;
+            this.FormaPagosGrd.AllowUserToDeleteRows = false;
+            this.FormaPagosGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FormaPagosGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LocalidadCol,
             this.NombreCol});
-            this.LocalidadesGrd.Location = new System.Drawing.Point(11, 23);
-            this.LocalidadesGrd.Margin = new System.Windows.Forms.Padding(2);
-            this.LocalidadesGrd.MultiSelect = false;
-            this.LocalidadesGrd.Name = "LocalidadesGrd";
-            this.LocalidadesGrd.ReadOnly = true;
-            this.LocalidadesGrd.RowTemplate.Height = 24;
-            this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LocalidadesGrd.ShowEditingIcon = false;
-            this.LocalidadesGrd.Size = new System.Drawing.Size(294, 76);
-            this.LocalidadesGrd.TabIndex = 8;
-            this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
-            this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
+            this.FormaPagosGrd.Location = new System.Drawing.Point(11, 21);
+            this.FormaPagosGrd.Margin = new System.Windows.Forms.Padding(2);
+            this.FormaPagosGrd.MultiSelect = false;
+            this.FormaPagosGrd.Name = "FormaPagosGrd";
+            this.FormaPagosGrd.ReadOnly = true;
+            this.FormaPagosGrd.RowTemplate.Height = 24;
+            this.FormaPagosGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FormaPagosGrd.ShowEditingIcon = false;
+            this.FormaPagosGrd.Size = new System.Drawing.Size(294, 76);
+            this.FormaPagosGrd.TabIndex = 9;
+            this.FormaPagosGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
+            this.FormaPagosGrd.DoubleClick += new System.EventHandler(this.FormaPagoGrd_DoubleClick);
             // 
             // LocalidadCol
             // 
-            this.LocalidadCol.DataPropertyName = "CodPos";
-            this.LocalidadCol.HeaderText = "CodPos";
+            this.LocalidadCol.DataPropertyName = "Codigo";
+            this.LocalidadCol.HeaderText = "Codigo";
             this.LocalidadCol.Name = "LocalidadCol";
             this.LocalidadCol.ReadOnly = true;
             // 
             // NombreCol
             // 
-            this.NombreCol.DataPropertyName = "Nombres";
-            this.NombreCol.HeaderText = "Nombres";
+            this.NombreCol.DataPropertyName = "Forma";
+            this.NombreCol.HeaderText = "Forma";
             this.NombreCol.Name = "NombreCol";
             this.NombreCol.ReadOnly = true;
             this.NombreCol.Width = 150;
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(126, 116);
+            this.CerrarBtn.Location = new System.Drawing.Point(125, 116);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 9;
+            this.CerrarBtn.TabIndex = 10;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
-            // FrmLocalidadList
+            // FrmFormaPagoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 154);
             this.Controls.Add(this.CerrarBtn);
-            this.Controls.Add(this.LocalidadesGrd);
-            this.Name = "FrmLocalidadList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista Localidades";
-            this.Activated += new System.EventHandler(this.FrmLocalidadList_Load);
-            this.Load += new System.EventHandler(this.FrmLocalidadList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).EndInit();
+            this.Controls.Add(this.FormaPagosGrd);
+            this.Name = "FrmFormaPagoList";
+            this.Text = "Lista Forma de Pago";
+            this.Activated += new System.EventHandler(this.FrmFormaPagoList_Load);
+            this.Load += new System.EventHandler(this.FrmFormaPagoList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FormaPagosGrd)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView LocalidadesGrd;
+        private System.Windows.Forms.DataGridView FormaPagosGrd;
+        private System.Windows.Forms.Button CerrarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LocalidadCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
-        private System.Windows.Forms.Button CerrarBtn;
     }
 }
