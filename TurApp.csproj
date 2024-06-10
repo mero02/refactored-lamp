@@ -324,8 +324,14 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmPaqueteAM.resx">
       <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>

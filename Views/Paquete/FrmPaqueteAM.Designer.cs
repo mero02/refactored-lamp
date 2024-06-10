@@ -1,4 +1,4 @@
-﻿namespace TurApp.Views.Paquete
+﻿namespace TurApp.Views
 {
     partial class FrmPaqueteAM
     {
@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(311, 285);
             this.Name = "FrmPaqueteAM";
             this.Text = "FrmPaqueteAM";
+            this.Load += new System.EventHandler(this.FrmPaqueteAM_Load);
             this.ResumeLayout(false);
 
         }
