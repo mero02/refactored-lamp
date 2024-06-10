@@ -236,8 +236,8 @@ namespace TurApp.Views
                             //(item as ComboBox).SelectedIndex = (item as ComboBox).FindString(data.ToString());
                             //(item as ComboBox).SelectedItem = data;
                             dynamic valor = (item as ComboBox).SelectedValue;
-                            dynamic objVal=null;
-                            if (typeof(object) == valor.GetType())
+                            dynamic objVal = null;
+                            if (valor is IImpleCodigo)
                                 objVal = (valor as IImpleCodigo).Codigo;
                             else
                                 objVal = valor;
