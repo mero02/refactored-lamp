@@ -216,6 +216,12 @@ namespace TurApp.Views
         {
             FrmFormaPagoBusq frm = new FrmFormaPagoBusq();
             frm.ShowBuscar();
+        }
+
+        private void ListadoFormaPago_Click(object sender, EventArgs e)
+        {
+            FrmListadoFormaPago frmListPac = new FrmListadoFormaPago();
+            frmListPac.Show();
         } 
     }
 }

@@ -185,6 +185,12 @@
     <Compile Include="Views\FormasPago\FrmFormaPagoList.Designer.cs">
       <DependentUpon>FrmFormaPagoList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormasPago\FrmListadoFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmListadoFormaPago.Designer.cs">
+      <DependentUpon>FrmListadoFormaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormasPago\FrmFormaPagoList.resx">
       <DependentUpon>FrmFormaPagoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormasPago\FrmListadoFormaPago.resx">
+      <DependentUpon>FrmListadoFormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

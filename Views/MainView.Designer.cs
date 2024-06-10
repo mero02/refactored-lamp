@@ -181,7 +181,7 @@
             // LocalidadAM_mnu
             // 
             this.LocalidadAM_mnu.Name = "LocalidadAM_mnu";
-            this.LocalidadAM_mnu.Size = new System.Drawing.Size(152, 22);
+            this.LocalidadAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.LocalidadAM_mnu.Tag = "AltaLocalidad";
             this.LocalidadAM_mnu.Text = "Ingreso";
             this.LocalidadAM_mnu.Click += new System.EventHandler(this.LocalidadAM_mnu_Click);
@@ -189,7 +189,7 @@
             // BuscarLocalidad_mnu
             // 
             this.BuscarLocalidad_mnu.Name = "BuscarLocalidad_mnu";
-            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(152, 22);
+            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarLocalidad_mnu.Tag = "ModificaLocalidad,ConsultaLocalidad";
             this.BuscarLocalidad_mnu.Text = "Buscar";
             this.BuscarLocalidad_mnu.Click += new System.EventHandler(this.BuscarLocalidad_mnu_Click);
@@ -207,7 +207,7 @@
             // ActividadAM_mnu
             // 
             this.ActividadAM_mnu.Name = "ActividadAM_mnu";
-            this.ActividadAM_mnu.Size = new System.Drawing.Size(152, 22);
+            this.ActividadAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.ActividadAM_mnu.Tag = "AltaActividad";
             this.ActividadAM_mnu.Text = "Ingreso";
             this.ActividadAM_mnu.Click += new System.EventHandler(this.ActividadAM_mnu_Click);
@@ -215,7 +215,7 @@
             // BuscarActividad_mnu
             // 
             this.BuscarActividad_mnu.Name = "BuscarActividad_mnu";
-            this.BuscarActividad_mnu.Size = new System.Drawing.Size(152, 22);
+            this.BuscarActividad_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarActividad_mnu.Tag = "ModificaActividad,ConsultaActividad";
             this.BuscarActividad_mnu.Text = "Buscar";
             // 
@@ -232,14 +232,14 @@
             // PaqueteAM_mnu
             // 
             this.PaqueteAM_mnu.Name = "PaqueteAM_mnu";
-            this.PaqueteAM_mnu.Size = new System.Drawing.Size(152, 22);
+            this.PaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.PaqueteAM_mnu.Tag = "AltaPaquete";
             this.PaqueteAM_mnu.Text = "Ingreso";
             // 
             // BuscarPaquete_mnu
             // 
             this.BuscarPaquete_mnu.Name = "BuscarPaquete_mnu";
-            this.BuscarPaquete_mnu.Size = new System.Drawing.Size(152, 22);
+            this.BuscarPaquete_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarPaquete_mnu.Tag = "ModificaPaquete,ConsultaPaquete";
             this.BuscarPaquete_mnu.Text = "Buscar";
             // 
@@ -280,7 +280,7 @@
             // ingresoToolStripMenuItem
             // 
             this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
-            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.ingresoToolStripMenuItem.Tag = "AltaFormaPago";
             this.ingresoToolStripMenuItem.Text = "Ingreso";
             this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.FormaPagoAM_mnu_Click);
@@ -288,7 +288,7 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormaPago_mnu_Click);
@@ -346,6 +346,7 @@
             this.FormaPagosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.FormaPagosToolStripMenuItem.Tag = "ConsultaFormaPago";
             this.FormaPagosToolStripMenuItem.Text = "FormaPagos";
+            this.FormaPagosToolStripMenuItem.Click += new System.EventHandler(this.ListadoFormaPago_Click);
             // 
             // auditoriaToolStripMenuItem
             // 
