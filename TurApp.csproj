@@ -134,6 +134,12 @@
     <Compile Include="db\Secure\UsuarioRol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Actividad\FrmActividadAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Actividad\FrmActividadAM.Designer.cs">
+      <DependentUpon>FrmActividadAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Agencias\FrmAgenciaAM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Actividad\FrmActividadAM.resx">
+      <DependentUpon>FrmActividadAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmAgenciaAM.resx">
       <DependentUpon>FrmAgenciaAM.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,7 +386,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Script\" />
-    <Folder Include="Views\Actividad\" />
     <Folder Include="Views\Detinos\" />
     <Folder Include="Views\Facturas\" />
     <Folder Include="Views\Paises\" />

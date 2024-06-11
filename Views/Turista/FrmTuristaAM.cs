@@ -238,5 +238,15 @@ namespace TurApp.Views
             }
         }
 
+        private void PaisCbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LocalidadLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
