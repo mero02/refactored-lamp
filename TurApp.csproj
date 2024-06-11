@@ -227,23 +227,11 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
+    <Compile Include="Views\Paquete\FrmPaquetAM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Paquete\FrmListadoPaquetes.Designer.cs">
-      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Paquete\FrmPaqueteAM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Paquete\FrmPaqueteAM.Designer.cs">
-      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Paquete\FrmPaqueteBusq.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
-      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+    <Compile Include="Views\Paquete\FrmPaquetAM.Designer.cs">
+      <DependentUpon>FrmPaquetAM.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
@@ -324,14 +312,8 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
-      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Paquete\FrmPaqueteAM.resx">
-      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
-      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Paquete\FrmPaquetAM.resx">
+      <DependentUpon>FrmPaquetAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>

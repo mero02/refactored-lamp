@@ -135,6 +135,14 @@ namespace TurApp.Views
             frm.ShowIngresoTurista(this);
         }
 
+        private void IngresoPaqueteMnu_Click(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+            FrmPaqueteAM frm = new FrmPaqueteAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+            frm.ShowIngresoPaquete(this);
+        }
+
         private void BuscarTuristaMnu_Click(object sender, EventArgs e)
         {
             MainView.Instance.Cursor = Cursors.WaitCursor;
@@ -222,6 +230,22 @@ namespace TurApp.Views
         {
             FrmListadoFormaPago frmListPac = new FrmListadoFormaPago();
             frmListPac.Show();
+        }
+
+        private void PaqueteAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmPaqueteAM frm = new FrmPaqueteAM();
+            frm.ShowIngresoPaquete();
+        }
+
+        private void BuscarPaquete_mnu_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Paquetes_mnu_top_Click(object sender, EventArgs e)
+        {
+
         } 
     }
 }

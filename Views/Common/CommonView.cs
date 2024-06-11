@@ -258,5 +258,6 @@ namespace TurApp.Views
                 }
             }
         }
+
     }
 }
