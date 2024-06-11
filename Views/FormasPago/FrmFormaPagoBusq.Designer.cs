@@ -65,7 +65,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 14;
+            this.BuscarBtn.TabIndex = 8;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -90,7 +90,10 @@
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.FormaPagoCbo);
             this.Controls.Add(this.FormaPagoChk);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmFormaPagoBusq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Forma de Pago";
             this.Activated += new System.EventHandler(this.FrmFormaPagoBusq_Activated);
             this.Load += new System.EventHandler(this.FrmFormaPagoBusq_Load);

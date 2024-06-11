@@ -98,7 +98,10 @@
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmFormaPagoAM";
+            this.Deactivate += new System.EventHandler(this.FrmFormaPagoAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmFormaPagoAM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -22,11 +22,6 @@ namespace TurApp.Views
             this.Show();
         }
 
-        private void FrmFormaPagoBusq_Activated(object sender, EventArgs e)
-        {
-            MainView.Instance.Cursor = Cursors.Default;
-        }
-
         private void FrmFormaPagoBusq_Load(object sender, EventArgs e)
         {
             FormaPagoCbo.DataSource = FormaPago.FindAllStatic(null, (for1, for2) => for1.Forma.CompareTo(for2.Forma));
@@ -36,6 +31,11 @@ namespace TurApp.Views
         private void FormaPagoChk_CheckedChanged(object sender, EventArgs e)
         {
             this.FormaPagoCbo.Enabled = FormaPagoChk.Checked;
+        }
+
+        private void FrmFormaPagoBusq_Activated(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.Default;
         }
 
         private void CancelarBtn_Click(object sender, EventArgs e)
@@ -52,9 +52,9 @@ namespace TurApp.Views
             if (this.FormaPagoChk.Checked)
             {
                 if (criterio == null)
-                    criterio = String.Format("cod_FormaPago = {0} ", (FormaPagoCbo.SelectedValue as FormaPago).Codigo);
+                    criterio = String.Format("codigo = {0} ", (FormaPagoCbo.SelectedValue));
                 else
-                    criterio += String.Format(" and cod_FormaPago = {0}", (FormaPagoCbo.SelectedValue as FormaPago).Codigo);
+                    criterio += String.Format(" and codigo = {0}", (FormaPagoCbo.SelectedValue));
             }
 
             try
@@ -68,7 +68,7 @@ namespace TurApp.Views
                 }
                 // invocar Formulario de Listado.
                 FrmFormaPagoList frm = new FrmFormaPagoList();
-                //frm.ShowListado(lista, this, null);
+                frm.ShowListado(lista, this, null);
             }
             catch (Exception ex)
             {

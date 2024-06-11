@@ -90,6 +90,8 @@
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.LocalidadCbo);
             this.Controls.Add(this.LocalidadChk);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLocalidadBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Localidad";

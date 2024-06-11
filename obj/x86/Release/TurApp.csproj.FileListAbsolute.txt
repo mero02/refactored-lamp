@@ -92,3 +92,12 @@ C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\bin
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\bin\Release\zh-CN\Npgsql.resources.dll
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\clubApp.exe.manifest
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\clubApp.application
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmFormaPagoAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmFormaPagoBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmFormaPagoList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoFormaPago.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoLocalidades.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteAM.resources

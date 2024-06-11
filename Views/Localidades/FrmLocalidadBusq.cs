@@ -17,8 +17,6 @@ namespace TurApp.Views
             InitializeComponent();
         }
 
-
-
         public void ShowBuscar()
         {
             this.Show();

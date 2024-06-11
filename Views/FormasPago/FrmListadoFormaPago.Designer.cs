@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.FormaPagoGrd = new System.Windows.Forms.DataGridView();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FormaPagoTxt = new System.Windows.Forms.TextBox();
             this.FormaPagoChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FormaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.FormaPagoGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,8 +46,8 @@
             this.FormaPagoGrd.AllowUserToDeleteRows = false;
             this.FormaPagoGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FormaPagoGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DniCol,
-            this.NombreCol});
+            this.CodigoCol,
+            this.FormaCol});
             this.FormaPagoGrd.Location = new System.Drawing.Point(17, 54);
             this.FormaPagoGrd.Margin = new System.Windows.Forms.Padding(2);
             this.FormaPagoGrd.MultiSelect = false;
@@ -61,21 +61,6 @@
             this.FormaPagoGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FormaPagoGrd_CellContentClick);
             this.FormaPagoGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FormaPagoGrd_DataBindingComplete);
             this.FormaPagoGrd.DoubleClick += new System.EventHandler(this.FormaPagoGrd_DoubleClick);
-            // 
-            // DniCol
-            // 
-            this.DniCol.DataPropertyName = "Codigo";
-            this.DniCol.HeaderText = "Codigo";
-            this.DniCol.Name = "DniCol";
-            this.DniCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Forma";
-            this.NombreCol.HeaderText = "Forma de pago";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
             // 
             // groupBox1
             // 
@@ -130,6 +115,21 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            // 
+            // FormaCol
+            // 
+            this.FormaCol.DataPropertyName = "Forma";
+            this.FormaCol.HeaderText = "Forma de pago";
+            this.FormaCol.Name = "FormaCol";
+            this.FormaCol.ReadOnly = true;
+            this.FormaCol.Width = 150;
+            // 
             // FrmListadoFormaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,12 +153,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView FormaPagoGrd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox FormaPagoTxt;
         private System.Windows.Forms.CheckBox FormaPagoChk;
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.Button ExportarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FormaCol;
     }
 }
