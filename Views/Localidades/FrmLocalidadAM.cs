@@ -200,5 +200,13 @@ namespace TurApp.Views
             MainView.Instance.Cursor = Cursors.Default; 
         }
 
+        private void NombreTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

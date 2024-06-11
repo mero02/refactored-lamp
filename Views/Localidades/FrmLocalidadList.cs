@@ -47,7 +47,9 @@ namespace TurApp.Views
 
         private void LocalidadesGrd_DoubleClick(object sender, EventArgs e)
         {
-
+            FrmLocalidadAM frmpac = new FrmLocalidadAM();
+            Localidad pac = (this.LocalidadesGrd.SelectedRows[0].DataBoundItem as Localidad);
+            frmpac.ShowModificarLocalidad(pac);
         }
 
         private void LocalidadesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

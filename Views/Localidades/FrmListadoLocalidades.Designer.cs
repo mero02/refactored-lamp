@@ -36,9 +36,9 @@
             this.NombreChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.LocalidadesGrd = new System.Windows.Forms.DataGridView();
-            this.LocalidadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.CodPosCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).BeginInit();
@@ -131,7 +131,7 @@
             this.LocalidadesGrd.AllowUserToDeleteRows = false;
             this.LocalidadesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocalidadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LocalidadCol,
+            this.CodPosCol,
             this.NombreCol});
             this.LocalidadesGrd.Location = new System.Drawing.Point(-2, 82);
             this.LocalidadesGrd.Margin = new System.Windows.Forms.Padding(2);
@@ -144,23 +144,9 @@
             this.LocalidadesGrd.Size = new System.Drawing.Size(664, 355);
             this.LocalidadesGrd.TabIndex = 7;
             this.LocalidadesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LocalidadesGrd_CellContentClick);
+            this.LocalidadesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocalidadesGrd_ColumnHeaderMouseClick);
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
-            // 
-            // LocalidadCol
-            // 
-            this.LocalidadCol.DataPropertyName = "CodPos";
-            this.LocalidadCol.HeaderText = "CodPos";
-            this.LocalidadCol.Name = "LocalidadCol";
-            this.LocalidadCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombres";
-            this.NombreCol.HeaderText = "Nombres";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
             // 
             // ExportarBtn
             // 
@@ -171,6 +157,21 @@
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
+            // 
+            // CodPosCol
+            // 
+            this.CodPosCol.DataPropertyName = "CodPos";
+            this.CodPosCol.HeaderText = "CodPos";
+            this.CodPosCol.Name = "CodPosCol";
+            this.CodPosCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.HeaderText = "Nombres";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 150;
             // 
             // FrmListadoLocalidades
             // 
@@ -206,7 +207,7 @@
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.DataGridView LocalidadesGrd;
         private System.Windows.Forms.Button ExportarBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LocalidadCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodPosCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
     }
 }

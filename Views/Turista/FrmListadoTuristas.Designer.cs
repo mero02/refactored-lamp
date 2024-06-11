@@ -65,6 +65,7 @@
             this.TuristasGrd.Size = new System.Drawing.Size(826, 384);
             this.TuristasGrd.TabIndex = 0;
             this.TuristasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
+            this.TuristasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TuristasGrd_ColumnHeaderMouseClick);
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
             this.TuristasGrd.DoubleClick += new System.EventHandler(this.TuristasGrd_DoubleClick);
             // 

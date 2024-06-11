@@ -88,6 +88,7 @@
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(133, 20);
             this.NombreTxt.TabIndex = 4;
+            this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
             // FrmLocalidadAM
             // 

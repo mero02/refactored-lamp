@@ -28,9 +28,16 @@ namespace TurApp.Views
             LoadComboBox(Localidad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.LocalidadCbo, addSeleccion: true);
             this.LocalidadesGrd.AutoGenerateColumns = false;
 
-            this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+            //this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+            var localidades = Localidad.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var localidadesBindingList = new BindingList<Localidad>(localidades);
+            var localidadesBindingSource = new BindingSource(localidadesBindingList, null);
+            this.LocalidadesGrd.DataSource = localidadesBindingSource;
 
             this.ExportarBtn.Enabled = true;
+
+            this.LocalidadesGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(LocalidadesGrd_ColumnHeaderMouseClick);
+
         }
 
         private void LocalidadesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -73,6 +80,7 @@ namespace TurApp.Views
 
         private void FiltroBtn_Click(object sender, EventArgs e)
         {
+
             string criterio = null;
 
             if (this.LocalidadChk.Checked && this.LocalidadCbo.SelectedIndex != -1)
@@ -85,6 +93,8 @@ namespace TurApp.Views
                     criterio = "cod_Localidad = " + LocalidadCbo.SelectedValue;
             }
             this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+
+
         }
 
 
@@ -134,7 +144,60 @@ namespace TurApp.Views
 
         private void LocalidadesGrd_DoubleClick(object sender, EventArgs e)
         {
-
+            FrmLocalidadAM frmpac = new FrmLocalidadAM();
+            Localidad pac = (this.LocalidadesGrd.SelectedRows[0].DataBoundItem as Localidad);
+            frmpac.ShowModificarLocalidad(pac);
         }
+
+
+    private void LocalidadesGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+    {
+        string sortOrderGrid = "";
+
+        if (LocalidadesGrd.Tag != null)
+            sortOrderGrid = LocalidadesGrd.Tag.ToString();
+
+        DataGridViewColumn newColumn = LocalidadesGrd.Columns[e.ColumnIndex];
+
+        // Determinar la dirección de orden actual
+        ListSortDirection direction;
+        if (sortOrderGrid.StartsWith("-") && sortOrderGrid.Substring(1) == newColumn.Name)
+            direction = ListSortDirection.Ascending;
+        else
+            direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+        // Obtener las localidades desde el DataSource
+        var bindingSource = LocalidadesGrd.DataSource as BindingSource;
+        if (bindingSource == null)
+        {
+            MessageBox.Show("DataSource no es un BindingSource.");
+            return;
+        }
+
+        var localidades = bindingSource.List.Cast<Localidad>().ToList();
+
+        // Ordenar las localidades según la columna seleccionada
+        switch (newColumn.Name)
+        {
+            case "CodPosCol":
+                localidades.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Codigo.CompareTo(t2.Codigo) : t2.Codigo.CompareTo(t1.Codigo));
+                break;
+            case "NombreCol":
+                localidades.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Nombre.CompareTo(t2.Nombre) : t2.Nombre.CompareTo(t1.Nombre));
+                break;
+        }
+
+        // Cambiar la dirección de orden para la próxima vez
+        direction = (direction == ListSortDirection.Ascending) ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+        // Actualizar la etiqueta de dirección de orden
+        LocalidadesGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
+
+        // Asignar los datos ordenados al DataSource
+        bindingSource.DataSource = new BindingList<Localidad>(localidades);
+
+        // Mostrar la dirección de orden en el encabezado de la columna
+        newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
     }
+  }
 }

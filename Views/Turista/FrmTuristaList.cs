@@ -86,39 +86,55 @@ namespace TurApp.Views
         private void TuristasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string sortOrderGrid = "";
-            
-            if(TuristasGrd.Tag!=null)
+
+            if (TuristasGrd.Tag != null)
                 sortOrderGrid = TuristasGrd.Tag.ToString();
+
             DataGridViewColumn newColumn = TuristasGrd.Columns[e.ColumnIndex];
-            if (newColumn.Name == "Domicilio") //columna no ordenable
-                return; 
-            ListSortDirection direction = ListSortDirection.Ascending;
-            if (sortOrderGrid == "")
+
+            // Verificar si la columna es no ordenable
+            if (newColumn.Name == "Domicilio")
+                return;
+
+            // Determinar la dirección de orden
+            ListSortDirection direction;
+            if (sortOrderGrid.StartsWith("-") && sortOrderGrid.Substring(1) == newColumn.Name)
                 direction = ListSortDirection.Ascending;
             else
+                direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Obtener los turistas desde el DataSource
+            var bindingSource = TuristasGrd.DataSource as BindingSource;
+            if (bindingSource == null)
             {
-                if (sortOrderGrid.IndexOf("-") != -1)
-                    direction = ListSortDirection.Ascending;
-                else
-                    direction = ListSortDirection.Descending;
+                MessageBox.Show("DataSource no es un BindingSource.");
+                return;
             }
-            var turistas = (TuristasGrd.DataSource as BindingSource).List.Cast<Turista>().ToList();
-            sortOrderGrid = direction == ListSortDirection.Descending ? "-" : "" + newColumn.Name;
-            if (newColumn.Name == "Nombre")
-                turistas.Sort((t1, t2) => (direction == ListSortDirection.Ascending ? t1.Nombre.CompareTo(t2.Nombre) : t2.Nombre.CompareTo(t1.Nombre)));
-            if (newColumn.Name == "Dni")
-                turistas.Sort((t1, t2) => (direction == ListSortDirection.Ascending ? t1.NroDocumento.CompareTo(t2.NroDocumento) : t2.NroDocumento.CompareTo(t1.NroDocumento)));
-            if (newColumn.Name == "Pais")
-                turistas.Sort((t1, t2) => (direction == ListSortDirection.Ascending ? t1.PaisObj.Nombre.CompareTo(t2.PaisObj.Nombre) : t2.PaisObj.Nombre.CompareTo(t1.PaisObj.Nombre)));
+
+            var turistas = bindingSource.List.Cast<Turista>().ToList();
+
+            // Ordenar los turistas según la columna seleccionada
+            switch (newColumn.Name)
+            {
+                case "Nombre":
+                    turistas.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Nombre.CompareTo(t2.Nombre) : t2.Nombre.CompareTo(t1.Nombre));
+                    break;
+                case "Dni":
+                    turistas.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.NroDocumento.CompareTo(t2.NroDocumento) : t2.NroDocumento.CompareTo(t1.NroDocumento));
+                    break;
+                case "Pais":
+                    turistas.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.PaisObj.Nombre.CompareTo(t2.PaisObj.Nombre) : t2.PaisObj.Nombre.CompareTo(t1.PaisObj.Nombre));
+                    break;
+            }
+
+            // Actualizar la etiqueta de dirección de orden
             TuristasGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
-            TuristasGrd.DataSource = null;
-            var bindingList = new BindingList<Turista>(turistas);
-            var source = new BindingSource(bindingList, null);
-            TuristasGrd.DataSource = source;
-            TuristasGrd.Tag = sortOrderGrid;
-            newColumn.HeaderCell.SortGlyphDirection =
-                direction == ListSortDirection.Ascending ?
-                SortOrder.Ascending : SortOrder.Descending;
+
+            // Asignar los datos ordenados al DataSource
+            bindingSource.DataSource = new BindingList<Turista>(turistas);
+
+            // Mostrar la dirección de orden en el encabezado de la columna
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
     }
 }

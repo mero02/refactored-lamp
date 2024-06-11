@@ -39,6 +39,11 @@ namespace TurApp.Views
                 else
                     criterio += String.Format(" and cod_pais = {0}", (PaisCbo.SelectedValue));
             }
+            if (this.NombreChk.Checked)
+            {
+                if (criterio == null)
+                    criterio = String.Format("nombre = '{0}'", NombreTxt.Text);
+            }
 
             try
             {
@@ -95,6 +100,22 @@ namespace TurApp.Views
         private void FrmTuristaBusq_Activated(object sender, EventArgs e)
         {
             MainView.Instance.Cursor = Cursors.Default;
+        }
+
+        private void DniTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            } 
+        }
+
+        private void NombreTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
     }

@@ -91,6 +91,7 @@
             this.Controls.Add(this.LocalidadCbo);
             this.Controls.Add(this.LocalidadChk);
             this.Name = "FrmLocalidadBusq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Localidad";
             this.Activated += new System.EventHandler(this.FrmLocalidadBusq_Activated);
             this.Load += new System.EventHandler(this.FrmLocalidadBusq_Load);

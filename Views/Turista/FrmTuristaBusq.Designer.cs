@@ -41,19 +41,20 @@
             // NombreTxt
             // 
             this.NombreTxt.Enabled = false;
-            this.NombreTxt.Location = new System.Drawing.Point(469, 23);
-            this.NombreTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombreTxt.Location = new System.Drawing.Point(352, 19);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(241, 22);
+            this.NombreTxt.Size = new System.Drawing.Size(182, 20);
             this.NombreTxt.TabIndex = 3;
+            this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
             // NombreChk
             // 
             this.NombreChk.AutoSize = true;
-            this.NombreChk.Location = new System.Drawing.Point(369, 23);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombreChk.Location = new System.Drawing.Point(277, 19);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreChk.Name = "NombreChk";
-            this.NombreChk.Size = new System.Drawing.Size(80, 21);
+            this.NombreChk.Size = new System.Drawing.Size(63, 17);
             this.NombreChk.TabIndex = 2;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
@@ -62,19 +63,20 @@
             // DniTxt
             // 
             this.DniTxt.Enabled = false;
-            this.DniTxt.Location = new System.Drawing.Point(99, 23);
-            this.DniTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DniTxt.Location = new System.Drawing.Point(74, 19);
+            this.DniTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DniTxt.Name = "DniTxt";
-            this.DniTxt.Size = new System.Drawing.Size(163, 22);
+            this.DniTxt.Size = new System.Drawing.Size(123, 20);
             this.DniTxt.TabIndex = 5;
+            this.DniTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxt_KeyPress);
             // 
             // DniChk
             // 
             this.DniChk.AutoSize = true;
-            this.DniChk.Location = new System.Drawing.Point(12, 22);
-            this.DniChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DniChk.Location = new System.Drawing.Point(9, 18);
+            this.DniChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DniChk.Name = "DniChk";
-            this.DniChk.Size = new System.Drawing.Size(51, 21);
+            this.DniChk.Size = new System.Drawing.Size(42, 17);
             this.DniChk.TabIndex = 4;
             this.DniChk.Text = "Dni";
             this.DniChk.UseVisualStyleBackColor = true;
@@ -82,10 +84,10 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(588, 99);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CancelarBtn.Location = new System.Drawing.Point(441, 80);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(77, 33);
+            this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
             this.CancelarBtn.TabIndex = 9;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -93,10 +95,10 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(470, 99);
-            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BuscarBtn.Location = new System.Drawing.Point(352, 80);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BuscarBtn.Name = "BuscarBtn";
-            this.BuscarBtn.Size = new System.Drawing.Size(77, 33);
+            this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
             this.BuscarBtn.TabIndex = 8;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
@@ -105,10 +107,10 @@
             // PaisChk
             // 
             this.PaisChk.AutoSize = true;
-            this.PaisChk.Location = new System.Drawing.Point(12, 70);
-            this.PaisChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PaisChk.Location = new System.Drawing.Point(9, 57);
+            this.PaisChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PaisChk.Name = "PaisChk";
-            this.PaisChk.Size = new System.Drawing.Size(57, 21);
+            this.PaisChk.Size = new System.Drawing.Size(46, 17);
             this.PaisChk.TabIndex = 10;
             this.PaisChk.Text = "Pais";
             this.PaisChk.UseVisualStyleBackColor = true;
@@ -120,17 +122,18 @@
             this.PaisCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCbo.Enabled = false;
             this.PaisCbo.FormattingEnabled = true;
-            this.PaisCbo.Location = new System.Drawing.Point(99, 68);
+            this.PaisCbo.Location = new System.Drawing.Point(74, 55);
+            this.PaisCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PaisCbo.Name = "PaisCbo";
-            this.PaisCbo.Size = new System.Drawing.Size(273, 24);
+            this.PaisCbo.Size = new System.Drawing.Size(206, 21);
             this.PaisCbo.TabIndex = 11;
             this.PaisCbo.ValueMember = "Codigo";
             // 
             // FrmTuristaBusq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 167);
+            this.ClientSize = new System.Drawing.Size(551, 136);
             this.Controls.Add(this.PaisCbo);
             this.Controls.Add(this.PaisChk);
             this.Controls.Add(this.CancelarBtn);
@@ -139,7 +142,7 @@
             this.Controls.Add(this.DniChk);
             this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.NombreChk);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmTuristaBusq";
