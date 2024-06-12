@@ -140,6 +140,18 @@
     <Compile Include="Views\Actividad\FrmActividadAM.Designer.cs">
       <DependentUpon>FrmActividadAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Actividad\FrmActividadBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Actividad\FrmActividadBusq.Designer.cs">
+      <DependentUpon>FrmActividadBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Actividad\FrmActividadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Actividad\FrmActividadList.Designer.cs">
+      <DependentUpon>FrmActividadList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Agencias\FrmAgenciaAM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +287,12 @@
     </Compile>
     <EmbeddedResource Include="Views\Actividad\FrmActividadAM.resx">
       <DependentUpon>FrmActividadAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Actividad\FrmActividadBusq.resx">
+      <DependentUpon>FrmActividadBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Actividad\FrmActividadList.resx">
+      <DependentUpon>FrmActividadList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmAgenciaAM.resx">
       <DependentUpon>FrmAgenciaAM.cs</DependentUpon>

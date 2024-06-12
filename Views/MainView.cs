@@ -247,6 +247,14 @@ namespace TurApp.Views
         private void Paquetes_mnu_top_Click(object sender, EventArgs e)
         {
 
-        } 
+        }
+
+        private void BuscarActividad_mnu_Click(object sender, EventArgs e)
+        {
+            FrmActividadBusq frm = new FrmActividadBusq();
+            frm.ShowBuscar();
+        }
+
+       
     }
 }

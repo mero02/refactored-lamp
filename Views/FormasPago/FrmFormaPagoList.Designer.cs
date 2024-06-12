@@ -45,15 +45,14 @@
             this.FormaPagoGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoCol,
             this.FormaCol});
-            this.FormaPagoGrd.Location = new System.Drawing.Point(11, 21);
-            this.FormaPagoGrd.Margin = new System.Windows.Forms.Padding(2);
+            this.FormaPagoGrd.Location = new System.Drawing.Point(16, 32);
             this.FormaPagoGrd.MultiSelect = false;
             this.FormaPagoGrd.Name = "FormaPagoGrd";
             this.FormaPagoGrd.ReadOnly = true;
             this.FormaPagoGrd.RowTemplate.Height = 24;
             this.FormaPagoGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FormaPagoGrd.ShowEditingIcon = false;
-            this.FormaPagoGrd.Size = new System.Drawing.Size(294, 76);
+            this.FormaPagoGrd.Size = new System.Drawing.Size(441, 117);
             this.FormaPagoGrd.TabIndex = 9;
             this.FormaPagoGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FormaPagoGrd_ColumnHeaderMouseClick);
             this.FormaPagoGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FormaPagoGrd_DataBindingComplete);
@@ -76,10 +75,9 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(125, 116);
-            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CerrarBtn.Location = new System.Drawing.Point(188, 178);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
+            this.CerrarBtn.Size = new System.Drawing.Size(81, 42);
             this.CerrarBtn.TabIndex = 10;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
@@ -87,11 +85,12 @@
             // 
             // FrmFormaPagoList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 154);
+            this.ClientSize = new System.Drawing.Size(471, 237);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.FormaPagoGrd);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmFormaPagoList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
