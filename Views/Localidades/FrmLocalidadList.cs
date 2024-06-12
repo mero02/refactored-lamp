@@ -47,9 +47,26 @@ namespace TurApp.Views
 
         private void LocalidadesGrd_DoubleClick(object sender, EventArgs e)
         {
-            FrmLocalidadAM frmpac = new FrmLocalidadAM();
-            Localidad pac = (this.LocalidadesGrd.SelectedRows[0].DataBoundItem as Localidad);
-            frmpac.ShowModificarLocalidad(pac);
+            if (this.LocalidadesGrd.SelectedRows.Count > 0)
+            {
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmLocalidadAM frm = new FrmLocalidadAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarLocalidad(this, (this.LocalidadesGrd.SelectedRows[0].DataBoundItem as Localidad));
+            }
+
+        }
+
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
+        {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK)
+            {
+                var selAnt = LocalidadesGrd.SelectedRows[0].Index;
+                this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(_criterio, (e1, e2) => e1.Codigo.CompareTo(e2.Codigo));
+                LocalidadesGrd.Rows[selAnt].Selected = true;
+                MessageBox.Show("Localidad actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void LocalidadesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

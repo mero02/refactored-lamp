@@ -26,9 +26,16 @@ namespace TurApp.Views
         private void FrmListadoFormasPago_Load(object sender, EventArgs e)
         {
             this.FormaPagoGrd.AutoGenerateColumns = false;
-            this.FormaPagoGrd.DataSource = FormaPago.FindAllStatic(null, (p1, p2) => (p1.Forma).CompareTo(p2.Forma));
+           // this.FormaPagoGrd.DataSource = FormaPago.FindAllStatic(null, (p1, p2) => (p1.Forma).CompareTo(p2.Forma));
+            var Formas = FormaPago.FindAllStatic(null, (p1, p2) => p1.Forma.CompareTo(p2.Forma));
+            var FormasBindingList = new BindingList<FormaPago>(Formas);
+            var FromasBindingSource = new BindingSource(FormasBindingList, null);
+            this.FormaPagoGrd.DataSource = FromasBindingSource;
 
             this.ExportarBtn.Enabled = true;
+
+            this.FormaPagoGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(FormaPagoGrd_ColumnHeaderMouseClick);
+
         }
 
         private void FormaPagoChk_CheckedChanged(object sender, EventArgs e)
@@ -48,14 +55,19 @@ namespace TurApp.Views
 
         private void FormaPagoGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            foreach (DataGridViewRow rw in this.FormaPagoGrd.Rows)
-            {
-                rw.Cells[0].Value = (rw.DataBoundItem as FormaPago).Codigo;
-            }
+            this.FormaPagoGrd.DataBindingComplete -= FormaPagoGrd_DataBindingComplete;
 
-            foreach (DataGridViewRow rw in this.FormaPagoGrd.Rows)
+            try
             {
-                rw.Cells[1].Value = (rw.DataBoundItem as FormaPago).Forma;
+                for (int i = 0; i < this.FormaPagoGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.FormaPagoGrd.Rows[i];
+                    item.Cells[1].Value = (item.DataBoundItem as FormaPago).Forma;
+                }
+            }
+            finally
+            {
+                this.FormaPagoGrd.DataBindingComplete += FormaPagoGrd_DataBindingComplete;
             }
         }
 
@@ -118,6 +130,56 @@ namespace TurApp.Views
             {
                 MessageBox.Show("Error al exportar datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormaPagoGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string sortOrderGrid = "";
+
+            if (FormaPagoGrd.Tag != null)
+                sortOrderGrid = FormaPagoGrd.Tag.ToString();
+
+            DataGridViewColumn newColumn = FormaPagoGrd.Columns[e.ColumnIndex];
+
+            // Determinar la dirección de orden actual
+            ListSortDirection direction;
+            if (sortOrderGrid.StartsWith("-") && sortOrderGrid.Substring(1) == newColumn.Name)
+                direction = ListSortDirection.Ascending;
+            else
+                direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Obtener las localidades desde el DataSource
+            var bindingSource = FormaPagoGrd.DataSource as BindingSource;
+            if (bindingSource == null)
+            {
+                MessageBox.Show("DataSource no es un BindingSource.");
+                return;
+            }
+
+            var FormasPago = bindingSource.List.Cast<FormaPago>().ToList();
+
+            // Ordenar las localidades según la columna seleccionada
+            switch (newColumn.Name)
+            {
+                case "CodigoCol":
+                    FormasPago.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Codigo.CompareTo(t2.Codigo) : t2.Codigo.CompareTo(t1.Codigo));
+                    break;
+                case "FormaCol":
+                    FormasPago.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Forma.CompareTo(t2.Forma) : t2.Forma.CompareTo(t1.Forma));
+                    break;
+            }
+
+            // Cambiar la dirección de orden para la próxima vez
+            direction = (direction == ListSortDirection.Ascending) ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Actualizar la etiqueta de dirección de orden
+            FormaPagoGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
+
+            // Asignar los datos ordenados al DataSource
+            bindingSource.DataSource = new BindingList<FormaPago>(FormasPago);
+
+            // Mostrar la dirección de orden en el encabezado de la columna
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
     }
 }

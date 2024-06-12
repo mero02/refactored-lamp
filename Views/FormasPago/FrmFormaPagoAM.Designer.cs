@@ -101,6 +101,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmFormaPagoAM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Deactivate += new System.EventHandler(this.FrmFormaPagoAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmFormaPagoAM_Load);
             this.groupBox1.ResumeLayout(false);

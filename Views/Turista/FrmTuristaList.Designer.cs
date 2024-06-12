@@ -42,10 +42,10 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(901, 356);
-            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CerrarBtn.Location = new System.Drawing.Point(676, 289);
+            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(72, 33);
+            this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
             this.CerrarBtn.TabIndex = 7;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
@@ -54,11 +54,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.TuristasGrd);
-            this.groupBox1.Location = new System.Drawing.Point(7, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(5, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1003, 327);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(752, 266);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -77,17 +77,17 @@
             this.Dni,
             this.Domicilio,
             this.Pais});
-            this.TuristasGrd.Location = new System.Drawing.Point(5, 21);
-            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TuristasGrd.Location = new System.Drawing.Point(4, 17);
+            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TuristasGrd.MultiSelect = false;
             this.TuristasGrd.Name = "TuristasGrd";
             this.TuristasGrd.ReadOnly = true;
             this.TuristasGrd.RowTemplate.Height = 24;
             this.TuristasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TuristasGrd.Size = new System.Drawing.Size(991, 292);
+            this.TuristasGrd.Size = new System.Drawing.Size(743, 237);
             this.TuristasGrd.TabIndex = 0;
             this.TuristasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TuristasGrd_ColumnHeaderMouseClick);
-            this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
+            this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
             this.TuristasGrd.DoubleClick += new System.EventHandler(this.TuristasGrd_DoubleClick);
             // 
             // Nombre
@@ -126,12 +126,12 @@
             // 
             // FrmTuristaList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 402);
+            this.ClientSize = new System.Drawing.Size(770, 327);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmTuristaList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

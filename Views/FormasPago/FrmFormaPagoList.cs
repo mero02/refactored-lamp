@@ -59,10 +59,19 @@ namespace TurApp.Views
 
         private void FormaPagoGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            for (int i = 0; i < this.FormaPagoGrd.Rows.Count; ++i)
+            this.FormaPagoGrd.DataBindingComplete -= FormaPagoGrd_DataBindingComplete;
+
+            try
             {
-                DataGridViewRow item = this.FormaPagoGrd.Rows[i];
-                item.Cells[1].Value = (item.DataBoundItem as FormaPago).Forma;
+                for (int i = 0; i < this.FormaPagoGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.FormaPagoGrd.Rows[i];
+                    item.Cells[1].Value = (item.DataBoundItem as FormaPago).Forma;
+                }
+            }
+            finally
+            {
+                this.FormaPagoGrd.DataBindingComplete += FormaPagoGrd_DataBindingComplete;
             }
         }
 

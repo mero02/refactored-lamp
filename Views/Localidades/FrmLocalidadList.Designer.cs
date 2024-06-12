@@ -43,7 +43,7 @@
             this.LocalidadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LocalidadCol,
             this.NombreCol});
-            this.LocalidadesGrd.Location = new System.Drawing.Point(11, 23);
+            this.LocalidadesGrd.Location = new System.Drawing.Point(35, 26);
             this.LocalidadesGrd.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadesGrd.MultiSelect = false;
             this.LocalidadesGrd.Name = "LocalidadesGrd";
@@ -51,7 +51,7 @@
             this.LocalidadesGrd.RowTemplate.Height = 24;
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocalidadesGrd.ShowEditingIcon = false;
-            this.LocalidadesGrd.Size = new System.Drawing.Size(294, 76);
+            this.LocalidadesGrd.Size = new System.Drawing.Size(295, 191);
             this.LocalidadesGrd.TabIndex = 8;
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
@@ -73,7 +73,7 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(126, 116);
+            this.CerrarBtn.Location = new System.Drawing.Point(148, 233);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 154);
+            this.ClientSize = new System.Drawing.Size(369, 286);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.LocalidadesGrd);
             this.Name = "FrmLocalidadList";

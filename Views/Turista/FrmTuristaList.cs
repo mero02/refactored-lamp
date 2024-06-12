@@ -50,7 +50,7 @@ namespace TurApp.Views
             this.Close();
         }
 
-        private void EspecialidadesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void TuristasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             for( int i=0;i<this.TuristasGrd.Rows.Count;++i)
             {
