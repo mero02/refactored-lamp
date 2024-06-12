@@ -233,8 +233,8 @@ namespace TurApp.Views
                     {
                         if (item.Tag.ToString() == prop.Name)
                         {
-                            //(item as ComboBox).SelectedIndex = (item as ComboBox).FindString(data.ToString());
-                            //(item as ComboBox).SelectedItem = data;
+                            (item as ComboBox).SelectedIndex = (item as ComboBox).FindString(data.ToString());
+                            (item as ComboBox).SelectedItem = data;
                             dynamic valor = (item as ComboBox).SelectedValue;
                             dynamic objVal = null;
                             if (valor is IImpleCodigo)
