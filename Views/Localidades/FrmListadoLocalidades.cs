@@ -83,14 +83,19 @@ namespace TurApp.Views
 
             string criterio = null;
 
+            if (this.NombreChk.Checked && this.NombreTxt != null)
+            {
+                criterio = String.Format("nombre = '{0}'", NombreTxt.Text);
+            }
+
             if (this.LocalidadChk.Checked && this.LocalidadCbo.SelectedIndex != -1)
             {
                 if (criterio != null)
                 {
-                    criterio += " and cod_Localidad = " + LocalidadCbo.SelectedValue;
+                    criterio += " and cod_postal = " + (LocalidadCbo.SelectedValue as Localidad).Codigo;
                 }
                 else
-                    criterio = "cod_Localidad = " + LocalidadCbo.SelectedValue;
+                    criterio = "cod_postal = " + (LocalidadCbo.SelectedValue as Localidad).Codigo;
             }
             this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
 

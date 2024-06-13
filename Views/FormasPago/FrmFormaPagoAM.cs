@@ -91,7 +91,7 @@ namespace TurApp.Views
                 FormaPago = new FormaPago();
                 operacionLog = "ALTA";
                 // cargar la info de la Turista antes de dar de alta.
-                FormaPago.Forma = FormaPagoTxt.Text;
+                //FormaPago.Forma = FormaPagoTxt.Text;
             }
 
             if (OperacionForm == FrmOperacion.frmModificacion)

@@ -80,6 +80,7 @@
             this.CodPosTxt.Name = "CodPosTxt";
             this.CodPosTxt.Size = new System.Drawing.Size(61, 20);
             this.CodPosTxt.TabIndex = 2;
+            this.CodPosTxt.Tag = "Codigo";
             this.CodPosTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodPosTxt_KeyPress);
             // 
             // NombreTxt
@@ -88,6 +89,7 @@
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(133, 20);
             this.NombreTxt.TabIndex = 4;
+            this.NombreTxt.Tag = "Nombre";
             this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
             // FrmLocalidadAM

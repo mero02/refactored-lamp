@@ -55,8 +55,8 @@
             this.FormaPagoTxt.MaxLength = 15;
             this.FormaPagoTxt.Name = "FormaPagoTxt";
             this.FormaPagoTxt.Size = new System.Drawing.Size(160, 20);
-            this.FormaPagoTxt.TabIndex = 0;
-            this.FormaPagoTxt.Tag = "FormaPago";
+            this.FormaPagoTxt.TabIndex = 1;
+            this.FormaPagoTxt.Tag = "Forma";
             // 
             // FormaPagoLbl
             // 
