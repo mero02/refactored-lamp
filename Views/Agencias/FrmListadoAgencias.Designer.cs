@@ -87,6 +87,7 @@
             this.AgenciasGrd.Size = new System.Drawing.Size(826, 366);
             this.AgenciasGrd.TabIndex = 4;
             this.AgenciasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgenciasGrd_CellContentClick);
+            this.AgenciasGrd.DoubleClick += new System.EventHandler(this.AgenciasGrd_DoubleClick);
             // 
             // NroAgenciaCol
             // 

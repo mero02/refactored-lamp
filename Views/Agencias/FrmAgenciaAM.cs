@@ -112,6 +112,13 @@ namespace TurApp.Views
             string operacionLog = "";
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;  
+
+            if (NombreTxt.Text == "")
+            {
+                MessageBox.Show("Por favor, ingresa un nombre.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Salir del evento si la validación falla
+            }
+            
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Agencia = new Agencia();

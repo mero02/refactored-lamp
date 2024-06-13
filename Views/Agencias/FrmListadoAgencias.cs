@@ -104,5 +104,12 @@ namespace TurApp.Views
                 MessageBox.Show("Error al exportar datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AgenciasGrd_DoubleClick(object sender, EventArgs e)
+        {
+            Agencia Agencia = (Agencia)this.AgenciasGrd.CurrentRow.DataBoundItem;
+            FrmAgenciaAM frm = new FrmAgenciaAM();
+            frm.ShowModificarAgencia(this, Agencia);
+        }
     }
 }
