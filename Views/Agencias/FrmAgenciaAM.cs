@@ -15,6 +15,8 @@ namespace TurApp.Views
     {
         public override event FormEvent DoCompleteOperationForm;
         private Agencia _Agencia_modif = null;
+        private string AgenciaLog = "";
+
         public FrmAgenciaAM()
         {
             InitializeComponent();
@@ -70,10 +72,12 @@ namespace TurApp.Views
         // Notificara al Invocador que recargue algun cambio de datos.
         public void ShowModificarAgencia(FormBase Invoker, Agencia Pac_modif)
         {
+            LocalidadCbo.Enabled = false;
             ShowInfoAgenciaInForm(Pac_modif, Invoker);
         }
         public void ShowModificarAgencia(Agencia Pac_modif)
         {
+            LocalidadCbo.Enabled = false;
             ShowInfoAgenciaInForm(Pac_modif, null);
         }
         private void CancelarBtn_Click(object sender, EventArgs e)
@@ -129,8 +133,8 @@ namespace TurApp.Views
             if (OperacionForm == FrmOperacion.frmModificacion)
             {
                 operacionLog = "MODIFICACION";
-                //Agencia = _Agencia_modif;
-                //detalleLog = "OBJ-Antes:" + AgenciaLog + " - OBJ-MOD";
+                Agencia = _Agencia_modif;
+                detalleLog = "OBJ-Antes:" + AgenciaLog + " - OBJ-MOD";
             }
             if (OperacionForm == FrmOperacion.frmConsulta)
             {
@@ -175,6 +179,11 @@ namespace TurApp.Views
             {
                 e.Handled = true;
             }            
+        }
+
+        private void Telefono2Txt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

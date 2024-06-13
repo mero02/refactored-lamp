@@ -60,6 +60,7 @@
             this.FiltroBtn.TabIndex = 3;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
+            this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
             // 
             // AgenciasGrd
             // 
@@ -87,6 +88,7 @@
             this.AgenciasGrd.Size = new System.Drawing.Size(826, 366);
             this.AgenciasGrd.TabIndex = 4;
             this.AgenciasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgenciasGrd_CellContentClick);
+            this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
             this.AgenciasGrd.DoubleClick += new System.EventHandler(this.AgenciasGrd_DoubleClick);
             // 
             // NroAgenciaCol
@@ -191,6 +193,7 @@
             this.NombreChk.TabIndex = 0;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
+            this.NombreChk.CheckedChanged += new System.EventHandler(this.NombreChk_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -216,7 +219,6 @@
             this.LocCbo.Size = new System.Drawing.Size(115, 21);
             this.LocCbo.TabIndex = 1;
             this.LocCbo.ValueMember = "Nombre";
-            this.LocCbo.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // LocChk
             // 
@@ -228,6 +230,7 @@
             this.LocChk.TabIndex = 0;
             this.LocChk.Text = "Localidad";
             this.LocChk.UseVisualStyleBackColor = true;
+            this.LocChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged);
             // 
             // ExportarBtn
             // 

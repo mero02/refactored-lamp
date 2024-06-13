@@ -28,21 +28,28 @@ namespace TurApp.Views
             LoadComboBox(Localidad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.LocCbo, addSeleccion: true);
 
             this.AgenciasGrd.AutoGenerateColumns = false;
-            this.AgenciasGrd.DataSource = Agencia.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+            var agencias = Agencia.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var agenciasBindingList = new BindingList<Agencia>(agencias);
+            var agenciasBindingSource = new BindingSource(agenciasBindingList, null);
+            this.AgenciasGrd.DataSource = agenciasBindingSource;
 
             this.ExportarBtn.Enabled = true;
+            this.AgenciasGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(AgenciasGrd_ColumnHeaderMouseClick);
         }
 
         private void AgenciasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
             {
-                rw.Cells[6].Value = (rw.DataBoundItem as Agencia).LocalidadObj.Nombre;
+                rw.Cells[1].Value = (rw.DataBoundItem as Agencia).Nombre;
             }
-
             foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
             {
-                rw.Cells[1].Value = (rw.DataBoundItem as Agencia).Nombre;
+                rw.Cells[6].Value = (rw.DataBoundItem as Agencia).LocalidadObj.Nombre;
+            }
+            foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
+            {
+                rw.Cells[0].Value = (rw.DataBoundItem as Agencia).Codigo;
             }
         }
 
@@ -110,6 +117,90 @@ namespace TurApp.Views
             Agencia Agencia = (Agencia)this.AgenciasGrd.CurrentRow.DataBoundItem;
             FrmAgenciaAM frm = new FrmAgenciaAM();
             frm.ShowModificarAgencia(this, Agencia);
+        }
+
+        private void AgenciasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string sortOrderGrid = "";
+
+            if (AgenciasGrd.Tag != null)
+                sortOrderGrid = AgenciasGrd.Tag.ToString();
+
+            DataGridViewColumn newColumn = AgenciasGrd.Columns[e.ColumnIndex];
+
+            // Determinar la dirección de orden
+            ListSortDirection direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Obtener los turistas desde el DataSource
+            var bindingSource = AgenciasGrd.DataSource as BindingSource;
+            if (bindingSource == null)
+            {
+                MessageBox.Show("DataSource is not a BindingSource.");
+                return;
+            }
+
+            var agencias = bindingSource.List.Cast<Agencia>().ToList();
+
+            // Ordenar las agencias según la columna seleccionada
+            switch (newColumn.Name)
+            {
+                case "NombreCol":
+                    agencias.Sort((a1, a2) => direction == ListSortDirection.Ascending ? a1.Nombre.CompareTo(a2.Nombre) : a2.Nombre.CompareTo(a1.Nombre));
+                    break;
+                case "NroAgenciaCol":
+                    agencias.Sort((a1, a2) => direction == ListSortDirection.Ascending ? a1.Codigo.CompareTo(a2.Codigo) : a2.Codigo.CompareTo(a1.Codigo));
+                    break;
+                case "LocCol":
+                    agencias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.LocalidadObj.Nombre.CompareTo(t2.LocalidadObj.Nombre) : t2.LocalidadObj.Nombre.CompareTo(t1.LocalidadObj.Nombre));
+                    break;
+                default:
+                    MessageBox.Show("Columna no manejada.");
+                    return;
+
+            }
+
+            // Actualizar la etiqueta de dirección de orden
+            AgenciasGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
+
+            // Asignar los datos ordenados al DataSource
+            bindingSource.DataSource = new BindingList<Agencia>(agencias);
+
+            // Mostrar la dirección de orden en el encabezado de la columna
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
+        }
+
+        private void FiltroBtn_Click(object sender, EventArgs e)
+        {
+            string criterio = null;
+
+
+            if (this.NombreChk.Checked && this.NombreTxt != null)
+            {
+                criterio = String.Format("nombre = '{0}'", NombreTxt.Text);
+            }
+
+            if (this.LocChk.Checked && this.LocCbo.SelectedIndex != -1)
+            {
+                if (criterio != null)
+                {
+                    criterio += " and codigo_postal = " + (LocCbo.SelectedValue as Localidad).Codigo;
+                }
+                else
+                    criterio = "codigo_postal = " + (LocCbo.SelectedValue as Localidad).Codigo;
+            }
+
+            this.AgenciasGrd.DataSource = Agencia.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+
+        }
+
+        private void LocalidadChk_CheckedChanged(object sender, EventArgs e)
+        {
+            this.LocCbo.Enabled = LocChk.Checked;
+        }
+
+        private void NombreChk_CheckedChanged(object sender, EventArgs e)
+        {
+            this.NombreTxt.Enabled = this.NombreChk.Checked;
         }
     }
 }

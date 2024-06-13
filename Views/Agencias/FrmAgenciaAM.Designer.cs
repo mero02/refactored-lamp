@@ -73,7 +73,7 @@
             this.CalleTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CalleTxt.Name = "CalleTxt";
             this.CalleTxt.Size = new System.Drawing.Size(192, 20);
-            this.CalleTxt.TabIndex = 3;
+            this.CalleTxt.TabIndex = 2;
             this.CalleTxt.Tag = "Calle";
             // 
             // label2
@@ -92,7 +92,7 @@
             this.NroTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NroTxt.Name = "NroTxt";
             this.NroTxt.Size = new System.Drawing.Size(94, 20);
-            this.NroTxt.TabIndex = 5;
+            this.NroTxt.TabIndex = 3;
             this.NroTxt.Tag = "Nro";
             // 
             // label3
@@ -111,7 +111,7 @@
             this.PisoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.PisoTxt.Name = "PisoTxt";
             this.PisoTxt.Size = new System.Drawing.Size(94, 20);
-            this.PisoTxt.TabIndex = 7;
+            this.PisoTxt.TabIndex = 4;
             this.PisoTxt.Tag = "Piso";
             // 
             // label4
@@ -143,7 +143,7 @@
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(174, 21);
-            this.LocalidadCbo.TabIndex = 9;
+            this.LocalidadCbo.TabIndex = 6;
             this.LocalidadCbo.Tag = "CodPostal";
             this.LocalidadCbo.ValueMember = "Codigo";
             // 
@@ -153,7 +153,7 @@
             this.Telefono1Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono1Txt.Name = "Telefono1Txt";
             this.Telefono1Txt.Size = new System.Drawing.Size(94, 20);
-            this.Telefono1Txt.TabIndex = 10;
+            this.Telefono1Txt.TabIndex = 7;
             this.Telefono1Txt.Tag = "Telefono1";
             // 
             // label6
@@ -172,7 +172,7 @@
             this.DptoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DptoTxt.Name = "DptoTxt";
             this.DptoTxt.Size = new System.Drawing.Size(94, 20);
-            this.DptoTxt.TabIndex = 8;
+            this.DptoTxt.TabIndex = 5;
             this.DptoTxt.Tag = "Dpto";
             this.DptoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DptoTxt_KeyPress);
             // 
@@ -192,8 +192,9 @@
             this.Telefono2Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono2Txt.Name = "Telefono2Txt";
             this.Telefono2Txt.Size = new System.Drawing.Size(94, 20);
-            this.Telefono2Txt.TabIndex = 11;
+            this.Telefono2Txt.TabIndex = 8;
             this.Telefono2Txt.Tag = "Telefono2";
+            this.Telefono2Txt.TextChanged += new System.EventHandler(this.Telefono2Txt_TextChanged);
             // 
             // label8
             // 
