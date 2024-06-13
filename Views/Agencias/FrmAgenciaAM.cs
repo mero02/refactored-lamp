@@ -132,7 +132,7 @@ namespace TurApp.Views
             // validar los campos
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
-            ReadDataFromForm(this, Agencia);            
+            ReadDataFromForm(this, Agencia,OperacionForm);            
             // intentar guardar en la Base de datos.
             try
             {

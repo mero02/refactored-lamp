@@ -116,7 +116,7 @@ namespace TurApp.Views
 
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
-            ReadDataFromForm(this, Turista);
+            ReadDataFromForm(this, Turista,OperacionForm);
             /*
             Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
             Turista.Nombre = NombreTxt.Text;            
@@ -155,10 +155,14 @@ namespace TurApp.Views
         // Notificara al Invocador que recargue algun cambio de datos.
         public void ShowModificarTurista(FormBase Invoker, Turista Tur_modif)
         {
+            DniTxt.Enabled = false;
+            PaisCbo.Enabled = false;
             ShowInfoTuristaInForm(Tur_modif, Invoker);
         }
         public void ShowModificarTurista(Turista Tur_modif)
         {
+            DniTxt.Enabled = false;
+            PaisCbo.Enabled = false;
             ShowInfoTuristaInForm(Tur_modif, null);
         }
         private void ShowInfoTuristaInForm(Turista Tur_modif, FormBase Invoker)

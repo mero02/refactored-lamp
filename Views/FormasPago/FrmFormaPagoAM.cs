@@ -107,7 +107,7 @@ namespace TurApp.Views
 
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
-            ReadDataFromForm(this, FormaPago);
+            ReadDataFromForm(this, FormaPago,OperacionForm);
             /*
             Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
             Turista.Nombre = NombreTxt.Text;            

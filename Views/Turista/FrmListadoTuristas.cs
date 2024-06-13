@@ -54,15 +54,22 @@ namespace TurApp.Views
         {
             string criterio = null;
 
+
+            if (this.NombreChk.Checked && this.ApellidoTxt != null)
+            {
+                criterio = String.Format("nombre = '{0}'", ApellidoTxt.Text);
+            }
+
             if (this.PaisChk.Checked && this.PaisCbo.SelectedIndex != -1)
             {
                 if (criterio != null)
                 {
-                    criterio += " and cod_pais = " + PaisCbo.SelectedValue;
+                    criterio += " and cod_pais = " + (PaisCbo.SelectedValue as Pais).Codigo;
                 }
                 else
-                    criterio = "cod_pais = " + PaisCbo.SelectedValue;
+                    criterio = "cod_pais = " + (PaisCbo.SelectedValue as Pais).Codigo;
             }
+
             this.TuristasGrd.DataSource = Turista.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
         }
 

@@ -215,7 +215,7 @@ namespace TurApp.Views
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
 
-            ReadDataFromForm(this, Paquete);
+            ReadDataFromForm(this, Paquete,OperacionForm);
 
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Paquete);
             // intentar guardar en la Base de datos.

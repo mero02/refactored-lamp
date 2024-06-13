@@ -157,7 +157,7 @@ namespace TurApp.Views
             }
 
 
-            ReadDataFromForm(this, Actividad);
+            ReadDataFromForm(this, Actividad,OperacionForm);
 
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Actividad);
 

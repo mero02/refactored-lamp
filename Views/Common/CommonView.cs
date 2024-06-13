@@ -181,18 +181,18 @@ namespace TurApp.Views
             }
         }
 
-        public static void ReadDataFromForm(FormBase frm, BaseClass obj)
+        public static void ReadDataFromForm(FormBase frm, BaseClass obj, FrmOperacion operacion)
         {
             var props = MetaDataClass.GetProps(obj.GetType());
 
             List<Control> ctls = new List<Control>();
             foreach (Control item in frm.Controls)
             {
-                if (item.GetType() == typeof(GroupBox))
+                if (item is GroupBox)
                 {
-                    foreach (Control itm in (item as GroupBox).Controls)
+                    foreach (Control itm in ((GroupBox)item).Controls)
                     {
-                        if (itm.Tag != null && itm.Tag.ToString() != "")
+                        if (itm.Tag != null && !string.IsNullOrEmpty(itm.Tag.ToString()))
                         {
                             ctls.Add(itm);
                         }
@@ -200,60 +200,57 @@ namespace TurApp.Views
                 }
                 else
                 {
-                    // verificar si posee la metadata asociativa con la clase.
-                    if (item.Tag != null && item.Tag.ToString() != "")
+                    if (item.Tag != null && !string.IsNullOrEmpty(item.Tag.ToString()))
                     {
                         ctls.Add(item);
                     }
                 }
             }
+
             foreach (var prop in props)
             {
-                dynamic data = "";
-                PropiedadAttribute propAt = (prop.GetCustomAttributes(typeof(PropiedadAttribute), true)[0] as PropiedadAttribute);
-                //data = prop.GetValue(obj, null);
+                dynamic data = prop.GetValue(obj, null);
+                PropiedadAttribute propAt = (PropiedadAttribute)prop.GetCustomAttributes(typeof(PropiedadAttribute), true)[0];
 
                 foreach (Control item in ctls)
                 {
-                    // Tipos de controles: comunes a setear.
-                    // TextBox
-                    // ComboBox
-                    // CheckBox
-                    // DatePicker
-                    // Verificar Conjunto de datos Mapeados
+                    if (item.Tag.ToString() == prop.Name)
+                    {
+                        if (item is TextBox)
+                        {
+                            string newValue = (item as TextBox).Text;
+                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data.ToString())))
+                            {
+                                prop.SetValue(obj, Convert.ChangeType(newValue, prop.PropertyType), null);
+                            }
+                        }
+                        else if (item is ComboBox && operacion == FrmOperacion.frmAlta)
+                        {
+                            var comboBox = (ComboBox)item;
+                            dynamic selectedValue = comboBox.SelectedValue;
+                            dynamic objVal = selectedValue is IImpleCodigo ? ((IImpleCodigo)selectedValue).Codigo : selectedValue;
 
-                    if (item.GetType() == typeof(TextBox))
-                    {
-                        if (item.Tag.ToString() == prop.Name)
-                        {
-                            prop.SetValue(obj, Convert.ChangeType((item as TextBox).Text, prop.PropertyType), null);
+                            if (operacion == FrmOperacion.frmAlta || (data != null && !objVal.Equals(data)))
+                            {
+                                prop.SetValue(obj, Convert.ChangeType(objVal, prop.PropertyType), null);
+                            }
                         }
-                    }
-                    if (item.GetType() == typeof(ComboBox))
-                    {
-                        if (item.Tag.ToString() == prop.Name)
+                        else if (item is DateTimePicker)
                         {
-                            (item as ComboBox).SelectedIndex = (item as ComboBox).FindString(data.ToString());
-                            (item as ComboBox).SelectedItem = data;
-                            dynamic valor = (item as ComboBox).SelectedValue;
-                            dynamic objVal = null;
-                            if (valor is IImpleCodigo)
-                                objVal = (valor as IImpleCodigo).Codigo;
-                            else
-                                objVal = valor;
-                            // verificar si es instancia o el valor---
-                            prop.SetValue(obj, Convert.ChangeType(objVal, prop.PropertyType), null);
+                            DateTime newValue = (item as DateTimePicker).Value;
+                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
+                            {
+                                prop.SetValue(obj, newValue, null);
+                            }
                         }
-                    }
-                    if (item.GetType() == typeof(DateTimePicker))
-                    {
-                        if (item.Tag.ToString() == prop.Name)
-                            prop.SetValue(obj, (item as DateTimePicker).Value, null); 
-                    }
-                    if (item.GetType() == typeof(CheckBox))
-                    {
-                        if (item.Tag.ToString() == prop.Name)
-                            prop.SetValue(obj, (item as CheckBox).Checked, null);                             
+                        else if (item is CheckBox)
+                        {
+                            bool newValue = (item as CheckBox).Checked;
+                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
+                            {
+                                prop.SetValue(obj, newValue, null);
+                            }
+                        }
                     }
                 }
             }
