@@ -255,6 +255,12 @@ namespace TurApp.Views
             frm.ShowBuscar();
         }
 
+        //Preguntar como agregar permisos a usuarios
+        /*private void ListadoDestinoMnu_Click(object sender, EventArgs e)
+        {
+            FrmListadoDestinos frmListPac = new FrmListadoDestinos();
+            frmListPac.Show();
+        }*/
        
     }
 }
