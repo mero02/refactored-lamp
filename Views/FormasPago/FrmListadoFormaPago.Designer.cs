@@ -120,6 +120,7 @@
             this.FiltroBtn.TabIndex = 8;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
+            this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
             // 
             // ExportarBtn
             // 

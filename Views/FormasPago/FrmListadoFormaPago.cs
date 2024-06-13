@@ -45,7 +45,14 @@ namespace TurApp.Views
 
         private void FiltroBtn_Click(object sender, EventArgs e)
         {
-            //Implementar
+            string criterio = null;
+
+            if (this.FormaPagoChk.Checked && this.FormaPagoChk != null)
+            {
+                criterio = String.Format("forma = '{0}'", FormaPagoTxt.Text);
+            }
+
+            this.FormaPagoGrd.DataSource = FormaPago.FindAllStatic(criterio, (p1, p2) => (p1.Forma).CompareTo(p2.Forma));
         }
 
         private void FormaPagoGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
