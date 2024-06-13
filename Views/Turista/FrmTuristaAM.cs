@@ -59,6 +59,7 @@ namespace TurApp.Views
                 LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
+                    MisFactBtn.Enabled = false;
                     this.Text = "Ingreso de nuevo Turista...";
                     this.PaisCbo.SelectedIndex = -1;
                 }
@@ -93,14 +94,11 @@ namespace TurApp.Views
                 DniTxt.Focus();
                 return;
             }
-            // validar...
-            //.....
-            //....
+
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Turista = new Turista();
                 operacionLog = "ALTA";
-                // cargar la info de la Turista antes de dar de alta.
             }
             
             if (OperacionForm == FrmOperacion.frmModificacion)
@@ -117,14 +115,7 @@ namespace TurApp.Views
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
             ReadDataFromForm(this, Turista,OperacionForm);
-            /*
-            Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
-            Turista.Nombre = NombreTxt.Text;            
-            Turista.Domicilio = DomicilioTxt.Text;
-            Turista.CodPais= Convert.ToInt32(PaisCbo.SelectedValue);
-            Turista.Observaciones = ObservacionesTxt.Text;
-            Turista.Telefono = TelefonoTxt.Text;
-             * */
+
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Turista);
             // intentar guardar en la Base de datos.
             try
@@ -205,7 +196,11 @@ namespace TurApp.Views
 
         private void MisFactBtn_Click(object sender, EventArgs e)
         {
-            // debe mostrar un formulario con un listado de las facturas que se le han hecho al turista
+            var lista = FacturaTurista.FindAllStatic(null, (p1, p2) => (p1.DniTurista).CompareTo(p2.DniTurista));
+            MainView.Instance.Cursor = Cursors.Default;
+            FrmListadoFacturas frm = new FrmListadoFacturas();
+            string dni = DniTxt.Text;
+            frm.ShowListadoFacturas(lista);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
