@@ -271,6 +271,7 @@
             this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarTipoPaquete_mnu.Tag = "ModificaTipoPaquete,ConsultaTipoPaquete";
             this.BuscarTipoPaquete_mnu.Text = "Buscar";
+            this.BuscarTipoPaquete_mnu.Click += new System.EventHandler(this.BuscarTipoPaquete_mnu_Click);
             // 
             // FormaPagoToolStripMenuItem
             // 
