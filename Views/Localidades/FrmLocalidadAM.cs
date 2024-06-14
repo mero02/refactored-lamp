@@ -100,8 +100,6 @@ namespace TurApp.Views
                 Localidad = new Localidad();
                 operacionLog = "ALTA";
                 // cargar la info de la Turista antes de dar de alta.
-                Localidad.Codigo = int.Parse(CodPosTxt.Text);
-                Localidad.Nombre = NombreTxt.Text;
             }
 
             if (OperacionForm == FrmOperacion.frmModificacion)
@@ -118,14 +116,7 @@ namespace TurApp.Views
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
             ReadDataFromForm(this, Localidad,OperacionForm);
-            /*
-            Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
-            Turista.Nombre = NombreTxt.Text;            
-            Turista.Domicilio = DomicilioTxt.Text;
-            Turista.CodPais= Convert.ToInt32(PaisCbo.SelectedValue);
-            Turista.Observaciones = ObservacionesTxt.Text;
-            Turista.Telefono = TelefonoTxt.Text;
-             * */
+
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Localidad);
             // intentar guardar en la Base de datos.
             try
@@ -157,10 +148,12 @@ namespace TurApp.Views
 
         public void ShowModificarLocalidad(FormBase Invoker, Localidad Loc_modif)
         {
+            CodPosTxt.Enabled = false;
             ShowInfoLocalidadInForm(Loc_modif, Invoker);
         }
         public void ShowModificarLocalidad(Localidad Loc_modif)
         {
+            CodPosTxt.Enabled = false;
             ShowInfoLocalidadInForm(Loc_modif, null);
         }
         private void ShowInfoLocalidadInForm(Localidad Loc_modif, FormBase Invoker)

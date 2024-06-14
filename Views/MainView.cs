@@ -255,6 +255,12 @@ namespace TurApp.Views
             frm.ShowBuscar();
         }
 
+        private void TipoPaqueteAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmTipoPaqueteAM frm = new FrmTipoPaqueteAM();
+            frm.ShowIngresoTipoPaquete();
+        }
+
         //Preguntar como agregar permisos a usuarios
         /*private void ListadoDestinoMnu_Click(object sender, EventArgs e)
         {
