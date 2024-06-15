@@ -53,5 +53,19 @@ namespace TurApp.db
         {
             return ORMDB<Destino>.FindbyKey(key);
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Destino other = (Destino)obj;
+            return Codigo == other.Codigo;
+        }
+
+        public override int GetHashCode()
+        {
+            return Codigo.GetHashCode();
+        }
     }
 }

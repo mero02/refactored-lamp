@@ -27,16 +27,16 @@ namespace TurApp.Views
         {
             this.DestinosGrd.AutoGenerateColumns = false;
             var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
-            var Destinos = new List<Destino>();
+            var DestinosSet = new HashSet<Destino>();
             foreach (Paquete paquete in Paquetes)
             {
                 var destino = Destino.FindByKeyStatic(paquete.CodDestino);
-
-                if (destino != null) {
-                    Destinos.Add(destino);
+                if (destino != null)
+                {
+                    DestinosSet.Add(destino);
                 }
             }
-            Destinos = Destinos.OrderBy(d => d.Codigo).ToList();
+            var Destinos = DestinosSet.OrderBy(d => d.Codigo).ToList();
             var DestinosBindingList = new BindingList<Destino>(Destinos);
             var DestinosBindingSource = new BindingSource(DestinosBindingList, null);
             this.DestinosGrd.DataSource = DestinosBindingSource;

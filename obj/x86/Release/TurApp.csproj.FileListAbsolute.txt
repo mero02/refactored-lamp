@@ -101,3 +101,11 @@ C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadBusq.resources
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadList.resources
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoDestinos.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteAM.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteList.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoFacturas.resources
