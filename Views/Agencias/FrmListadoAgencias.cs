@@ -39,17 +39,20 @@ namespace TurApp.Views
 
         private void AgenciasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
+
+            this.AgenciasGrd.DataBindingComplete -= AgenciasGrd_DataBindingComplete;
+
+            try
             {
-                rw.Cells[1].Value = (rw.DataBoundItem as Agencia).Nombre;
+                for (int i = 0; i < this.AgenciasGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.AgenciasGrd.Rows[i];
+                    item.Cells[0].Value = (item.DataBoundItem as Agencia).Codigo;
+                }
             }
-            foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
+            finally
             {
-                rw.Cells[6].Value = (rw.DataBoundItem as Agencia).LocalidadObj.Nombre;
-            }
-            foreach (DataGridViewRow rw in this.AgenciasGrd.Rows)
-            {
-                rw.Cells[0].Value = (rw.DataBoundItem as Agencia).Codigo;
+                this.AgenciasGrd.DataBindingComplete += AgenciasGrd_DataBindingComplete;
             }
         }
 

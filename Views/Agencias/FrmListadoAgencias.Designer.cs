@@ -89,6 +89,7 @@
             this.AgenciasGrd.TabIndex = 4;
             this.AgenciasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgenciasGrd_CellContentClick);
             this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
+            this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
             this.AgenciasGrd.DoubleClick += new System.EventHandler(this.AgenciasGrd_DoubleClick);
             // 
             // NroAgenciaCol
