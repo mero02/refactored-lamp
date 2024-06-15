@@ -85,14 +85,20 @@ namespace TurApp.Views
 
         private void DestinosGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            foreach (DataGridViewRow rw in this.DestinosGrd.Rows)
-            {
-                rw.Cells[2].Value = (rw.DataBoundItem as Destino).Descripcion;
-            }
 
-            foreach (DataGridViewRow rw in this.DestinosGrd.Rows)
+            this.DestinosGrd.DataBindingComplete -= DestinosGrd_DataBindingComplete;
+
+            try
             {
-                rw.Cells[1].Value = (rw.DataBoundItem as Destino).Nombre;
+                for (int i = 0; i < this.DestinosGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.DestinosGrd.Rows[i];
+                    item.Cells[1].Value = (item.DataBoundItem as Destino).Nombre;
+                }
+            }
+            finally
+            {
+                this.DestinosGrd.DataBindingComplete += DestinosGrd_DataBindingComplete;
             }
         }
 
