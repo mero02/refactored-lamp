@@ -26,17 +26,8 @@ namespace TurApp.Views
         private void FrmListadoDestinos_Load(object sender, EventArgs e)
         {
             this.DestinosGrd.AutoGenerateColumns = false;
-            var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
-            var DestinosSet = new HashSet<Destino>();
-            foreach (Paquete paquete in Paquetes)
-            {
-                var destino = Destino.FindByKeyStatic(paquete.CodDestino);
-                if (destino != null)
-                {
-                    DestinosSet.Add(destino);
-                }
-            }
-            var Destinos = DestinosSet.OrderBy(d => d.Codigo).ToList();
+            var destinos = Destino.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
+            var Destinos = filtrarPaquetesPorDestino(destinos);
             var DestinosBindingList = new BindingList<Destino>(Destinos);
             var DestinosBindingSource = new BindingSource(DestinosBindingList, null);
             this.DestinosGrd.DataSource = DestinosBindingSource;
@@ -45,6 +36,26 @@ namespace TurApp.Views
 
             this.DestinosGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(DestinosGrd_ColumnHeaderMouseClick);
 
+        }
+
+        private List<Destino> filtrarPaquetesPorDestino( List<Destino> Destinos)
+        {
+            var DestinosSet = new HashSet<Destino>();
+            var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
+
+            foreach (Destino destino in Destinos)
+            {
+                var codDestino = destino.Codigo;
+                foreach (Paquete paquete in Paquetes)
+                {
+                    if (codDestino == paquete.CodDestino)
+                    {
+                        DestinosSet.Add(destino);
+                    }
+                }
+            }
+
+            return DestinosSet.OrderBy(d => d.Codigo).ToList();
         }
 
         private void DestinosGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -121,13 +132,12 @@ namespace TurApp.Views
         {
             string criterio = null;
 
-
             if (this.NombreChk.Checked && this.NombreTxt != null)
             {
                 criterio = String.Format("nombre = '{0}'", NombreTxt.Text);
             }
-
-            this.DestinosGrd.DataSource = Destino.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+            var destinos = Destino.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
+            this.DestinosGrd.DataSource = filtrarPaquetesPorDestino(destinos);
         }
 
         private void ExportarBtn_Click(object sender, EventArgs e)
