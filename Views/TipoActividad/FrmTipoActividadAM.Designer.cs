@@ -1,4 +1,4 @@
-﻿namespace TurApp.Views.TipoActividad
+﻿namespace TurApp.Views
 {
     partial class FrmTipoActividadAM
     {
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmTipoActividadAM
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "FrmTipoActividadAM";
             this.Text = "FrmTipoActividadAM";
+            this.Load += new System.EventHandler(this.FrmTipoActividadAM_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

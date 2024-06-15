@@ -420,6 +420,18 @@
     <EmbeddedResource Include="Views\Paquete\FrmPaquetAM.resx">
       <DependentUpon>FrmPaquetAM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoActividad\FrmListadoTipoActividad.resx">
+      <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoActividad\FrmTipoActividadAM.resx">
+      <DependentUpon>FrmTipoActividadAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoActividad\FrmTipoActividadBusq.resx">
+      <DependentUpon>FrmTipoActividadBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoActividad\FrmTipoActividadList.resx">
+      <DependentUpon>FrmTipoActividadList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoPaquete\FrmListadoTipoPaquete.resx">
       <DependentUpon>FrmListadoTipoPaquete.cs</DependentUpon>
     </EmbeddedResource>

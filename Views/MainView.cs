@@ -280,6 +280,12 @@ namespace TurApp.Views
             FrmFacturaAM frm = new FrmFacturaAM();
             frm.ShowIngresoFactura();
         }
+
+         private void BuscarTipoAct_mnu_Click(object sender, EventArgs e)
+         {
+             FrmTipoActividadBusq frm = new FrmTipoActividadBusq();
+             frm.ShowBuscar();
+         }
          
 
     }
