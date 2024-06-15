@@ -41,9 +41,14 @@ namespace TurApp.Views
 
         private void FrmPaquetAM_Load(object sender, EventArgs e)
         {
+            LoadComboBox(TipoPaquete.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.TipoPaqueteCbo, addSeleccion: true);
+            LoadComboBox(Agencia.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.AgenciaCbo, addSeleccion: true);
+            //LoadComboBox(Turista.FindAllStatic(null, (l1, l2) => l1.NroDocumento.CompareTo(l2.NroDocumento)), this.DniTuristaCbo, addSeleccion: true);
+            LoadComboBox(Destino.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.CodDestinoCbo, addSeleccion: true);
 
+            this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
         }
-
+       
         public override FrmOperacion OperacionForm
         {
             get
@@ -69,66 +74,12 @@ namespace TurApp.Views
             }
         }
 
-        private void CodigoLbl_Click(object sender, EventArgs e)
+        private void CancelarBtn_Click(object sender, EventArgs e)
         {
+            this.Close();
 
         }
-
-        private void CodigoTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodTipoPaqueteLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodTipoPaqueteTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodAgenciaLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodAgenciaTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NivelLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NivelTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DniTuristaLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DniTuristaTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodDestinoLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodDestinoTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void GuardarBtn_Click(object sender, EventArgs e)
         {
             Paquete Paquete = null;
@@ -137,67 +88,11 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            if (CodigoTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese Codigo del paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
-                return;
-            }
-
-            if (CodTipoPaqueteTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese codigo tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTipoPaqueteTxt.Focus();
-                return;
-            }
-
-            if (CodAgenciaTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese codigo agencia", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodAgenciaTxt.Focus();
-                return;
-            }
-
-            if (NivelTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese el nivel", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NivelTxt.Focus();
-                return;
-            }
-
-            if (FechaTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese la fecha", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                FechaTxt.Focus();
-                return;
-            }
-
-            if (DniTuristaTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese el dni del turisto", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DniTuristaTxt.Focus();
-                return;
-            }
-
-            if (CodDestinoTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese el Codigo de destino", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodDestinoTxt.Focus();
-                return;
-            }
-
+            
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Paquete = new Paquete();
                 operacionLog = "ALTA";
-                // cargar la info de la Turista antes de dar de alta.
-                /*Paquete.Codigo = int.Parse(CodigoTxt.Text);
-                Paquete.CodTipoPaquete = int.Parse(CodTipoPaqueteTxt.Text);
-                Paquete.CodAgencia = int.Parse(CodAgenciaTxt.Text);
-                Paquete.Nivel = NivelTxt.Text;
-                Paquete.Fecha = FechaTxt.Text;
-                Paquete.DniTurista = DniTuristaTxt.Text;
-                Paquete.CodDestino = CodDestinoTxt.Text;*/
             }
 
             if (OperacionForm == FrmOperacion.frmModificacion)
@@ -246,12 +141,13 @@ namespace TurApp.Views
             }
             MainView.Instance.Cursor = Cursors.Default;
             this.Close();
-
         }
+
         public void ShowModificarPaquete(FormBase Invoker, Paquete Paq_modif)
         {
             ShowInfoPaqueteInForm(Paq_modif, Invoker);
         }
+
         public void ShowModificarPaquete(Paquete Paq_modif)
         {
             ShowInfoPaqueteInForm(Paq_modif, null);
@@ -283,45 +179,26 @@ namespace TurApp.Views
             this.ShowDialog();
         }
 
-        private void CodigoTxt_KeyPress(object sender, KeyPressEventArgs e)
+        private void FrmPaqueteAm_Deactivate(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.Default;
+        }
+
+
+        private void FechaTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
         }
-
-        private void FrmPaqueteAm_Deactivate(object sender, EventArgs e)
+       
+        private void NivelTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            MainView.Instance.Cursor = Cursors.Default;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-'))
+            {
+                e.Handled = true;
+            }
         }
-
-      
-        private void CancelarBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
-        private void FechaLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FechaTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        internal void ShowIngresoPaquete(MainView mainView)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

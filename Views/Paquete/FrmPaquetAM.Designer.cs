@@ -28,61 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CodigoLbl = new System.Windows.Forms.Label();
-            this.CodigoTxt = new System.Windows.Forms.TextBox();
-            this.CodTipoPaqueteLbl = new System.Windows.Forms.Label();
-            this.CodTipoPaqueteTxt = new System.Windows.Forms.TextBox();
+            this.CodTipoPaqueteCbo = new System.Windows.Forms.Label();
             this.CodAgenciaLbl = new System.Windows.Forms.Label();
-            this.CodAgenciaTxt = new System.Windows.Forms.TextBox();
             this.NivelLbl = new System.Windows.Forms.Label();
             this.NivelTxt = new System.Windows.Forms.TextBox();
             this.DniTuristaLbl = new System.Windows.Forms.Label();
-            this.DniTuristaTxt = new System.Windows.Forms.TextBox();
             this.CodDestinoLbl = new System.Windows.Forms.Label();
-            this.CodDestinoTxt = new System.Windows.Forms.TextBox();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.FechaLbl = new System.Windows.Forms.Label();
             this.FechaTxt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CodDestinoCbo = new System.Windows.Forms.ComboBox();
+            this.DniTuristaCbo = new System.Windows.Forms.ComboBox();
+            this.AgenciaCbo = new System.Windows.Forms.ComboBox();
+            this.TipoPaqueteCbo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CodigoLbl
+            // CodTipoPaqueteCbo
             // 
-            this.CodigoLbl.AutoSize = true;
-            this.CodigoLbl.Location = new System.Drawing.Point(2, 9);
-            this.CodigoLbl.Name = "CodigoLbl";
-            this.CodigoLbl.Size = new System.Drawing.Size(43, 13);
-            this.CodigoLbl.TabIndex = 0;
-            this.CodigoLbl.Text = "Codigo:";
-            this.CodigoLbl.Click += new System.EventHandler(this.CodigoLbl_Click);
-            // 
-            // CodigoTxt
-            // 
-            this.CodigoTxt.Location = new System.Drawing.Point(108, 7);
-            this.CodigoTxt.Name = "CodigoTxt";
-            this.CodigoTxt.Size = new System.Drawing.Size(100, 20);
-            this.CodigoTxt.TabIndex = 1;
-            this.CodigoTxt.TextChanged += new System.EventHandler(this.CodigoTxt_TextChanged);
-            // 
-            // CodTipoPaqueteLbl
-            // 
-            this.CodTipoPaqueteLbl.AutoSize = true;
-            this.CodTipoPaqueteLbl.Location = new System.Drawing.Point(2, 41);
-            this.CodTipoPaqueteLbl.Name = "CodTipoPaqueteLbl";
-            this.CodTipoPaqueteLbl.Size = new System.Drawing.Size(99, 13);
-            this.CodTipoPaqueteLbl.TabIndex = 2;
-            this.CodTipoPaqueteLbl.Text = "Cod. Tipo Paquete:";
-            this.CodTipoPaqueteLbl.Click += new System.EventHandler(this.CodTipoPaqueteLbl_Click);
-            // 
-            // CodTipoPaqueteTxt
-            // 
-            this.CodTipoPaqueteTxt.Location = new System.Drawing.Point(108, 39);
-            this.CodTipoPaqueteTxt.Name = "CodTipoPaqueteTxt";
-            this.CodTipoPaqueteTxt.Size = new System.Drawing.Size(100, 20);
-            this.CodTipoPaqueteTxt.TabIndex = 3;
-            this.CodTipoPaqueteTxt.TextChanged += new System.EventHandler(this.CodTipoPaqueteTxt_TextChanged);
+            this.CodTipoPaqueteCbo.AutoSize = true;
+            this.CodTipoPaqueteCbo.Location = new System.Drawing.Point(2, 41);
+            this.CodTipoPaqueteCbo.Name = "CodTipoPaqueteCbo";
+            this.CodTipoPaqueteCbo.Size = new System.Drawing.Size(99, 13);
+            this.CodTipoPaqueteCbo.TabIndex = 1;
+            this.CodTipoPaqueteCbo.Text = "&Cod. Tipo Paquete:";
             // 
             // CodAgenciaLbl
             // 
@@ -90,17 +61,8 @@
             this.CodAgenciaLbl.Location = new System.Drawing.Point(2, 73);
             this.CodAgenciaLbl.Name = "CodAgenciaLbl";
             this.CodAgenciaLbl.Size = new System.Drawing.Size(74, 13);
-            this.CodAgenciaLbl.TabIndex = 4;
+            this.CodAgenciaLbl.TabIndex = 3;
             this.CodAgenciaLbl.Text = "Cod. Agencia:";
-            this.CodAgenciaLbl.Click += new System.EventHandler(this.CodAgenciaLbl_Click);
-            // 
-            // CodAgenciaTxt
-            // 
-            this.CodAgenciaTxt.Location = new System.Drawing.Point(108, 70);
-            this.CodAgenciaTxt.Name = "CodAgenciaTxt";
-            this.CodAgenciaTxt.Size = new System.Drawing.Size(100, 20);
-            this.CodAgenciaTxt.TabIndex = 5;
-            this.CodAgenciaTxt.TextChanged += new System.EventHandler(this.CodAgenciaTxt_TextChanged);
             // 
             // NivelLbl
             // 
@@ -108,17 +70,16 @@
             this.NivelLbl.Location = new System.Drawing.Point(2, 105);
             this.NivelLbl.Name = "NivelLbl";
             this.NivelLbl.Size = new System.Drawing.Size(34, 13);
-            this.NivelLbl.TabIndex = 6;
+            this.NivelLbl.TabIndex = 5;
             this.NivelLbl.Text = "Nivel:";
-            this.NivelLbl.Click += new System.EventHandler(this.NivelLbl_Click);
             // 
             // NivelTxt
             // 
             this.NivelTxt.Location = new System.Drawing.Point(108, 101);
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(100, 20);
-            this.NivelTxt.TabIndex = 7;
-            this.NivelTxt.TextChanged += new System.EventHandler(this.NivelTxt_TextChanged);
+            this.NivelTxt.TabIndex = 6;
+            this.NivelTxt.Tag = "Nivel";
             // 
             // DniTuristaLbl
             // 
@@ -126,17 +87,8 @@
             this.DniTuristaLbl.Location = new System.Drawing.Point(2, 164);
             this.DniTuristaLbl.Name = "DniTuristaLbl";
             this.DniTuristaLbl.Size = new System.Drawing.Size(58, 13);
-            this.DniTuristaLbl.TabIndex = 8;
+            this.DniTuristaLbl.TabIndex = 9;
             this.DniTuristaLbl.Text = "DniTurista:";
-            this.DniTuristaLbl.Click += new System.EventHandler(this.DniTuristaLbl_Click);
-            // 
-            // DniTuristaTxt
-            // 
-            this.DniTuristaTxt.Location = new System.Drawing.Point(108, 158);
-            this.DniTuristaTxt.Name = "DniTuristaTxt";
-            this.DniTuristaTxt.Size = new System.Drawing.Size(100, 20);
-            this.DniTuristaTxt.TabIndex = 9;
-            this.DniTuristaTxt.TextChanged += new System.EventHandler(this.DniTuristaTxt_TextChanged);
             // 
             // CodDestinoLbl
             // 
@@ -144,17 +96,8 @@
             this.CodDestinoLbl.Location = new System.Drawing.Point(2, 193);
             this.CodDestinoLbl.Name = "CodDestinoLbl";
             this.CodDestinoLbl.Size = new System.Drawing.Size(71, 13);
-            this.CodDestinoLbl.TabIndex = 10;
+            this.CodDestinoLbl.TabIndex = 11;
             this.CodDestinoLbl.Text = "Cod. Destino:";
-            this.CodDestinoLbl.Click += new System.EventHandler(this.CodDestinoLbl_Click);
-            // 
-            // CodDestinoTxt
-            // 
-            this.CodDestinoTxt.Location = new System.Drawing.Point(108, 190);
-            this.CodDestinoTxt.Name = "CodDestinoTxt";
-            this.CodDestinoTxt.Size = new System.Drawing.Size(100, 20);
-            this.CodDestinoTxt.TabIndex = 11;
-            this.CodDestinoTxt.TextChanged += new System.EventHandler(this.CodDestinoTxt_TextChanged);
             // 
             // CancelarBtn
             // 
@@ -162,7 +105,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 15;
+            this.CancelarBtn.TabIndex = 14;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -173,7 +116,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 14;
+            this.GuardarBtn.TabIndex = 13;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -184,34 +127,31 @@
             this.FechaLbl.Location = new System.Drawing.Point(2, 134);
             this.FechaLbl.Name = "FechaLbl";
             this.FechaLbl.Size = new System.Drawing.Size(40, 13);
-            this.FechaLbl.TabIndex = 16;
+            this.FechaLbl.TabIndex = 7;
             this.FechaLbl.Text = "Fecha:";
-            this.FechaLbl.Click += new System.EventHandler(this.FechaLbl_Click);
             // 
             // FechaTxt
             // 
             this.FechaTxt.Location = new System.Drawing.Point(108, 130);
             this.FechaTxt.Name = "FechaTxt";
             this.FechaTxt.Size = new System.Drawing.Size(100, 20);
-            this.FechaTxt.TabIndex = 17;
-            this.FechaTxt.TextChanged += new System.EventHandler(this.FechaTxt_TextChanged);
+            this.FechaTxt.TabIndex = 8;
+            this.FechaTxt.Tag = "Fecha";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CodDestinoCbo);
+            this.groupBox1.Controls.Add(this.DniTuristaCbo);
+            this.groupBox1.Controls.Add(this.AgenciaCbo);
+            this.groupBox1.Controls.Add(this.TipoPaqueteCbo);
             this.groupBox1.Controls.Add(this.FechaTxt);
             this.groupBox1.Controls.Add(this.FechaLbl);
-            this.groupBox1.Controls.Add(this.CodDestinoTxt);
             this.groupBox1.Controls.Add(this.CodDestinoLbl);
-            this.groupBox1.Controls.Add(this.DniTuristaTxt);
             this.groupBox1.Controls.Add(this.DniTuristaLbl);
             this.groupBox1.Controls.Add(this.NivelTxt);
             this.groupBox1.Controls.Add(this.NivelLbl);
-            this.groupBox1.Controls.Add(this.CodAgenciaTxt);
             this.groupBox1.Controls.Add(this.CodAgenciaLbl);
-            this.groupBox1.Controls.Add(this.CodTipoPaqueteTxt);
-            this.groupBox1.Controls.Add(this.CodTipoPaqueteLbl);
-            this.groupBox1.Controls.Add(this.CodigoTxt);
-            this.groupBox1.Controls.Add(this.CodigoLbl);
+            this.groupBox1.Controls.Add(this.CodTipoPaqueteCbo);
             this.groupBox1.Location = new System.Drawing.Point(9, 1);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -219,19 +159,74 @@
             this.groupBox1.Size = new System.Drawing.Size(270, 245);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // CodDestinoCbo
+            // 
+            this.CodDestinoCbo.DisplayMember = "Nombre";
+            this.CodDestinoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CodDestinoCbo.FormattingEnabled = true;
+            this.CodDestinoCbo.Location = new System.Drawing.Point(108, 190);
+            this.CodDestinoCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.CodDestinoCbo.Name = "CodDestinoCbo";
+            this.CodDestinoCbo.Size = new System.Drawing.Size(102, 21);
+            this.CodDestinoCbo.TabIndex = 12;
+            this.CodDestinoCbo.Tag = "CodDestino";
+            this.CodDestinoCbo.ValueMember = "Id";
+            // 
+            // DniTuristaCbo
+            // 
+            this.DniTuristaCbo.DisplayMember = "NroDocumento";
+            this.DniTuristaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DniTuristaCbo.FormattingEnabled = true;
+            this.DniTuristaCbo.Location = new System.Drawing.Point(108, 160);
+            this.DniTuristaCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.DniTuristaCbo.Name = "DniTuristaCbo";
+            this.DniTuristaCbo.Size = new System.Drawing.Size(102, 21);
+            this.DniTuristaCbo.TabIndex = 10;
+            this.DniTuristaCbo.Tag = "DniTurista";
+            this.DniTuristaCbo.ValueMember = "Id";
+            // 
+            // AgenciaCbo
+            // 
+            this.AgenciaCbo.DisplayMember = "Nombre";
+            this.AgenciaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AgenciaCbo.FormattingEnabled = true;
+            this.AgenciaCbo.Location = new System.Drawing.Point(106, 65);
+            this.AgenciaCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.AgenciaCbo.Name = "AgenciaCbo";
+            this.AgenciaCbo.Size = new System.Drawing.Size(102, 21);
+            this.AgenciaCbo.TabIndex = 4;
+            this.AgenciaCbo.Tag = "CodAgencia";
+            this.AgenciaCbo.ValueMember = "Id";
+            // 
+            // TipoPaqueteCbo
+            // 
+            this.TipoPaqueteCbo.DisplayMember = "Nombre";
+            this.TipoPaqueteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoPaqueteCbo.FormattingEnabled = true;
+            this.TipoPaqueteCbo.Location = new System.Drawing.Point(106, 38);
+            this.TipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.TipoPaqueteCbo.Name = "TipoPaqueteCbo";
+            this.TipoPaqueteCbo.Size = new System.Drawing.Size(102, 21);
+            this.TipoPaqueteCbo.TabIndex = 2;
+            this.TipoPaqueteCbo.Tag = "CodTipoPaquete";
+            this.TipoPaqueteCbo.ValueMember = "Id";
+            
             // 
             // FrmPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 288);
+            this.ClientSize = new System.Drawing.Size(291, 280);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Location = new System.Drawing.Point(9, 1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPaqueteAM";
-            this.Text = "FrmPaquetAM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso de Paquete";
             this.Load += new System.EventHandler(this.FrmPaquetAM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -241,22 +236,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label CodigoLbl;
-        private System.Windows.Forms.TextBox CodigoTxt;
-        private System.Windows.Forms.Label CodTipoPaqueteLbl;
-        private System.Windows.Forms.TextBox CodTipoPaqueteTxt;
+        private System.Windows.Forms.Label CodTipoPaqueteCbo;
         private System.Windows.Forms.Label CodAgenciaLbl;
-        private System.Windows.Forms.TextBox CodAgenciaTxt;
         private System.Windows.Forms.Label NivelLbl;
         private System.Windows.Forms.TextBox NivelTxt;
         private System.Windows.Forms.Label DniTuristaLbl;
-        private System.Windows.Forms.TextBox DniTuristaTxt;
         private System.Windows.Forms.Label CodDestinoLbl;
-        private System.Windows.Forms.TextBox CodDestinoTxt;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.Label FechaLbl;
         private System.Windows.Forms.TextBox FechaTxt;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox TipoPaqueteCbo;
+        private System.Windows.Forms.ComboBox CodDestinoCbo;
+        private System.Windows.Forms.ComboBox DniTuristaCbo;
+        private System.Windows.Forms.ComboBox AgenciaCbo;
     }
 }

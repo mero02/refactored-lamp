@@ -64,7 +64,6 @@ C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadBusq.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmLocalidadList.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.MainView.resources
-C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaquetAM.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoTuristas.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTuristaBusq.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTuristaList.resources
@@ -109,3 +108,19 @@ C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteBusq.resources
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteList.resources
 C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoFacturas.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadAM.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadBusq.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmActividadList.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoDestinos.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmFacturaAM.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoTipoActividad.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoActividadAM.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoActividadBusq.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoActividadList.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoTipoPaquete.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteAM.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteBusq.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmTipoPaqueteList.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmDetalleFactura.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoFacturas.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\bin\Release\clubApp.pdb
