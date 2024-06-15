@@ -286,6 +286,12 @@ namespace TurApp.Views
              FrmTipoActividadBusq frm = new FrmTipoActividadBusq();
              frm.ShowBuscar();
          }
+
+         private void ListadoTipoPaqueteMnu_Click(object sender, EventArgs e)
+         {
+             FrmListadoTipoPaquete frmListPac = new FrmListadoTipoPaquete();
+             frmListPac.Show();
+         }
          
 
     }

@@ -52,7 +52,7 @@ namespace TurApp.Views
                 }
                 // invocar Formulario de Listado.
                 FrmAgenciaList frm = new FrmAgenciaList();
-                frm.ShowListado(lista, this, null);
+                frm.ShowListado(lista, this, criterio);
             }
             catch (Exception ex)
             {

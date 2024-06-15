@@ -14,10 +14,17 @@ namespace TurApp.Views
     {
         private string _criterio = null;
         private List<Agencia> _listado;
+
         public FrmAgenciaList()
         {
             InitializeComponent();
         }
+
+        public override void ConfigurePermiso(PermisoAttribute perm)
+        {
+
+        }
+
         public void ShowListado(List<Agencia> listado, FormBase Invoker, string criterio)
         {
             this.InvokerForm = Invoker;
@@ -55,9 +62,75 @@ namespace TurApp.Views
 
         private void AgenciasGrd_DoubleClick(object sender, EventArgs e)
         {
-            Agencia Agencia = (Agencia)this.AgenciasGrd.CurrentRow.DataBoundItem;
-            FrmAgenciaAM frm = new FrmAgenciaAM();
-            frm.ShowModificarAgencia(this, Agencia);
+            if (this.AgenciasGrd.SelectedRows.Count > 0)
+            {
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmAgenciaAM frm = new FrmAgenciaAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarAgencia(this, (this.AgenciasGrd.SelectedRows[0].DataBoundItem as Agencia));
+            }
+        }
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
+        {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK)
+            {
+                var selAnt = AgenciasGrd.SelectedRows[0].Index;
+                this.AgenciasGrd.DataSource = Agencia.FindAllStatic(_criterio, (e1, e2) => e1.Codigo.CompareTo(e2.Codigo));
+                AgenciasGrd.Rows[selAnt].Selected = true;
+                MessageBox.Show("Agencia actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void AgenciasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string sortOrderGrid = "";
+
+            if (AgenciasGrd.Tag != null)
+                sortOrderGrid = AgenciasGrd.Tag.ToString();
+
+            DataGridViewColumn newColumn = AgenciasGrd.Columns[e.ColumnIndex];
+
+            // Verificar si la columna es no ordenable
+            if (newColumn.Name == "Domicilio")
+                return;
+
+            // Determinar la dirección de orden
+            ListSortDirection direction;
+            if (sortOrderGrid.StartsWith("-") && sortOrderGrid.Substring(1) == newColumn.Name)
+                direction = ListSortDirection.Ascending;
+            else
+                direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Obtener los turistas desde el DataSource
+            var bindingSource = AgenciasGrd.DataSource as BindingSource;
+            if (bindingSource == null)
+            {
+                MessageBox.Show("DataSource no es un BindingSource.");
+                return;
+            }
+
+            var agencias = bindingSource.List.Cast<Agencia>().ToList();
+
+            // Ordenar los turistas según la columna seleccionada
+            switch (newColumn.Name)
+            {
+                case "Nombre":
+                    agencias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Nombre.CompareTo(t2.Nombre) : t2.Nombre.CompareTo(t1.Nombre));
+                    break;
+                case "Localidad":
+                    agencias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.CodPostal.CompareTo(t2.CodPostal) : t2.CodPostal.CompareTo(t1.CodPostal));
+                    break;
+            }
+
+            // Actualizar la etiqueta de dirección de orden
+            AgenciasGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
+
+            // Asignar los datos ordenados al DataSource
+            bindingSource.DataSource = new BindingList<Agencia>(agencias);
+
+            // Mostrar la dirección de orden en el encabezado de la columna
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
     }
 }

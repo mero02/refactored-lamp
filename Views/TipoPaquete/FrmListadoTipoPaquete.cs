@@ -65,7 +65,7 @@ namespace TurApp.Views
                 for (int i = 0; i < this.TipoPaquetesGrd.Rows.Count; ++i)
                 {
                     DataGridViewRow item = this.TipoPaquetesGrd.Rows[i];
-                    item.Cells[1].Value = (item.DataBoundItem as FormaPago).Forma;
+                    item.Cells[1].Value = (item.DataBoundItem as TipoPaquete).Codigo;
                 }
             }
             finally

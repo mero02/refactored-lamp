@@ -27,6 +27,7 @@ namespace TurApp.db
             this.Nro = agn.Nro;
             this.Piso = agn.Piso;
             this.Dpto = agn.Dpto;
+            this.CodPostal = agn.CodPostal;
             this.Telefono1 = agn.Telefono1;
             this.Telefono2 = agn.Telefono2;
             this.SetIsObjFromDB();

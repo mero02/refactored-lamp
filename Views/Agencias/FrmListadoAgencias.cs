@@ -28,7 +28,7 @@ namespace TurApp.Views
             LoadComboBox(Localidad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.LocCbo, addSeleccion: true);
 
             this.AgenciasGrd.AutoGenerateColumns = false;
-            var agencias = Agencia.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var agencias = Agencia.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var agenciasBindingList = new BindingList<Agencia>(agencias);
             var agenciasBindingSource = new BindingSource(agenciasBindingList, null);
             this.AgenciasGrd.DataSource = agenciasBindingSource;
@@ -157,10 +157,6 @@ namespace TurApp.Views
                 case "LocCol":
                     agencias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.LocalidadObj.Nombre.CompareTo(t2.LocalidadObj.Nombre) : t2.LocalidadObj.Nombre.CompareTo(t1.LocalidadObj.Nombre));
                     break;
-                default:
-                    MessageBox.Show("Columna no manejada.");
-                    return;
-
             }
 
             // Actualizar la etiqueta de dirección de orden

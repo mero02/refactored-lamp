@@ -34,7 +34,7 @@
             this.AgenciasGrd = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AgenciasGrd)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             this.AgenciasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Domicilio,
-            this.Pais});
+            this.Localidad});
             this.AgenciasGrd.Location = new System.Drawing.Point(4, 17);
             this.AgenciasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.AgenciasGrd.MultiSelect = false;
@@ -84,6 +84,7 @@
             this.AgenciasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AgenciasGrd.Size = new System.Drawing.Size(520, 237);
             this.AgenciasGrd.TabIndex = 0;
+            this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
             this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
             this.AgenciasGrd.DoubleClick += new System.EventHandler(this.AgenciasGrd_DoubleClick);
             // 
@@ -104,13 +105,13 @@
             this.Domicilio.ReadOnly = true;
             this.Domicilio.Width = 150;
             // 
-            // Pais
+            // Localidad
             // 
-            this.Pais.DataPropertyName = "Localidad";
-            this.Pais.HeaderText = "Localidad";
-            this.Pais.Name = "Pais";
-            this.Pais.ReadOnly = true;
-            this.Pais.Width = 140;
+            this.Localidad.DataPropertyName = "Localidad";
+            this.Localidad.HeaderText = "Localidad";
+            this.Localidad.Name = "Localidad";
+            this.Localidad.ReadOnly = true;
+            this.Localidad.Width = 140;
             // 
             // FrmAgenciaList
             // 
@@ -136,6 +137,6 @@
         private System.Windows.Forms.DataGridView AgenciasGrd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Domicilio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Localidad;
     }
 }

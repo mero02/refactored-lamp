@@ -30,6 +30,13 @@
         {
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.AgenciasGrd = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NombreTxt = new System.Windows.Forms.TextBox();
+            this.NombreChk = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.LocCbo = new System.Windows.Forms.ComboBox();
+            this.LocChk = new System.Windows.Forms.CheckBox();
+            this.ExportarBtn = new System.Windows.Forms.Button();
             this.NroAgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalleCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,14 +45,7 @@
             this.DptoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TelCol1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NombreTxt = new System.Windows.Forms.TextBox();
-            this.NombreChk = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.LocCbo = new System.Windows.Forms.ComboBox();
-            this.LocChk = new System.Windows.Forms.CheckBox();
-            this.ExportarBtn = new System.Windows.Forms.Button();
+            this.TelCol2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AgenciasGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,7 +76,7 @@
             this.DptoCol,
             this.LocCol,
             this.TelCol1,
-            this.TelCol});
+            this.TelCol2});
             this.AgenciasGrd.Location = new System.Drawing.Point(11, 74);
             this.AgenciasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.AgenciasGrd.MultiSelect = false;
@@ -91,77 +91,6 @@
             this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
             this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
             this.AgenciasGrd.DoubleClick += new System.EventHandler(this.AgenciasGrd_DoubleClick);
-            // 
-            // NroAgenciaCol
-            // 
-            this.NroAgenciaCol.DataPropertyName = "NroAgencia";
-            this.NroAgenciaCol.HeaderText = "Nro Agencia";
-            this.NroAgenciaCol.Name = "NroAgenciaCol";
-            this.NroAgenciaCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombre";
-            this.NombreCol.HeaderText = "Nombre";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 80;
-            // 
-            // CalleCol
-            // 
-            this.CalleCol.DataPropertyName = "Calle";
-            this.CalleCol.HeaderText = "Calle";
-            this.CalleCol.Name = "CalleCol";
-            this.CalleCol.ReadOnly = true;
-            this.CalleCol.Width = 80;
-            // 
-            // NroCol
-            // 
-            this.NroCol.DataPropertyName = "Nro";
-            this.NroCol.HeaderText = "Nro";
-            this.NroCol.Name = "NroCol";
-            this.NroCol.ReadOnly = true;
-            this.NroCol.Width = 80;
-            // 
-            // PisoCol
-            // 
-            this.PisoCol.DataPropertyName = "Piso";
-            this.PisoCol.HeaderText = "Piso";
-            this.PisoCol.Name = "PisoCol";
-            this.PisoCol.ReadOnly = true;
-            this.PisoCol.Width = 80;
-            // 
-            // DptoCol
-            // 
-            this.DptoCol.DataPropertyName = "Dpto";
-            this.DptoCol.HeaderText = "Dpto";
-            this.DptoCol.Name = "DptoCol";
-            this.DptoCol.ReadOnly = true;
-            this.DptoCol.Width = 80;
-            // 
-            // LocCol
-            // 
-            this.LocCol.DataPropertyName = "Localidad";
-            this.LocCol.HeaderText = "Localidad";
-            this.LocCol.Name = "LocCol";
-            this.LocCol.ReadOnly = true;
-            this.LocCol.Width = 80;
-            // 
-            // TelCol1
-            // 
-            this.TelCol1.DataPropertyName = "Telefono1";
-            this.TelCol1.HeaderText = "Telefono1";
-            this.TelCol1.Name = "TelCol1";
-            this.TelCol1.ReadOnly = true;
-            this.TelCol1.Width = 80;
-            // 
-            // TelCol
-            // 
-            this.TelCol.DataPropertyName = "Telefono2";
-            this.TelCol.HeaderText = "Telefono2";
-            this.TelCol.Name = "TelCol";
-            this.TelCol.ReadOnly = true;
-            this.TelCol.Width = 80;
             // 
             // groupBox1
             // 
@@ -243,6 +172,76 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // NroAgenciaCol
+            // 
+            this.NroAgenciaCol.DataPropertyName = "Codigo";
+            this.NroAgenciaCol.HeaderText = "Nro Agencia";
+            this.NroAgenciaCol.Name = "NroAgenciaCol";
+            this.NroAgenciaCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombre";
+            this.NombreCol.HeaderText = "Nombre";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 80;
+            // 
+            // CalleCol
+            // 
+            this.CalleCol.DataPropertyName = "Calle";
+            this.CalleCol.HeaderText = "Calle";
+            this.CalleCol.Name = "CalleCol";
+            this.CalleCol.ReadOnly = true;
+            this.CalleCol.Width = 80;
+            // 
+            // NroCol
+            // 
+            this.NroCol.DataPropertyName = "Nro";
+            this.NroCol.HeaderText = "Nro";
+            this.NroCol.Name = "NroCol";
+            this.NroCol.ReadOnly = true;
+            this.NroCol.Width = 80;
+            // 
+            // PisoCol
+            // 
+            this.PisoCol.DataPropertyName = "Piso";
+            this.PisoCol.HeaderText = "Piso";
+            this.PisoCol.Name = "PisoCol";
+            this.PisoCol.ReadOnly = true;
+            this.PisoCol.Width = 80;
+            // 
+            // DptoCol
+            // 
+            this.DptoCol.DataPropertyName = "Dpto";
+            this.DptoCol.HeaderText = "Dpto";
+            this.DptoCol.Name = "DptoCol";
+            this.DptoCol.ReadOnly = true;
+            this.DptoCol.Width = 80;
+            // 
+            // LocCol
+            // 
+            this.LocCol.HeaderText = "Localidad";
+            this.LocCol.Name = "LocCol";
+            this.LocCol.ReadOnly = true;
+            this.LocCol.Width = 80;
+            // 
+            // TelCol1
+            // 
+            this.TelCol1.DataPropertyName = "Telefono1";
+            this.TelCol1.HeaderText = "Telefono1";
+            this.TelCol1.Name = "TelCol1";
+            this.TelCol1.ReadOnly = true;
+            this.TelCol1.Width = 80;
+            // 
+            // TelCol2
+            // 
+            this.TelCol2.DataPropertyName = "Telefono2";
+            this.TelCol2.HeaderText = "Telefono2";
+            this.TelCol2.Name = "TelCol2";
+            this.TelCol2.ReadOnly = true;
+            this.TelCol2.Width = 80;
+            // 
             // FrmListadoAgencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,6 +275,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox LocCbo;
         private System.Windows.Forms.CheckBox LocChk;
+        private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroAgenciaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalleCol;
@@ -284,7 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DptoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn LocCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelCol1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelCol;
-        private System.Windows.Forms.Button ExportarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCol2;
     }
 }

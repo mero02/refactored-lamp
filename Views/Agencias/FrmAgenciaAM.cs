@@ -10,7 +10,7 @@ using TurApp.db;
 
 namespace TurApp.Views
 {
-    [Permiso(ClaseBaseForm = "Agencia", FuncionPermiso = "AltaAgencia,ModificaAgencia,ConsultaAgencia", RolUsuario = "administrador,operadorTurista,operadorTurno,consulta,operador")]
+    [Permiso(ClaseBaseForm = "Agencia", FuncionPermiso = "AltaAgencia,ModificaAgencia,ConsultaAgencia", RolUsuario = "administrador,operadorAgencia,operadorTurno,consulta,operador")]
     public partial class FrmAgenciaAM : FormBase
     {
         public override event FormEvent DoCompleteOperationForm;
@@ -88,12 +88,11 @@ namespace TurApp.Views
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
             _Agencia_modif = Cli_modif;
-            //AgenciaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Agencia_modif);
+            AgenciaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Agencia_modif);
             // cargar cada control con informacion del Agencia....
-            //this.ApellidoTxt.Text = Pac_modif.Apellido;
             FormBase.ShowDataFromModel(this, Cli_modif);
             this.InvokerForm = Invoker;
-            
+            this.CancelarBtn.Click += new EventHandler(CancelarBtn_Click);
             this.ShowDialog();
         }
         public void ShowIngresoAgencia(FormBase Invoker)
