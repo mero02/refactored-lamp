@@ -69,33 +69,22 @@ namespace TurApp.Views
 
         private void TipoPaquetesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            for (int i = 0; i < this.TipoPaquetesGrd.Rows.Count; ++i)
+            this.TipoPaquetesGrd.DataBindingComplete -= TipoPaquetesGrd_DataBindingComplete;
+
+            try
             {
-                foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
+                for (int i = 0; i < this.TipoPaquetesGrd.Rows.Count; ++i)
                 {
-                    rw.Cells[0].Value = (rw.DataBoundItem as TipoPaquete).Codigo;
+                    DataGridViewRow item = this.TipoPaquetesGrd.Rows[i];
+                    item.Cells[1].Value = (item.DataBoundItem as TipoPaquete).Nombre;
                 }
+            }
 
-                foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
-                {
-                    rw.Cells[1].Value = (rw.DataBoundItem as TipoPaquete).Nombre;
-                }
-
-                foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
-                {
-                    rw.Cells[2].Value = (rw.DataBoundItem as TipoPaquete).Descripcion;
-                }
-
-                foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
-                {
-                    rw.Cells[3].Value = (rw.DataBoundItem as TipoPaquete).Duracion;
-                }
-
-                foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
-                {
-                    rw.Cells[4].Value = (rw.DataBoundItem as TipoPaquete).Nivel;
-                }
+            finally
+            {
+                this.TipoPaquetesGrd.DataBindingComplete += TipoPaquetesGrd_DataBindingComplete;
             }
         }
     }
 }
+
