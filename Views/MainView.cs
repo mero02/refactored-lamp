@@ -273,6 +273,14 @@ namespace TurApp.Views
             FrmListadoDestinos frmListPac = new FrmListadoDestinos();
             frmListPac.Show();
         }
-       
+
+        
+         private void FacturaAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmFacturaAM frm = new FrmFacturaAM();
+            frm.ShowIngresoFactura();
+        }
+         
+
     }
 }
