@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.FacturasGrd = new System.Windows.Forms.DataGridView();
+            this.CerrarBtn = new System.Windows.Forms.Button();
+            this.groupBoxFac = new System.Windows.Forms.GroupBox();
             this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.letra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,8 +38,6 @@
             this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fromaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CerrarBtn = new System.Windows.Forms.Button();
-            this.groupBoxFac = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.FacturasGrd)).BeginInit();
             this.groupBoxFac.SuspendLayout();
             this.SuspendLayout();
@@ -63,50 +63,8 @@
             this.FacturasGrd.ShowEditingIcon = false;
             this.FacturasGrd.Size = new System.Drawing.Size(744, 272);
             this.FacturasGrd.TabIndex = 0;
+            this.FacturasGrd.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this._CellDoubleClick);
             this.FacturasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FacturasTuristaGrd_DataBindingComplete);
-            this.FacturasGrd.DoubleClick += new System.EventHandler(this.FacturasGrd_DoubleClick);
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "NroFactura";
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            // 
-            // serie
-            // 
-            this.serie.HeaderText = "Serie";
-            this.serie.Name = "serie";
-            this.serie.ReadOnly = true;
-            // 
-            // letra
-            // 
-            this.letra.HeaderText = "Letra";
-            this.letra.Name = "letra";
-            this.letra.ReadOnly = true;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            // 
-            // dni
-            // 
-            this.dni.HeaderText = "DNI";
-            this.dni.Name = "dni";
-            this.dni.ReadOnly = true;
-            // 
-            // fromaPago
-            // 
-            this.fromaPago.HeaderText = "Forma de Pago";
-            this.fromaPago.Name = "fromaPago";
-            this.fromaPago.ReadOnly = true;
-            // 
-            // detPago
-            // 
-            this.detPago.HeaderText = "Detalle del pago";
-            this.detPago.Name = "detPago";
-            this.detPago.ReadOnly = true;
             // 
             // CerrarBtn
             // 
@@ -127,6 +85,54 @@
             this.groupBoxFac.TabIndex = 2;
             this.groupBoxFac.TabStop = false;
             this.groupBoxFac.Text = "Facturas Turista";
+            // 
+            // nro
+            // 
+            this.nro.DataPropertyName = "Nro";
+            this.nro.HeaderText = "NroFactura";
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            // 
+            // serie
+            // 
+            this.serie.DataPropertyName = "Serie";
+            this.serie.HeaderText = "Serie";
+            this.serie.Name = "serie";
+            this.serie.ReadOnly = true;
+            // 
+            // letra
+            // 
+            this.letra.DataPropertyName = "Letra";
+            this.letra.HeaderText = "Letra";
+            this.letra.Name = "letra";
+            this.letra.ReadOnly = true;
+            // 
+            // fecha
+            // 
+            this.fecha.DataPropertyName = "Fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            // 
+            // dni
+            // 
+            this.dni.DataPropertyName = "DniTurista";
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
+            // 
+            // fromaPago
+            // 
+            this.fromaPago.HeaderText = "Forma de Pago";
+            this.fromaPago.Name = "fromaPago";
+            this.fromaPago.ReadOnly = true;
+            // 
+            // detPago
+            // 
+            this.detPago.DataPropertyName = "DetallePago";
+            this.detPago.HeaderText = "Detalle del pago";
+            this.detPago.Name = "detPago";
+            this.detPago.ReadOnly = true;
             // 
             // FrmListadoFacturas
             // 
@@ -149,6 +155,7 @@
 
         private System.Windows.Forms.DataGridView FacturasGrd;
         private System.Windows.Forms.Button CerrarBtn;
+        private System.Windows.Forms.GroupBox groupBoxFac;
         private System.Windows.Forms.DataGridViewTextBoxColumn nro;
         private System.Windows.Forms.DataGridViewTextBoxColumn serie;
         private System.Windows.Forms.DataGridViewTextBoxColumn letra;
@@ -156,6 +163,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dni;
         private System.Windows.Forms.DataGridViewTextBoxColumn fromaPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn detPago;
-        private System.Windows.Forms.GroupBox groupBoxFac;
     }
 }

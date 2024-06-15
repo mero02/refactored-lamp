@@ -44,52 +44,45 @@ namespace TurApp.Views
         }
 
         private void FacturasTuristaGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+{
+    // Desactivar temporalmente el evento para evitar recursiones infinitas
+    this.FacturasGrd.DataBindingComplete -= FacturasTuristaGrd_DataBindingComplete;
+
+    foreach (DataGridViewRow item in this.FacturasGrd.Rows)
+    {
+        var facturaTurista = item.DataBoundItem as FacturaTurista;
+        if (facturaTurista != null)
         {
-           for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[0].Value = (item.DataBoundItem as FacturaTurista).Nro;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[1].Value = (item.DataBoundItem as FacturaTurista).Serie;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[2].Value = (item.DataBoundItem as FacturaTurista).Letra;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[3].Value = (item.DataBoundItem as FacturaTurista).Fecha;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[4].Value = (item.DataBoundItem as FacturaTurista).DniTurista;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[5].Value = (item.DataBoundItem as FacturaTurista).FormaPagoObj.Forma;
-            }
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
-            {
-                DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[6].Value = (item.DataBoundItem as FacturaTurista).DetallePago;
-            }
+            item.Cells[0].Value = facturaTurista.Nro;
+            item.Cells[1].Value = facturaTurista.Serie;
+            item.Cells[2].Value = facturaTurista.Letra;
+            item.Cells[3].Value = facturaTurista.Fecha;
+            item.Cells[4].Value = facturaTurista.DniTurista;
+            item.Cells[5].Value = facturaTurista.FormaPagoObj.Forma; 
+            item.Cells[6].Value = facturaTurista.DetallePago;
         }
+    }
 
-        private void FacturasGrd_DoubleClick(object sender, EventArgs e)
+    // Volver a activar el evento
+    this.FacturasGrd.DataBindingComplete += FacturasTuristaGrd_DataBindingComplete;
+}
+
+
+        private void _CellDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string nro = String.Format("nro_fact = {0}",_listado[0].Nro);
-
-            MainView.Instance.Cursor = Cursors.Default;
-            FrmDetalleFactura frm = new FrmDetalleFactura();
-            frm.ShowListadoDetalleFacturas(this, nro);
+            if (e.RowIndex >=0)
+            {
+                DataGridViewRow row = FacturasGrd.Rows[e.RowIndex];
                 
+                string nro = row.Cells["nro"].Value.ToString();
+                string serie = row.Cells["serie"].Value.ToString();
+                string letra = row.Cells["letra"].Value.ToString();
+
+                FrmDetalleFactura frm = new FrmDetalleFactura(nro,serie,letra);
+
+                frm.ShowListadoDetalleFacturas(this);
+
+            }
 
         }
     }

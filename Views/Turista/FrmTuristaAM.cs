@@ -197,7 +197,7 @@ namespace TurApp.Views
         private void MisFactBtn_Click(object sender, EventArgs e)
         {
             string criterio = null;
-            criterio = String.Format("dni_turista = {0}", DniTxt.Text); ;
+            criterio = String.Format("dni_turista = {0}", DniTxt.Text);
             MainView.Instance.Cursor = Cursors.Default;
             FrmListadoFacturas frm = new FrmListadoFacturas();
             frm.ShowListadoFacturas(criterio,this);

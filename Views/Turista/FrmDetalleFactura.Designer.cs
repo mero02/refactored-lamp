@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.DetalleFacGrd = new System.Windows.Forms.DataGridView();
+            this.CerrarBtn = new System.Windows.Forms.Button();
             this.NroRengCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaqCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CerrarBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleFacGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,21 +49,6 @@
             this.DetalleFacGrd.TabIndex = 0;
             this.DetalleFacGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DetalleFacGrd_DataBindingComplete);
             // 
-            // NroRengCol
-            // 
-            this.NroRengCol.HeaderText = "Nro Renglo";
-            this.NroRengCol.Name = "NroRengCol";
-            // 
-            // PaqCol
-            // 
-            this.PaqCol.HeaderText = "Paquete";
-            this.PaqCol.Name = "PaqCol";
-            // 
-            // ImporteCol
-            // 
-            this.ImporteCol.HeaderText = "Importe";
-            this.ImporteCol.Name = "ImporteCol";
-            // 
             // CerrarBtn
             // 
             this.CerrarBtn.Location = new System.Drawing.Point(550, 223);
@@ -73,6 +58,23 @@
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            // 
+            // NroRengCol
+            // 
+            this.NroRengCol.HeaderText = "Nro Renglo";
+            this.NroRengCol.Name = "NroRengCol";
+            // 
+            // PaqCol
+            // 
+            this.PaqCol.DataPropertyName = "CodPaquete";
+            this.PaqCol.HeaderText = "Paquete";
+            this.PaqCol.Name = "PaqCol";
+            // 
+            // ImporteCol
+            // 
+            this.ImporteCol.DataPropertyName = "Importe";
+            this.ImporteCol.HeaderText = "Importe";
+            this.ImporteCol.Name = "ImporteCol";
             // 
             // FrmDetalleFactura
             // 
@@ -93,9 +95,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DetalleFacGrd;
+        private System.Windows.Forms.Button CerrarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroRengCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaqCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImporteCol;
-        private System.Windows.Forms.Button CerrarBtn;
     }
 }
