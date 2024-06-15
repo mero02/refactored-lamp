@@ -26,7 +26,17 @@ namespace TurApp.Views
         private void FrmListadoDestinos_Load(object sender, EventArgs e)
         {
             this.DestinosGrd.AutoGenerateColumns = false;
-            var Destinos = Destino.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
+            var Destinos = new List<Destino>();
+            foreach (Paquete paquete in Paquetes)
+            {
+                var destino = Destino.FindByKeyStatic(paquete.CodDestino);
+
+                if (destino != null) {
+                    Destinos.Add(destino);
+                }
+            }
+            Destinos = Destinos.OrderBy(d => d.Codigo).ToList();
             var DestinosBindingList = new BindingList<Destino>(Destinos);
             var DestinosBindingSource = new BindingSource(DestinosBindingList, null);
             this.DestinosGrd.DataSource = DestinosBindingSource;
@@ -100,15 +110,6 @@ namespace TurApp.Views
             {
                 this.DestinosGrd.DataBindingComplete += DestinosGrd_DataBindingComplete;
             }
-        }
-
-        private void DestinosGrd_DoubleClick(object sender, EventArgs e)
-        {
-            //Preguntar si es necesario agregar AM de Destino
-            /*FrmDestinoAM frmpac = new FrmDestinoAM();
-            Destino pac = (this.DestinosGrd.SelectedRows[0].DataBoundItem as Destino);
-            frmpac.ShowModificarDestino(pac);
-             * */
         }
 
         private void NombreChk_CheckedChanged(object sender, EventArgs e)

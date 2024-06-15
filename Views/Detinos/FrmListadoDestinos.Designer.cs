@@ -63,7 +63,6 @@
             this.DestinosGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DestinosGrd_CellContentClick);
             this.DestinosGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DestinosGrd_ColumnHeaderMouseClick);
             this.DestinosGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DestinosGrd_DataBindingComplete);
-            this.DestinosGrd.DoubleClick += new System.EventHandler(this.DestinosGrd_DoubleClick);
             // 
             // CodigoCol
             // 
