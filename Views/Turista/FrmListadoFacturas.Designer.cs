@@ -64,6 +64,7 @@
             this.FacturasGrd.Size = new System.Drawing.Size(744, 272);
             this.FacturasGrd.TabIndex = 0;
             this.FacturasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FacturasTuristaGrd_DataBindingComplete);
+            this.FacturasGrd.DoubleClick += new System.EventHandler(this.FacturasGrd_DoubleClick);
             // 
             // nro
             // 
