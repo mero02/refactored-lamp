@@ -48,6 +48,7 @@ namespace TurApp.Views
                 {
                     DataGridViewRow item = this.AgenciasGrd.Rows[i];
                     item.Cells[0].Value = (item.DataBoundItem as Agencia).Codigo;
+                    item.Cells[6].Value = (item.DataBoundItem as Agencia).LocalidadObj.Nombre;
                 }
             }
             finally

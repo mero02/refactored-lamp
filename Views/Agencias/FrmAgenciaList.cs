@@ -52,5 +52,12 @@ namespace TurApp.Views
         {
             this.Close();
         }
+
+        private void AgenciasGrd_DoubleClick(object sender, EventArgs e)
+        {
+            Agencia Agencia = (Agencia)this.AgenciasGrd.CurrentRow.DataBoundItem;
+            FrmAgenciaAM frm = new FrmAgenciaAM();
+            frm.ShowModificarAgencia(this, Agencia);
+        }
     }
 }
