@@ -68,8 +68,8 @@ namespace TurApp.Views
                     MessageBox.Show("No se encontraron resultados con criterio ingresado", "Sin resultados...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // invocar Formulario de Listado.
-                FrmLocalidadList frm = new FrmLocalidadList();
-                //frm.ShowListado(lista, this, criterio);   CUANDO SE IMPLEMENTE EL FORMULARIO DE LISTADO
+                FrmTipoPaqueteList frm = new FrmTipoPaqueteList();
+                frm.ShowListado(lista, this, criterio);   
             }
             catch (Exception ex)
             {

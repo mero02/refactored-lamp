@@ -49,7 +49,6 @@ namespace TurApp.Views
         {
             this.PaisCbo.Enabled = PaisChk.Checked;
         }
-
         private void FiltroBtn_Click(object sender, EventArgs e)
         {
             string criterio = null;

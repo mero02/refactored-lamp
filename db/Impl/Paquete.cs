@@ -27,6 +27,7 @@ namespace TurApp.db
             this.Fecha = pq.Fecha;
             this.DniTurista = pq.DniTurista;
             this.Nivel = pq.Nivel;
+            this.CodDestino = pq.CodDestino;
             this.SetIsObjFromDB();
             return this;
         }

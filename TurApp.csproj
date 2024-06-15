@@ -257,6 +257,30 @@
     <Compile Include="Views\Paquete\FrmPaquetAM.Designer.cs">
       <DependentUpon>FrmPaquetAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TipoActividad\FrmListadoTipoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmListadoTipoActividad.Designer.cs">
+      <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadAM.Designer.cs">
+      <DependentUpon>FrmTipoActividadAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadBusq.Designer.cs">
+      <DependentUpon>FrmTipoActividadBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoActividad\FrmTipoActividadList.Designer.cs">
+      <DependentUpon>FrmTipoActividadList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TipoPaquete\FrmTipoPaqueteAM.cs">
       <SubType>Form</SubType>
     </Compile>
