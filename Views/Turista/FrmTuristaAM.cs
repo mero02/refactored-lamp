@@ -196,22 +196,14 @@ namespace TurApp.Views
 
         private void MisFactBtn_Click(object sender, EventArgs e)
         {
-            var lista = FacturaTurista.FindAllStatic(null, (p1, p2) => (p1.DniTurista).CompareTo(p2.DniTurista));
+            string criterio = null;
+            criterio = String.Format("dni_turista = {0}", DniTxt.Text); ;
             MainView.Instance.Cursor = Cursors.Default;
             FrmListadoFacturas frm = new FrmListadoFacturas();
-            string dni = DniTxt.Text;
-            frm.ShowListadoFacturas(lista);
+            frm.ShowListadoFacturas(criterio,this);
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TelefonoTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void NombreTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -235,16 +227,6 @@ namespace TurApp.Views
             {
                 e.Handled = true;
             }
-        }
-
-        private void PaisCbo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LocalidadLbl_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

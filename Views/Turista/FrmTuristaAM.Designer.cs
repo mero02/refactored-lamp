@@ -67,7 +67,6 @@
             this.groupBox1.Size = new System.Drawing.Size(438, 427);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ObservacionesTxt
             // 
@@ -109,7 +108,6 @@
             this.PaisCbo.TabIndex = 4;
             this.PaisCbo.Tag = "CodPais";
             this.PaisCbo.ValueMember = "Id";
-            this.PaisCbo.SelectedIndexChanged += new System.EventHandler(this.PaisCbo_SelectedIndexChanged);
             // 
             // LocalidadLbl
             // 
@@ -119,7 +117,6 @@
             this.LocalidadLbl.Size = new System.Drawing.Size(39, 20);
             this.LocalidadLbl.TabIndex = 12;
             this.LocalidadLbl.Text = "&Pais";
-            this.LocalidadLbl.Click += new System.EventHandler(this.LocalidadLbl_Click);
             // 
             // TelefonoTxt
             // 
@@ -128,7 +125,6 @@
             this.TelefonoTxt.Size = new System.Drawing.Size(247, 26);
             this.TelefonoTxt.TabIndex = 3;
             this.TelefonoTxt.Tag = "Telefono";
-            this.TelefonoTxt.TextChanged += new System.EventHandler(this.TelefonoTxt_TextChanged);
             this.TelefonoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelefonoTxt_KeyPress);
             // 
             // TelefonoLbl

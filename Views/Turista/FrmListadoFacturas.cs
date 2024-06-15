@@ -14,7 +14,6 @@ namespace TurApp.Views
     public partial class FrmListadoFacturas : FormBase
     {
         private List<FacturaTurista> _listado;
-
         public FrmListadoFacturas()
         {
             InitializeComponent();
@@ -25,17 +24,16 @@ namespace TurApp.Views
 
         }
 
-        public void ShowListadoFacturas(List<FacturaTurista> listado)
+        public void ShowListadoFacturas(string criterio, FormBase Invoker)
         {
-            //this.InvokerForm = Invoker;
-            _listado = listado;
-           //_criterio = criterio;
+            var lista = FacturaTurista.FindAllStatic(criterio, (p1, p2) => (p1.DniTurista).CompareTo(p2.DniTurista));
+            this.InvokerForm = Invoker;
+            _listado = lista;
             this.FacturasGrd.AutoGenerateColumns = false;
-            var bindingList = new BindingList<FacturaTurista>(listado);
+            var bindingList = new BindingList<FacturaTurista>(lista);
             var source = new BindingSource(bindingList, null);
-            //this.TuristasGrd.DataSource = listado;
             this.FacturasGrd.DataSource = source;
-            //InvokerForm.Close();
+            InvokerForm.Close();
             this.MdiParent = MainView.Instance;
             this.Show();
         }
@@ -47,7 +45,7 @@ namespace TurApp.Views
 
         private void FacturasTuristaGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
+           for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
             {
                 DataGridViewRow item = this.FacturasGrd.Rows[i];
                 item.Cells[0].Value = (item.DataBoundItem as FacturaTurista).Nro;
@@ -75,13 +73,24 @@ namespace TurApp.Views
             for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
             {
                 DataGridViewRow item = this.FacturasGrd.Rows[i];
-                item.Cells[5].Value = (item.DataBoundItem as FacturaTurista).CodFormaPago;
+                item.Cells[5].Value = (item.DataBoundItem as FacturaTurista).FormaPagoObj.Forma;
             }
             for (int i = 0; i < this.FacturasGrd.Rows.Count; ++i)
             {
                 DataGridViewRow item = this.FacturasGrd.Rows[i];
                 item.Cells[6].Value = (item.DataBoundItem as FacturaTurista).DetallePago;
             }
+        }
+
+        private void FacturasGrd_DoubleClick(object sender, EventArgs e)
+        {
+            string nro = String.Format("nro_fact = {0}",_listado[0].Nro);
+
+            MainView.Instance.Cursor = Cursors.Default;
+            FrmDetalleFactura frm = new FrmDetalleFactura();
+            frm.ShowListadoDetalleFacturas(this, nro);
+                
+
         }
     }
 }
