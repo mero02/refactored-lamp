@@ -289,6 +289,18 @@ namespace TurApp.Views
              FrmListadoTipoPaquete frmListPac = new FrmListadoTipoPaquete();
              frmListPac.Show();
          }
+
+         private void TipoActivAM_mnu_Click(object sender, EventArgs e)
+         {
+             FrmTipoActividadAM frm = new FrmTipoActividadAM();
+             frm.ShowIngresoTipoActividad();
+         }
+
+         private void TipoActividadToolStripMenuItem1_Click(object sender, EventArgs e)
+         {
+             FrmListadoTipoActividad frmListPac = new FrmListadoTipoActividad();
+             frmListPac.Show();
+         }
          
 
     }
