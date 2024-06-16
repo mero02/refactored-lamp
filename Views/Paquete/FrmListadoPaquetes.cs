@@ -66,24 +66,9 @@ namespace TurApp.Views
                 {
                     DataGridViewRow item = this.PaquetesGrd.Rows[i];
                     item.Cells[0].Value = (item.DataBoundItem as Paquete).Codigo;
-                }
-
-                for (int i = 0; i < this.PaquetesGrd.Rows.Count; ++i)
-                {
-                    DataGridViewRow item = this.PaquetesGrd.Rows[i];
                     item.Cells[1].Value = (item.DataBoundItem as Paquete).TipoPaqueteObj.Nombre;
-                }
-
-                for (int i = 0; i < this.PaquetesGrd.Rows.Count; ++i)
-                {
-                    DataGridViewRow item = this.PaquetesGrd.Rows[i];
                     item.Cells[2].Value = (item.DataBoundItem as Paquete).AgenciaObj.Nombre;
-                }
-
-                for (int i = 0; i < this.PaquetesGrd.Rows.Count; ++i)
-                {
-                    DataGridViewRow item = this.PaquetesGrd.Rows[i];
-                    item.Cells[6].Value = (item.DataBoundItem as Paquete).DestinoObj.Nombre;
+                    item.Cells[6].Value = (item.DataBoundItem as Paquete).CodDestino;
                 }
             }
             finally
