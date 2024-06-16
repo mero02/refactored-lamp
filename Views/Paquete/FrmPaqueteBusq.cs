@@ -46,15 +46,15 @@ namespace TurApp.Views
             {
                 if (criterio == null)
                     criterio = String.Format("Tipo Paquete = {0} ", (TipoPaqueteCbo.SelectedValue));
-                else
-                    criterio += String.Format(" and Tipo Paquete  = {0}", (TipoPaqueteCbo.SelectedValue));
+                //else
+                  //  criterio += String.Format(" and Tipo Paquete  = {0}", (TipoPaqueteCbo.SelectedValue));
             }
             if (this.AgenciaChk.Checked)
             {
                 if (criterio == null)
                     criterio = String.Format("Agencia = '{0}'", (AgenciaCbo.SelectedValue));
-                else
-                    criterio += String.Format(" and Agencia  = {0}", (AgenciaCbo.SelectedValue));
+               // else
+                  //  criterio += String.Format(" and Agencia  = {0}", (AgenciaCbo.SelectedValue));
             }
 
             try

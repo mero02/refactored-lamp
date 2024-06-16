@@ -134,3 +134,4 @@ C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoPaquetes.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteBusq.resources
 C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteList.resources
+C:\Users\cal_2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoPaises.resources
