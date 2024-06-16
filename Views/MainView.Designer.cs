@@ -61,6 +61,7 @@
             this.FormaPagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PaqueteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PaisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DestinosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TipoActividadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoPaqueteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +70,6 @@
             this.AcercaDe_mnu = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.StatusInfoUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.PaisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.SuspendLayout();
@@ -375,6 +375,15 @@
             this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PaqueteToolStripMenuItem.Tag = "ConsultaPaquete";
             this.PaqueteToolStripMenuItem.Text = "Paquete";
+            this.PaqueteToolStripMenuItem.Click += new System.EventHandler(this.ListadoPaqueteMnu_Click);
+            // 
+            // PaisesToolStripMenuItem
+            // 
+            this.PaisesToolStripMenuItem.Name = "PaisesToolStripMenuItem";
+            this.PaisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PaisesToolStripMenuItem.Tag = "Listados";
+            this.PaisesToolStripMenuItem.Text = "Paises";
+            this.PaisesToolStripMenuItem.Click += new System.EventHandler(this.ListadoPaisesMnu_Click);
             // 
             // DestinosToolStripMenuItem
             // 
@@ -439,14 +448,6 @@
             this.StatusInfoUser.Name = "StatusInfoUser";
             this.StatusInfoUser.Size = new System.Drawing.Size(0, 17);
             // 
-            // PaisesToolStripMenuItem
-            // 
-            this.PaisesToolStripMenuItem.Name = "PaisesToolStripMenuItem";
-            this.PaisesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.PaisesToolStripMenuItem.Tag = "Listados";
-            this.PaisesToolStripMenuItem.Text = "Paises";
-            this.PaisesToolStripMenuItem.Click += new System.EventHandler(this.ListadoPaisesMnu_Click);
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,7 +459,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurApp: Registro de información";

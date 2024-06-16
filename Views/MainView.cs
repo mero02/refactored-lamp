@@ -307,7 +307,11 @@ namespace TurApp.Views
              FrmListadoPaises frmListPac = new FrmListadoPaises();
              frmListPac.Show();
          }
-         
 
+         private void ListadoPaqueteMnu_Click(object sender, EventArgs e)
+         {
+             FrmListadoPaquetes frmListPac = new FrmListadoPaquetes();
+             frmListPac.Show();
+         }
     }
 }
