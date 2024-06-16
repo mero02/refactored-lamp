@@ -46,7 +46,7 @@ namespace TurApp.Views
             //LoadComboBox(Turista.FindAllStatic(null, (l1, l2) => l1.NroDocumento.CompareTo(l2.NroDocumento)), this.DniTuristaCbo, addSeleccion: true);
             LoadComboBox(Destino.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.CodDestinoCbo, addSeleccion: true);
 
-            this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+            //this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
         }
        
         public override FrmOperacion OperacionForm
@@ -184,14 +184,6 @@ namespace TurApp.Views
             MainView.Instance.Cursor = Cursors.Default;
         }
 
-
-        private void FechaTxt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '-'))
-            {
-                e.Handled = true;
-            }
-        }
        
         private void NivelTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -200,5 +192,6 @@ namespace TurApp.Views
                 e.Handled = true;
             }
         }
+
     }
 }

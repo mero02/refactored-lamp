@@ -29,8 +29,8 @@ namespace TurApp.Views
            // this.FormaPagoGrd.DataSource = FormaPago.FindAllStatic(null, (p1, p2) => (p1.Forma).CompareTo(p2.Forma));
             var Formas = FormaPago.FindAllStatic(null, (p1, p2) => p1.Forma.CompareTo(p2.Forma));
             var FormasBindingList = new BindingList<FormaPago>(Formas);
-            var FromasBindingSource = new BindingSource(FormasBindingList, null);
-            this.FormaPagoGrd.DataSource = FromasBindingSource;
+            var FormasBindingSource = new BindingSource(FormasBindingList, null);
+            this.FormaPagoGrd.DataSource = FormasBindingSource;
 
             this.ExportarBtn.Enabled = true;
 

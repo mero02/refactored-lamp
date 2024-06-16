@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
+            this.DetallePagoTxt = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FormaPagolbl = new System.Windows.Forms.Label();
             this.NumeroTxt = new System.Windows.Forms.TextBox();
             this.NumeroLbl = new System.Windows.Forms.Label();
             this.DniTuristaCbo = new System.Windows.Forms.ComboBox();
@@ -38,10 +42,6 @@
             this.LetraLbl = new System.Windows.Forms.Label();
             this.SerieTxt = new System.Windows.Forms.TextBox();
             this.SerieLbl = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
-            this.FormaPagolbl = new System.Windows.Forms.Label();
-            this.DetallePagoTxt = new System.Windows.Forms.TextBox();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -49,8 +49,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DetallePagoTxt);
             this.groupBox1.Controls.Add(this.FormaPagoCbo);
+            this.groupBox1.Controls.Add(this.DetallePagoTxt);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.FormaPagolbl);
             this.groupBox1.Controls.Add(this.NumeroTxt);
@@ -69,6 +69,48 @@
             this.groupBox1.Size = new System.Drawing.Size(292, 319);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // FormaPagoCbo
+            // 
+            this.FormaPagoCbo.DisplayMember = "Forma";
+            this.FormaPagoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FormaPagoCbo.FormattingEnabled = true;
+            this.FormaPagoCbo.Location = new System.Drawing.Point(93, 187);
+            this.FormaPagoCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.FormaPagoCbo.Name = "FormaPagoCbo";
+            this.FormaPagoCbo.Size = new System.Drawing.Size(157, 21);
+            this.FormaPagoCbo.TabIndex = 19;
+            this.FormaPagoCbo.Tag = "CodFormaPago";
+            this.FormaPagoCbo.ValueMember = "Id";
+            this.FormaPagoCbo.SelectedIndexChanged += new System.EventHandler(this.FormaPagoCbo_SelectedIndexChanged);
+            // 
+            // DetallePagoTxt
+            // 
+            this.DetallePagoTxt.Location = new System.Drawing.Point(13, 222);
+            this.DetallePagoTxt.Multiline = true;
+            this.DetallePagoTxt.Name = "DetallePagoTxt";
+            this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
+            this.DetallePagoTxt.TabIndex = 18;
+            this.DetallePagoTxt.Tag = "DetallePago";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
+            this.dateTimePicker1.Location = new System.Drawing.Point(74, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.Tag = "Fecha";
+            // 
+            // FormaPagolbl
+            // 
+            this.FormaPagolbl.AutoSize = true;
+            this.FormaPagolbl.Location = new System.Drawing.Point(10, 190);
+            this.FormaPagolbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FormaPagolbl.Name = "FormaPagolbl";
+            this.FormaPagolbl.Size = new System.Drawing.Size(79, 13);
+            this.FormaPagolbl.TabIndex = 14;
+            this.FormaPagolbl.Text = "&Forma de Pago";
             // 
             // NumeroTxt
             // 
@@ -166,47 +208,6 @@
             this.SerieLbl.TabIndex = 2;
             this.SerieLbl.Text = "&Serie";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker1.Location = new System.Drawing.Point(74, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.Tag = "Fecha";
-            // 
-            // FormaPagoCbo
-            // 
-            this.FormaPagoCbo.DisplayMember = "Nombre";
-            this.FormaPagoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FormaPagoCbo.FormattingEnabled = true;
-            this.FormaPagoCbo.Location = new System.Drawing.Point(93, 187);
-            this.FormaPagoCbo.Margin = new System.Windows.Forms.Padding(2);
-            this.FormaPagoCbo.Name = "FormaPagoCbo";
-            this.FormaPagoCbo.Size = new System.Drawing.Size(157, 21);
-            this.FormaPagoCbo.TabIndex = 13;
-            this.FormaPagoCbo.Tag = "CodFormaPago";
-            this.FormaPagoCbo.ValueMember = "Id";
-            // 
-            // FormaPagolbl
-            // 
-            this.FormaPagolbl.AutoSize = true;
-            this.FormaPagolbl.Location = new System.Drawing.Point(10, 190);
-            this.FormaPagolbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.FormaPagolbl.Name = "FormaPagolbl";
-            this.FormaPagolbl.Size = new System.Drawing.Size(79, 13);
-            this.FormaPagolbl.TabIndex = 14;
-            this.FormaPagolbl.Text = "&Forma de Pago";
-            // 
-            // DetallePagoTxt
-            // 
-            this.DetallePagoTxt.Location = new System.Drawing.Point(13, 222);
-            this.DetallePagoTxt.Multiline = true;
-            this.DetallePagoTxt.Name = "DetallePagoTxt";
-            this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
-            this.DetallePagoTxt.TabIndex = 18;
-            this.DetallePagoTxt.Tag = "DetallePago";
-            // 
             // CancelarBtn
             // 
             this.CancelarBtn.Location = new System.Drawing.Point(233, 342);
@@ -225,7 +226,7 @@
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
             this.GuardarBtn.TabIndex = 13;
-            this.GuardarBtn.Text = "&Guardar";
+            this.GuardarBtn.Text = "Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
@@ -262,10 +263,10 @@
         private System.Windows.Forms.TextBox SerieTxt;
         private System.Windows.Forms.Label SerieLbl;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox FormaPagoCbo;
         private System.Windows.Forms.Label FormaPagolbl;
         private System.Windows.Forms.TextBox DetallePagoTxt;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
+        private System.Windows.Forms.ComboBox FormaPagoCbo;
     }
 }

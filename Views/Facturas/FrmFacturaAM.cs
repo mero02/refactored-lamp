@@ -36,7 +36,8 @@ namespace TurApp.Views
         }
         private void FrmFacturaAM_Load(object sender, EventArgs e)
         {
-
+            this.GuardarBtn.Enabled = true;
+            LoadComboBox(FormaPago.FindAllStatic(null, (l1, l2) => l1.Forma.CompareTo(l2.Forma)), this.FormaPagoCbo, addSeleccion: true);
         }
 
         private void FrmFacturaAM_Deactivate(object sender, EventArgs e)
@@ -81,7 +82,6 @@ namespace TurApp.Views
         private void LoadCombos()
         {
             this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
-            this.FormaPagoCbo.DataSource = FormaPago.FindAllStatic(null, (pa1, pa2) => pa1.Forma.CompareTo(pa2.Forma));
         }
 
         public override FrmOperacion OperacionForm
@@ -218,6 +218,11 @@ namespace TurApp.Views
             this.InvokerForm = null;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
+        }
+
+        private void FormaPagoCbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
