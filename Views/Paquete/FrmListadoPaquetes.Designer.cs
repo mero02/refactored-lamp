@@ -136,14 +136,12 @@
             // 
             // TipoPaqueteCol
             // 
-            this.TipoPaqueteCol.DataPropertyName = "CodTipoPaquete";
             this.TipoPaqueteCol.HeaderText = "TipoPaquete";
             this.TipoPaqueteCol.Name = "TipoPaqueteCol";
             this.TipoPaqueteCol.ReadOnly = true;
             // 
             // AgenciaCol
             // 
-            this.AgenciaCol.DataPropertyName = "CodAgencia";
             this.AgenciaCol.HeaderText = "Agencia";
             this.AgenciaCol.Name = "AgenciaCol";
             this.AgenciaCol.ReadOnly = true;
@@ -171,7 +169,6 @@
             // 
             // DestinoCol
             // 
-            this.DestinoCol.DataPropertyName = "CodDestino";
             this.DestinoCol.HeaderText = "Destino";
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
