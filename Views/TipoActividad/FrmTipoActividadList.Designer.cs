@@ -68,7 +68,6 @@
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(960, 294);
             this.TipoActividadGrd.TabIndex = 12;
-            
             // 
             // CodigoCol
             // 
@@ -79,7 +78,7 @@
             // 
             // NombreCol
             // 
-            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.DataPropertyName = "Nombre";
             this.NombreCol.HeaderText = "Nombres";
             this.NombreCol.Name = "NombreCol";
             this.NombreCol.ReadOnly = true;

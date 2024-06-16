@@ -69,6 +69,10 @@
             this.CodigoCbo.TabIndex = 18;
             this.CodigoCbo.Tag = "CodActividad";
             this.CodigoCbo.ValueMember = "Id";
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 9664bffbe1520179954ad62cdf0ecfed0fb8dd25
             // 
             // TransporteCbo
             // 
