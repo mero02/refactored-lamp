@@ -80,7 +80,7 @@
             this.FormaPagoCbo.Name = "FormaPagoCbo";
             this.FormaPagoCbo.Size = new System.Drawing.Size(157, 21);
             this.FormaPagoCbo.TabIndex = 19;
-            this.FormaPagoCbo.Tag = "CodFormaPago";
+            this.FormaPagoCbo.Tag = "Codigo";
             this.FormaPagoCbo.ValueMember = "Id";
             this.FormaPagoCbo.SelectedIndexChanged += new System.EventHandler(this.FormaPagoCbo_SelectedIndexChanged);
             // 
@@ -242,6 +242,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmFacturaAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso nueva factura";
             this.Deactivate += new System.EventHandler(this.FrmFacturaAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmFacturaAM_Load);
             this.groupBox1.ResumeLayout(false);

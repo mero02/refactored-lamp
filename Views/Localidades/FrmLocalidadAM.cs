@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TurApp.db;
+using Newtonsoft;
 
 namespace TurApp.Views
 {

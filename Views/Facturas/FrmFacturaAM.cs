@@ -37,7 +37,7 @@ namespace TurApp.Views
         private void FrmFacturaAM_Load(object sender, EventArgs e)
         {
             this.GuardarBtn.Enabled = true;
-            LoadComboBox(FormaPago.FindAllStatic(null, (l1, l2) => l1.Forma.CompareTo(l2.Forma)), this.FormaPagoCbo, addSeleccion: true);
+            //LoadComboBox(FormaPago.FindAllStatic(null, (l1, l2) => l1.Forma.CompareTo(l2.Codigo)), this.FormaPagoCbo, addSeleccion: true);
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
             FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
@@ -84,6 +84,7 @@ namespace TurApp.Views
         private void LoadCombos()
         {
             this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+            this.FormaPagoCbo.DataSource = FormaPago.FindAllStatic(null, (pa1, pa2) => pa1.Forma.CompareTo(pa2.Forma));
         }
 
         public override FrmOperacion OperacionForm

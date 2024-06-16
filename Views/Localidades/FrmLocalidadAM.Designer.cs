@@ -103,6 +103,8 @@
             this.Controls.Add(this.CodPosLbl);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLocalidadAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Deactivate += new System.EventHandler(this.FrmLocalidadAM_Deactivate);
