@@ -70,7 +70,10 @@ namespace TurApp.Views
                 for (int i = 0; i < this.PaisesGrd.Rows.Count; ++i)
                 {
                     DataGridViewRow item = this.PaisesGrd.Rows[i];
+                    item.Cells[0].Value = (item.DataBoundItem as PaisConTuristas).CodigoCol;
                     item.Cells[1].Value = (item.DataBoundItem as PaisConTuristas).PaisCol;
+                    item.Cells[2].Value = (item.DataBoundItem as PaisConTuristas).CantidadCol;
+
                 }
             }
             finally
