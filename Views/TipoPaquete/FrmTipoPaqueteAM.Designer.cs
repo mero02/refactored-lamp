@@ -41,9 +41,9 @@
             this.QuitarBtn = new System.Windows.Forms.Button();
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrd = new System.Windows.Forms.DataGridView();
+            this.GuardarBtn = new System.Windows.Forms.Button();
             this.CodActCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuardarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
             this.SuspendLayout();
@@ -148,14 +148,14 @@
             this.ActividadesGrupBox.Controls.Add(this.ActividadesGrd);
             this.ActividadesGrupBox.Location = new System.Drawing.Point(353, 5);
             this.ActividadesGrupBox.Name = "ActividadesGrupBox";
-            this.ActividadesGrupBox.Size = new System.Drawing.Size(323, 234);
+            this.ActividadesGrupBox.Size = new System.Drawing.Size(452, 320);
             this.ActividadesGrupBox.TabIndex = 27;
             this.ActividadesGrupBox.TabStop = false;
             this.ActividadesGrupBox.Text = "Actividades";
             // 
             // QuitarBtn
             // 
-            this.QuitarBtn.Location = new System.Drawing.Point(167, 189);
+            this.QuitarBtn.Location = new System.Drawing.Point(233, 262);
             this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.QuitarBtn.Name = "QuitarBtn";
             this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
@@ -166,7 +166,7 @@
             // 
             // AgregarBtn
             // 
-            this.AgregarBtn.Location = new System.Drawing.Point(60, 189);
+            this.AgregarBtn.Location = new System.Drawing.Point(123, 262);
             this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AgregarBtn.Name = "AgregarBtn";
             this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
@@ -177,27 +177,19 @@
             // 
             // ActividadesGrd
             // 
+            this.ActividadesGrd.AllowUserToAddRows = false;
+            this.ActividadesGrd.AllowUserToDeleteRows = false;
             this.ActividadesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ActividadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodActCol,
             this.NombreActividadCol});
             this.ActividadesGrd.Location = new System.Drawing.Point(17, 26);
+            this.ActividadesGrd.MultiSelect = false;
             this.ActividadesGrd.Name = "ActividadesGrd";
-            this.ActividadesGrd.Size = new System.Drawing.Size(291, 145);
+            this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ActividadesGrd.Size = new System.Drawing.Size(397, 216);
             this.ActividadesGrd.TabIndex = 0;
             this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadedsGrd_DataBindingComplete);
-            // 
-            // CodActCol
-            // 
-            this.CodActCol.DataPropertyName = "CodAct";
-            this.CodActCol.HeaderText = "Codigo";
-            this.CodActCol.Name = "CodActCol";
-            // 
-            // NombreActividadCol
-            // 
-            this.NombreActividadCol.DataPropertyName = "NombreActividad";
-            this.NombreActividadCol.HeaderText = "Nombre Actividad";
-            this.NombreActividadCol.Name = "NombreActividadCol";
             // 
             // GuardarBtn
             // 
@@ -209,11 +201,24 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
+            // CodActCol
+            // 
+            this.CodActCol.DataPropertyName = "Codigo";
+            this.CodActCol.HeaderText = "Codigo";
+            this.CodActCol.Name = "CodActCol";
+            // 
+            // NombreActividadCol
+            // 
+            this.NombreActividadCol.DataPropertyName = "Nombre";
+            this.NombreActividadCol.HeaderText = "Nombre Actividad";
+            this.NombreActividadCol.Name = "NombreActividadCol";
+            this.NombreActividadCol.Width = 250;
+            // 
             // FrmTipoPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 366);
+            this.ClientSize = new System.Drawing.Size(881, 366);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.ActividadesGrupBox);
             this.Controls.Add(this.CancelarBtn);
@@ -253,8 +258,8 @@
         private System.Windows.Forms.DataGridView ActividadesGrd;
         private System.Windows.Forms.Button QuitarBtn;
         private System.Windows.Forms.Button AgregarBtn;
+        private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodActCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreActividadCol;
-        private System.Windows.Forms.Button GuardarBtn;
     }
 }

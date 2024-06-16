@@ -23,6 +23,15 @@ namespace TurApp.Views
             InitializeComponent();
         }
 
+        private void FrmTipoPaqueteAM_Load(object sender, EventArgs e)
+        {
+            this.GuardarBtn.Enabled = true;
+            this.ActividadesGrd.AutoGenerateColumns = false;
+            var TipoActividades = TipoActividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
+            var TipoActividadesBindingList = new BindingList<TipoActividad>(TipoActividades);
+            var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
+            this.ActividadesGrd.DataSource = TipoActividadesBindingSource;
+        }
         public override void ConfigurePermiso(PermisoAttribute perm)
         {
             if (perm != null)
@@ -115,16 +124,22 @@ namespace TurApp.Views
 
         private void ActividadedsGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-           /* for (int i = 0; i < this.ActividadesGrd.Rows.Count; ++i)
+            this.ActividadesGrd.DataBindingComplete -= ActividadedsGrd_DataBindingComplete;
+
+            try
             {
-                DataGridViewRow item = this.ActividadesGrd.Rows[i];
-                item.Cells[0].Value = (item.DataBoundItem as Actividad).Codigo;
+                for (int i = 0; i < this.ActividadesGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.ActividadesGrd.Rows[i];
+                    item.Cells[0].Value = (item.DataBoundItem as TipoActividad).Codigo;
+                    item.Cells[1].Value = (item.DataBoundItem as TipoActividad).Nombre;
+
+                }
             }
-            for (int i = 0; i < this.ActividadesGrd.Rows.Count; ++i)
+            finally
             {
-                DataGridViewRow item = this.ActividadesGrd.Rows[i];
-                item.Cells[1].Value = (item.DataBoundItem as Actividad).TipoActividadObj.Nombre;
-            }*/
+                this.ActividadesGrd.DataBindingComplete += ActividadedsGrd_DataBindingComplete;
+            }
 
         }
 
@@ -256,19 +271,7 @@ namespace TurApp.Views
             this.Close();
         }
 
-        private void FrmTipoPaqueteAM_Load(object sender, EventArgs e)
-        {
-            this.GuardarBtn.Enabled = true;
-            this.ActividadesGrd.AutoGenerateColumns = false;
-            //this.TuristasGrd.DataSource = Turista.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
-            var actividades = Actividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
-            var actividadesBindingList = new BindingList<Actividad>(actividades);
-            var actividadesBindingSource = new BindingSource(actividadesBindingList, null);
-            this.ActividadesGrd.DataSource = actividadesBindingSource;
 
-
-            //this.ActividadesGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(TuristasGrd_ColumnHeaderMouseClick);
-        }
 
     }
 }
