@@ -42,7 +42,7 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(265, 250);
+            this.CerrarBtn.Location = new System.Drawing.Point(336, 245);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(129, 27);
@@ -64,7 +64,7 @@
             this.DniTuristaCol,
             this.NivelCol,
             this.DestinoCol});
-            this.PaquetesGrd.Location = new System.Drawing.Point(23, 35);
+            this.PaquetesGrd.Location = new System.Drawing.Point(-2, 40);
             this.PaquetesGrd.Margin = new System.Windows.Forms.Padding(2);
             this.PaquetesGrd.MultiSelect = false;
             this.PaquetesGrd.Name = "PaquetesGrd";
@@ -72,7 +72,7 @@
             this.PaquetesGrd.RowTemplate.Height = 24;
             this.PaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PaquetesGrd.ShowEditingIcon = false;
-            this.PaquetesGrd.Size = new System.Drawing.Size(640, 191);
+            this.PaquetesGrd.Size = new System.Drawing.Size(749, 191);
             this.PaquetesGrd.TabIndex = 1;
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
             this.PaquetesGrd.DoubleClick += new System.EventHandler(this.PaquetesGrd_DoubleClick);
@@ -86,19 +86,15 @@
             // 
             // TipoPaqueteCol
             // 
-            this.TipoPaqueteCol.DataPropertyName = "TipoPaquete";
             this.TipoPaqueteCol.HeaderText = "Tipo Paquete";
             this.TipoPaqueteCol.Name = "TipoPaqueteCol";
             this.TipoPaqueteCol.ReadOnly = true;
-            this.TipoPaqueteCol.Width = 150;
             // 
             // AgenciaCol
             // 
-            this.AgenciaCol.DataPropertyName = "Agencia";
             this.AgenciaCol.HeaderText = "Agencia";
             this.AgenciaCol.Name = "AgenciaCol";
             this.AgenciaCol.ReadOnly = true;
-            this.AgenciaCol.Width = 150;
             // 
             // FechaCol
             // 
@@ -123,7 +119,6 @@
             // 
             // DestinoCol
             // 
-            this.DestinoCol.DataPropertyName = "Destino";
             this.DestinoCol.HeaderText = "Destino";
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
@@ -133,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 283);
+            this.ClientSize = new System.Drawing.Size(749, 283);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.PaquetesGrd);
             this.MaximizeBox = false;

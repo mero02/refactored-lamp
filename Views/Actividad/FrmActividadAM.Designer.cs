@@ -54,6 +54,21 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+<<<<<<< HEAD
+=======
+            // CodigoCbo
+            // 
+            this.CodigoCbo.DisplayMember = "Nombre";
+            this.CodigoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CodigoCbo.FormattingEnabled = true;
+            this.CodigoCbo.Location = new System.Drawing.Point(111, 31);
+            this.CodigoCbo.Name = "CodigoCbo";
+            this.CodigoCbo.Size = new System.Drawing.Size(234, 28);
+            this.CodigoCbo.TabIndex = 18;
+            this.CodigoCbo.Tag = "CodActividad";
+            this.CodigoCbo.ValueMember = "Id";
+            // 
+>>>>>>> 1a67e89e5aa478fed4d3fda15c388d9cdbb6bbe5
             // TransporteCbo
             // 
             this.TransporteCbo.DisplayMember = "Descripcion";

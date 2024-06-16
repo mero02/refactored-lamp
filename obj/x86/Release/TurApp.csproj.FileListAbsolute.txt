@@ -182,3 +182,9 @@ C:\Users\Ouros\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj
 C:\Users\Ouros\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\clubApp.exe
 C:\Users\Ouros\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\bin\Release\clubApp.exe.config
 C:\Users\Ouros\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoAuditoria.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoActividad.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoAuditoria.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoPaises.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmListadoPaquetes.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteBusq.resources
+C:\Users\mero2\OneDrive\Documentos\Visual Studio 2010\Projects\tpfinalCsharp\obj\x86\Release\TurApp.Views.FrmPaqueteList.resources

@@ -187,7 +187,7 @@
             // LocalidadAM_mnu
             // 
             this.LocalidadAM_mnu.Name = "LocalidadAM_mnu";
-            this.LocalidadAM_mnu.Size = new System.Drawing.Size(113, 22);
+            this.LocalidadAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.LocalidadAM_mnu.Tag = "AltaLocalidad";
             this.LocalidadAM_mnu.Text = "Ingreso";
             this.LocalidadAM_mnu.Click += new System.EventHandler(this.LocalidadAM_mnu_Click);
@@ -195,7 +195,7 @@
             // BuscarLocalidad_mnu
             // 
             this.BuscarLocalidad_mnu.Name = "BuscarLocalidad_mnu";
-            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(113, 22);
+            this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarLocalidad_mnu.Tag = "ModificaLocalidad,ConsultaLocalidad";
             this.BuscarLocalidad_mnu.Text = "Buscar";
             this.BuscarLocalidad_mnu.Click += new System.EventHandler(this.BuscarLocalidad_mnu_Click);
@@ -239,7 +239,7 @@
             // PaqueteAM_mnu
             // 
             this.PaqueteAM_mnu.Name = "PaqueteAM_mnu";
-            this.PaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
+            this.PaqueteAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.PaqueteAM_mnu.Tag = "AltaPaquete";
             this.PaqueteAM_mnu.Text = "Ingreso";
             this.PaqueteAM_mnu.Click += new System.EventHandler(this.PaqueteAM_mnu_Click);
@@ -247,7 +247,7 @@
             // BuscarPaquete_mnu
             // 
             this.BuscarPaquete_mnu.Name = "BuscarPaquete_mnu";
-            this.BuscarPaquete_mnu.Size = new System.Drawing.Size(113, 22);
+            this.BuscarPaquete_mnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarPaquete_mnu.Tag = "ModificaPaquete,ConsultaPaquete";
             this.BuscarPaquete_mnu.Text = "Buscar";
             this.BuscarPaquete_mnu.Click += new System.EventHandler(this.BuscarPaquete_mnu_Click);
