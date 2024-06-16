@@ -182,6 +182,12 @@
     <Compile Include="Views\Agencias\FrmListadoAgencias.Designer.cs">
       <DependentUpon>FrmListadoAgencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Auditoria\FrmListadoAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Auditoria\FrmListadoAuditoria.Designer.cs">
+      <DependentUpon>FrmListadoAuditoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Common\CommonView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmListadoAgencias.resx">
       <DependentUpon>FrmListadoAgencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Auditoria\FrmListadoAuditoria.resx">
+      <DependentUpon>FrmListadoAuditoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CtlCargaInfo.resx">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>

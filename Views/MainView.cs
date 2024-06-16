@@ -313,5 +313,11 @@ namespace TurApp.Views
              FrmListadoPaquetes frmListPac = new FrmListadoPaquetes();
              frmListPac.Show();
          }
+
+         private void ListadoAuditoriaMnu_Click(object sender, EventArgs e)
+         {
+            FrmListadoAuditoria frmListPac = new FrmListadoAuditoria();
+            frmListPac.Show();
+         }
     }
 }

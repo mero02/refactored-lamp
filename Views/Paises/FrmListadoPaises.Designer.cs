@@ -98,6 +98,7 @@
             this.ClientSize = new System.Drawing.Size(860, 493);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.PaisesGrd);
+            this.MaximizeBox = false;
             this.Name = "FrmListadoPaises";
             this.Text = "FrmListadoPaises";
             this.Load += new System.EventHandler(this.FrmListadoPaises_Load);
