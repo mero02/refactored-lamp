@@ -125,7 +125,25 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            
+            if (NivelTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese nivel de la actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NivelTxt.Focus();
+                return;
+            }
+
+            if (ImporteTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese duracion del tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ImporteTxt.Focus();
+                return;
+            }
+            if (TransporteCbo.Text == "")
+            {
+                MessageBox.Show("Ingrese nivel de tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TransporteCbo.Focus();
+                return;
+            }
             // validar...
             //.....
             //....

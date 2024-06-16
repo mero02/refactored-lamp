@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.ActividadGrd = new System.Windows.Forms.DataGridView();
-            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTransporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TipoActividadTxt = new System.Windows.Forms.TextBox();
             this.TipoActividadChk = new System.Windows.Forms.CheckBox();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTransporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,39 +65,6 @@
             this.ActividadGrd.ShowEditingIcon = false;
             this.ActividadGrd.Size = new System.Drawing.Size(864, 358);
             this.ActividadGrd.TabIndex = 12;
-            // 
-            // CodigoCol
-            // 
-            this.CodigoCol.DataPropertyName = "Codigo";
-            this.CodigoCol.HeaderText = "Codigo";
-            this.CodigoCol.Name = "CodigoCol";
-            this.CodigoCol.ReadOnly = true;
-            // 
-            // codTransporteCol
-            // 
-            this.codTransporteCol.DataPropertyName = "codigotransporte";
-            this.codTransporteCol.HeaderText = "Transporte";
-            this.codTransporteCol.Name = "codTransporteCol";
-            this.codTransporteCol.ReadOnly = true;
-            this.codTransporteCol.Width = 150;
-            // 
-            // Nivel
-            // 
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.ReadOnly = true;
-            // 
-            // TipoActividad
-            // 
-            this.TipoActividad.HeaderText = "Tipo Actividad";
-            this.TipoActividad.Name = "TipoActividad";
-            this.TipoActividad.ReadOnly = true;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
             // 
             // FiltroBtn
             // 
@@ -150,6 +117,42 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            // 
+            // codTransporteCol
+            // 
+            this.codTransporteCol.DataPropertyName = "CodTransporte";
+            this.codTransporteCol.HeaderText = "Transporte";
+            this.codTransporteCol.Name = "codTransporteCol";
+            this.codTransporteCol.ReadOnly = true;
+            this.codTransporteCol.Width = 150;
+            // 
+            // Nivel
+            // 
+            this.Nivel.DataPropertyName = "Nivel";
+            this.Nivel.HeaderText = "Nivel";
+            this.Nivel.Name = "Nivel";
+            this.Nivel.ReadOnly = true;
+            // 
+            // TipoActividad
+            // 
+            this.TipoActividad.DataPropertyName = "CodTipoActividad";
+            this.TipoActividad.HeaderText = "Tipo Actividad";
+            this.TipoActividad.Name = "TipoActividad";
+            this.TipoActividad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            // 
             // FrmListadoActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -173,15 +176,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView ActividadGrd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codTransporteCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox TipoActividadTxt;
         private System.Windows.Forms.CheckBox TipoActividadChk;
         private System.Windows.Forms.Button ExportarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codTransporteCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }

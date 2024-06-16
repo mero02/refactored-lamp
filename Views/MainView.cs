@@ -319,5 +319,11 @@ namespace TurApp.Views
             FrmListadoAuditoria frmListPac = new FrmListadoAuditoria();
             frmListPac.Show();
          }
+
+         private void ActividadesToolStripMenuItem1_Click(object sender, EventArgs e)
+         {
+             FrmListadoActividad frmListPac = new FrmListadoActividad();
+             frmListPac.Show();
+         }
     }
 }
