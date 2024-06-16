@@ -257,11 +257,29 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.Designer.cs">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Paquete\FrmPaquetAM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Paquete\FrmPaquetAM.Designer.cs">
       <DependentUpon>FrmPaquetAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteList.Designer.cs">
+      <DependentUpon>FrmPaqueteList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TipoActividad\FrmListadoTipoActividad.cs">
       <SubType>Form</SubType>
@@ -417,8 +435,17 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmPaquetAM.resx">
       <DependentUpon>FrmPaquetAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteList.resx">
+      <DependentUpon>FrmPaqueteList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoActividad\FrmListadoTipoActividad.resx">
       <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
