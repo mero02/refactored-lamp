@@ -46,7 +46,9 @@ namespace TurApp.Views
             //LoadComboBox(Turista.FindAllStatic(null, (l1, l2) => l1.NroDocumento.CompareTo(l2.NroDocumento)), this.DniTuristaCbo, addSeleccion: true);
             LoadComboBox(Destino.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.CodDestinoCbo, addSeleccion: true);
 
-            //this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
+            this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
+            FechaPaqueteTime.Format = DateTimePickerFormat.Custom;
+            FechaPaqueteTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
        
         public override FrmOperacion OperacionForm

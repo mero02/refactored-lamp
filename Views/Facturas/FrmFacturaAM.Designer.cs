@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
             this.DetallePagoTxt = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaFacturaTime = new System.Windows.Forms.DateTimePicker();
             this.FormaPagolbl = new System.Windows.Forms.Label();
             this.NumeroTxt = new System.Windows.Forms.TextBox();
             this.NumeroLbl = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             // 
             this.groupBox1.Controls.Add(this.FormaPagoCbo);
             this.groupBox1.Controls.Add(this.DetallePagoTxt);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.FechaFacturaTime);
             this.groupBox1.Controls.Add(this.FormaPagolbl);
             this.groupBox1.Controls.Add(this.NumeroTxt);
             this.groupBox1.Controls.Add(this.NumeroLbl);
@@ -93,14 +93,14 @@
             this.DetallePagoTxt.TabIndex = 18;
             this.DetallePagoTxt.Tag = "DetallePago";
             // 
-            // dateTimePicker1
+            // FechaFacturaTime
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker1.Location = new System.Drawing.Point(74, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
-            this.dateTimePicker1.Tag = "Fecha";
+            this.FechaFacturaTime.CustomFormat = "yyyy-mm-dd";
+            this.FechaFacturaTime.Location = new System.Drawing.Point(74, 120);
+            this.FechaFacturaTime.Name = "FechaFacturaTime";
+            this.FechaFacturaTime.Size = new System.Drawing.Size(200, 20);
+            this.FechaFacturaTime.TabIndex = 17;
+            this.FechaFacturaTime.Tag = "Fecha";
             // 
             // FormaPagolbl
             // 
@@ -262,7 +262,7 @@
         private System.Windows.Forms.Label LetraLbl;
         private System.Windows.Forms.TextBox SerieTxt;
         private System.Windows.Forms.Label SerieLbl;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaFacturaTime;
         private System.Windows.Forms.Label FormaPagolbl;
         private System.Windows.Forms.TextBox DetallePagoTxt;
         private System.Windows.Forms.Button CancelarBtn;

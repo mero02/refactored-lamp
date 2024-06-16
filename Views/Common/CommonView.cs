@@ -209,47 +209,68 @@ namespace TurApp.Views
 
             foreach (var prop in props)
             {
-                dynamic data = prop.GetValue(obj, null);
+                object data = prop.GetValue(obj, null);
                 PropiedadAttribute propAt = (PropiedadAttribute)prop.GetCustomAttributes(typeof(PropiedadAttribute), true)[0];
 
                 foreach (Control item in ctls)
                 {
                     if (item.Tag.ToString() == prop.Name)
                     {
-                        if (item is TextBox)
+                        try
                         {
-                            string newValue = (item as TextBox).Text;
-                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data.ToString())))
+                            if (item is TextBox)
                             {
-                                prop.SetValue(obj, Convert.ChangeType(newValue, prop.PropertyType), null);
+                                string newValue = (item as TextBox).Text;
+                                if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data.ToString())))
+                                {
+                                    prop.SetValue(obj, Convert.ChangeType(newValue, prop.PropertyType), null);
+                                }
                             }
-                        }
-                        else if (item is ComboBox && operacion == FrmOperacion.frmAlta)
-                        {
-                            var comboBox = (ComboBox)item;
-                            dynamic selectedValue = comboBox.SelectedValue;
-                            dynamic objVal = selectedValue is IImpleCodigo ? ((IImpleCodigo)selectedValue).Codigo : selectedValue;
+                            else if (item is ComboBox && operacion == FrmOperacion.frmAlta)
+                            {
+                                var comboBox = (ComboBox)item;
+                                object selectedValue = comboBox.SelectedValue ?? comboBox.Text;
+                                object objVal = null;
 
-                            if (operacion == FrmOperacion.frmAlta || (data != null && !objVal.Equals(data)))
+                                if (selectedValue is IImpleCodigo)
+                                {
+                                    objVal = ((IImpleCodigo)selectedValue).Codigo;
+                                }
+                                else if (selectedValue is IImpleDNI)
+                                {
+                                    objVal = ((IImpleDNI)selectedValue).NroDocumento;
+                                }
+                                else
+                                {
+                                    objVal = selectedValue;
+                                }
+
+                                if (operacion == FrmOperacion.frmAlta || (data != null && !objVal.Equals(data)))
+                                {
+                                    prop.SetValue(obj, Convert.ChangeType(objVal, prop.PropertyType), null);
+                                }
+                            }
+                            else if (item is DateTimePicker)
                             {
-                                prop.SetValue(obj, Convert.ChangeType(objVal, prop.PropertyType), null);
+                                DateTime newValue = (item as DateTimePicker).Value;
+                                if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
+                                {
+                                    prop.SetValue(obj, newValue, null);
+                                }
+                            }
+                            else if (item is CheckBox)
+                            {
+                                bool newValue = (item as CheckBox).Checked;
+                                if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
+                                {
+                                    prop.SetValue(obj, newValue, null);
+                                }
                             }
                         }
-                        else if (item is DateTimePicker)
+                        catch (Exception ex)
                         {
-                            DateTime newValue = (item as DateTimePicker).Value;
-                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
-                            {
-                                prop.SetValue(obj, newValue, null);
-                            }
-                        }
-                        else if (item is CheckBox)
-                        {
-                            bool newValue = (item as CheckBox).Checked;
-                            if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
-                            {
-                                prop.SetValue(obj, newValue, null);
-                            }
+                            // Manejo de errores: registrar el error y continuar
+                            Console.WriteLine("Error al procesar el control con Tag '{0}': {1}", item.Tag, ex.Message);
                         }
                     }
                 }

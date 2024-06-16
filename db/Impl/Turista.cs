@@ -7,7 +7,7 @@ using TurApp.db.orm;
 namespace TurApp.db
 {
     // ICOmparable
-    public partial class Turista : BaseClass, IAccessDB<Turista>
+    public partial class Turista : BaseClass, IAccessDB<Turista>, IImpleDNI
     {  // HACER VERIFICACIONES ANTES DE REALIZAR OPERACIONES DE ACTUALIZACION, LANZAR EVENTO O EXCEPCION
         public event ValidarClaseDelegate ValidacionTuristaGuardar;
         public List<Turista> FindAll()

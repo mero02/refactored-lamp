@@ -38,6 +38,8 @@ namespace TurApp.Views
         {
             this.GuardarBtn.Enabled = true;
             LoadComboBox(FormaPago.FindAllStatic(null, (l1, l2) => l1.Forma.CompareTo(l2.Forma)), this.FormaPagoCbo, addSeleccion: true);
+            FechaFacturaTime.Format = DateTimePickerFormat.Custom;
+            FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
 
         private void FrmFacturaAM_Deactivate(object sender, EventArgs e)

@@ -9,6 +9,10 @@ namespace TurApp.db.orm
     {
         int Codigo { get; }
     }
+    public interface IImpleDNI
+    {
+        int NroDocumento { get; }
+    }
     public delegate void ValidarClaseDelegate(string mensaje);
 
     public abstract class BaseClass 
