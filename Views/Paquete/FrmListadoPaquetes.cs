@@ -45,7 +45,7 @@ namespace TurApp.Views
 
             if (this.TipoPaqueteChk.Checked && this.TipoPaqueteChk != null)
             {
-                criterio = String.Format("Tipo Paquete = '{0}'", TipoPaqueteTxt.Text);
+                criterio = String.Format("cod_tipo_paquete = '{0}'", TipoPaqueteTxt.Text);
             }
 
             this.PaquetesGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));

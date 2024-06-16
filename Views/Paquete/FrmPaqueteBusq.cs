@@ -39,22 +39,22 @@ namespace TurApp.Views
             string criterio = null;
             if (this.DniChk.Checked)
             {
-                criterio = String.Format("dni = {0}", DniTxt.Text);
+                criterio = String.Format("dni_turista = {0}", DniTxt.Text);
             }
 
             if (this.TipoPaqueteChk.Checked)
             {
                 if (criterio == null)
-                    criterio = String.Format("Tipo Paquete = {0} ", (TipoPaqueteCbo.SelectedValue));
-                //else
-                  //  criterio += String.Format(" and Tipo Paquete  = {0}", (TipoPaqueteCbo.SelectedValue));
+                    criterio = String.Format("cod_tipo_paquete = {0} ", (TipoPaqueteCbo.SelectedValue));
+                else
+                 criterio += String.Format(" and cod_tipo_paquete  = {0}", (TipoPaqueteCbo.SelectedValue));
             }
             if (this.AgenciaChk.Checked)
             {
                 if (criterio == null)
-                    criterio = String.Format("Agencia = '{0}'", (AgenciaCbo.SelectedValue));
-               // else
-                  //  criterio += String.Format(" and Agencia  = {0}", (AgenciaCbo.SelectedValue));
+                    criterio = String.Format("cod_agencia = '{0}'", (AgenciaCbo.SelectedValue));
+               else
+                 criterio += String.Format(" and cod_agencia  = {0}", (AgenciaCbo.SelectedValue));
             }
 
             try
@@ -67,8 +67,8 @@ namespace TurApp.Views
                     MessageBox.Show("No se encontraron resultados con criterio ingresado", "Sin resultados...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // invocar Formulario de Listado.
-                FrmTuristaList frm = new FrmTuristaList();
-                //frm.ShowListado(lista, this, criterio); //Falta el listado y list
+                FrmPaqueteList frm = new FrmPaqueteList();
+                frm.ShowListado(lista, this, criterio);
             }
             catch (Exception ex)
             {
