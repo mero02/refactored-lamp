@@ -160,6 +160,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ActividadGrd);
             this.Name = "FrmListadoActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListadoActividad";
             this.Load += new System.EventHandler(this.FrmListadoActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).EndInit();

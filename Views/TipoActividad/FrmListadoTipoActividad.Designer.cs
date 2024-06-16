@@ -163,6 +163,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TipoActividadGrd);
             this.Name = "FrmListadoTipoActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListadoTipoActividad";
             this.Load += new System.EventHandler(this.FrmListadoTipoActividad_Load);
             this.groupBox1.ResumeLayout(false);

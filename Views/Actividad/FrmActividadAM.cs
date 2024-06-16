@@ -44,11 +44,12 @@ namespace TurApp.Views
             set
             {
                 base.OperacionForm = value;
+                LoadCombos();
 
                 if (value == FrmOperacion.frmAlta)
                 {
                     this.Text = "Ingreso de nueva Actividad...";
-
+                    this.TransporteCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
@@ -63,20 +64,20 @@ namespace TurApp.Views
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         public void ShowModificarActividad(FormBase invoker, Actividad For_modif)
         {
             ShowInfoActividadInForm(For_modif, invoker);
         }
         private void FrmActividadAM_Load(object sender, EventArgs e)
         {
-            this.CodigoCbo.DataSource = Actividad.FindAllStatic(null, (pa1, pa2) => pa1.Codigo.CompareTo(pa2.Codigo));
-            CodigoCbo.SelectedIndex = -1;
-            this.TransporteCbo.DataSource = Transporte.FindAllStatic(null, (pa1, pa2) => pa1.Codigo.CompareTo(pa2.Codigo));
-            TransporteCbo.SelectedIndex = -1;
+            
+        }
+        private void LoadCombos()
+        {
+
+            this.TransporteCbo.DataSource = Transporte.FindAllStatic(null, (pa1, pa2) => pa1.Dominio.CompareTo(pa2.Dominio));
+
         }
         
           
@@ -124,12 +125,7 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            if (CodigoCbo.Text == "")
-            {
-                MessageBox.Show("Ingrese codigo", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoCbo.Focus();
-                return;
-            }
+            
             // validar...
             //.....
             //....
@@ -183,10 +179,11 @@ namespace TurApp.Views
 
         }
 
-        private void TransporteLbl_Click(object sender, EventArgs e)
-        {
+        
 
-        }
+        
+
+       
 
        
     }

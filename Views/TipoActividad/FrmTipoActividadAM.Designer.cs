@@ -147,6 +147,7 @@
             this.Controls.Add(this.DescripcionTxt);
             this.Controls.Add(this.DescripcionLbl);
             this.Name = "FrmTipoActividadAM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTipoActividadAM";
             this.Load += new System.EventHandler(this.FrmTipoActividadAM_Load);
             this.ResumeLayout(false);

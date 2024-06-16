@@ -65,7 +65,6 @@
             this.TipoActividadCbo.Size = new System.Drawing.Size(223, 28);
             this.TipoActividadCbo.TabIndex = 18;
             this.TipoActividadCbo.ValueMember = "Codigo";
-           
             // 
             // TipoActividadChk
             // 
@@ -88,6 +87,7 @@
             this.Controls.Add(this.TipoActividadCbo);
             this.Controls.Add(this.TipoActividadChk);
             this.Name = "FrmTipoActividadBusq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTipoActividadBusq";
             this.Load += new System.EventHandler(this.FrmTipoActividadBusq_Load);
             this.ResumeLayout(false);

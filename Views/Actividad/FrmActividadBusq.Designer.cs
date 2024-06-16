@@ -42,6 +42,7 @@
             this.BuscarBtn.TabIndex = 9;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
+            this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
             // 
             // CancelarBtn
             // 
@@ -58,34 +59,36 @@
             this.CodigoChk.AutoSize = true;
             this.CodigoChk.Location = new System.Drawing.Point(30, 49);
             this.CodigoChk.Name = "CodigoChk";
-            this.CodigoChk.Size = new System.Drawing.Size(85, 24);
+            this.CodigoChk.Size = new System.Drawing.Size(99, 24);
             this.CodigoChk.TabIndex = 17;
-            this.CodigoChk.Text = "Codigo";
+            this.CodigoChk.Text = "Actividad";
             this.CodigoChk.UseVisualStyleBackColor = true;
             this.CodigoChk.CheckedChanged += new System.EventHandler(this.CodigoChk_CheckedChanged);
             // 
             // ActividadCbo
             // 
-            this.ActividadCbo.DisplayMember = "Forma";
+            this.ActividadCbo.DisplayMember = "Nombre";
             this.ActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ActividadCbo.Enabled = false;
             this.ActividadCbo.FormattingEnabled = true;
-            this.ActividadCbo.Location = new System.Drawing.Point(121, 49);
+            this.ActividadCbo.Location = new System.Drawing.Point(135, 47);
             this.ActividadCbo.Name = "ActividadCbo";
             this.ActividadCbo.Size = new System.Drawing.Size(223, 28);
             this.ActividadCbo.TabIndex = 18;
+            this.ActividadCbo.Tag = "CodTipoActividad";
             this.ActividadCbo.ValueMember = "Codigo";
             // 
             // FrmActividadBusq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 331);
+            this.ClientSize = new System.Drawing.Size(409, 239);
             this.Controls.Add(this.ActividadCbo);
             this.Controls.Add(this.CodigoChk);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
             this.Name = "FrmActividadBusq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActividadBusq";
             this.Load += new System.EventHandler(this.FrmActividadBusq_Load);
             this.ResumeLayout(false);

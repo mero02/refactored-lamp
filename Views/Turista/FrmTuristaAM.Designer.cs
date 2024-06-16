@@ -67,7 +67,6 @@
             this.groupBox1.Size = new System.Drawing.Size(438, 428);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            
             // 
             // ObservacionesTxt
             // 
@@ -109,6 +108,7 @@
             this.PaisCbo.TabIndex = 4;
             this.PaisCbo.Tag = "CodPais";
             this.PaisCbo.ValueMember = "Id";
+            
             // 
             // LocalidadLbl
             // 

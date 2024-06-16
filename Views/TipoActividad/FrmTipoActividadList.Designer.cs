@@ -114,6 +114,7 @@
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.TipoActividadGrd);
             this.Name = "FrmTipoActividadList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTipoActividadList";
             this.Load += new System.EventHandler(this.FrmTipoActividadList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoActividadGrd)).EndInit();

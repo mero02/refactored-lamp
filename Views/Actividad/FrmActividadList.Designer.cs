@@ -81,7 +81,7 @@
             // 
             // codTransporteCol
             // 
-            this.codTransporteCol.DataPropertyName = "codigotransporte";
+            this.codTransporteCol.DataPropertyName = "CodTransporte";
             this.codTransporteCol.HeaderText = "Transporte";
             this.codTransporteCol.Name = "codTransporteCol";
             this.codTransporteCol.ReadOnly = true;
@@ -89,18 +89,21 @@
             // 
             // Nivel
             // 
+            this.Nivel.DataPropertyName = "Nivel";
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
             this.Nivel.ReadOnly = true;
             // 
             // TipoActividad
             // 
+            this.TipoActividad.DataPropertyName = "CodTipoActividad";
             this.TipoActividad.HeaderText = "Tipo Actividad";
             this.TipoActividad.Name = "TipoActividad";
             this.TipoActividad.ReadOnly = true;
             // 
             // Importe
             // 
+            this.Importe.DataPropertyName = "Importe";
             this.Importe.HeaderText = "Importe";
             this.Importe.Name = "Importe";
             this.Importe.ReadOnly = true;
@@ -113,6 +116,7 @@
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.ActividadGrd);
             this.Name = "FrmActividadList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmActividadList";
             this.Load += new System.EventHandler(this.FrmActividadList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).EndInit();
