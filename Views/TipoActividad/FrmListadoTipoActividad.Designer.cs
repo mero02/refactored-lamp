@@ -81,7 +81,6 @@
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(217, 26);
             this.NombreTxt.TabIndex = 1;
-            
             // 
             // NombreChk
             // 
@@ -125,7 +124,7 @@
             // 
             // NombreCol
             // 
-            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.DataPropertyName = "Nombre";
             this.NombreCol.HeaderText = "Nombres";
             this.NombreCol.Name = "NombreCol";
             this.NombreCol.ReadOnly = true;

@@ -61,7 +61,7 @@ namespace TurApp.Views
                 }
                 // invocar Formulario de Listado.
                 FrmTipoActividadList frm = new FrmTipoActividadList();
-                //frm.ShowListado(lista, this, criterio);
+                frm.ShowListado(lista, this, criterio);
             }
             catch (Exception ex)
             {
