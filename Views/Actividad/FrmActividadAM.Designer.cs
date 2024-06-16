@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TipoActividadCbo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.TransporteCbo = new System.Windows.Forms.ComboBox();
             this.TransporteLbl = new System.Windows.Forms.Label();
             this.ImporteTxt = new System.Windows.Forms.TextBox();
@@ -42,6 +44,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TipoActividadCbo);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.TransporteCbo);
             this.groupBox1.Controls.Add(this.TransporteLbl);
             this.groupBox1.Controls.Add(this.ImporteTxt);
@@ -50,30 +54,39 @@
             this.groupBox1.Controls.Add(this.NivelLbl);
             this.groupBox1.Location = new System.Drawing.Point(6, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(438, 201);
+            this.groupBox1.Size = new System.Drawing.Size(438, 261);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // CodigoCbo
+            // TipoActividadCbo
             // 
-            /*
-             this.CodigoCbo.DisplayMember = "Nombre";
-            this.CodigoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CodigoCbo.FormattingEnabled = true;
-            this.CodigoCbo.Location = new System.Drawing.Point(111, 31);
-            this.CodigoCbo.Name = "CodigoCbo";
-            this.CodigoCbo.Size = new System.Drawing.Size(234, 28);
-            this.CodigoCbo.TabIndex = 18;
-            this.CodigoCbo.Tag = "CodActividad";
-            this.CodigoCbo.ValueMember = "Id";
-             */
+            this.TipoActividadCbo.DisplayMember = "Descripcion";
+            this.TipoActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoActividadCbo.FormattingEnabled = true;
+            this.TipoActividadCbo.Location = new System.Drawing.Point(132, 177);
+            this.TipoActividadCbo.Name = "TipoActividadCbo";
+            this.TipoActividadCbo.Size = new System.Drawing.Size(234, 28);
+            this.TipoActividadCbo.TabIndex = 13;
+            this.TipoActividadCbo.Tag = "Descripcion";
+            this.TipoActividadCbo.ValueMember = "Id";
+            this.TipoActividadCbo.SelectedIndexChanged += new System.EventHandler(this.TipoActividadCbo_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Tipo Actividad";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TransporteCbo
             // 
             this.TransporteCbo.DisplayMember = "Descripcion";
             this.TransporteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TransporteCbo.FormattingEnabled = true;
-            this.TransporteCbo.Location = new System.Drawing.Point(115, 129);
+            this.TransporteCbo.Location = new System.Drawing.Point(132, 129);
             this.TransporteCbo.Name = "TransporteCbo";
             this.TransporteCbo.Size = new System.Drawing.Size(234, 28);
             this.TransporteCbo.TabIndex = 11;
@@ -91,7 +104,7 @@
             // 
             // ImporteTxt
             // 
-            this.ImporteTxt.Location = new System.Drawing.Point(115, 79);
+            this.ImporteTxt.Location = new System.Drawing.Point(132, 79);
             this.ImporteTxt.Name = "ImporteTxt";
             this.ImporteTxt.Size = new System.Drawing.Size(247, 26);
             this.ImporteTxt.TabIndex = 2;
@@ -108,7 +121,7 @@
             // 
             // NivelTxt
             // 
-            this.NivelTxt.Location = new System.Drawing.Point(115, 25);
+            this.NivelTxt.Location = new System.Drawing.Point(132, 25);
             this.NivelTxt.MaxLength = 90;
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(247, 26);
@@ -126,7 +139,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(356, 236);
+            this.CancelarBtn.Location = new System.Drawing.Point(356, 289);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(88, 42);
             this.CancelarBtn.TabIndex = 14;
@@ -136,7 +149,7 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(226, 236);
+            this.GuardarBtn.Location = new System.Drawing.Point(243, 289);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(88, 42);
             this.GuardarBtn.TabIndex = 13;
@@ -148,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 300);
+            this.ClientSize = new System.Drawing.Size(456, 350);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
@@ -172,6 +185,8 @@
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.ComboBox TransporteCbo;
+        private System.Windows.Forms.ComboBox TipoActividadCbo;
+        private System.Windows.Forms.Label label1;
 
     }
 }

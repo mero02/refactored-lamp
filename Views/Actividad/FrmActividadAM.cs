@@ -50,6 +50,7 @@ namespace TurApp.Views
                 {
                     this.Text = "Ingreso de nueva Actividad...";
                     this.TransporteCbo.SelectedIndex = -1;
+                    this.TipoActividadCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
@@ -77,7 +78,7 @@ namespace TurApp.Views
         {
 
             this.TransporteCbo.DataSource = Transporte.FindAllStatic(null, (pa1, pa2) => pa1.Dominio.CompareTo(pa2.Dominio));
-
+            this.TipoActividadCbo.DataSource = TipoActividad.FindAllStatic(null, (pa1, pa2) => pa1.Descripcion.CompareTo(pa2.Descripcion));
         }
         
           
@@ -194,6 +195,16 @@ namespace TurApp.Views
             }
             MainView.Instance.Cursor = Cursors.Default;
             this.Close();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TipoActividadCbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
