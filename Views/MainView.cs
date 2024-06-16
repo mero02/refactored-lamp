@@ -301,6 +301,12 @@ namespace TurApp.Views
              FrmListadoTipoActividad frmListPac = new FrmListadoTipoActividad();
              frmListPac.Show();
          }
+
+         private void ListadoPaisesMnu_Click(object sender, EventArgs e)
+         {
+             FrmListadoPaises frmListPac = new FrmListadoPaises();
+             frmListPac.Show();
+         }
          
 
     }

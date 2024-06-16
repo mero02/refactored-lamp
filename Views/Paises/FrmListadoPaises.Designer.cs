@@ -87,10 +87,9 @@
             // CantidadCol
             // 
             this.CantidadCol.DataPropertyName = "Cantidad";
-            this.CantidadCol.HeaderText = "Descripcion";
+            this.CantidadCol.HeaderText = "Cantidad";
             this.CantidadCol.Name = "CantidadCol";
             this.CantidadCol.ReadOnly = true;
-            this.CantidadCol.Width = 500;
             // 
             // FrmListadoPaises
             // 

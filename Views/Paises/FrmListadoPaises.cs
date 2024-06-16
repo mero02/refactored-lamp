@@ -18,7 +18,7 @@ namespace TurApp.Views
             InitializeComponent();
         }
 
-        private void FrmListadoDestinos_Load(object sender, EventArgs e)
+        private void FrmListadoPaises_Load(object sender, EventArgs e)
     {
         this.PaisesGrd.AutoGenerateColumns = false;
         var paises = Pais.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
@@ -34,7 +34,7 @@ namespace TurApp.Views
 
     private class PaisConTuristas
     {
-        public Pais PaisCol;
+        public string PaisCol;
         public int CodigoCol;
         public int CantidadCol;
     }
@@ -55,8 +55,8 @@ namespace TurApp.Views
                     count++;
                 }
             }
-        PaisesConTuristas.Add(new PaisConTuristas { PaisCol = pais, CodigoCol = codPais, CantidadCol = count });
-    }
+            PaisesConTuristas.Add(new PaisConTuristas { PaisCol = pais.Nombre, CodigoCol = codPais, CantidadCol = count });
+        }
 
         return PaisesConTuristas.OrderBy(p => p.CodigoCol).ToList();
     }
@@ -70,7 +70,7 @@ namespace TurApp.Views
                 for (int i = 0; i < this.PaisesGrd.Rows.Count; ++i)
                 {
                     DataGridViewRow item = this.PaisesGrd.Rows[i];
-                    item.Cells[1].Value = (item.DataBoundItem as Pais).Nombre;
+                    item.Cells[1].Value = (item.DataBoundItem as PaisConTuristas).PaisCol;
                 }
             }
             finally
@@ -143,9 +143,5 @@ namespace TurApp.Views
 
         }
 
-        private void FrmListadoPaises_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
