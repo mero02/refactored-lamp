@@ -233,7 +233,7 @@
             this.Paquetes_mnu_top.Size = new System.Drawing.Size(67, 20);
             this.Paquetes_mnu_top.Tag = "AltaPaquete,ModificaPaquete,ConsultaPaquete";
             this.Paquetes_mnu_top.Text = "Paquetes";
-            this.Paquetes_mnu_top.Click += new System.EventHandler(this.Paquetes_mnu_top_Click);
+            
             // 
             // PaqueteAM_mnu
             // 
