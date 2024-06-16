@@ -36,8 +36,35 @@ namespace TurApp.Views
 
         }
 
-        private void TipoActividadGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        private void TipoActividadGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            for (int i = 0; i < this.TipoActividadGrd.Rows.Count; ++i)
+            {
+                DataGridViewRow item = this.TipoActividadGrd.Rows[i];
+                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Nombre;
+            }
+        }
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
+        {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK)
+            {
+                var selAnt = TipoActividadGrd.SelectedRows[0].Index;
+                this.TipoActividadGrd.DataSource = TipoActividad.FindAllStatic(_criterio, (e1, e2) => e1.Codigo.CompareTo(e2.Codigo));
+                TipoActividadGrd.Rows[selAnt].Selected = true;
+                MessageBox.Show("Tipo actividad actualizada", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void TipoActividadGrd_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.TipoActividadGrd.SelectedRows.Count > 0)
+            {
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmTipoActividadAM frm = new FrmTipoActividadAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarTipoActividad(this, (this.TipoActividadGrd.SelectedRows[0].DataBoundItem as TipoActividad));
+            }
 
         }
 

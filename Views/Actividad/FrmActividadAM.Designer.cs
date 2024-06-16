@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CodigoCbo = new System.Windows.Forms.ComboBox();
             this.TransporteCbo = new System.Windows.Forms.ComboBox();
-            this.CodigoTxt = new System.Windows.Forms.TextBox();
             this.CodigoLbl = new System.Windows.Forms.Label();
             this.TransporteLbl = new System.Windows.Forms.Label();
             this.ImporteTxt = new System.Windows.Forms.TextBox();
@@ -44,8 +44,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CodigoCbo);
             this.groupBox1.Controls.Add(this.TransporteCbo);
-            this.groupBox1.Controls.Add(this.CodigoTxt);
             this.groupBox1.Controls.Add(this.CodigoLbl);
             this.groupBox1.Controls.Add(this.TransporteLbl);
             this.groupBox1.Controls.Add(this.ImporteTxt);
@@ -57,6 +57,19 @@
             this.groupBox1.Size = new System.Drawing.Size(438, 290);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // CodigoCbo
+            // 
+            this.CodigoCbo.DisplayMember = "Nombre";
+            this.CodigoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CodigoCbo.FormattingEnabled = true;
+            this.CodigoCbo.Location = new System.Drawing.Point(111, 31);
+            this.CodigoCbo.Name = "CodigoCbo";
+            this.CodigoCbo.Size = new System.Drawing.Size(234, 28);
+            this.CodigoCbo.TabIndex = 18;
+            this.CodigoCbo.Tag = "CodActividad";
+            this.CodigoCbo.ValueMember = "Id";
+            this.CodigoCbo.SelectedIndexChanged += new System.EventHandler(this.CodigoCbo_SelectedIndexChanged);
             // 
             // TransporteCbo
             // 
@@ -70,15 +83,6 @@
             this.TransporteCbo.Tag = "CodTransporte";
             this.TransporteCbo.ValueMember = "Id";
             this.TransporteCbo.SelectedIndexChanged += new System.EventHandler(this.label3_Click);
-            // 
-            // CodigoTxt
-            // 
-            this.CodigoTxt.Location = new System.Drawing.Point(111, 34);
-            this.CodigoTxt.MaxLength = 15;
-            this.CodigoTxt.Name = "CodigoTxt";
-            this.CodigoTxt.Size = new System.Drawing.Size(118, 26);
-            this.CodigoTxt.TabIndex = 0;
-            this.CodigoTxt.Tag = "NroCodigo";
             // 
             // CodigoLbl
             // 
@@ -97,6 +101,7 @@
             this.TransporteLbl.Size = new System.Drawing.Size(86, 20);
             this.TransporteLbl.TabIndex = 10;
             this.TransporteLbl.Text = "Transporte";
+            this.TransporteLbl.Click += new System.EventHandler(this.TransporteLbl_Click);
             // 
             // ImporteTxt
             // 
@@ -172,7 +177,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox CodigoTxt;
         private System.Windows.Forms.Label CodigoLbl;
         private System.Windows.Forms.Label TransporteLbl;
         private System.Windows.Forms.TextBox ImporteTxt;
@@ -182,6 +186,7 @@
         private System.Windows.Forms.ComboBox TransporteCbo;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
+        private System.Windows.Forms.ComboBox CodigoCbo;
 
     }
 }

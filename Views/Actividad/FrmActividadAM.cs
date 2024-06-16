@@ -71,13 +71,15 @@ namespace TurApp.Views
         {
             ShowInfoActividadInForm(For_modif, invoker);
         }
+        private void FrmActividadAM_Load(object sender, EventArgs e)
+        {
+            this.CodigoCbo.DataSource = Actividad.FindAllStatic(null, (pa1, pa2) => pa1.Codigo.CompareTo(pa2.Codigo));
+            CodigoCbo.SelectedIndex = -1;
+            this.TransporteCbo.DataSource = Transporte.FindAllStatic(null, (pa1, pa2) => pa1.Codigo.CompareTo(pa2.Codigo));
+            TransporteCbo.SelectedIndex = -1;
+        }
         
-            
-
-
-       
-
-       
+          
         public void ShowModificarActividad(Actividad For_modif)
         {
             ShowInfoActividadInForm(For_modif, null);
@@ -107,14 +109,7 @@ namespace TurApp.Views
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
         }
-        private void LoadCombos()
-        {
-            
-            this.TransporteCbo.DataSource = Transporte.FindAllStatic(null, (pa1, pa2) => pa1.Codigo.CompareTo(pa2.Codigo));
-
-
-            
-        }
+       
 
         private void CancelarBtn_Click(object sender, EventArgs e)
         {
@@ -129,10 +124,10 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            if (CodigoTxt.Text == "")
+            if (CodigoCbo.Text == "")
             {
                 MessageBox.Show("Ingrese codigo", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
+                CodigoCbo.Focus();
                 return;
             }
             // validar...
@@ -187,5 +182,12 @@ namespace TurApp.Views
             this.Close();
 
         }
+
+        private void TransporteLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -68,7 +68,7 @@
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(960, 294);
             this.TipoActividadGrd.TabIndex = 12;
-            this.TipoActividadGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TipoActividadGrd_CellContentClick);
+            
             // 
             // CodigoCol
             // 

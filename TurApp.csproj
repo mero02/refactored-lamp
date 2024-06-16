@@ -152,6 +152,12 @@
     <Compile Include="Views\Actividad\FrmActividadList.Designer.cs">
       <DependentUpon>FrmActividadList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Actividad\FrmListadoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Actividad\FrmListadoActividad.Designer.cs">
+      <DependentUpon>FrmListadoActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Agencias\FrmAgenciaAM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Actividad\FrmActividadList.resx">
       <DependentUpon>FrmActividadList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Actividad\FrmListadoActividad.resx">
+      <DependentUpon>FrmListadoActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmAgenciaAM.resx">
       <DependentUpon>FrmAgenciaAM.cs</DependentUpon>

@@ -65,6 +65,7 @@
             this.TipoActividadCbo.Size = new System.Drawing.Size(223, 28);
             this.TipoActividadCbo.TabIndex = 18;
             this.TipoActividadCbo.ValueMember = "Codigo";
+           
             // 
             // TipoActividadChk
             // 

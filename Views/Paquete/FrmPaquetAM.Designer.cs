@@ -49,62 +49,68 @@
             // CodTipoPaqueteCbo
             // 
             this.CodTipoPaqueteCbo.AutoSize = true;
-            this.CodTipoPaqueteCbo.Location = new System.Drawing.Point(2, 41);
+            this.CodTipoPaqueteCbo.Location = new System.Drawing.Point(3, 63);
+            this.CodTipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodTipoPaqueteCbo.Name = "CodTipoPaqueteCbo";
-            this.CodTipoPaqueteCbo.Size = new System.Drawing.Size(99, 13);
+            this.CodTipoPaqueteCbo.Size = new System.Drawing.Size(144, 20);
             this.CodTipoPaqueteCbo.TabIndex = 1;
             this.CodTipoPaqueteCbo.Text = "&Cod. Tipo Paquete:";
             // 
             // CodAgenciaLbl
             // 
             this.CodAgenciaLbl.AutoSize = true;
-            this.CodAgenciaLbl.Location = new System.Drawing.Point(2, 73);
+            this.CodAgenciaLbl.Location = new System.Drawing.Point(3, 112);
+            this.CodAgenciaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodAgenciaLbl.Name = "CodAgenciaLbl";
-            this.CodAgenciaLbl.Size = new System.Drawing.Size(74, 13);
+            this.CodAgenciaLbl.Size = new System.Drawing.Size(108, 20);
             this.CodAgenciaLbl.TabIndex = 3;
             this.CodAgenciaLbl.Text = "Cod. Agencia:";
+            this.CodAgenciaLbl.Click += new System.EventHandler(this.CodAgenciaLbl_Click);
             // 
             // NivelLbl
             // 
             this.NivelLbl.AutoSize = true;
-            this.NivelLbl.Location = new System.Drawing.Point(2, 105);
+            this.NivelLbl.Location = new System.Drawing.Point(3, 162);
+            this.NivelLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NivelLbl.Name = "NivelLbl";
-            this.NivelLbl.Size = new System.Drawing.Size(34, 13);
+            this.NivelLbl.Size = new System.Drawing.Size(46, 20);
             this.NivelLbl.TabIndex = 5;
             this.NivelLbl.Text = "Nivel:";
             // 
             // NivelTxt
             // 
-            this.NivelTxt.Location = new System.Drawing.Point(106, 102);
+            this.NivelTxt.Location = new System.Drawing.Point(159, 157);
+            this.NivelTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NivelTxt.Name = "NivelTxt";
-            this.NivelTxt.Size = new System.Drawing.Size(149, 20);
+            this.NivelTxt.Size = new System.Drawing.Size(222, 26);
             this.NivelTxt.TabIndex = 6;
             this.NivelTxt.Tag = "Nivel";
             // 
             // DniTuristaLbl
             // 
             this.DniTuristaLbl.AutoSize = true;
-            this.DniTuristaLbl.Location = new System.Drawing.Point(2, 164);
+            this.DniTuristaLbl.Location = new System.Drawing.Point(3, 252);
+            this.DniTuristaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DniTuristaLbl.Name = "DniTuristaLbl";
-            this.DniTuristaLbl.Size = new System.Drawing.Size(58, 13);
+            this.DniTuristaLbl.Size = new System.Drawing.Size(85, 20);
             this.DniTuristaLbl.TabIndex = 9;
             this.DniTuristaLbl.Text = "DniTurista:";
             // 
             // CodDestinoLbl
             // 
             this.CodDestinoLbl.AutoSize = true;
-            this.CodDestinoLbl.Location = new System.Drawing.Point(2, 193);
+            this.CodDestinoLbl.Location = new System.Drawing.Point(3, 297);
+            this.CodDestinoLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodDestinoLbl.Name = "CodDestinoLbl";
-            this.CodDestinoLbl.Size = new System.Drawing.Size(71, 13);
+            this.CodDestinoLbl.Size = new System.Drawing.Size(105, 20);
             this.CodDestinoLbl.TabIndex = 11;
             this.CodDestinoLbl.Text = "Cod. Destino:";
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(213, 250);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CancelarBtn.Location = new System.Drawing.Point(320, 385);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
+            this.CancelarBtn.Size = new System.Drawing.Size(88, 42);
             this.CancelarBtn.TabIndex = 14;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -112,10 +118,9 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(106, 250);
-            this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.GuardarBtn.Location = new System.Drawing.Point(159, 385);
             this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
+            this.GuardarBtn.Size = new System.Drawing.Size(88, 42);
             this.GuardarBtn.TabIndex = 13;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
@@ -124,9 +129,10 @@
             // FechaLbl
             // 
             this.FechaLbl.AutoSize = true;
-            this.FechaLbl.Location = new System.Drawing.Point(2, 134);
+            this.FechaLbl.Location = new System.Drawing.Point(3, 206);
+            this.FechaLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FechaLbl.Name = "FechaLbl";
-            this.FechaLbl.Size = new System.Drawing.Size(40, 13);
+            this.FechaLbl.Size = new System.Drawing.Size(58, 20);
             this.FechaLbl.TabIndex = 7;
             this.FechaLbl.Text = "Fecha:";
             // 
@@ -144,20 +150,19 @@
             this.groupBox1.Controls.Add(this.NivelLbl);
             this.groupBox1.Controls.Add(this.CodAgenciaLbl);
             this.groupBox1.Controls.Add(this.CodTipoPaqueteCbo);
-            this.groupBox1.Location = new System.Drawing.Point(9, 1);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(14, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(334, 245);
+            this.groupBox1.Size = new System.Drawing.Size(501, 377);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
             // FechaPaqueteTime
             // 
             this.FechaPaqueteTime.CustomFormat = "yyyy-mm-dd";
-            this.FechaPaqueteTime.Location = new System.Drawing.Point(106, 134);
+            this.FechaPaqueteTime.Location = new System.Drawing.Point(159, 206);
+            this.FechaPaqueteTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FechaPaqueteTime.Name = "FechaPaqueteTime";
-            this.FechaPaqueteTime.Size = new System.Drawing.Size(200, 20);
+            this.FechaPaqueteTime.Size = new System.Drawing.Size(298, 26);
             this.FechaPaqueteTime.TabIndex = 8;
             this.FechaPaqueteTime.Tag = "Fecha";
             // 
@@ -166,10 +171,9 @@
             this.CodDestinoCbo.DisplayMember = "Nombre";
             this.CodDestinoCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CodDestinoCbo.FormattingEnabled = true;
-            this.CodDestinoCbo.Location = new System.Drawing.Point(106, 193);
-            this.CodDestinoCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.CodDestinoCbo.Location = new System.Drawing.Point(159, 297);
             this.CodDestinoCbo.Name = "CodDestinoCbo";
-            this.CodDestinoCbo.Size = new System.Drawing.Size(157, 21);
+            this.CodDestinoCbo.Size = new System.Drawing.Size(234, 28);
             this.CodDestinoCbo.TabIndex = 12;
             this.CodDestinoCbo.Tag = "CodDestino";
             this.CodDestinoCbo.ValueMember = "Id";
@@ -179,10 +183,9 @@
             this.DniTuristaCbo.DisplayMember = "NroDocumento";
             this.DniTuristaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DniTuristaCbo.FormattingEnabled = true;
-            this.DniTuristaCbo.Location = new System.Drawing.Point(106, 159);
-            this.DniTuristaCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.DniTuristaCbo.Location = new System.Drawing.Point(159, 245);
             this.DniTuristaCbo.Name = "DniTuristaCbo";
-            this.DniTuristaCbo.Size = new System.Drawing.Size(157, 21);
+            this.DniTuristaCbo.Size = new System.Drawing.Size(234, 28);
             this.DniTuristaCbo.TabIndex = 10;
             this.DniTuristaCbo.Tag = "DniTurista";
             this.DniTuristaCbo.ValueMember = "Id";
@@ -192,10 +195,9 @@
             this.AgenciaCbo.DisplayMember = "Nombre";
             this.AgenciaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AgenciaCbo.FormattingEnabled = true;
-            this.AgenciaCbo.Location = new System.Drawing.Point(106, 65);
-            this.AgenciaCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.AgenciaCbo.Location = new System.Drawing.Point(159, 100);
             this.AgenciaCbo.Name = "AgenciaCbo";
-            this.AgenciaCbo.Size = new System.Drawing.Size(151, 21);
+            this.AgenciaCbo.Size = new System.Drawing.Size(224, 28);
             this.AgenciaCbo.TabIndex = 4;
             this.AgenciaCbo.Tag = "CodAgencia";
             this.AgenciaCbo.ValueMember = "Id";
@@ -205,23 +207,23 @@
             this.TipoPaqueteCbo.DisplayMember = "Nombre";
             this.TipoPaqueteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoPaqueteCbo.FormattingEnabled = true;
-            this.TipoPaqueteCbo.Location = new System.Drawing.Point(106, 38);
-            this.TipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.TipoPaqueteCbo.Location = new System.Drawing.Point(159, 58);
             this.TipoPaqueteCbo.Name = "TipoPaqueteCbo";
-            this.TipoPaqueteCbo.Size = new System.Drawing.Size(151, 21);
+            this.TipoPaqueteCbo.Size = new System.Drawing.Size(224, 28);
             this.TipoPaqueteCbo.TabIndex = 2;
             this.TipoPaqueteCbo.Tag = "CodTipoPaquete";
             this.TipoPaqueteCbo.ValueMember = "Id";
             // 
             // FrmPaqueteAM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 280);
+            this.ClientSize = new System.Drawing.Size(534, 431);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Location = new System.Drawing.Point(9, 1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPaqueteAM";
