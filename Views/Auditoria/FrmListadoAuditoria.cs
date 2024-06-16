@@ -64,8 +64,8 @@ namespace TurApp.Views
                     DataGridViewRow item = this.AuditoriasGrd.Rows[i];
                     item.Cells[0].Value = (item.DataBoundItem as AuditoriaConLogger).UsuarioName;
                     item.Cells[1].Value = (item.DataBoundItem as AuditoriaConLogger).Objeto;
-                    item.Cells[2].Value = (item.DataBoundItem as AuditoriaConLogger).Operacion;
-                    item.Cells[3].Value = (item.DataBoundItem as AuditoriaConLogger).Fecha;
+                    item.Cells[2].Value = (item.DataBoundItem as AuditoriaConLogger).Fecha;
+                    item.Cells[3].Value = (item.DataBoundItem as AuditoriaConLogger).Operacion;
                     item.Cells[4].Value = (item.DataBoundItem as AuditoriaConLogger).Detalle;
                 }
             }
@@ -131,13 +131,52 @@ namespace TurApp.Views
 
         private void AuditoriasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            string sortOrderGrid = "";
 
+            if (AuditoriasGrd.Tag != null)
+                sortOrderGrid = AuditoriasGrd.Tag.ToString();
+
+            DataGridViewColumn newColumn = AuditoriasGrd.Columns[e.ColumnIndex];
+
+            // Determinar la dirección de orden
+            ListSortDirection direction = sortOrderGrid.StartsWith("-") ? ListSortDirection.Descending : ListSortDirection.Ascending;
+
+            // Obtener los turistas desde el DataSource
+            var bindingSource = AuditoriasGrd.DataSource as BindingSource;
+            if (bindingSource == null)
+            {
+                MessageBox.Show("DataSource no es un BindingSource.");
+                return;
+            }
+
+            var auditorias = bindingSource.List.Cast<AuditoriaConLogger>().ToList();
+
+            // Ordenar los turistas según la columna seleccionada
+            switch (newColumn.Name)
+            {
+                case "usuario":
+                    auditorias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.UsuarioName.CompareTo(t2.UsuarioName) : t2.UsuarioName.CompareTo(t1.UsuarioName));
+                    break;
+                case "fecha":
+                    auditorias.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Fecha.CompareTo(t2.Fecha) : t2.Fecha.CompareTo(t1.Fecha));
+                    break;
+            }
+
+            // Actualizar la etiqueta de dirección de orden
+            AuditoriasGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
+
+            // Asignar los datos ordenados al DataSource
+            bindingSource.DataSource = new BindingList<AuditoriaConLogger>(auditorias);
+
+            // Mostrar la dirección de orden en el encabezado de la columna
+            newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
 
         private void AuditoriasGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
 
     }
 }

@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.DestinosGrd = new System.Windows.Forms.DataGridView();
-            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.NombreTxt = new System.Windows.Forms.TextBox();
             this.NombreChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DestinosGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,8 @@
             this.DestinosGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoCol,
             this.NombreCol,
-            this.DescripcionCol});
+            this.DescripcionCol,
+            this.CantCol});
             this.DestinosGrd.Location = new System.Drawing.Point(17, 65);
             this.DestinosGrd.Margin = new System.Windows.Forms.Padding(2);
             this.DestinosGrd.MultiSelect = false;
@@ -63,29 +65,6 @@
             this.DestinosGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DestinosGrd_CellContentClick);
             this.DestinosGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DestinosGrd_ColumnHeaderMouseClick);
             this.DestinosGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DestinosGrd_DataBindingComplete);
-            // 
-            // CodigoCol
-            // 
-            this.CodigoCol.DataPropertyName = "Codigo";
-            this.CodigoCol.HeaderText = "Codigo";
-            this.CodigoCol.Name = "CodigoCol";
-            this.CodigoCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombre";
-            this.NombreCol.HeaderText = "Nombre";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
-            // 
-            // DescripcionCol
-            // 
-            this.DescripcionCol.DataPropertyName = "Descripcion";
-            this.DescripcionCol.HeaderText = "Descripcion";
-            this.DescripcionCol.Name = "DescripcionCol";
-            this.DescripcionCol.ReadOnly = true;
-            this.DescripcionCol.Width = 500;
             // 
             // groupBox1
             // 
@@ -141,6 +120,36 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombre";
+            this.NombreCol.HeaderText = "Nombre";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 150;
+            // 
+            // DescripcionCol
+            // 
+            this.DescripcionCol.DataPropertyName = "Descripcion";
+            this.DescripcionCol.HeaderText = "Descripcion";
+            this.DescripcionCol.Name = "DescripcionCol";
+            this.DescripcionCol.ReadOnly = true;
+            this.DescripcionCol.Width = 400;
+            // 
+            // CantCol
+            // 
+            this.CantCol.DataPropertyName = "Cantidad";
+            this.CantCol.HeaderText = "Cantidad";
+            this.CantCol.Name = "CantCol";
+            this.CantCol.ReadOnly = true;
+            // 
             // FrmListadoDestinos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,13 +174,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DestinosGrd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionCol;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox NombreTxt;
         private System.Windows.Forms.CheckBox NombreChk;
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.Button ExportarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantCol;
     }
 }

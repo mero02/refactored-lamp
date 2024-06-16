@@ -69,7 +69,6 @@
             this.CodigoCbo.TabIndex = 18;
             this.CodigoCbo.Tag = "CodActividad";
             this.CodigoCbo.ValueMember = "Id";
-            this.CodigoCbo.SelectedIndexChanged += new System.EventHandler(this.CodigoCbo_SelectedIndexChanged);
             // 
             // TransporteCbo
             // 

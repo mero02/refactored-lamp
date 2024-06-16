@@ -27,35 +27,44 @@ namespace TurApp.Views
         {
             this.DestinosGrd.AutoGenerateColumns = false;
             var destinos = Destino.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
-            var Destinos = filtrarPaquetesPorDestino(destinos);
-            var DestinosBindingList = new BindingList<Destino>(Destinos);
+            var destinosConcurridos = filtrarPaquetesPorDestino(destinos);
+            var DestinosBindingList = new BindingList<DestinosConcurridos>(destinosConcurridos);
             var DestinosBindingSource = new BindingSource(DestinosBindingList, null);
             this.DestinosGrd.DataSource = DestinosBindingSource;
 
             this.ExportarBtn.Enabled = true;
 
             this.DestinosGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(DestinosGrd_ColumnHeaderMouseClick);
-
         }
 
-        private List<Destino> filtrarPaquetesPorDestino( List<Destino> Destinos)
+        private class DestinosConcurridos
         {
-            var DestinosSet = new HashSet<Destino>();
+            public int Codigo;
+            public string Nombre;
+            public string Descripcion;
+            public int Cantidad;
+        }
+
+        private List<DestinosConcurridos> filtrarPaquetesPorDestino(List<Destino> Destinos)
+        {
+            var DestinosConcurridos = new List<DestinosConcurridos>();
             var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
 
             foreach (Destino destino in Destinos)
             {
                 var codDestino = destino.Codigo;
+                var count = 0;
                 foreach (Paquete paquete in Paquetes)
                 {
                     if (codDestino == paquete.CodDestino)
                     {
-                        DestinosSet.Add(destino);
+                        count++;
                     }
                 }
+                DestinosConcurridos.Add(new DestinosConcurridos { Codigo = destino.Codigo, Nombre = destino.Nombre, Descripcion = destino.Descripcion, Cantidad = count });
             }
 
-            return DestinosSet.OrderBy(d => d.Codigo).ToList();
+            return DestinosConcurridos.OrderBy(p => p.Codigo).ToList();
         }
 
         private void DestinosGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -78,7 +87,7 @@ namespace TurApp.Views
                 return;
             }
 
-            var destinos = bindingSource.List.Cast<Destino>().ToList();
+            var destinos = bindingSource.List.Cast<DestinosConcurridos>().ToList();
 
             // Ordenar los turistas según la columna seleccionada
             switch (newColumn.Name)
@@ -92,13 +101,16 @@ namespace TurApp.Views
                 case "DescripcionCol":
                     destinos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Descripcion.CompareTo(t2.Descripcion) : t2.Descripcion.CompareTo(t1.Descripcion));
                     break;
+                case "CantCol":
+                    destinos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t2.Cantidad.CompareTo(t1.Cantidad) : t1.Cantidad.CompareTo(t2.Cantidad));
+                    break;
             }
 
             // Actualizar la etiqueta de dirección de orden
             DestinosGrd.Tag = direction == ListSortDirection.Ascending ? "" : "-" + newColumn.Name;
 
             // Asignar los datos ordenados al DataSource
-            bindingSource.DataSource = new BindingList<Destino>(destinos);
+            bindingSource.DataSource = new BindingList<DestinosConcurridos>(destinos);
 
             // Mostrar la dirección de orden en el encabezado de la columna
             newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
@@ -114,7 +126,10 @@ namespace TurApp.Views
                 for (int i = 0; i < this.DestinosGrd.Rows.Count; ++i)
                 {
                     DataGridViewRow item = this.DestinosGrd.Rows[i];
-                    item.Cells[1].Value = (item.DataBoundItem as Destino).Nombre;
+                    item.Cells[0].Value = (item.DataBoundItem as DestinosConcurridos).Codigo;
+                    item.Cells[1].Value = (item.DataBoundItem as DestinosConcurridos).Nombre;
+                    item.Cells[2].Value = (item.DataBoundItem as DestinosConcurridos).Descripcion;
+                    item.Cells[3].Value = (item.DataBoundItem as DestinosConcurridos).Cantidad;
                 }
             }
             finally

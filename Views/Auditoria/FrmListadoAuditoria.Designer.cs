@@ -30,7 +30,6 @@
         {
             this.ExportarBtn = new System.Windows.Forms.Button();
             this.AuditoriasGrd = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +54,6 @@
             this.AuditoriasGrd.AllowUserToDeleteRows = false;
             this.AuditoriasGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AuditoriasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.usuario,
             this.objeto,
             this.fecha,
@@ -74,12 +72,6 @@
             this.AuditoriasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AuditoriasGrd_CellContentClick);
             this.AuditoriasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AuditoriasGrd_ColumnHeaderMouseClick);
             this.AuditoriasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AuditoriasGrd_DataBindingComplete);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
             // 
             // usuario
             // 
@@ -120,6 +112,7 @@
             this.Controls.Add(this.AuditoriasGrd);
             this.MaximizeBox = false;
             this.Name = "FrmListadoAuditoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListadoAuditoria";
             this.Load += new System.EventHandler(this.FrmListadoAuditoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AuditoriasGrd)).EndInit();
@@ -131,7 +124,6 @@
 
         private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.DataGridView AuditoriasGrd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn objeto;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
