@@ -136,5 +136,10 @@ namespace TurApp.Views
             // Mostrar la dirección de orden en el encabezado de la columna
             newColumn.HeaderCell.SortGlyphDirection = direction == ListSortDirection.Ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
+
+        private void TuristasGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
