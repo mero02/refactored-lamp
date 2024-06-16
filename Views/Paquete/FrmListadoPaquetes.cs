@@ -48,7 +48,7 @@ namespace TurApp.Views
                 criterio = String.Format("cod_tipo_paquete = '{0}'", TipoPaqueteTxt.Text);
             }
 
-            this.PaquetesGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));
+            this.PaquetesGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.CodTipoPaquete).CompareTo(p2.CodTipoPaquete));
 
         }
 
@@ -65,7 +65,7 @@ namespace TurApp.Views
                 for (int i = 0; i < this.PaquetesGrd.Rows.Count; ++i)
                 {
                     DataGridViewRow item = this.PaquetesGrd.Rows[i];
-                    item.Cells[1].Value = (item.DataBoundItem as Paquete).Codigo;
+                    item.Cells[0].Value = (item.DataBoundItem as Paquete).Codigo;
                 }
             }
             finally
