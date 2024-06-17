@@ -37,7 +37,7 @@
             // BuscarBtn
             // 
             this.BuscarBtn.Location = new System.Drawing.Point(115, 115);
-            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
             this.BuscarBtn.TabIndex = 9;
@@ -48,7 +48,7 @@
             // CancelarBtn
             // 
             this.CancelarBtn.Location = new System.Drawing.Point(189, 115);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
             this.CancelarBtn.TabIndex = 16;
@@ -60,7 +60,7 @@
             // 
             this.CodigoChk.AutoSize = true;
             this.CodigoChk.Location = new System.Drawing.Point(20, 32);
-            this.CodigoChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CodigoChk.Margin = new System.Windows.Forms.Padding(2);
             this.CodigoChk.Name = "CodigoChk";
             this.CodigoChk.Size = new System.Drawing.Size(70, 17);
             this.CodigoChk.TabIndex = 17;
@@ -75,7 +75,7 @@
             this.ActividadCbo.Enabled = false;
             this.ActividadCbo.FormattingEnabled = true;
             this.ActividadCbo.Location = new System.Drawing.Point(90, 31);
-            this.ActividadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActividadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.ActividadCbo.Name = "ActividadCbo";
             this.ActividadCbo.Size = new System.Drawing.Size(150, 21);
             this.ActividadCbo.TabIndex = 18;
@@ -87,12 +87,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(273, 155);
+            this.ClientSize = new System.Drawing.Size(285, 155);
             this.Controls.Add(this.ActividadCbo);
             this.Controls.Add(this.CodigoChk);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmActividadBusq";
