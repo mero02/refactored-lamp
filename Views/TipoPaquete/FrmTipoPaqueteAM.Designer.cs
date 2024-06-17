@@ -233,6 +233,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmTipoPaqueteAM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTipoPaqueteAM";
             this.Deactivate += new System.EventHandler(this.FrmTipoPaqueteAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);

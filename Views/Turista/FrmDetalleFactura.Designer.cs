@@ -61,7 +61,7 @@
             // 
             // NroRengCol
             // 
-            this.NroRengCol.HeaderText = "Nro Renglo";
+            this.NroRengCol.HeaderText = "Nro Renglon";
             this.NroRengCol.Name = "NroRengCol";
             // 
             // PaqCol

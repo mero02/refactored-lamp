@@ -14,6 +14,7 @@ namespace TurApp.Views
     [Permiso(ClaseBaseForm = "Tipo Paquete", FuncionPermiso = "AltaTipoPaquete,ModificaTipoPaquete,ConsultaTipoPaquete", RolUsuario = "administrador,operadorTurno,consulta,operador")]
     public partial class FrmTipoPaqueteAM : FormBase
     {
+        List<string> codigos = new List<string>();
         public override event FormEvent DoCompleteOperationForm;
         private TipoPaquete _Tipo_Paquete_modif = null;
         private string TipoPaqueteLog = "";
@@ -114,12 +115,43 @@ namespace TurApp.Views
 
         private void AgregarBtn_Click(object sender, EventArgs e)
         {
-            //Implementar
+            if (ActividadesGrd.SelectedRows.Count > 0) // Verifica que hay una fila seleccionada
+            {
+                DataGridViewRow selectedRow = ActividadesGrd.SelectedRows[0];
+
+                // Extrae los datos de la fila seleccionada
+                string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
+                codigos.Add(codPaquete);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona una fila primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }         
         }
 
         private void QuitarBtn_Click(object sender, EventArgs e)
         {
-            //Implementar
+            if (ActividadesGrd.SelectedRows.Count > 0) // Verifica que hay una fila seleccionada
+            {
+                DataGridViewRow selectedRow = ActividadesGrd.SelectedRows[0];
+
+                // Extrae los datos de la fila seleccionada
+                string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
+
+                // Verifica si el código está en la lista y lo elimina
+                if (codigos.Contains(codPaquete))
+                {
+                    codigos.Remove(codPaquete);
+                }
+                else
+                {
+                    MessageBox.Show("El código no se encuentra en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona una fila primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ActividadedsGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -217,7 +249,7 @@ namespace TurApp.Views
             {
                 TipoPaquete = new TipoPaquete();
                 operacionLog = "ALTA";
-                // cargar la info de la Turista antes de dar de alta.
+                // cargar la info de la TipoPaquete antes de dar de alta.
 
             }
 
@@ -235,14 +267,6 @@ namespace TurApp.Views
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
             ReadDataFromForm(this, TipoPaquete, OperacionForm);
-            /*
-            Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
-            Turista.Nombre = NombreTxt.Text;            
-            Turista.Domicilio = DomicilioTxt.Text;
-            Turista.CodPais= Convert.ToInt32(PaisCbo.SelectedValue);
-            Turista.Observaciones = ObservacionesTxt.Text;
-            Turista.Telefono = TelefonoTxt.Text;
-             * */
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(TipoPaquete);
             // intentar guardar en la Base de datos.
             try
@@ -267,6 +291,26 @@ namespace TurApp.Views
             {
                 InvokerForm.Reload();
             }
+
+            foreach (string codigo in codigos)
+            {
+                TipoPaqueteTipoActividad TipoPactipoAct = new TipoPaqueteTipoActividad();
+                TipoPactipoAct.CodTipoPaquete = TipoPaquete.Codigo;
+                TipoActividad tipoAct = new TipoActividad();
+                tipoAct.FindbyKey(codigo);
+                TipoPactipoAct.CodTipoActividad = tipoAct.Codigo;
+                try
+                {
+                    TipoPactipoAct.SaveObj();
+                    Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
+                }
+                catch (Exception ex)
+                {
+                    errMsj = "Error: " + ex.Message;
+                }
+                
+            }
+            
             MainView.Instance.Cursor = Cursors.Default;
             this.Close();
         }
