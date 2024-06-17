@@ -136,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(333, 194);
             this.Controls.Add(this.AgenciaCbo);
             this.Controls.Add(this.AgenciaChk);
@@ -145,6 +146,8 @@
             this.Controls.Add(this.TipoPaqueteChk);
             this.Controls.Add(this.DniTxt);
             this.Controls.Add(this.DniChk);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPaqueteBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda Paquete";

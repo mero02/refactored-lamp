@@ -107,13 +107,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 493);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.AuditoriasGrd);
             this.MaximizeBox = false;
             this.Name = "FrmListadoAuditoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListadoAuditoria";
+            this.Text = "Listado Auditoria";
             this.Load += new System.EventHandler(this.FrmListadoAuditoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AuditoriasGrd)).EndInit();
             this.ResumeLayout(false);

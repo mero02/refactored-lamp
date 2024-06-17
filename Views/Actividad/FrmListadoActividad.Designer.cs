@@ -57,7 +57,7 @@
             this.TipoActividad,
             this.Importe});
             this.ActividadGrd.Location = new System.Drawing.Point(8, 59);
-            this.ActividadGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ActividadGrd.Margin = new System.Windows.Forms.Padding(2);
             this.ActividadGrd.MultiSelect = false;
             this.ActividadGrd.Name = "ActividadGrd";
             this.ActividadGrd.ReadOnly = true;
@@ -106,7 +106,7 @@
             // FiltroBtn
             // 
             this.FiltroBtn.Location = new System.Drawing.Point(508, 9);
-            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
             this.FiltroBtn.TabIndex = 21;
@@ -119,9 +119,9 @@
             this.groupBox1.Controls.Add(this.TipoActividadTxt);
             this.groupBox1.Controls.Add(this.TipoActividadChk);
             this.groupBox1.Location = new System.Drawing.Point(8, 1);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(268, 42);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
@@ -131,7 +131,7 @@
             // 
             this.TipoActividadTxt.Enabled = false;
             this.TipoActividadTxt.Location = new System.Drawing.Point(111, 15);
-            this.TipoActividadTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TipoActividadTxt.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadTxt.Name = "TipoActividadTxt";
             this.TipoActividadTxt.Size = new System.Drawing.Size(146, 20);
             this.TipoActividadTxt.TabIndex = 1;
@@ -140,7 +140,7 @@
             // 
             this.TipoActividadChk.AutoSize = true;
             this.TipoActividadChk.Location = new System.Drawing.Point(4, 17);
-            this.TipoActividadChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TipoActividadChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadChk.Name = "TipoActividadChk";
             this.TipoActividadChk.Size = new System.Drawing.Size(94, 17);
             this.TipoActividadChk.TabIndex = 0;
@@ -168,11 +168,11 @@
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ActividadGrd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmListadoActividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListadoActividad";
+            this.Text = " Listado de Actividades";
             this.Load += new System.EventHandler(this.FrmListadoActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);

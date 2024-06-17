@@ -63,7 +63,7 @@
             this.PaisesGrd.RowTemplate.Height = 24;
             this.PaisesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PaisesGrd.ShowEditingIcon = false;
-            this.PaisesGrd.Size = new System.Drawing.Size(826, 414);
+            this.PaisesGrd.Size = new System.Drawing.Size(452, 304);
             this.PaisesGrd.TabIndex = 11;
             this.PaisesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PaisesGrd_CellContentClick);
             this.PaisesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PaisesGrd_ColumnHeaderMouseClick);
@@ -95,13 +95,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 493);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(474, 359);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.PaisesGrd);
             this.MaximizeBox = false;
             this.Name = "FrmListadoPaises";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListadoPaises";
+            this.Text = "Listado Paises";
             this.Load += new System.EventHandler(this.FrmListadoPaises_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PaisesGrd)).EndInit();
             this.ResumeLayout(false);

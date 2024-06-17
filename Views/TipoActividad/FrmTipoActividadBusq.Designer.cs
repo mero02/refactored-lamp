@@ -36,9 +36,10 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(263, 146);
+            this.CancelarBtn.Location = new System.Drawing.Point(175, 95);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(87, 42);
+            this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
             this.CancelarBtn.TabIndex = 20;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(111, 146);
+            this.BuscarBtn.Location = new System.Drawing.Point(74, 95);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
-            this.BuscarBtn.Size = new System.Drawing.Size(87, 42);
+            this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
             this.BuscarBtn.TabIndex = 19;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
@@ -60,18 +62,20 @@
             this.TipoActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoActividadCbo.Enabled = false;
             this.TipoActividadCbo.FormattingEnabled = true;
-            this.TipoActividadCbo.Location = new System.Drawing.Point(176, 57);
+            this.TipoActividadCbo.Location = new System.Drawing.Point(117, 37);
+            this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadCbo.Name = "TipoActividadCbo";
-            this.TipoActividadCbo.Size = new System.Drawing.Size(223, 28);
+            this.TipoActividadCbo.Size = new System.Drawing.Size(150, 21);
             this.TipoActividadCbo.TabIndex = 18;
             this.TipoActividadCbo.ValueMember = "Codigo";
             // 
             // TipoActividadChk
             // 
             this.TipoActividadChk.AutoSize = true;
-            this.TipoActividadChk.Location = new System.Drawing.Point(35, 60);
+            this.TipoActividadChk.Location = new System.Drawing.Point(23, 39);
+            this.TipoActividadChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadChk.Name = "TipoActividadChk";
-            this.TipoActividadChk.Size = new System.Drawing.Size(99, 24);
+            this.TipoActividadChk.Size = new System.Drawing.Size(70, 17);
             this.TipoActividadChk.TabIndex = 17;
             this.TipoActividadChk.Text = "Actividad";
             this.TipoActividadChk.UseVisualStyleBackColor = true;
@@ -79,16 +83,20 @@
             // 
             // FrmTipoActividadBusq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 244);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(289, 159);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.TipoActividadCbo);
             this.Controls.Add(this.TipoActividadChk);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmTipoActividadBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTipoActividadBusq";
+            this.Text = "Busqueda Tipo Actividad...";
             this.Load += new System.EventHandler(this.FrmTipoActividadBusq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -86,12 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(369, 286);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.LocalidadesGrd);
+            this.MaximizeBox = false;
             this.Name = "FrmLocalidadList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista Localidades";
+            this.Text = "Lista de Localidades";
             this.Activated += new System.EventHandler(this.FrmLocalidadList_Load);
             this.Load += new System.EventHandler(this.FrmLocalidadList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).EndInit();

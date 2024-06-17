@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.DestinosGrd = new System.Windows.Forms.DataGridView();
+            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.NombreTxt = new System.Windows.Forms.TextBox();
             this.NombreChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.ExportarBtn = new System.Windows.Forms.Button();
-            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DestinosGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,36 @@
             this.DestinosGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DestinosGrd_CellContentClick);
             this.DestinosGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DestinosGrd_ColumnHeaderMouseClick);
             this.DestinosGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DestinosGrd_DataBindingComplete);
+            // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombre";
+            this.NombreCol.HeaderText = "Nombre";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 150;
+            // 
+            // DescripcionCol
+            // 
+            this.DescripcionCol.DataPropertyName = "Descripcion";
+            this.DescripcionCol.HeaderText = "Descripcion";
+            this.DescripcionCol.Name = "DescripcionCol";
+            this.DescripcionCol.ReadOnly = true;
+            this.DescripcionCol.Width = 400;
+            // 
+            // CantCol
+            // 
+            this.CantCol.DataPropertyName = "Cantidad";
+            this.CantCol.HeaderText = "Cantidad";
+            this.CantCol.Name = "CantCol";
+            this.CantCol.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -120,40 +150,11 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
-            // CodigoCol
-            // 
-            this.CodigoCol.DataPropertyName = "Codigo";
-            this.CodigoCol.HeaderText = "Codigo";
-            this.CodigoCol.Name = "CodigoCol";
-            this.CodigoCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombre";
-            this.NombreCol.HeaderText = "Nombre";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
-            // 
-            // DescripcionCol
-            // 
-            this.DescripcionCol.DataPropertyName = "Descripcion";
-            this.DescripcionCol.HeaderText = "Descripcion";
-            this.DescripcionCol.Name = "DescripcionCol";
-            this.DescripcionCol.ReadOnly = true;
-            this.DescripcionCol.Width = 400;
-            // 
-            // CantCol
-            // 
-            this.CantCol.DataPropertyName = "Cantidad";
-            this.CantCol.HeaderText = "Cantidad";
-            this.CantCol.Name = "CantCol";
-            this.CantCol.ReadOnly = true;
-            // 
             // FrmListadoDestinos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 493);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.FiltroBtn);

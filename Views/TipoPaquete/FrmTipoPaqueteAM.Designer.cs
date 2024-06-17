@@ -218,6 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(881, 366);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.ActividadesGrupBox);
@@ -234,7 +235,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmTipoPaqueteAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTipoPaqueteAM";
+            this.Text = "Ingreso Tipo Paquete";
             this.Deactivate += new System.EventHandler(this.FrmTipoPaqueteAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);
             this.ActividadesGrupBox.ResumeLayout(false);

@@ -36,9 +36,9 @@
             this.NombreChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.LocalidadesGrd = new System.Windows.Forms.DataGridView();
-            this.ExportarBtn = new System.Windows.Forms.Button();
             this.CodPosCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExportarBtn = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).BeginInit();
@@ -148,16 +148,6 @@
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
             // 
-            // ExportarBtn
-            // 
-            this.ExportarBtn.Location = new System.Drawing.Point(578, 452);
-            this.ExportarBtn.Name = "ExportarBtn";
-            this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 10;
-            this.ExportarBtn.Text = "Exportar";
-            this.ExportarBtn.UseVisualStyleBackColor = true;
-            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
-            // 
             // CodPosCol
             // 
             this.CodPosCol.DataPropertyName = "CodPos";
@@ -173,16 +163,28 @@
             this.NombreCol.ReadOnly = true;
             this.NombreCol.Width = 150;
             // 
+            // ExportarBtn
+            // 
+            this.ExportarBtn.Location = new System.Drawing.Point(578, 452);
+            this.ExportarBtn.Name = "ExportarBtn";
+            this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
+            this.ExportarBtn.TabIndex = 10;
+            this.ExportarBtn.Text = "Exportar";
+            this.ExportarBtn.UseVisualStyleBackColor = true;
+            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
+            // 
             // FrmListadoLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(701, 490);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.LocalidadesGrd);
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.MaximizeBox = false;
             this.Name = "FrmListadoLocalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Localidades";

@@ -85,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(284, 171);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
@@ -94,7 +95,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmTipoPaqueteBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Tipo Paquete";
+            this.Text = "Busqueda Tipo Paquete";
             this.Activated += new System.EventHandler(this.FrmTipoPaqueteBusq_Activated);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteBusq_Load);
             this.ResumeLayout(false);

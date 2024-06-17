@@ -186,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(860, 493);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.groupBox3);
@@ -196,7 +197,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmListadoTuristas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de Turistas";
+            this.Text = "Listado  Turistas";
             this.Load += new System.EventHandler(this.FrmListadoTuristas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);

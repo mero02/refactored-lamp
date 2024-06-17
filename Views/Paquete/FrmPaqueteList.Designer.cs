@@ -128,11 +128,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(749, 283);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.PaquetesGrd);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmPaqueteList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Paquetes";

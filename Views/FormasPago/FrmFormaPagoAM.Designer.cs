@@ -94,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(314, 148);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
@@ -102,6 +103,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmFormaPagoAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso Forma de Pago";
             this.Deactivate += new System.EventHandler(this.FrmFormaPagoAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmFormaPagoAM_Load);
             this.groupBox1.ResumeLayout(false);

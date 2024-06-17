@@ -164,13 +164,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(685, 331);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TipoPaquetesGrd);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmListadoTipoPaquete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado Tipo Paquete";

@@ -96,6 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(247, 220);
             this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.CodPosTxt);
@@ -107,6 +108,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmLocalidadAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ingreso nueva localidad";
             this.Deactivate += new System.EventHandler(this.FrmLocalidadAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmLocalidadAM_Load);
             this.ResumeLayout(false);

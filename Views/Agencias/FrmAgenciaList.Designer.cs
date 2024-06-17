@@ -125,7 +125,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmAgenciaList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de agencias";
+            this.Text = "Lista de Agencias";
             this.Load += new System.EventHandler(this.FrmAgenciaList_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AgenciasGrd)).EndInit();

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.DetalleFacGrd = new System.Windows.Forms.DataGridView();
-            this.CerrarBtn = new System.Windows.Forms.Button();
             this.NroRengCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaqCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CerrarBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleFacGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,21 +43,11 @@
             this.NroRengCol,
             this.PaqCol,
             this.ImporteCol});
-            this.DetalleFacGrd.Location = new System.Drawing.Point(54, 32);
+            this.DetalleFacGrd.Location = new System.Drawing.Point(0, 37);
             this.DetalleFacGrd.Name = "DetalleFacGrd";
             this.DetalleFacGrd.Size = new System.Drawing.Size(584, 180);
             this.DetalleFacGrd.TabIndex = 0;
             this.DetalleFacGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DetalleFacGrd_DataBindingComplete);
-            // 
-            // CerrarBtn
-            // 
-            this.CerrarBtn.Location = new System.Drawing.Point(550, 223);
-            this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(61, 26);
-            this.CerrarBtn.TabIndex = 1;
-            this.CerrarBtn.Text = "Cerrar";
-            this.CerrarBtn.UseVisualStyleBackColor = true;
-            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // NroRengCol
             // 
@@ -76,16 +66,28 @@
             this.ImporteCol.HeaderText = "Importe";
             this.ImporteCol.Name = "ImporteCol";
             // 
+            // CerrarBtn
+            // 
+            this.CerrarBtn.Location = new System.Drawing.Point(523, 223);
+            this.CerrarBtn.Name = "CerrarBtn";
+            this.CerrarBtn.Size = new System.Drawing.Size(61, 26);
+            this.CerrarBtn.TabIndex = 1;
+            this.CerrarBtn.Text = "Cerrar";
+            this.CerrarBtn.UseVisualStyleBackColor = true;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            // 
             // FrmDetalleFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 261);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(585, 261);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.DetalleFacGrd);
+            this.MaximizeBox = false;
             this.Name = "FrmDetalleFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDetalleFactura";
+            this.Text = "Detalle Factura";
             this.Load += new System.EventHandler(this.FrmDetalleFactura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetalleFacGrd)).EndInit();
             this.ResumeLayout(false);
