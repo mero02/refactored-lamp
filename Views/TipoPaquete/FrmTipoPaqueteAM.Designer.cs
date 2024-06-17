@@ -41,9 +41,9 @@
             this.QuitarBtn = new System.Windows.Forms.Button();
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrd = new System.Windows.Forms.DataGridView();
-            this.GuardarBtn = new System.Windows.Forms.Button();
             this.CodActCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuardarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
             this.SuspendLayout();
@@ -191,16 +191,6 @@
             this.ActividadesGrd.TabIndex = 0;
             this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadedsGrd_DataBindingComplete);
             // 
-            // GuardarBtn
-            // 
-            this.GuardarBtn.Location = new System.Drawing.Point(99, 267);
-            this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(61, 27);
-            this.GuardarBtn.TabIndex = 7;
-            this.GuardarBtn.Text = "Guardar";
-            this.GuardarBtn.UseVisualStyleBackColor = true;
-            this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
-            // 
             // CodActCol
             // 
             this.CodActCol.DataPropertyName = "Codigo";
@@ -213,6 +203,16 @@
             this.NombreActividadCol.HeaderText = "Nombre Actividad";
             this.NombreActividadCol.Name = "NombreActividadCol";
             this.NombreActividadCol.Width = 250;
+            // 
+            // GuardarBtn
+            // 
+            this.GuardarBtn.Location = new System.Drawing.Point(99, 267);
+            this.GuardarBtn.Name = "GuardarBtn";
+            this.GuardarBtn.Size = new System.Drawing.Size(61, 27);
+            this.GuardarBtn.TabIndex = 7;
+            this.GuardarBtn.Text = "Guardar";
+            this.GuardarBtn.UseVisualStyleBackColor = true;
+            this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
             // FrmTipoPaqueteAM
             // 

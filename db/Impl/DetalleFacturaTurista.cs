@@ -24,6 +24,7 @@ namespace TurApp.db
             this.NroFactura = fac.NroFactura;
             this.SerieFactura = fac.SerieFactura;
             this.LetraFactura = fac.LetraFactura;
+            this.NroRenglon = fac.NroRenglon;
             this.CodPaquete= fac.CodPaquete;
             this.Importe = fac.Importe;
             this.SetIsObjFromDB();

@@ -17,6 +17,10 @@ namespace TurApp.Views
         public override event FormEvent DoCompleteOperationForm;
         private FacturaTurista _Factura_modif = null;
         private string FacturaLog = "";
+
+        private List<DetalleFacturaTurista> detallesFactura = new List<DetalleFacturaTurista>();
+        private int renglon = 1;
+
         public FrmFacturaAM()
         {
             InitializeComponent();
@@ -37,7 +41,14 @@ namespace TurApp.Views
         private void FrmFacturaAM_Load(object sender, EventArgs e)
         {
             this.GuardarBtn.Enabled = true;
-            //LoadComboBox(FormaPago.FindAllStatic(null, (l1, l2) => l1.Forma.CompareTo(l2.Codigo)), this.FormaPagoCbo, addSeleccion: true);
+            var paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
+            var PaquetesBindingList = new BindingList<Paquete>(paquetes);
+            var PaquetesBindingSource = new BindingSource(PaquetesBindingList, null);
+            this.PaquetesGrd.AutoGenerateColumns = false;
+            this.PaquetesGrd.DataSource = PaquetesBindingSource;
+            this.DetallesGrd.AutoGenerateColumns = false;
+            this.DetallesGrd.DataSource = detallesFactura;
+
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
             FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
@@ -168,6 +179,12 @@ namespace TurApp.Views
             try
             {
                 FacturaTurista.SaveObj();
+
+                foreach (var detalle in detallesFactura)
+                {
+                    detalle.SaveObj();
+                }
+
                 Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
             }
             catch (Exception ex)
@@ -187,6 +204,7 @@ namespace TurApp.Views
             {
                 InvokerForm.Reload();
             }
+
             MainView.Instance.Cursor = Cursors.Default;
             this.Close();
         }
@@ -226,6 +244,141 @@ namespace TurApp.Views
         private void FormaPagoCbo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private float getImporte(int codigo)
+        {
+            var paqueteActividades = PaqueteActividad.FindAllStatic(null, (p1, p2) => p1.CodActividad.CompareTo(p2.CodActividad));
+            float importeTotal = 0;  
+
+            foreach (PaqueteActividad paqActividad in paqueteActividades)
+            {
+                if (codigo == paqActividad.CodPaquete)
+                {
+                    importeTotal += paqActividad.Importe; 
+                }
+            }
+
+            return importeTotal;
+        }
+
+        private void PaquetesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.PaquetesGrd.DataBindingComplete -= PaquetesGrd_DataBindingComplete;
+
+            try
+            {
+                for (int i = 0; i < this.PaquetesGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.PaquetesGrd.Rows[i];
+                    item.Cells[0].Value = (item.DataBoundItem as Paquete).Codigo;
+                    item.Cells[1].Value = (item.DataBoundItem as Paquete).AgenciaObj.Nombre;
+                    item.Cells[2].Value = getImporte((item.DataBoundItem as Paquete).Codigo);
+                }
+            }
+            finally
+            {
+                this.PaquetesGrd.DataBindingComplete += PaquetesGrd_DataBindingComplete;
+            }
+        }
+
+        private void AgregarBtn_Click(object sender, EventArgs e)
+        {
+            int nroFactura;
+            int serieFactura;
+
+            if (string.IsNullOrEmpty(NumeroTxt.Text) || !int.TryParse(NumeroTxt.Text, out nroFactura))
+            {
+                MessageBox.Show("Ingrese un número válido", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NumeroTxt.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(SerieTxt.Text) || !int.TryParse(SerieTxt.Text, out serieFactura))
+            {
+                MessageBox.Show("Ingrese una serie válida", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                SerieTxt.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(LetraTxt.Text))
+            {
+                MessageBox.Show("Ingrese una letra válida", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LetraTxt.Focus();
+                return;
+            }
+
+            var paquete = (Paquete)PaquetesGrd.CurrentRow.DataBoundItem;
+            if (paquete == null)
+            {
+                MessageBox.Show("Seleccione un paquete", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            int renglon = detallesFactura.Count + 1;
+
+            detallesFactura.Add(new DetalleFacturaTurista
+            {
+                NroFactura = nroFactura,
+                SerieFactura = serieFactura,
+                LetraFactura = LetraTxt.Text,
+                NroRenglon = renglon,
+                CodPaquete = paquete.Codigo,
+                Importe = getImporte(paquete.Codigo)
+            });
+
+            DetallesGrd.DataSource = null;
+            DetallesGrd.DataSource = detallesFactura;
+
+            MessageBox.Show("Detalle agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void QuitarBtn_Click(object sender, EventArgs e)
+        {
+            if (DetallesGrd.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un detalle para quitar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var selectedRow = DetallesGrd.SelectedRows[0];
+            var detalle = selectedRow.DataBoundItem as DetalleFacturaTurista;
+
+            if (detalle != null)
+            {
+                detallesFactura.Remove(detalle);
+                DetallesGrd.DataSource = null;
+                DetallesGrd.DataSource = detallesFactura;
+
+                MessageBox.Show("Detalle quitado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void DetallesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            // Evitar reentrancia removiendo el manejador de eventos temporalmente
+            this.DetallesGrd.DataBindingComplete -= DetallesGrd_DataBindingComplete;
+
+            try
+            {
+                for (int i = 0; i < this.DetallesGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.DetallesGrd.Rows[i];
+
+                    var detalle = item.DataBoundItem as DetalleFacturaTurista;
+                    if (detalle != null)
+                    {
+                        item.Cells["NroCol"].Value = detalle.NroRenglon;
+                        item.Cells["CodCol"].Value = detalle.CodPaquete;
+                        item.Cells["ImpCol"].Value = detalle.Importe;
+                    }
+                }
+            }
+            finally
+            {
+                // Reasignar el manejador de eventos
+                this.DetallesGrd.DataBindingComplete += DetallesGrd_DataBindingComplete;
+            }
         }
     }
 }

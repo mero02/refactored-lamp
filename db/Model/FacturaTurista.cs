@@ -17,7 +17,7 @@ namespace TurApp.db
         private int _dniTurista;
         private int _cod_forma_pago;
         private string _detallePago;
-        private FormaPago codPago;
+        private FormaPago _formaPago = null;
         
         #endregion
 
@@ -78,11 +78,11 @@ namespace TurApp.db
         {
             get
             {
-                if (codPago == null && this.CodFormaPago != 0)
+                if (_formaPago == null && this.CodFormaPago != 0)
                 {
-                    codPago = FormaPago.FindByKeyStatic(this.CodFormaPago);
+                    _formaPago = FormaPago.FindByKeyStatic(this.CodFormaPago);
                 }
-                return codPago;
+                return _formaPago;
             }
         }
 

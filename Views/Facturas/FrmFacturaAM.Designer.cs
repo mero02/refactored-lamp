@@ -44,7 +44,21 @@
             this.SerieLbl = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
+            this.PaquetesGrupBox = new System.Windows.Forms.GroupBox();
+            this.DetallesGrd = new System.Windows.Forms.DataGridView();
+            this.QuitarBtn = new System.Windows.Forms.Button();
+            this.AgregarBtn = new System.Windows.Forms.Button();
+            this.PaquetesGrd = new System.Windows.Forms.DataGridView();
+            this.CodPaqCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreAgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            this.PaquetesGrupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DetallesGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -230,11 +244,115 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
+            // PaquetesGrupBox
+            // 
+            this.PaquetesGrupBox.Controls.Add(this.DetallesGrd);
+            this.PaquetesGrupBox.Controls.Add(this.QuitarBtn);
+            this.PaquetesGrupBox.Controls.Add(this.AgregarBtn);
+            this.PaquetesGrupBox.Controls.Add(this.PaquetesGrd);
+            this.PaquetesGrupBox.Location = new System.Drawing.Point(327, 12);
+            this.PaquetesGrupBox.Name = "PaquetesGrupBox";
+            this.PaquetesGrupBox.Size = new System.Drawing.Size(476, 380);
+            this.PaquetesGrupBox.TabIndex = 28;
+            this.PaquetesGrupBox.TabStop = false;
+            this.PaquetesGrupBox.Text = "Paquetes";
+            // 
+            // DetallesGrd
+            // 
+            this.DetallesGrd.AllowUserToAddRows = false;
+            this.DetallesGrd.AllowUserToDeleteRows = false;
+            this.DetallesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetallesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NroCol,
+            this.CodCol,
+            this.ImpCol});
+            this.DetallesGrd.Location = new System.Drawing.Point(17, 221);
+            this.DetallesGrd.MultiSelect = false;
+            this.DetallesGrd.Name = "DetallesGrd";
+            this.DetallesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DetallesGrd.Size = new System.Drawing.Size(439, 144);
+            this.DetallesGrd.TabIndex = 29;
+            this.DetallesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DetallesGrd_DataBindingComplete);
+            // 
+            // QuitarBtn
+            // 
+            this.QuitarBtn.Location = new System.Drawing.Point(271, 182);
+            this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.QuitarBtn.Name = "QuitarBtn";
+            this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
+            this.QuitarBtn.TabIndex = 6;
+            this.QuitarBtn.Text = "&Quitar";
+            this.QuitarBtn.UseVisualStyleBackColor = true;
+            this.QuitarBtn.Click += new System.EventHandler(this.QuitarBtn_Click);
+            // 
+            // AgregarBtn
+            // 
+            this.AgregarBtn.Location = new System.Drawing.Point(161, 182);
+            this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarBtn.Name = "AgregarBtn";
+            this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
+            this.AgregarBtn.TabIndex = 5;
+            this.AgregarBtn.Text = "&Agregar";
+            this.AgregarBtn.UseVisualStyleBackColor = true;
+            this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
+            // 
+            // PaquetesGrd
+            // 
+            this.PaquetesGrd.AllowUserToAddRows = false;
+            this.PaquetesGrd.AllowUserToDeleteRows = false;
+            this.PaquetesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PaquetesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CodPaqCol,
+            this.NombreAgenciaCol,
+            this.ImporteCol});
+            this.PaquetesGrd.Location = new System.Drawing.Point(17, 26);
+            this.PaquetesGrd.MultiSelect = false;
+            this.PaquetesGrd.Name = "PaquetesGrd";
+            this.PaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PaquetesGrd.Size = new System.Drawing.Size(439, 144);
+            this.PaquetesGrd.TabIndex = 0;
+            this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
+            // 
+            // CodPaqCol
+            // 
+            this.CodPaqCol.DataPropertyName = "Codigo";
+            this.CodPaqCol.HeaderText = "Codigo";
+            this.CodPaqCol.Name = "CodPaqCol";
+            // 
+            // NombreAgenciaCol
+            // 
+            this.NombreAgenciaCol.HeaderText = "Nombre Agencia";
+            this.NombreAgenciaCol.Name = "NombreAgenciaCol";
+            this.NombreAgenciaCol.Width = 150;
+            // 
+            // ImporteCol
+            // 
+            this.ImporteCol.HeaderText = "Importe";
+            this.ImporteCol.Name = "ImporteCol";
+            // 
+            // NroCol
+            // 
+            this.NroCol.HeaderText = "Nro Renglon";
+            this.NroCol.Name = "NroCol";
+            this.NroCol.Width = 90;
+            // 
+            // CodCol
+            // 
+            this.CodCol.DataPropertyName = "Codigo";
+            this.CodCol.HeaderText = "Codigo";
+            this.CodCol.Name = "CodCol";
+            // 
+            // ImpCol
+            // 
+            this.ImpCol.HeaderText = "Importe";
+            this.ImpCol.Name = "ImpCol";
+            // 
             // FrmFacturaAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 380);
+            this.ClientSize = new System.Drawing.Size(815, 404);
+            this.Controls.Add(this.PaquetesGrupBox);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
@@ -247,6 +365,9 @@
             this.Load += new System.EventHandler(this.FrmFacturaAM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.PaquetesGrupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DetallesGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +390,16 @@
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.ComboBox FormaPagoCbo;
+        private System.Windows.Forms.GroupBox PaquetesGrupBox;
+        private System.Windows.Forms.Button QuitarBtn;
+        private System.Windows.Forms.Button AgregarBtn;
+        private System.Windows.Forms.DataGridView PaquetesGrd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodPaqCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreAgenciaCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImporteCol;
+        private System.Windows.Forms.DataGridView DetallesGrd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NroCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImpCol;
     }
 }

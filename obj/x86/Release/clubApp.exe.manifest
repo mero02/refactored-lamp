@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clubApp.exe" size="385536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="clubApp.exe" size="387072">
       <assemblyIdentity name="clubApp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qhWbaR6tDGLYnL+NLbPxYe+ymzQ=</dsig:DigestValue>
+        <dsig:DigestValue>nQdN4uzIN8jEcVSvA7VsRk++Vm0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
