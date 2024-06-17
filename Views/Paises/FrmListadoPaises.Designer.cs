@@ -100,6 +100,7 @@
             this.Controls.Add(this.PaisesGrd);
             this.MaximizeBox = false;
             this.Name = "FrmListadoPaises";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListadoPaises";
             this.Load += new System.EventHandler(this.FrmListadoPaises_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PaisesGrd)).EndInit();

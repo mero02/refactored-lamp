@@ -36,9 +36,10 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(172, 177);
+            this.BuscarBtn.Location = new System.Drawing.Point(115, 115);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BuscarBtn.Name = "BuscarBtn";
-            this.BuscarBtn.Size = new System.Drawing.Size(87, 42);
+            this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
             this.BuscarBtn.TabIndex = 9;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(283, 177);
+            this.CancelarBtn.Location = new System.Drawing.Point(189, 115);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(87, 42);
+            this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
             this.CancelarBtn.TabIndex = 16;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // CodigoChk
             // 
             this.CodigoChk.AutoSize = true;
-            this.CodigoChk.Location = new System.Drawing.Point(30, 49);
+            this.CodigoChk.Location = new System.Drawing.Point(20, 32);
+            this.CodigoChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CodigoChk.Name = "CodigoChk";
-            this.CodigoChk.Size = new System.Drawing.Size(99, 24);
+            this.CodigoChk.Size = new System.Drawing.Size(70, 17);
             this.CodigoChk.TabIndex = 17;
             this.CodigoChk.Text = "Actividad";
             this.CodigoChk.UseVisualStyleBackColor = true;
@@ -71,25 +74,30 @@
             this.ActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ActividadCbo.Enabled = false;
             this.ActividadCbo.FormattingEnabled = true;
-            this.ActividadCbo.Location = new System.Drawing.Point(135, 47);
+            this.ActividadCbo.Location = new System.Drawing.Point(90, 31);
+            this.ActividadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ActividadCbo.Name = "ActividadCbo";
-            this.ActividadCbo.Size = new System.Drawing.Size(223, 28);
+            this.ActividadCbo.Size = new System.Drawing.Size(150, 21);
             this.ActividadCbo.TabIndex = 18;
             this.ActividadCbo.Tag = "CodTipoActividad";
             this.ActividadCbo.ValueMember = "Codigo";
             // 
             // FrmActividadBusq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 239);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(273, 155);
             this.Controls.Add(this.ActividadCbo);
             this.Controls.Add(this.CodigoChk);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmActividadBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmActividadBusq";
+            this.Text = "Buscar Actividad";
             this.Load += new System.EventHandler(this.FrmActividadBusq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -46,15 +46,15 @@
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.PaquetesGrupBox = new System.Windows.Forms.GroupBox();
             this.DetallesGrd = new System.Windows.Forms.DataGridView();
+            this.NroCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuitarBtn = new System.Windows.Forms.Button();
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
             this.CodPaqCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NroCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImpCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.PaquetesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesGrd)).BeginInit();
@@ -269,10 +269,31 @@
             this.DetallesGrd.Location = new System.Drawing.Point(17, 221);
             this.DetallesGrd.MultiSelect = false;
             this.DetallesGrd.Name = "DetallesGrd";
+            this.DetallesGrd.ReadOnly = true;
             this.DetallesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DetallesGrd.Size = new System.Drawing.Size(439, 144);
             this.DetallesGrd.TabIndex = 29;
             this.DetallesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DetallesGrd_DataBindingComplete);
+            // 
+            // NroCol
+            // 
+            this.NroCol.HeaderText = "Nro Renglon";
+            this.NroCol.Name = "NroCol";
+            this.NroCol.ReadOnly = true;
+            this.NroCol.Width = 90;
+            // 
+            // CodCol
+            // 
+            this.CodCol.DataPropertyName = "Codigo";
+            this.CodCol.HeaderText = "Codigo";
+            this.CodCol.Name = "CodCol";
+            this.CodCol.ReadOnly = true;
+            // 
+            // ImpCol
+            // 
+            this.ImpCol.HeaderText = "Importe";
+            this.ImpCol.Name = "ImpCol";
+            this.ImpCol.ReadOnly = true;
             // 
             // QuitarBtn
             // 
@@ -329,23 +350,6 @@
             // 
             this.ImporteCol.HeaderText = "Importe";
             this.ImporteCol.Name = "ImporteCol";
-            // 
-            // NroCol
-            // 
-            this.NroCol.HeaderText = "Nro Renglon";
-            this.NroCol.Name = "NroCol";
-            this.NroCol.Width = 90;
-            // 
-            // CodCol
-            // 
-            this.CodCol.DataPropertyName = "Codigo";
-            this.CodCol.HeaderText = "Codigo";
-            this.CodCol.Name = "CodCol";
-            // 
-            // ImpCol
-            // 
-            this.ImpCol.HeaderText = "Importe";
-            this.ImpCol.Name = "ImpCol";
             // 
             // FrmFacturaAM
             // 

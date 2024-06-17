@@ -52,9 +52,11 @@
             this.groupBox1.Controls.Add(this.ImporteLbl);
             this.groupBox1.Controls.Add(this.NivelTxt);
             this.groupBox1.Controls.Add(this.NivelLbl);
-            this.groupBox1.Location = new System.Drawing.Point(6, 12);
+            this.groupBox1.Location = new System.Drawing.Point(4, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(438, 261);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(292, 170);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -63,9 +65,10 @@
             this.TipoActividadCbo.DisplayMember = "Descripcion";
             this.TipoActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoActividadCbo.FormattingEnabled = true;
-            this.TipoActividadCbo.Location = new System.Drawing.Point(132, 177);
+            this.TipoActividadCbo.Location = new System.Drawing.Point(88, 115);
+            this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TipoActividadCbo.Name = "TipoActividadCbo";
-            this.TipoActividadCbo.Size = new System.Drawing.Size(234, 28);
+            this.TipoActividadCbo.Size = new System.Drawing.Size(157, 21);
             this.TipoActividadCbo.TabIndex = 13;
             this.TipoActividadCbo.Tag = "Descripcion";
             this.TipoActividadCbo.ValueMember = "Id";
@@ -74,9 +77,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 180);
+            this.label1.Location = new System.Drawing.Point(13, 117);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tipo Actividad";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -86,9 +90,10 @@
             this.TransporteCbo.DisplayMember = "Descripcion";
             this.TransporteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TransporteCbo.FormattingEnabled = true;
-            this.TransporteCbo.Location = new System.Drawing.Point(132, 129);
+            this.TransporteCbo.Location = new System.Drawing.Point(88, 84);
+            this.TransporteCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TransporteCbo.Name = "TransporteCbo";
-            this.TransporteCbo.Size = new System.Drawing.Size(234, 28);
+            this.TransporteCbo.Size = new System.Drawing.Size(157, 21);
             this.TransporteCbo.TabIndex = 11;
             this.TransporteCbo.Tag = "Codigo";
             this.TransporteCbo.ValueMember = "Id";
@@ -96,52 +101,58 @@
             // TransporteLbl
             // 
             this.TransporteLbl.AutoSize = true;
-            this.TransporteLbl.Location = new System.Drawing.Point(19, 132);
+            this.TransporteLbl.Location = new System.Drawing.Point(13, 86);
+            this.TransporteLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TransporteLbl.Name = "TransporteLbl";
-            this.TransporteLbl.Size = new System.Drawing.Size(86, 20);
+            this.TransporteLbl.Size = new System.Drawing.Size(58, 13);
             this.TransporteLbl.TabIndex = 10;
             this.TransporteLbl.Text = "Transporte";
             // 
             // ImporteTxt
             // 
-            this.ImporteTxt.Location = new System.Drawing.Point(132, 79);
+            this.ImporteTxt.Location = new System.Drawing.Point(88, 51);
+            this.ImporteTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ImporteTxt.Name = "ImporteTxt";
-            this.ImporteTxt.Size = new System.Drawing.Size(247, 26);
+            this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
             this.ImporteTxt.TabIndex = 2;
             this.ImporteTxt.Tag = "Importe";
             // 
             // ImporteLbl
             // 
             this.ImporteLbl.AutoSize = true;
-            this.ImporteLbl.Location = new System.Drawing.Point(19, 79);
+            this.ImporteLbl.Location = new System.Drawing.Point(13, 51);
+            this.ImporteLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ImporteLbl.Name = "ImporteLbl";
-            this.ImporteLbl.Size = new System.Drawing.Size(64, 20);
+            this.ImporteLbl.Size = new System.Drawing.Size(42, 13);
             this.ImporteLbl.TabIndex = 8;
             this.ImporteLbl.Text = "Importe";
             // 
             // NivelTxt
             // 
-            this.NivelTxt.Location = new System.Drawing.Point(132, 25);
+            this.NivelTxt.Location = new System.Drawing.Point(88, 16);
+            this.NivelTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NivelTxt.MaxLength = 90;
             this.NivelTxt.Name = "NivelTxt";
-            this.NivelTxt.Size = new System.Drawing.Size(247, 26);
+            this.NivelTxt.Size = new System.Drawing.Size(166, 20);
             this.NivelTxt.TabIndex = 1;
             this.NivelTxt.Tag = "Nivel";
             // 
             // NivelLbl
             // 
             this.NivelLbl.AutoSize = true;
-            this.NivelLbl.Location = new System.Drawing.Point(19, 25);
+            this.NivelLbl.Location = new System.Drawing.Point(13, 16);
+            this.NivelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NivelLbl.Name = "NivelLbl";
-            this.NivelLbl.Size = new System.Drawing.Size(42, 20);
+            this.NivelLbl.Size = new System.Drawing.Size(31, 13);
             this.NivelLbl.TabIndex = 2;
             this.NivelLbl.Text = "&Nivel";
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(356, 289);
+            this.CancelarBtn.Location = new System.Drawing.Point(237, 188);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(88, 42);
+            this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
             this.CancelarBtn.TabIndex = 14;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -149,9 +160,10 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(243, 289);
+            this.GuardarBtn.Location = new System.Drawing.Point(162, 188);
+            this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(88, 42);
+            this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
             this.GuardarBtn.TabIndex = 13;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
@@ -159,15 +171,18 @@
             // 
             // FrmActividadAM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 350);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(304, 227);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmActividadAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmActividadAM";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

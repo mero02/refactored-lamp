@@ -122,6 +122,7 @@ namespace TurApp.Views
                 // Extrae los datos de la fila seleccionada
                 string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
                 codigos.Add(codPaquete);
+                MessageBox.Show("Tipo actividad agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -142,6 +143,7 @@ namespace TurApp.Views
                 if (codigos.Contains(codPaquete))
                 {
                     codigos.Remove(codPaquete);
+                    MessageBox.Show("Tipo actividad quitada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

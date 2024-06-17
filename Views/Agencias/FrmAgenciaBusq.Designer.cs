@@ -39,19 +39,19 @@
             // NombreTxt
             // 
             this.NombreTxt.Enabled = false;
-            this.NombreTxt.Location = new System.Drawing.Point(127, 16);
-            this.NombreTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombreTxt.Location = new System.Drawing.Point(95, 13);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(241, 22);
+            this.NombreTxt.Size = new System.Drawing.Size(182, 20);
             this.NombreTxt.TabIndex = 3;
             // 
             // NombreChk
             // 
             this.NombreChk.AutoSize = true;
-            this.NombreChk.Location = new System.Drawing.Point(41, 16);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombreChk.Location = new System.Drawing.Point(31, 13);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreChk.Name = "NombreChk";
-            this.NombreChk.Size = new System.Drawing.Size(80, 21);
+            this.NombreChk.Size = new System.Drawing.Size(63, 17);
             this.NombreChk.TabIndex = 2;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(393, 108);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CancelarBtn.Location = new System.Drawing.Point(295, 88);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(77, 33);
+            this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
             this.CancelarBtn.TabIndex = 9;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(256, 108);
-            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BuscarBtn.Location = new System.Drawing.Point(192, 88);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BuscarBtn.Name = "BuscarBtn";
-            this.BuscarBtn.Size = new System.Drawing.Size(77, 33);
+            this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
             this.BuscarBtn.TabIndex = 8;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
@@ -85,19 +85,20 @@
             this.LocalidadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalidadCbo.Enabled = false;
             this.LocalidadCbo.FormattingEnabled = true;
-            this.LocalidadCbo.Location = new System.Drawing.Point(127, 64);
+            this.LocalidadCbo.Location = new System.Drawing.Point(95, 52);
+            this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LocalidadCbo.Name = "LocalidadCbo";
-            this.LocalidadCbo.Size = new System.Drawing.Size(273, 24);
+            this.LocalidadCbo.Size = new System.Drawing.Size(206, 21);
             this.LocalidadCbo.TabIndex = 13;
             this.LocalidadCbo.ValueMember = "Codigo";
             // 
             // LocalidadChk
             // 
             this.LocalidadChk.AutoSize = true;
-            this.LocalidadChk.Location = new System.Drawing.Point(41, 64);
-            this.LocalidadChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LocalidadChk.Location = new System.Drawing.Point(31, 52);
+            this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LocalidadChk.Name = "LocalidadChk";
-            this.LocalidadChk.Size = new System.Drawing.Size(91, 21);
+            this.LocalidadChk.Size = new System.Drawing.Size(72, 17);
             this.LocalidadChk.TabIndex = 12;
             this.LocalidadChk.Text = "Localidad";
             this.LocalidadChk.UseVisualStyleBackColor = true;
@@ -105,16 +106,17 @@
             // 
             // FrmAgenciaBusq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 165);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(390, 134);
             this.Controls.Add(this.LocalidadCbo);
             this.Controls.Add(this.LocalidadChk);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.NombreChk);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAgenciaBusq";

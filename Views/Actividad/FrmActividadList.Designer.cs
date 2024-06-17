@@ -40,9 +40,10 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(269, 171);
+            this.CerrarBtn.Location = new System.Drawing.Point(275, 111);
+            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(116, 42);
+            this.CerrarBtn.Size = new System.Drawing.Size(77, 27);
             this.CerrarBtn.TabIndex = 12;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
@@ -61,14 +62,15 @@
             this.Nivel,
             this.TipoActividad,
             this.Importe});
-            this.ActividadGrd.Location = new System.Drawing.Point(33, 30);
+            this.ActividadGrd.Location = new System.Drawing.Point(22, 19);
+            this.ActividadGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ActividadGrd.MultiSelect = false;
             this.ActividadGrd.Name = "ActividadGrd";
             this.ActividadGrd.ReadOnly = true;
             this.ActividadGrd.RowTemplate.Height = 24;
             this.ActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadGrd.ShowEditingIcon = false;
-            this.ActividadGrd.Size = new System.Drawing.Size(618, 117);
+            this.ActividadGrd.Size = new System.Drawing.Size(597, 88);
             this.ActividadGrd.TabIndex = 11;
             this.ActividadGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ActividadGrd_CellContentClick_1);
             // 
@@ -110,14 +112,18 @@
             // 
             // FrmActividadList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 244);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(633, 147);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.ActividadGrd);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmActividadList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmActividadList";
+            this.Text = "Lista Actividades";
             this.Load += new System.EventHandler(this.FrmActividadList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).EndInit();
             this.ResumeLayout(false);

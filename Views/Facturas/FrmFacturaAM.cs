@@ -48,6 +48,7 @@ namespace TurApp.Views
             this.PaquetesGrd.DataSource = PaquetesBindingSource;
             this.DetallesGrd.AutoGenerateColumns = false;
             this.DetallesGrd.DataSource = detallesFactura;
+            DetallesGrd.Enabled = false;
 
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
             FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
@@ -335,22 +336,43 @@ namespace TurApp.Views
 
         private void QuitarBtn_Click(object sender, EventArgs e)
         {
-            if (DetallesGrd.SelectedRows.Count == 0)
+            if (PaquetesGrd.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione un detalle para quitar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un paquete para quitar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var selectedRow = DetallesGrd.SelectedRows[0];
-            var detalle = selectedRow.DataBoundItem as DetalleFacturaTurista;
+            DataGridViewRow selectedRowPaquetes = PaquetesGrd.SelectedRows[0];
+            int codPaquete = Convert.ToInt32(selectedRowPaquetes.Cells["CodPaqCol"].Value);
 
-            if (detalle != null)
+            List<DetalleFacturaTurista> detallesParaEliminar = new List<DetalleFacturaTurista>();
+
+            foreach (DataGridViewRow row in DetallesGrd.Rows)
+            {
+                var detalle = row.DataBoundItem as DetalleFacturaTurista;
+                if (detalle != null && detalle.CodPaquete == codPaquete)
+                {
+                    detallesParaEliminar.Add(detalle);
+                }
+            }
+
+            bool detalleEncontrado = detallesParaEliminar.Count > 0;
+
+            foreach (var detalle in detallesParaEliminar)
             {
                 detallesFactura.Remove(detalle);
+            }
+
+            if (detalleEncontrado)
+            {
                 DetallesGrd.DataSource = null;
                 DetallesGrd.DataSource = detallesFactura;
 
                 MessageBox.Show("Detalle quitado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un detalle con el código de paquete seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
