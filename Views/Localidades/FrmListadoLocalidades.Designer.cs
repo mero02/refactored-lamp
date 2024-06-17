@@ -133,7 +133,7 @@
             this.LocalidadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodPosCol,
             this.NombreCol});
-            this.LocalidadesGrd.Location = new System.Drawing.Point(-2, 82);
+            this.LocalidadesGrd.Location = new System.Drawing.Point(194, 74);
             this.LocalidadesGrd.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadesGrd.MultiSelect = false;
             this.LocalidadesGrd.Name = "LocalidadesGrd";
@@ -141,7 +141,7 @@
             this.LocalidadesGrd.RowTemplate.Height = 24;
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocalidadesGrd.ShowEditingIcon = false;
-            this.LocalidadesGrd.Size = new System.Drawing.Size(664, 355);
+            this.LocalidadesGrd.Size = new System.Drawing.Size(293, 355);
             this.LocalidadesGrd.TabIndex = 7;
             this.LocalidadesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LocalidadesGrd_CellContentClick);
             this.LocalidadesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocalidadesGrd_ColumnHeaderMouseClick);

@@ -164,12 +164,15 @@ namespace TurApp.Views
 
         private void IngresoAgencia_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmAgenciaAM frm = new FrmAgenciaAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoAgencia();
         }
 
         private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmAgenciaBusq frmba = new FrmAgenciaBusq();
             frmba.ShowBuscar();
         }
@@ -188,7 +191,9 @@ namespace TurApp.Views
 
         private void ActividadAM_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmActividadAM frm = new FrmActividadAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoActividad();
         }
 
@@ -205,24 +210,30 @@ namespace TurApp.Views
 
         private void LocalidadAM_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmLocalidadAM frm = new FrmLocalidadAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoLocalidad();
         }
 
         private void BuscarLocalidad_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmLocalidadBusq frm = new FrmLocalidadBusq();
             frm.ShowBuscar();
         }
 
         private void FormaPagoAM_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmFormaPagoAM frm = new FrmFormaPagoAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoFormaPago();
         }
 
         private void BuscarFormaPago_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmFormaPagoBusq frm = new FrmFormaPagoBusq();
             frm.ShowBuscar();
         }
@@ -233,14 +244,17 @@ namespace TurApp.Views
             frmListPac.Show();
         }
 
-        private void PaqueteAM_mnu_Click(object sender, EventArgs e)
-        {
-            FrmPaqueteAM frm = new FrmPaqueteAM();
-            frm.ShowIngresoPaquete();
-        }
+         private void PaqueteAM_mnu_Click(object sender, EventArgs e)
+         {
+             MainView.Instance.Cursor = Cursors.WaitCursor;
+             FrmPaqueteAM frm = new FrmPaqueteAM();
+             frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+             frm.ShowIngresoPaquete();
+         }
 
         private void BuscarPaquete_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmPaqueteBusq frm = new FrmPaqueteBusq();
             frm.ShowBuscar();
         }
@@ -248,18 +262,22 @@ namespace TurApp.Views
        
         private void BuscarActividad_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmActividadBusq frm = new FrmActividadBusq();
             frm.ShowBuscar();
         }
 
         private void TipoPaqueteAM_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmTipoPaqueteAM frm = new FrmTipoPaqueteAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoTipoPaquete();
         }
 
         private void BuscarTipoPaquete_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmTipoPaqueteBusq frm = new FrmTipoPaqueteBusq();
             frm.ShowBuscar();
         }
@@ -274,12 +292,15 @@ namespace TurApp.Views
         
          private void FacturaAM_mnu_Click(object sender, EventArgs e)
         {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
             FrmFacturaAM frm = new FrmFacturaAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
             frm.ShowIngresoFactura();
         }
 
          private void BuscarTipoAct_mnu_Click(object sender, EventArgs e)
          {
+             MainView.Instance.Cursor = Cursors.WaitCursor;
              FrmTipoActividadBusq frm = new FrmTipoActividadBusq();
              frm.ShowBuscar();
          }
@@ -292,7 +313,9 @@ namespace TurApp.Views
 
          private void TipoActivAM_mnu_Click(object sender, EventArgs e)
          {
+             MainView.Instance.Cursor = Cursors.WaitCursor;
              FrmTipoActividadAM frm = new FrmTipoActividadAM();
+             frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
              frm.ShowIngresoTipoActividad();
          }
 
