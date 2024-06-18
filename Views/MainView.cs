@@ -348,5 +348,21 @@ namespace TurApp.Views
              FrmListadoActividad frmListPac = new FrmListadoActividad();
              frmListPac.Show();
          }
+
+         private void ingresoTransporte_Click(object sender, EventArgs e)
+         {
+             MainView.Instance.Cursor = Cursors.WaitCursor;
+             FrmTransporteAm frm = new FrmTransporteAm();
+             frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+             frm.ShowIngresoTransporte();
+         }
+
+         private void buscarTransporte_Click(object sender, EventArgs e)
+         {
+             MainView.Instance.Cursor = Cursors.WaitCursor;
+             FrmTransporteBusq frm = new FrmTransporteBusq();
+             frm.ShowBuscar();
+         }
+
     }
 }

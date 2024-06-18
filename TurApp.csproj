@@ -347,6 +347,18 @@
     <Compile Include="Views\TipoPaquete\FrmTipoPaqueteList.Designer.cs">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Transporte\FrmTransporteAm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Transporte\FrmTransporteAm.Designer.cs">
+      <DependentUpon>FrmTransporteAm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Transporte\FrmTransporteBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Transporte\FrmTransporteBusq.Designer.cs">
+      <DependentUpon>FrmTransporteBusq.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Turista\FrmDetalleFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -497,6 +509,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoPaquete\FrmTipoPaqueteList.resx">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Transporte\FrmTransporteAm.resx">
+      <DependentUpon>FrmTransporteAm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Transporte\FrmTransporteBusq.resx">
+      <DependentUpon>FrmTransporteBusq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmDetalleFactura.resx">
       <DependentUpon>FrmDetalleFactura.cs</DependentUpon>
