@@ -28,7 +28,6 @@ namespace TurApp.Views
             LoadComboBox(Localidad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.LocalidadCbo, addSeleccion: true);
             this.LocalidadesGrd.AutoGenerateColumns = false;
 
-            //this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
             var localidades = Localidad.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
             var localidadesBindingList = new BindingList<Localidad>(localidades);
             var localidadesBindingSource = new BindingSource(localidadesBindingList, null);
