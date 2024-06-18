@@ -53,9 +53,9 @@
             this.groupBox1.Controls.Add(this.NivelTxt);
             this.groupBox1.Controls.Add(this.NivelLbl);
             this.groupBox1.Location = new System.Drawing.Point(4, 8);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(292, 170);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -66,11 +66,11 @@
             this.TipoActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoActividadCbo.FormattingEnabled = true;
             this.TipoActividadCbo.Location = new System.Drawing.Point(88, 115);
-            this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadCbo.Name = "TipoActividadCbo";
             this.TipoActividadCbo.Size = new System.Drawing.Size(157, 21);
             this.TipoActividadCbo.TabIndex = 13;
-            this.TipoActividadCbo.Tag = "Descripcion";
+            this.TipoActividadCbo.Tag = "CodTipoActividad";
             this.TipoActividadCbo.ValueMember = "Id";
             this.TipoActividadCbo.SelectedIndexChanged += new System.EventHandler(this.TipoActividadCbo_SelectedIndexChanged);
             // 
@@ -91,11 +91,11 @@
             this.TransporteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TransporteCbo.FormattingEnabled = true;
             this.TransporteCbo.Location = new System.Drawing.Point(88, 84);
-            this.TransporteCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TransporteCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TransporteCbo.Name = "TransporteCbo";
             this.TransporteCbo.Size = new System.Drawing.Size(157, 21);
             this.TransporteCbo.TabIndex = 11;
-            this.TransporteCbo.Tag = "Codigo";
+            this.TransporteCbo.Tag = "CodTransporte";
             this.TransporteCbo.ValueMember = "Id";
             // 
             // TransporteLbl
@@ -111,7 +111,7 @@
             // ImporteTxt
             // 
             this.ImporteTxt.Location = new System.Drawing.Point(88, 51);
-            this.ImporteTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImporteTxt.Margin = new System.Windows.Forms.Padding(2);
             this.ImporteTxt.Name = "ImporteTxt";
             this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
             this.ImporteTxt.TabIndex = 2;
@@ -130,7 +130,7 @@
             // NivelTxt
             // 
             this.NivelTxt.Location = new System.Drawing.Point(88, 16);
-            this.NivelTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.MaxLength = 90;
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
@@ -150,7 +150,7 @@
             // CancelarBtn
             // 
             this.CancelarBtn.Location = new System.Drawing.Point(237, 188);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
             this.CancelarBtn.TabIndex = 14;
@@ -161,7 +161,7 @@
             // GuardarBtn
             // 
             this.GuardarBtn.Location = new System.Drawing.Point(162, 188);
-            this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
             this.GuardarBtn.TabIndex = 13;
@@ -178,7 +178,7 @@
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmActividadAM";

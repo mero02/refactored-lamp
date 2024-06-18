@@ -119,6 +119,44 @@ namespace TurApp.Views
             try
             {
                 Paquete.SaveObj();
+
+                List<TipoPaqueteTipoActividad> tipo_paqActdes = new List<TipoPaqueteTipoActividad>(); //No trae la lista que necesitamos
+
+                foreach (TipoPaqueteTipoActividad tPaqAct in tipo_paqActdes)
+                {
+                    if (tPaqAct.CodTipoPaquete == Paquete.CodTipoPaquete)
+                    {
+                        List<Actividad> actividades = new List<Actividad>();
+                        foreach (Actividad actividad in actividades)
+                        {
+                            if (actividad.CodTipoActividad == tPaqAct.CodTipoActividad)
+                            {
+                                Transporte transporte = new Transporte();
+                                transporte.FindbyKey(actividad.CodTransporte);
+                                TipoPaquete tipoPaq = new TipoPaquete();
+                                tipoPaq.FindbyKey(tPaqAct.CodTipoPaquete);
+
+                                PaqueteActividad paqueteActividad = new PaqueteActividad();
+                                paqueteActividad.CodPaquete = Paquete.Codigo; //Lo trae?
+                                paqueteActividad.CodActividad = actividad.Codigo;
+                                paqueteActividad.Importe = transporte.Importe + actividad.Importe;
+                                paqueteActividad.FechaHoraDesde = Paquete.Fecha;
+                                paqueteActividad.FechaHoraHasta = Convert.ToDateTime(tipoPaq.Duracion);
+                                paqueteActividad.Detalle = actividad.TipoActividadObj.Descripcion;
+                                try
+                                {
+                                    paqueteActividad.SaveObj();
+                                    Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
+                                }
+                                catch (Exception ex)
+                                {
+                                    errMsj = "Error: " + ex.Message;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
             }
 
