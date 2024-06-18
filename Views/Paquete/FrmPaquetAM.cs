@@ -120,13 +120,13 @@ namespace TurApp.Views
             {
                 Paquete.SaveObj();
 
-                List<TipoPaqueteTipoActividad> tipo_paqActdes = new List<TipoPaqueteTipoActividad>(); //No trae la lista que necesitamos
+                var tipo_paqActdes = TipoPaqueteTipoActividad.FindAllStatic(null, (p1, p2) => p1.CodTipoPaquete.CompareTo(p2.CodTipoPaquete));
 
                 foreach (TipoPaqueteTipoActividad tPaqAct in tipo_paqActdes)
                 {
                     if (tPaqAct.CodTipoPaquete == Paquete.CodTipoPaquete)
                     {
-                        List<Actividad> actividades = new List<Actividad>();
+                        var actividades = Actividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
                         foreach (Actividad actividad in actividades)
                         {
                             if (actividad.CodTipoActividad == tPaqAct.CodTipoActividad)
@@ -137,7 +137,7 @@ namespace TurApp.Views
                                 tipoPaq.FindbyKey(tPaqAct.CodTipoPaquete);
 
                                 PaqueteActividad paqueteActividad = new PaqueteActividad();
-                                paqueteActividad.CodPaquete = Paquete.Codigo; //Lo trae?
+                                paqueteActividad.CodPaquete = Paquete.Codigo; 
                                 paqueteActividad.CodActividad = actividad.Codigo;
                                 paqueteActividad.Importe = transporte.Importe + actividad.Importe;
                                 paqueteActividad.FechaHoraDesde = Paquete.Fecha;
