@@ -149,7 +149,7 @@
             // 
             // DniTuristaCbo
             // 
-            this.DniTuristaCbo.DisplayMember = "Nombre";
+            this.DniTuristaCbo.DisplayMember = "NroDocumento";
             this.DniTuristaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DniTuristaCbo.FormattingEnabled = true;
             this.DniTuristaCbo.Location = new System.Drawing.Point(74, 150);
