@@ -364,5 +364,11 @@ namespace TurApp.Views
              frm.ShowBuscar();
          }
 
+         private void TransportesToolStripMenuItem1_Click(object sender, EventArgs e)
+         {
+             FrmListadoTransportes frm = new FrmListadoTransportes();
+             frm.Show();
+         }
+
     }
 }

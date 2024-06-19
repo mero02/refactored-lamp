@@ -36,7 +36,7 @@
             // 
             // DominioCbo
             // 
-            this.DominioCbo.DisplayMember = "Nombre";
+            this.DominioCbo.DisplayMember = "Dominio";
             this.DominioCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DominioCbo.Enabled = false;
             this.DominioCbo.FormattingEnabled = true;
@@ -45,7 +45,7 @@
             this.DominioCbo.Name = "DominioCbo";
             this.DominioCbo.Size = new System.Drawing.Size(206, 21);
             this.DominioCbo.TabIndex = 13;
-            this.DominioCbo.ValueMember = "Dominio";
+            this.DominioCbo.ValueMember = "Codigo";
             // 
             // DominioChk
             // 
@@ -57,6 +57,7 @@
             this.DominioChk.TabIndex = 12;
             this.DominioChk.Text = "Dominio";
             this.DominioChk.UseVisualStyleBackColor = true;
+            this.DominioChk.CheckedChanged += new System.EventHandler(this.DominioChk_CheckedChanged);
             // 
             // CancelarBtn
             // 

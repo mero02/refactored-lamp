@@ -99,7 +99,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.CancelarBtn.BackColor = System.Drawing.SystemColors.HighlightText;
             this.CancelarBtn.Location = new System.Drawing.Point(155, 165);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
@@ -111,13 +111,14 @@
             // 
             // GuardarBtn
             // 
+            this.GuardarBtn.BackColor = System.Drawing.SystemColors.HighlightText;
             this.GuardarBtn.Location = new System.Drawing.Point(68, 165);
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
             this.GuardarBtn.TabIndex = 23;
             this.GuardarBtn.Text = "&Guardar";
-            this.GuardarBtn.UseVisualStyleBackColor = true;
+            this.GuardarBtn.UseVisualStyleBackColor = false;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
             // FrmTransporteAm

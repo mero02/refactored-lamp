@@ -31,7 +31,7 @@ namespace TurApp.Views
             string criterio = null;
             if (this.DominioChk.Checked)
             {
-                criterio = String.Format("cod_pais = {0} ", (DominioCbo.SelectedValue));
+                criterio = String.Format("codigo = {0} ", (DominioCbo.SelectedValue));
             }
 
             try
@@ -44,8 +44,8 @@ namespace TurApp.Views
                     MessageBox.Show("No se encontraron resultados con criterio ingresado", "Sin resultados...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // invocar Formulario de Listado.
-                //FrmTuristaList frm = new FrmTuristaList();
-               //frm.ShowListado(lista, this, criterio);
+                FrmTransporteList frm = new FrmTransporteList();
+                frm.ShowListado(lista, this, criterio);
             }
             catch (Exception ex)
             {
@@ -67,6 +67,11 @@ namespace TurApp.Views
         public void ShowBuscar()
         {
             this.Show();
+        }
+
+        private void DominioChk_CheckedChanged(object sender, EventArgs e)
+        {
+            this.DominioCbo.Enabled = this.DominioChk.Checked;
         }
     }
 }
