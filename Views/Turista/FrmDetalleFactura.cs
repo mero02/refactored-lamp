@@ -29,7 +29,7 @@ namespace TurApp.Views
 
         public void ShowListadoDetalleFacturas(FormBase Invoker)
         {
-            string criterio = String.Format("nro_fact = {0}", nro);
+            string criterio = String.Format("nro_fact = '{0}' AND serie_fact = '{1}' AND letra_fact = '{2}'", nro, serie, letra);
             var lista = DetalleFacturaTurista.FindAllStatic(criterio, (p1, p2) => (p1.NroFactura).CompareTo(p2.NroFactura));
             this.InvokerForm = Invoker;
             this.DetalleFacGrd.AutoGenerateColumns = false;
