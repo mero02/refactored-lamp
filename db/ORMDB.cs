@@ -131,8 +131,12 @@ namespace TurApp.db
                             listValues.Add(String.Format("coalesce((select max({0})+1 from {1}),1)", propAt.Name, table));
                         }
                         else
-                            listValues.Add(String.Format("{0}", prop.GetValue(obj, null)));
-                        
+                        {
+                            if (propAt.Tipo == typeof(string))
+                                listValues.Add(String.Format("'{0}'", prop.GetValue(obj, null)));
+                            else
+                                listValues.Add(String.Format("{0}", prop.GetValue(obj, null)));
+                        }                        
                     }
                 }
                 // generar cadena sql insert, considerar metadata
