@@ -119,6 +119,7 @@
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(640, 226);
             this.TipoActividadGrd.TabIndex = 3;
+            this.TipoActividadGrd.DoubleClick += new System.EventHandler(this.TipoActividadGrd_DoubleClick);
             // 
             // CodigoCol
             // 

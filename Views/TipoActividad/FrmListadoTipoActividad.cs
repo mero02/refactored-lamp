@@ -166,6 +166,13 @@ namespace TurApp.Views
             }
         }
 
+        private void TipoActividadGrd_DoubleClick(object sender, EventArgs e)
+        {
+            FrmTipoActividadAM frmpac = new FrmTipoActividadAM();
+            TipoActividad pac = (this.TipoActividadGrd.SelectedRows[0].DataBoundItem as TipoActividad);
+            frmpac.ShowModificarTipoActividad(pac);
+        }
+
         
     }
 }
