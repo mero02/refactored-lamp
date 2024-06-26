@@ -44,7 +44,7 @@
             this.DominioCbo.Margin = new System.Windows.Forms.Padding(2);
             this.DominioCbo.Name = "DominioCbo";
             this.DominioCbo.Size = new System.Drawing.Size(206, 21);
-            this.DominioCbo.TabIndex = 13;
+            this.DominioCbo.TabIndex = 2;
             this.DominioCbo.ValueMember = "Codigo";
             // 
             // DominioChk
@@ -54,7 +54,7 @@
             this.DominioChk.Margin = new System.Windows.Forms.Padding(2);
             this.DominioChk.Name = "DominioChk";
             this.DominioChk.Size = new System.Drawing.Size(64, 17);
-            this.DominioChk.TabIndex = 12;
+            this.DominioChk.TabIndex = 1;
             this.DominioChk.Text = "Dominio";
             this.DominioChk.UseVisualStyleBackColor = true;
             this.DominioChk.CheckedChanged += new System.EventHandler(this.DominioChk_CheckedChanged);
@@ -65,7 +65,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 15;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -76,7 +76,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 14;
+            this.BuscarBtn.TabIndex = 3;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -91,9 +91,11 @@
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.DominioCbo);
             this.Controls.Add(this.DominioChk);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmTransporteBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTransporteBusq";
+            this.Text = "Busqueda de Transporte";
             this.Activated += new System.EventHandler(this.FrmTransporteBusq_Activated);
             this.Load += new System.EventHandler(this.FrmTransporteBusq_Load);
             this.ResumeLayout(false);

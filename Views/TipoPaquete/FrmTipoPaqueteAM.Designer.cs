@@ -55,7 +55,7 @@
             this.NombreTxt.MaxLength = 15;
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(80, 20);
-            this.NombreTxt.TabIndex = 1;
+            this.NombreTxt.TabIndex = 2;
             this.NombreTxt.Tag = "Nombre";
             this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
@@ -66,7 +66,7 @@
             this.NombreLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NombreLbl.Name = "NombreLbl";
             this.NombreLbl.Size = new System.Drawing.Size(44, 13);
-            this.NombreLbl.TabIndex = 24;
+            this.NombreLbl.TabIndex = 1;
             this.NombreLbl.Text = "&Nombre";
             // 
             // NivelTxt
@@ -75,7 +75,7 @@
             this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
-            this.NivelTxt.TabIndex = 4;
+            this.NivelTxt.TabIndex = 8;
             this.NivelTxt.Tag = "Nivel";
             this.NivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelTxt_KeyPress);
             // 
@@ -86,7 +86,7 @@
             this.NivelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NivelLbl.Name = "NivelLbl";
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
-            this.NivelLbl.TabIndex = 23;
+            this.NivelLbl.TabIndex = 7;
             this.NivelLbl.Text = "&Nivel";
             // 
             // DuracionTxt
@@ -95,7 +95,7 @@
             this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DuracionTxt.Name = "DuracionTxt";
             this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DuracionTxt.TabIndex = 3;
+            this.DuracionTxt.TabIndex = 6;
             this.DuracionTxt.Tag = "Duracion";
             this.DuracionTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DuracionTxt_KeyPress);
             // 
@@ -106,7 +106,7 @@
             this.DuracionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DuracionLbl.Name = "DuracionLbl";
             this.DuracionLbl.Size = new System.Drawing.Size(50, 13);
-            this.DuracionLbl.TabIndex = 22;
+            this.DuracionLbl.TabIndex = 5;
             this.DuracionLbl.Text = "&Duracion";
             // 
             // DescripcionTxt
@@ -116,7 +116,7 @@
             this.DescripcionTxt.MaxLength = 90;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DescripcionTxt.TabIndex = 2;
+            this.DescripcionTxt.TabIndex = 4;
             this.DescripcionTxt.Tag = "Descripcion";
             this.DescripcionTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTxt_KeyPress);
             // 
@@ -127,7 +127,7 @@
             this.DescripcionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DescripcionLbl.Name = "DescripcionLbl";
             this.DescripcionLbl.Size = new System.Drawing.Size(63, 13);
-            this.DescripcionLbl.TabIndex = 20;
+            this.DescripcionLbl.TabIndex = 3;
             this.DescripcionLbl.Text = "&Descripcion";
             // 
             // CancelarBtn
@@ -136,7 +136,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 8;
+            this.CancelarBtn.TabIndex = 13;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -159,7 +159,7 @@
             this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.QuitarBtn.Name = "QuitarBtn";
             this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
-            this.QuitarBtn.TabIndex = 6;
+            this.QuitarBtn.TabIndex = 11;
             this.QuitarBtn.Text = "&Quitar";
             this.QuitarBtn.UseVisualStyleBackColor = true;
             this.QuitarBtn.Click += new System.EventHandler(this.QuitarBtn_Click);
@@ -170,7 +170,7 @@
             this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AgregarBtn.Name = "AgregarBtn";
             this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
-            this.AgregarBtn.TabIndex = 5;
+            this.AgregarBtn.TabIndex = 10;
             this.AgregarBtn.Text = "&Agregar";
             this.AgregarBtn.UseVisualStyleBackColor = true;
             this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
@@ -188,7 +188,7 @@
             this.ActividadesGrd.Name = "ActividadesGrd";
             this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadesGrd.Size = new System.Drawing.Size(397, 216);
-            this.ActividadesGrd.TabIndex = 0;
+            this.ActividadesGrd.TabIndex = 9;
             this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadedsGrd_DataBindingComplete);
             // 
             // CodActCol
@@ -209,7 +209,7 @@
             this.GuardarBtn.Location = new System.Drawing.Point(99, 267);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(61, 27);
-            this.GuardarBtn.TabIndex = 7;
+            this.GuardarBtn.TabIndex = 12;
             this.GuardarBtn.Text = "Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);

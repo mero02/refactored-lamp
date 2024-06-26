@@ -48,7 +48,7 @@
             this.TipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoPaqueteCbo.Name = "TipoPaqueteCbo";
             this.TipoPaqueteCbo.Size = new System.Drawing.Size(206, 21);
-            this.TipoPaqueteCbo.TabIndex = 15;
+            this.TipoPaqueteCbo.TabIndex = 4;
             this.TipoPaqueteCbo.ValueMember = "Codigo";
             // 
             // TipoPaqueteChk
@@ -58,7 +58,7 @@
             this.TipoPaqueteChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoPaqueteChk.Name = "TipoPaqueteChk";
             this.TipoPaqueteChk.Size = new System.Drawing.Size(90, 17);
-            this.TipoPaqueteChk.TabIndex = 14;
+            this.TipoPaqueteChk.TabIndex = 3;
             this.TipoPaqueteChk.Text = "Tipo Paquete";
             this.TipoPaqueteChk.UseVisualStyleBackColor = true;
             this.TipoPaqueteChk.CheckedChanged += new System.EventHandler(this.TipoPaqueteChk_CheckedChanged);
@@ -70,7 +70,7 @@
             this.DniTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DniTxt.Name = "DniTxt";
             this.DniTxt.Size = new System.Drawing.Size(123, 20);
-            this.DniTxt.TabIndex = 13;
+            this.DniTxt.TabIndex = 2;
             // 
             // DniChk
             // 
@@ -79,7 +79,7 @@
             this.DniChk.Margin = new System.Windows.Forms.Padding(2);
             this.DniChk.Name = "DniChk";
             this.DniChk.Size = new System.Drawing.Size(42, 17);
-            this.DniChk.TabIndex = 12;
+            this.DniChk.TabIndex = 1;
             this.DniChk.Tag = "Dni";
             this.DniChk.Text = "Dni";
             this.DniChk.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 17;
+            this.CancelarBtn.TabIndex = 8;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -102,7 +102,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 16;
+            this.BuscarBtn.TabIndex = 7;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -117,7 +117,7 @@
             this.AgenciaCbo.Margin = new System.Windows.Forms.Padding(2);
             this.AgenciaCbo.Name = "AgenciaCbo";
             this.AgenciaCbo.Size = new System.Drawing.Size(206, 21);
-            this.AgenciaCbo.TabIndex = 19;
+            this.AgenciaCbo.TabIndex = 6;
             this.AgenciaCbo.ValueMember = "Codigo";
             // 
             // AgenciaChk
@@ -127,7 +127,7 @@
             this.AgenciaChk.Margin = new System.Windows.Forms.Padding(2);
             this.AgenciaChk.Name = "AgenciaChk";
             this.AgenciaChk.Size = new System.Drawing.Size(65, 17);
-            this.AgenciaChk.TabIndex = 18;
+            this.AgenciaChk.TabIndex = 5;
             this.AgenciaChk.Text = "Agencia";
             this.AgenciaChk.UseVisualStyleBackColor = true;
             this.AgenciaChk.CheckedChanged += new System.EventHandler(this.CodAgenciaChk_CheckedChanged);

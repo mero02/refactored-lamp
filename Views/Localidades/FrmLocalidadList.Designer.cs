@@ -52,7 +52,7 @@
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocalidadesGrd.ShowEditingIcon = false;
             this.LocalidadesGrd.Size = new System.Drawing.Size(295, 191);
-            this.LocalidadesGrd.TabIndex = 8;
+            this.LocalidadesGrd.TabIndex = 1;
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
             // 
@@ -77,7 +77,7 @@
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 9;
+            this.CerrarBtn.TabIndex = 2;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);

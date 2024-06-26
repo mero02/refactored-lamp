@@ -63,7 +63,7 @@
             this.TipoPaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TipoPaquetesGrd.ShowEditingIcon = false;
             this.TipoPaquetesGrd.Size = new System.Drawing.Size(640, 226);
-            this.TipoPaquetesGrd.TabIndex = 12;
+            this.TipoPaquetesGrd.TabIndex = 3;
             this.TipoPaquetesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TipoPaquetesGrd_CellContentClick);
             this.TipoPaquetesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TipoPaquetesGrd_ColumnHeaderMouseClick);
             this.TipoPaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TipoPaquetesGrd_DataBindingComplete);
@@ -145,7 +145,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 15;
+            this.FiltroBtn.TabIndex = 2;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -155,7 +155,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(562, 293);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 16;
+            this.ExportarBtn.TabIndex = 4;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);

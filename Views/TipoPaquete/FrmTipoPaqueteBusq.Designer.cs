@@ -44,7 +44,7 @@
             this.TipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoPaqueteCbo.Name = "TipoPaqueteCbo";
             this.TipoPaqueteCbo.Size = new System.Drawing.Size(150, 21);
-            this.TipoPaqueteCbo.TabIndex = 14;
+            this.TipoPaqueteCbo.TabIndex = 2;
             this.TipoPaqueteCbo.ValueMember = "Codigo";
             // 
             // TipoPaqueteChk
@@ -54,7 +54,7 @@
             this.TipoPaqueteChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoPaqueteChk.Name = "TipoPaqueteChk";
             this.TipoPaqueteChk.Size = new System.Drawing.Size(90, 17);
-            this.TipoPaqueteChk.TabIndex = 13;
+            this.TipoPaqueteChk.TabIndex = 1;
             this.TipoPaqueteChk.Text = "Tipo Paquete";
             this.TipoPaqueteChk.UseVisualStyleBackColor = true;
             this.TipoPaqueteChk.CheckedChanged += new System.EventHandler(this.TipoPaqueteChk_CheckedChanged);
@@ -65,7 +65,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 16;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -76,7 +76,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 15;
+            this.BuscarBtn.TabIndex = 3;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);

@@ -93,7 +93,7 @@
             this.FormaPagoCbo.Margin = new System.Windows.Forms.Padding(2);
             this.FormaPagoCbo.Name = "FormaPagoCbo";
             this.FormaPagoCbo.Size = new System.Drawing.Size(157, 21);
-            this.FormaPagoCbo.TabIndex = 19;
+            this.FormaPagoCbo.TabIndex = 12;
             this.FormaPagoCbo.Tag = "CodFormaPago";
             this.FormaPagoCbo.ValueMember = "Id";
             this.FormaPagoCbo.SelectedIndexChanged += new System.EventHandler(this.FormaPagoCbo_SelectedIndexChanged);
@@ -104,7 +104,7 @@
             this.DetallePagoTxt.Multiline = true;
             this.DetallePagoTxt.Name = "DetallePagoTxt";
             this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
-            this.DetallePagoTxt.TabIndex = 18;
+            this.DetallePagoTxt.TabIndex = 13;
             this.DetallePagoTxt.Tag = "DetallePago";
             // 
             // FechaFacturaTime
@@ -113,7 +113,7 @@
             this.FechaFacturaTime.Location = new System.Drawing.Point(74, 120);
             this.FechaFacturaTime.Name = "FechaFacturaTime";
             this.FechaFacturaTime.Size = new System.Drawing.Size(200, 20);
-            this.FechaFacturaTime.TabIndex = 17;
+            this.FechaFacturaTime.TabIndex = 8;
             this.FechaFacturaTime.Tag = "Fecha";
             // 
             // FormaPagolbl
@@ -123,7 +123,7 @@
             this.FormaPagolbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FormaPagolbl.Name = "FormaPagolbl";
             this.FormaPagolbl.Size = new System.Drawing.Size(79, 13);
-            this.FormaPagolbl.TabIndex = 14;
+            this.FormaPagolbl.TabIndex = 11;
             this.FormaPagolbl.Text = "&Forma de Pago";
             // 
             // NumeroTxt
@@ -133,7 +133,7 @@
             this.NumeroTxt.MaxLength = 15;
             this.NumeroTxt.Name = "NumeroTxt";
             this.NumeroTxt.Size = new System.Drawing.Size(80, 20);
-            this.NumeroTxt.TabIndex = 0;
+            this.NumeroTxt.TabIndex = 2;
             this.NumeroTxt.Tag = "Nro";
             this.NumeroTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NroTxt_KeyPress);
             // 
@@ -144,7 +144,7 @@
             this.NumeroLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NumeroLbl.Name = "NumeroLbl";
             this.NumeroLbl.Size = new System.Drawing.Size(44, 13);
-            this.NumeroLbl.TabIndex = 16;
+            this.NumeroLbl.TabIndex = 1;
             this.NumeroLbl.Text = "&Numero";
             // 
             // DniTuristaCbo
@@ -156,7 +156,7 @@
             this.DniTuristaCbo.Margin = new System.Windows.Forms.Padding(2);
             this.DniTuristaCbo.Name = "DniTuristaCbo";
             this.DniTuristaCbo.Size = new System.Drawing.Size(157, 21);
-            this.DniTuristaCbo.TabIndex = 4;
+            this.DniTuristaCbo.TabIndex = 10;
             this.DniTuristaCbo.Tag = "DniTurista";
             this.DniTuristaCbo.ValueMember = "Id";
             this.DniTuristaCbo.SelectedIndexChanged += new System.EventHandler(this.DniTuristaCbo_SelectedIndexChanged);
@@ -168,7 +168,7 @@
             this.DniTuristaLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DniTuristaLbl.Name = "DniTuristaLbl";
             this.DniTuristaLbl.Size = new System.Drawing.Size(55, 13);
-            this.DniTuristaLbl.TabIndex = 12;
+            this.DniTuristaLbl.TabIndex = 9;
             this.DniTuristaLbl.Text = "&DniTurista";
             // 
             // FechaLbl
@@ -178,7 +178,7 @@
             this.FechaLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FechaLbl.Name = "FechaLbl";
             this.FechaLbl.Size = new System.Drawing.Size(37, 13);
-            this.FechaLbl.TabIndex = 10;
+            this.FechaLbl.TabIndex = 7;
             this.FechaLbl.Text = "&Fecha";
             // 
             // LetraTxt
@@ -187,7 +187,7 @@
             this.LetraTxt.Margin = new System.Windows.Forms.Padding(2);
             this.LetraTxt.Name = "LetraTxt";
             this.LetraTxt.Size = new System.Drawing.Size(166, 20);
-            this.LetraTxt.TabIndex = 2;
+            this.LetraTxt.TabIndex = 6;
             this.LetraTxt.Tag = "Letra";
             this.LetraTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LetraTxt_KeyPress);
             // 
@@ -198,7 +198,7 @@
             this.LetraLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LetraLbl.Name = "LetraLbl";
             this.LetraLbl.Size = new System.Drawing.Size(31, 13);
-            this.LetraLbl.TabIndex = 8;
+            this.LetraLbl.TabIndex = 5;
             this.LetraLbl.Text = "&Letra";
             // 
             // SerieTxt
@@ -208,7 +208,7 @@
             this.SerieTxt.MaxLength = 90;
             this.SerieTxt.Name = "SerieTxt";
             this.SerieTxt.Size = new System.Drawing.Size(166, 20);
-            this.SerieTxt.TabIndex = 1;
+            this.SerieTxt.TabIndex = 4;
             this.SerieTxt.Tag = "Serie";
             this.SerieTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SerieTxt_KeyPress);
             // 
@@ -219,7 +219,7 @@
             this.SerieLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SerieLbl.Name = "SerieLbl";
             this.SerieLbl.Size = new System.Drawing.Size(31, 13);
-            this.SerieLbl.TabIndex = 2;
+            this.SerieLbl.TabIndex = 3;
             this.SerieLbl.Text = "&Serie";
             // 
             // CancelarBtn
@@ -228,7 +228,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 14;
+            this.CancelarBtn.TabIndex = 19;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -239,7 +239,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 13;
+            this.GuardarBtn.TabIndex = 18;
             this.GuardarBtn.Text = "Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -272,7 +272,7 @@
             this.DetallesGrd.ReadOnly = true;
             this.DetallesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DetallesGrd.Size = new System.Drawing.Size(439, 144);
-            this.DetallesGrd.TabIndex = 29;
+            this.DetallesGrd.TabIndex = 15;
             this.DetallesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DetallesGrd_DataBindingComplete);
             // 
             // NroCol
@@ -301,7 +301,7 @@
             this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.QuitarBtn.Name = "QuitarBtn";
             this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
-            this.QuitarBtn.TabIndex = 6;
+            this.QuitarBtn.TabIndex = 17;
             this.QuitarBtn.Text = "&Quitar";
             this.QuitarBtn.UseVisualStyleBackColor = true;
             this.QuitarBtn.Click += new System.EventHandler(this.QuitarBtn_Click);
@@ -312,7 +312,7 @@
             this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AgregarBtn.Name = "AgregarBtn";
             this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
-            this.AgregarBtn.TabIndex = 5;
+            this.AgregarBtn.TabIndex = 16;
             this.AgregarBtn.Text = "&Agregar";
             this.AgregarBtn.UseVisualStyleBackColor = true;
             this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
@@ -331,7 +331,7 @@
             this.PaquetesGrd.Name = "PaquetesGrd";
             this.PaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PaquetesGrd.Size = new System.Drawing.Size(439, 144);
-            this.PaquetesGrd.TabIndex = 0;
+            this.PaquetesGrd.TabIndex = 14;
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
             // 
             // CodPaqCol

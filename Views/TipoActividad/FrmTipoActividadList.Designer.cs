@@ -41,10 +41,10 @@
             // CerrarBtn
             // 
             this.CerrarBtn.Location = new System.Drawing.Point(260, 220);
-            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(129, 27);
-            this.CerrarBtn.TabIndex = 13;
+            this.CerrarBtn.TabIndex = 2;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
@@ -61,7 +61,7 @@
             this.DuracionCol,
             this.NivelCol});
             this.TipoActividadGrd.Location = new System.Drawing.Point(14, 18);
-            this.TipoActividadGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TipoActividadGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadGrd.MultiSelect = false;
             this.TipoActividadGrd.Name = "TipoActividadGrd";
             this.TipoActividadGrd.ReadOnly = true;
@@ -69,7 +69,7 @@
             this.TipoActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(640, 191);
-            this.TipoActividadGrd.TabIndex = 12;
+            this.TipoActividadGrd.TabIndex = 1;
             // 
             // CodigoCol
             // 
@@ -116,7 +116,7 @@
             this.ClientSize = new System.Drawing.Size(667, 270);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.TipoActividadGrd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmTipoActividadList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -40,19 +40,19 @@
             // 
             this.NombreTxt.Enabled = false;
             this.NombreTxt.Location = new System.Drawing.Point(95, 13);
-            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(182, 20);
-            this.NombreTxt.TabIndex = 3;
+            this.NombreTxt.TabIndex = 2;
             // 
             // NombreChk
             // 
             this.NombreChk.AutoSize = true;
             this.NombreChk.Location = new System.Drawing.Point(31, 13);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2);
             this.NombreChk.Name = "NombreChk";
             this.NombreChk.Size = new System.Drawing.Size(63, 17);
-            this.NombreChk.TabIndex = 2;
+            this.NombreChk.TabIndex = 1;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
             this.NombreChk.CheckedChanged += new System.EventHandler(this.NombresChk_CheckedChanged);
@@ -60,10 +60,10 @@
             // CancelarBtn
             // 
             this.CancelarBtn.Location = new System.Drawing.Point(295, 88);
-            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 9;
+            this.CancelarBtn.TabIndex = 6;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -71,10 +71,10 @@
             // BuscarBtn
             // 
             this.BuscarBtn.Location = new System.Drawing.Point(192, 88);
-            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 8;
+            this.BuscarBtn.TabIndex = 5;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -86,20 +86,20 @@
             this.LocalidadCbo.Enabled = false;
             this.LocalidadCbo.FormattingEnabled = true;
             this.LocalidadCbo.Location = new System.Drawing.Point(95, 52);
-            this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(206, 21);
-            this.LocalidadCbo.TabIndex = 13;
+            this.LocalidadCbo.TabIndex = 4;
             this.LocalidadCbo.ValueMember = "Codigo";
             // 
             // LocalidadChk
             // 
             this.LocalidadChk.AutoSize = true;
             this.LocalidadChk.Location = new System.Drawing.Point(31, 52);
-            this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadChk.Name = "LocalidadChk";
             this.LocalidadChk.Size = new System.Drawing.Size(72, 17);
-            this.LocalidadChk.TabIndex = 12;
+            this.LocalidadChk.TabIndex = 3;
             this.LocalidadChk.Text = "Localidad";
             this.LocalidadChk.UseVisualStyleBackColor = true;
             this.LocalidadChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged_1);
@@ -116,7 +116,7 @@
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.NombreChk);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAgenciaBusq";

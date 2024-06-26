@@ -65,7 +65,7 @@
             this.ActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadGrd.ShowEditingIcon = false;
             this.ActividadGrd.Size = new System.Drawing.Size(576, 233);
-            this.ActividadGrd.TabIndex = 12;
+            this.ActividadGrd.TabIndex = 4;
             // 
             // CodigoCol
             // 
@@ -109,7 +109,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 21;
+            this.FiltroBtn.TabIndex = 3;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -143,7 +143,7 @@
             this.TipoActividadChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadChk.Name = "TipoActividadChk";
             this.TipoActividadChk.Size = new System.Drawing.Size(94, 17);
-            this.TipoActividadChk.TabIndex = 0;
+            this.TipoActividadChk.TabIndex = 1;
             this.TipoActividadChk.Text = "Tipo Actividad";
             this.TipoActividadChk.UseVisualStyleBackColor = true;
             this.TipoActividadChk.CheckedChanged += new System.EventHandler(this.TipoActividadChk_CheckedChanged);
@@ -153,7 +153,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(500, 313);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 22;
+            this.ExportarBtn.TabIndex = 5;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);

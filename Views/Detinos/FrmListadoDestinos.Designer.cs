@@ -61,7 +61,7 @@
             this.DestinosGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DestinosGrd.ShowEditingIcon = false;
             this.DestinosGrd.Size = new System.Drawing.Size(826, 384);
-            this.DestinosGrd.TabIndex = 1;
+            this.DestinosGrd.TabIndex = 2;
             this.DestinosGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DestinosGrd_CellContentClick);
             this.DestinosGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DestinosGrd_ColumnHeaderMouseClick);
             this.DestinosGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DestinosGrd_DataBindingComplete);
@@ -145,7 +145,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(740, 455);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 10;
+            this.ExportarBtn.TabIndex = 4;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);

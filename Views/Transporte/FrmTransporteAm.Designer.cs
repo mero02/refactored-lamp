@@ -45,7 +45,7 @@
             this.DominioTxt.MaxLength = 15;
             this.DominioTxt.Name = "DominioTxt";
             this.DominioTxt.Size = new System.Drawing.Size(80, 20);
-            this.DominioTxt.TabIndex = 17;
+            this.DominioTxt.TabIndex = 2;
             this.DominioTxt.Tag = "Dominio";
             // 
             // DniLbl
@@ -55,7 +55,7 @@
             this.DniLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DniLbl.Name = "DniLbl";
             this.DniLbl.Size = new System.Drawing.Size(45, 13);
-            this.DniLbl.TabIndex = 22;
+            this.DniLbl.TabIndex = 1;
             this.DniLbl.Text = "&Dominio";
             // 
             // ImporteTxt
@@ -64,7 +64,7 @@
             this.ImporteTxt.Margin = new System.Windows.Forms.Padding(2);
             this.ImporteTxt.Name = "ImporteTxt";
             this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
-            this.ImporteTxt.TabIndex = 20;
+            this.ImporteTxt.TabIndex = 6;
             this.ImporteTxt.Tag = "Importe";
             // 
             // DomicilioLbl
@@ -74,7 +74,7 @@
             this.DomicilioLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DomicilioLbl.Name = "DomicilioLbl";
             this.DomicilioLbl.Size = new System.Drawing.Size(42, 13);
-            this.DomicilioLbl.TabIndex = 21;
+            this.DomicilioLbl.TabIndex = 5;
             this.DomicilioLbl.Text = "Importe";
             // 
             // DescripcionTxt
@@ -84,7 +84,7 @@
             this.DescripcionTxt.MaxLength = 90;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DescripcionTxt.TabIndex = 18;
+            this.DescripcionTxt.TabIndex = 4;
             this.DescripcionTxt.Tag = "Descripcion";
             // 
             // NombresLbl
@@ -94,7 +94,7 @@
             this.NombresLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NombresLbl.Name = "NombresLbl";
             this.NombresLbl.Size = new System.Drawing.Size(63, 13);
-            this.NombresLbl.TabIndex = 19;
+            this.NombresLbl.TabIndex = 3;
             this.NombresLbl.Text = "&Descripcion";
             // 
             // CancelarBtn
@@ -104,7 +104,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 24;
+            this.CancelarBtn.TabIndex = 8;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = false;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -116,7 +116,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 23;
+            this.GuardarBtn.TabIndex = 7;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = false;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);

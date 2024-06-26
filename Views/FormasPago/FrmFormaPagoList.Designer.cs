@@ -54,7 +54,7 @@
             this.FormaPagoGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FormaPagoGrd.ShowEditingIcon = false;
             this.FormaPagoGrd.Size = new System.Drawing.Size(294, 76);
-            this.FormaPagoGrd.TabIndex = 9;
+            this.FormaPagoGrd.TabIndex = 1;
             this.FormaPagoGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FormaPagoGrd_ColumnHeaderMouseClick);
             this.FormaPagoGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FormaPagoGrd_DataBindingComplete);
             this.FormaPagoGrd.DoubleClick += new System.EventHandler(this.FormaPagoGrd_DoubleClick);
@@ -80,7 +80,7 @@
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 10;
+            this.CerrarBtn.TabIndex = 2;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);

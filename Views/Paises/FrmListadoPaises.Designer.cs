@@ -33,6 +33,7 @@
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PaisesGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.PaisesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PaisesGrd.ShowEditingIcon = false;
             this.PaisesGrd.Size = new System.Drawing.Size(452, 304);
-            this.PaisesGrd.TabIndex = 11;
+            this.PaisesGrd.TabIndex = 1;
             this.PaisesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PaisesGrd_CellContentClick);
             this.PaisesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PaisesGrd_ColumnHeaderMouseClick);
             this.PaisesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaisesGrd_DataBindingComplete);
@@ -91,12 +92,23 @@
             this.CantidadCol.Name = "CantidadCol";
             this.CantidadCol.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 26);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Exportar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ExportarBtn_Click);
+            // 
             // FrmListadoPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(474, 359);
+            this.ClientSize = new System.Drawing.Size(474, 369);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.PaisesGrd);
             this.MaximizeBox = false;
@@ -116,6 +128,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadCol;
+        private System.Windows.Forms.Button button1;
 
     }
 }

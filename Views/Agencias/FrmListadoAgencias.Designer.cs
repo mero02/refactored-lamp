@@ -57,7 +57,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 3;
+            this.FiltroBtn.TabIndex = 4;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -86,7 +86,7 @@
             this.AgenciasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AgenciasGrd.ShowEditingIcon = false;
             this.AgenciasGrd.Size = new System.Drawing.Size(826, 366);
-            this.AgenciasGrd.TabIndex = 4;
+            this.AgenciasGrd.TabIndex = 5;
             this.AgenciasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AgenciasGrd_CellContentClick);
             this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
             this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
@@ -217,7 +217,7 @@
             this.LocCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocCbo.Name = "LocCbo";
             this.LocCbo.Size = new System.Drawing.Size(115, 21);
-            this.LocCbo.TabIndex = 1;
+            this.LocCbo.TabIndex = 3;
             this.LocCbo.ValueMember = "Nombre";
             // 
             // LocChk
@@ -227,7 +227,7 @@
             this.LocChk.Margin = new System.Windows.Forms.Padding(2);
             this.LocChk.Name = "LocChk";
             this.LocChk.Size = new System.Drawing.Size(72, 17);
-            this.LocChk.TabIndex = 0;
+            this.LocChk.TabIndex = 2;
             this.LocChk.Text = "Localidad";
             this.LocChk.UseVisualStyleBackColor = true;
             this.LocChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged);

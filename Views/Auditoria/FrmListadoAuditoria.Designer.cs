@@ -43,7 +43,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(751, 443);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 14;
+            this.ExportarBtn.TabIndex = 2;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
@@ -68,7 +68,7 @@
             this.AuditoriasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.AuditoriasGrd.ShowEditingIcon = false;
             this.AuditoriasGrd.Size = new System.Drawing.Size(826, 414);
-            this.AuditoriasGrd.TabIndex = 13;
+            this.AuditoriasGrd.TabIndex = 1;
             this.AuditoriasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AuditoriasGrd_CellContentClick);
             this.AuditoriasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AuditoriasGrd_ColumnHeaderMouseClick);
             this.AuditoriasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AuditoriasGrd_DataBindingComplete);

@@ -63,7 +63,7 @@
             this.TuristasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TuristasGrd.ShowEditingIcon = false;
             this.TuristasGrd.Size = new System.Drawing.Size(826, 384);
-            this.TuristasGrd.TabIndex = 0;
+            this.TuristasGrd.TabIndex = 5;
             this.TuristasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
             this.TuristasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TuristasGrd_ColumnHeaderMouseClick);
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
@@ -130,7 +130,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 2;
+            this.FiltroBtn.TabIndex = 4;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -157,7 +157,7 @@
             this.PaisCbo.Margin = new System.Windows.Forms.Padding(2);
             this.PaisCbo.Name = "PaisCbo";
             this.PaisCbo.Size = new System.Drawing.Size(115, 21);
-            this.PaisCbo.TabIndex = 1;
+            this.PaisCbo.TabIndex = 3;
             this.PaisCbo.ValueMember = "Nombre";
             // 
             // PaisChk
@@ -167,7 +167,7 @@
             this.PaisChk.Margin = new System.Windows.Forms.Padding(2);
             this.PaisChk.Name = "PaisChk";
             this.PaisChk.Size = new System.Drawing.Size(46, 17);
-            this.PaisChk.TabIndex = 0;
+            this.PaisChk.TabIndex = 2;
             this.PaisChk.Text = "Pais";
             this.PaisChk.UseVisualStyleBackColor = true;
             this.PaisChk.CheckedChanged += new System.EventHandler(this.PaisChk_CheckedChanged);
@@ -177,7 +177,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(732, 458);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 9;
+            this.ExportarBtn.TabIndex = 6;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);

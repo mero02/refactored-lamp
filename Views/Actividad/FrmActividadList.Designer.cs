@@ -44,7 +44,7 @@
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(77, 27);
-            this.CerrarBtn.TabIndex = 12;
+            this.CerrarBtn.TabIndex = 2;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
@@ -71,7 +71,7 @@
             this.ActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadGrd.ShowEditingIcon = false;
             this.ActividadGrd.Size = new System.Drawing.Size(597, 88);
-            this.ActividadGrd.TabIndex = 11;
+            this.ActividadGrd.TabIndex = 1;
             this.ActividadGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ActividadGrd_CellContentClick_1);
             // 
             // CodigoCol

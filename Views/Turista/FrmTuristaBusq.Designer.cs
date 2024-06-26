@@ -67,7 +67,7 @@
             this.DniTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DniTxt.Name = "DniTxt";
             this.DniTxt.Size = new System.Drawing.Size(123, 20);
-            this.DniTxt.TabIndex = 5;
+            this.DniTxt.TabIndex = 1;
             this.DniTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxt_KeyPress);
             // 
             // DniChk
@@ -77,7 +77,7 @@
             this.DniChk.Margin = new System.Windows.Forms.Padding(2);
             this.DniChk.Name = "DniChk";
             this.DniChk.Size = new System.Drawing.Size(42, 17);
-            this.DniChk.TabIndex = 4;
+            this.DniChk.TabIndex = 0;
             this.DniChk.Text = "Dni";
             this.DniChk.UseVisualStyleBackColor = true;
             this.DniChk.CheckedChanged += new System.EventHandler(this.DniChk_CheckedChanged);
@@ -88,7 +88,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 9;
+            this.CancelarBtn.TabIndex = 7;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -99,7 +99,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 8;
+            this.BuscarBtn.TabIndex = 6;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -111,7 +111,7 @@
             this.PaisChk.Margin = new System.Windows.Forms.Padding(2);
             this.PaisChk.Name = "PaisChk";
             this.PaisChk.Size = new System.Drawing.Size(46, 17);
-            this.PaisChk.TabIndex = 10;
+            this.PaisChk.TabIndex = 4;
             this.PaisChk.Text = "Pais";
             this.PaisChk.UseVisualStyleBackColor = true;
             this.PaisChk.CheckedChanged += new System.EventHandler(this.PaisChk_CheckedChanged);
@@ -126,7 +126,7 @@
             this.PaisCbo.Margin = new System.Windows.Forms.Padding(2);
             this.PaisCbo.Name = "PaisCbo";
             this.PaisCbo.Size = new System.Drawing.Size(206, 21);
-            this.PaisCbo.TabIndex = 11;
+            this.PaisCbo.TabIndex = 5;
             this.PaisCbo.ValueMember = "Codigo";
             // 
             // FrmTuristaBusq

@@ -41,7 +41,7 @@
             this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadChk.Name = "LocalidadChk";
             this.LocalidadChk.Size = new System.Drawing.Size(72, 17);
-            this.LocalidadChk.TabIndex = 11;
+            this.LocalidadChk.TabIndex = 1;
             this.LocalidadChk.Text = "Localidad";
             this.LocalidadChk.UseVisualStyleBackColor = true;
             this.LocalidadChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged);
@@ -56,7 +56,7 @@
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(150, 21);
-            this.LocalidadCbo.TabIndex = 12;
+            this.LocalidadCbo.TabIndex = 2;
             this.LocalidadCbo.ValueMember = "Codigo";
             // 
             // BuscarBtn
@@ -65,7 +65,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 13;
+            this.BuscarBtn.TabIndex = 3;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -76,7 +76,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 14;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);

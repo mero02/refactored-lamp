@@ -41,7 +41,7 @@
             this.FormaPagoChk.Margin = new System.Windows.Forms.Padding(2);
             this.FormaPagoChk.Name = "FormaPagoChk";
             this.FormaPagoChk.Size = new System.Drawing.Size(98, 17);
-            this.FormaPagoChk.TabIndex = 12;
+            this.FormaPagoChk.TabIndex = 1;
             this.FormaPagoChk.Text = "Forma de Pago";
             this.FormaPagoChk.UseVisualStyleBackColor = true;
             this.FormaPagoChk.CheckedChanged += new System.EventHandler(this.FormaPagoChk_CheckedChanged);
@@ -56,7 +56,7 @@
             this.FormaPagoCbo.Margin = new System.Windows.Forms.Padding(2);
             this.FormaPagoCbo.Name = "FormaPagoCbo";
             this.FormaPagoCbo.Size = new System.Drawing.Size(150, 21);
-            this.FormaPagoCbo.TabIndex = 13;
+            this.FormaPagoCbo.TabIndex = 2;
             this.FormaPagoCbo.ValueMember = "Codigo";
             // 
             // BuscarBtn
@@ -65,7 +65,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 8;
+            this.BuscarBtn.TabIndex = 3;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -76,7 +76,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 15;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);

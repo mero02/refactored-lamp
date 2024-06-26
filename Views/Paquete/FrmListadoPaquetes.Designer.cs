@@ -50,7 +50,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(560, 303);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 20;
+            this.ExportarBtn.TabIndex = 3;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
@@ -61,7 +61,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 19;
+            this.FiltroBtn.TabIndex = 4;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -121,7 +121,7 @@
             this.PaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PaquetesGrd.ShowEditingIcon = false;
             this.PaquetesGrd.Size = new System.Drawing.Size(743, 226);
-            this.PaquetesGrd.TabIndex = 17;
+            this.PaquetesGrd.TabIndex = 2;
             this.PaquetesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PaquetesGrd_CellContentClick);
             this.PaquetesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PaquetesGrd_ColumnHeaderMouseClick);
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);

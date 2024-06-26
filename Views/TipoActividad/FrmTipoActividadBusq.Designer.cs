@@ -40,7 +40,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 20;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -51,7 +51,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 19;
+            this.BuscarBtn.TabIndex = 3;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -66,7 +66,7 @@
             this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadCbo.Name = "TipoActividadCbo";
             this.TipoActividadCbo.Size = new System.Drawing.Size(150, 21);
-            this.TipoActividadCbo.TabIndex = 18;
+            this.TipoActividadCbo.TabIndex = 2;
             this.TipoActividadCbo.ValueMember = "Codigo";
             // 
             // TipoActividadChk
@@ -76,7 +76,7 @@
             this.TipoActividadChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadChk.Name = "TipoActividadChk";
             this.TipoActividadChk.Size = new System.Drawing.Size(70, 17);
-            this.TipoActividadChk.TabIndex = 17;
+            this.TipoActividadChk.TabIndex = 1;
             this.TipoActividadChk.Text = "Actividad";
             this.TipoActividadChk.UseVisualStyleBackColor = true;
             this.TipoActividadChk.CheckedChanged += new System.EventHandler(this.TipoActividadChk_CheckedChanged);

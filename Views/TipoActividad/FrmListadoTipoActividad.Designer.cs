@@ -48,7 +48,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(555, 287);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 20;
+            this.ExportarBtn.TabIndex = 4;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
@@ -56,10 +56,10 @@
             // FiltroBtn
             // 
             this.FiltroBtn.Location = new System.Drawing.Point(563, 15);
-            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 19;
+            this.FiltroBtn.TabIndex = 2;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -69,9 +69,9 @@
             this.groupBox1.Controls.Add(this.NombreTxt);
             this.groupBox1.Controls.Add(this.NombreChk);
             this.groupBox1.Location = new System.Drawing.Point(3, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(227, 42);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -80,7 +80,7 @@
             // 
             this.NombreTxt.Enabled = false;
             this.NombreTxt.Location = new System.Drawing.Point(69, 15);
-            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(146, 20);
             this.NombreTxt.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             this.NombreChk.AutoSize = true;
             this.NombreChk.Location = new System.Drawing.Point(4, 17);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2);
             this.NombreChk.Name = "NombreChk";
             this.NombreChk.Size = new System.Drawing.Size(63, 17);
             this.NombreChk.TabIndex = 0;
@@ -110,7 +110,7 @@
             this.DuracionCol,
             this.NivelCol});
             this.TipoActividadGrd.Location = new System.Drawing.Point(18, 51);
-            this.TipoActividadGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TipoActividadGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadGrd.MultiSelect = false;
             this.TipoActividadGrd.Name = "TipoActividadGrd";
             this.TipoActividadGrd.ReadOnly = true;
@@ -118,7 +118,7 @@
             this.TipoActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(640, 226);
-            this.TipoActividadGrd.TabIndex = 17;
+            this.TipoActividadGrd.TabIndex = 3;
             // 
             // CodigoCol
             // 
@@ -167,7 +167,7 @@
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TipoActividadGrd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmListadoTipoActividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

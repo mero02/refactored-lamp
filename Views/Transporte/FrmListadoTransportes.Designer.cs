@@ -33,11 +33,11 @@
             this.DominioChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.TransportesGrd = new System.Windows.Forms.DataGridView();
-            this.ExportarBtn = new System.Windows.Forms.Button();
             this.CodCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DesCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExportarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransportesGrd)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 3;
+            this.FiltroBtn.TabIndex = 2;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -105,21 +105,11 @@
             this.TransportesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TransportesGrd.ShowEditingIcon = false;
             this.TransportesGrd.Size = new System.Drawing.Size(718, 315);
-            this.TransportesGrd.TabIndex = 4;
+            this.TransportesGrd.TabIndex = 3;
             this.TransportesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TransportesGrd_CellContentClick);
             this.TransportesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TransportesGrd_ColumnHeaderMouseClick);
             this.TransportesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TransportesGrd_DataBindingComplete);
             this.TransportesGrd.DoubleClick += new System.EventHandler(this.TransportesGrd_DoubleClick);
-            // 
-            // ExportarBtn
-            // 
-            this.ExportarBtn.Location = new System.Drawing.Point(623, 377);
-            this.ExportarBtn.Name = "ExportarBtn";
-            this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 10;
-            this.ExportarBtn.Text = "Exportar";
-            this.ExportarBtn.UseVisualStyleBackColor = true;
-            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // CodCol
             // 
@@ -149,6 +139,16 @@
             this.Importe.HeaderText = "Importe";
             this.Importe.Name = "Importe";
             this.Importe.ReadOnly = true;
+            // 
+            // ExportarBtn
+            // 
+            this.ExportarBtn.Location = new System.Drawing.Point(623, 377);
+            this.ExportarBtn.Name = "ExportarBtn";
+            this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
+            this.ExportarBtn.TabIndex = 4;
+            this.ExportarBtn.Text = "Exportar";
+            this.ExportarBtn.UseVisualStyleBackColor = true;
+            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // FrmListadoTransportes
             // 

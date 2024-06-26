@@ -55,7 +55,7 @@
             this.FormaPagoTxt.MaxLength = 15;
             this.FormaPagoTxt.Name = "FormaPagoTxt";
             this.FormaPagoTxt.Size = new System.Drawing.Size(160, 20);
-            this.FormaPagoTxt.TabIndex = 1;
+            this.FormaPagoTxt.TabIndex = 2;
             this.FormaPagoTxt.Tag = "Forma";
             // 
             // FormaPagoLbl
@@ -65,7 +65,7 @@
             this.FormaPagoLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FormaPagoLbl.Name = "FormaPagoLbl";
             this.FormaPagoLbl.Size = new System.Drawing.Size(61, 13);
-            this.FormaPagoLbl.TabIndex = 16;
+            this.FormaPagoLbl.TabIndex = 1;
             this.FormaPagoLbl.Text = "&FormaPago";
             // 
             // GuardarBtn
@@ -74,7 +74,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 12;
+            this.GuardarBtn.TabIndex = 3;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -85,7 +85,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 13;
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);

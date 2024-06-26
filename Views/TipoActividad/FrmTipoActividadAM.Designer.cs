@@ -47,7 +47,7 @@
             this.NombreTxt.MaxLength = 15;
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(80, 20);
-            this.NombreTxt.TabIndex = 25;
+            this.NombreTxt.TabIndex = 2;
             this.NombreTxt.Tag = "Nombre";
             // 
             // NombreLbl
@@ -57,7 +57,7 @@
             this.NombreLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NombreLbl.Name = "NombreLbl";
             this.NombreLbl.Size = new System.Drawing.Size(44, 13);
-            this.NombreLbl.TabIndex = 32;
+            this.NombreLbl.TabIndex = 1;
             this.NombreLbl.Text = "&Nombre";
             // 
             // NivelTxt
@@ -66,7 +66,7 @@
             this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
-            this.NivelTxt.TabIndex = 28;
+            this.NivelTxt.TabIndex = 8;
             this.NivelTxt.Tag = "Nivel";
             // 
             // NivelLbl
@@ -76,7 +76,7 @@
             this.NivelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NivelLbl.Name = "NivelLbl";
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
-            this.NivelLbl.TabIndex = 31;
+            this.NivelLbl.TabIndex = 7;
             this.NivelLbl.Text = "&Nivel";
             // 
             // DuracionTxt
@@ -85,7 +85,7 @@
             this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DuracionTxt.Name = "DuracionTxt";
             this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DuracionTxt.TabIndex = 27;
+            this.DuracionTxt.TabIndex = 6;
             this.DuracionTxt.Tag = "Duracion";
             // 
             // DuracionLbl
@@ -95,7 +95,7 @@
             this.DuracionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DuracionLbl.Name = "DuracionLbl";
             this.DuracionLbl.Size = new System.Drawing.Size(50, 13);
-            this.DuracionLbl.TabIndex = 30;
+            this.DuracionLbl.TabIndex = 5;
             this.DuracionLbl.Text = "&Duracion";
             // 
             // DescripcionTxt
@@ -105,7 +105,7 @@
             this.DescripcionTxt.MaxLength = 90;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DescripcionTxt.TabIndex = 26;
+            this.DescripcionTxt.TabIndex = 4;
             this.DescripcionTxt.Tag = "Descripcion";
             // 
             // DescripcionLbl
@@ -115,7 +115,7 @@
             this.DescripcionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DescripcionLbl.Name = "DescripcionLbl";
             this.DescripcionLbl.Size = new System.Drawing.Size(63, 13);
-            this.DescripcionLbl.TabIndex = 29;
+            this.DescripcionLbl.TabIndex = 3;
             this.DescripcionLbl.Text = "&Descripcion";
             // 
             // GuardarBtn
@@ -123,7 +123,7 @@
             this.GuardarBtn.Location = new System.Drawing.Point(120, 166);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(61, 27);
-            this.GuardarBtn.TabIndex = 33;
+            this.GuardarBtn.TabIndex = 9;
             this.GuardarBtn.Text = "Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -134,7 +134,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 34;
+            this.CancelarBtn.TabIndex = 10;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);

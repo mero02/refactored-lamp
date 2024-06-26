@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TransportesGrd = new System.Windows.Forms.DataGridView();
@@ -46,7 +46,7 @@
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 8;
+            this.CerrarBtn.TabIndex = 1;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
@@ -69,8 +69,8 @@
             this.TransportesGrd.AllowUserToDeleteRows = false;
             this.TransportesGrd.AllowUserToResizeColumns = false;
             this.TransportesGrd.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TransportesGrd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TransportesGrd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.TransportesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TransportesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodCol,
@@ -136,7 +136,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmTransporteList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTransporteList";
+            this.Text = "Listado Transportes";
             this.Load += new System.EventHandler(this.FrmTransporteList_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TransportesGrd)).EndInit();

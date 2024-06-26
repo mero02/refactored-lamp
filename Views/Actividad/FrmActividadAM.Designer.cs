@@ -69,7 +69,7 @@
             this.TipoActividadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadCbo.Name = "TipoActividadCbo";
             this.TipoActividadCbo.Size = new System.Drawing.Size(157, 21);
-            this.TipoActividadCbo.TabIndex = 13;
+            this.TipoActividadCbo.TabIndex = 8;
             this.TipoActividadCbo.Tag = "CodTipoActividad";
             this.TipoActividadCbo.ValueMember = "Id";
             this.TipoActividadCbo.SelectedIndexChanged += new System.EventHandler(this.TipoActividadCbo_SelectedIndexChanged);
@@ -81,7 +81,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 12;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Tipo Actividad";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -94,7 +94,7 @@
             this.TransporteCbo.Margin = new System.Windows.Forms.Padding(2);
             this.TransporteCbo.Name = "TransporteCbo";
             this.TransporteCbo.Size = new System.Drawing.Size(157, 21);
-            this.TransporteCbo.TabIndex = 11;
+            this.TransporteCbo.TabIndex = 6;
             this.TransporteCbo.Tag = "CodTransporte";
             this.TransporteCbo.ValueMember = "Id";
             // 
@@ -105,7 +105,7 @@
             this.TransporteLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TransporteLbl.Name = "TransporteLbl";
             this.TransporteLbl.Size = new System.Drawing.Size(58, 13);
-            this.TransporteLbl.TabIndex = 10;
+            this.TransporteLbl.TabIndex = 5;
             this.TransporteLbl.Text = "Transporte";
             // 
             // ImporteTxt
@@ -114,7 +114,7 @@
             this.ImporteTxt.Margin = new System.Windows.Forms.Padding(2);
             this.ImporteTxt.Name = "ImporteTxt";
             this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
-            this.ImporteTxt.TabIndex = 2;
+            this.ImporteTxt.TabIndex = 4;
             this.ImporteTxt.Tag = "Importe";
             // 
             // ImporteLbl
@@ -124,7 +124,7 @@
             this.ImporteLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ImporteLbl.Name = "ImporteLbl";
             this.ImporteLbl.Size = new System.Drawing.Size(42, 13);
-            this.ImporteLbl.TabIndex = 8;
+            this.ImporteLbl.TabIndex = 3;
             this.ImporteLbl.Text = "Importe";
             // 
             // NivelTxt
@@ -134,7 +134,7 @@
             this.NivelTxt.MaxLength = 90;
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
-            this.NivelTxt.TabIndex = 1;
+            this.NivelTxt.TabIndex = 2;
             this.NivelTxt.Tag = "Nivel";
             // 
             // NivelLbl
@@ -144,7 +144,7 @@
             this.NivelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NivelLbl.Name = "NivelLbl";
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
-            this.NivelLbl.TabIndex = 2;
+            this.NivelLbl.TabIndex = 1;
             this.NivelLbl.Text = "&Nivel";
             // 
             // CancelarBtn
@@ -153,7 +153,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 14;
+            this.CancelarBtn.TabIndex = 10;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
@@ -164,7 +164,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 13;
+            this.GuardarBtn.TabIndex = 9;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);

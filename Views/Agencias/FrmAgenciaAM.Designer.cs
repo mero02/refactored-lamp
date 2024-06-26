@@ -73,7 +73,7 @@
             this.CalleTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CalleTxt.Name = "CalleTxt";
             this.CalleTxt.Size = new System.Drawing.Size(192, 20);
-            this.CalleTxt.TabIndex = 2;
+            this.CalleTxt.TabIndex = 3;
             this.CalleTxt.Tag = "Calle";
             // 
             // label2
@@ -92,7 +92,7 @@
             this.NroTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NroTxt.Name = "NroTxt";
             this.NroTxt.Size = new System.Drawing.Size(94, 20);
-            this.NroTxt.TabIndex = 3;
+            this.NroTxt.TabIndex = 5;
             this.NroTxt.Tag = "Nro";
             // 
             // label3
@@ -111,7 +111,7 @@
             this.PisoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.PisoTxt.Name = "PisoTxt";
             this.PisoTxt.Size = new System.Drawing.Size(94, 20);
-            this.PisoTxt.TabIndex = 4;
+            this.PisoTxt.TabIndex = 7;
             this.PisoTxt.Tag = "Piso";
             // 
             // label4
@@ -131,7 +131,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 10;
             this.label5.Text = "Localidad";
             // 
             // LocalidadCbo
@@ -143,7 +143,7 @@
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(174, 21);
-            this.LocalidadCbo.TabIndex = 6;
+            this.LocalidadCbo.TabIndex = 11;
             this.LocalidadCbo.Tag = "CodPostal";
             this.LocalidadCbo.ValueMember = "Codigo";
             // 
@@ -153,7 +153,7 @@
             this.Telefono1Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono1Txt.Name = "Telefono1Txt";
             this.Telefono1Txt.Size = new System.Drawing.Size(94, 20);
-            this.Telefono1Txt.TabIndex = 7;
+            this.Telefono1Txt.TabIndex = 13;
             this.Telefono1Txt.Tag = "Telefono1";
             // 
             // label6
@@ -163,7 +163,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 10;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Telefono1";
             // 
             // DptoTxt
@@ -172,7 +172,7 @@
             this.DptoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DptoTxt.Name = "DptoTxt";
             this.DptoTxt.Size = new System.Drawing.Size(94, 20);
-            this.DptoTxt.TabIndex = 5;
+            this.DptoTxt.TabIndex = 9;
             this.DptoTxt.Tag = "Dpto";
             this.DptoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DptoTxt_KeyPress);
             // 
@@ -183,7 +183,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 14;
+            this.label7.TabIndex = 8;
             this.label7.Text = "Dpto";
             // 
             // Telefono2Txt
@@ -192,7 +192,7 @@
             this.Telefono2Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono2Txt.Name = "Telefono2Txt";
             this.Telefono2Txt.Size = new System.Drawing.Size(94, 20);
-            this.Telefono2Txt.TabIndex = 8;
+            this.Telefono2Txt.TabIndex = 15;
             this.Telefono2Txt.Tag = "Telefono2";
             this.Telefono2Txt.TextChanged += new System.EventHandler(this.Telefono2Txt_TextChanged);
             // 
@@ -203,7 +203,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 16;
+            this.label8.TabIndex = 14;
             this.label8.Text = "Telefono2";
             // 
             // CancelarBtn
@@ -212,7 +212,7 @@
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 18;
+            this.CancelarBtn.TabIndex = 17;
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             // 
@@ -222,7 +222,7 @@
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 17;
+            this.GuardarBtn.TabIndex = 16;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);

@@ -66,7 +66,7 @@
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(115, 21);
-            this.LocalidadCbo.TabIndex = 1;
+            this.LocalidadCbo.TabIndex = 3;
             this.LocalidadCbo.ValueMember = "Nombre";
             // 
             // LocalidadChk
@@ -76,7 +76,7 @@
             this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadChk.Name = "LocalidadChk";
             this.LocalidadChk.Size = new System.Drawing.Size(72, 17);
-            this.LocalidadChk.TabIndex = 0;
+            this.LocalidadChk.TabIndex = 2;
             this.LocalidadChk.Text = "Localidad";
             this.LocalidadChk.UseVisualStyleBackColor = true;
             this.LocalidadChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged);
@@ -120,7 +120,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 6;
+            this.FiltroBtn.TabIndex = 4;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -142,7 +142,7 @@
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocalidadesGrd.ShowEditingIcon = false;
             this.LocalidadesGrd.Size = new System.Drawing.Size(293, 355);
-            this.LocalidadesGrd.TabIndex = 7;
+            this.LocalidadesGrd.TabIndex = 5;
             this.LocalidadesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LocalidadesGrd_CellContentClick);
             this.LocalidadesGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocalidadesGrd_ColumnHeaderMouseClick);
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
@@ -168,7 +168,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(578, 452);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 10;
+            this.ExportarBtn.TabIndex = 6;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
