@@ -42,6 +42,7 @@ namespace TurApp.Views
             this.ExportarBtn.Enabled = true;
 
             this.TuristasGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(TuristasGrd_ColumnHeaderMouseClick);
+            this.MdiParent = MainView.Instance;
 
         }
 

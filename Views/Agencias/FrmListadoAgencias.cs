@@ -35,6 +35,7 @@ namespace TurApp.Views
 
             this.ExportarBtn.Enabled = true;
             this.AgenciasGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(AgenciasGrd_ColumnHeaderMouseClick);
+            this.MdiParent = MainView.Instance;
         }
 
         private void AgenciasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
