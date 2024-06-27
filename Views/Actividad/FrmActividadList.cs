@@ -39,9 +39,10 @@ namespace TurApp.Views
         }
         private void ActividadGrd_DoubleClick(object sender, EventArgs e)
         {
-            FrmFormaPagoAM frmpac = new FrmFormaPagoAM();
-            FormaPago pac = (this.ActividadGrd.SelectedRows[0].DataBoundItem as FormaPago);
-            frmpac.ShowModificarFormaPago(pac);
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+            FrmActividadAM frmpac = new FrmActividadAM();
+            Actividad pac = (this.ActividadGrd.SelectedRows[0].DataBoundItem as Actividad);
+            frmpac.ShowModificarActividad(pac);
         }
        
 
@@ -82,16 +83,16 @@ namespace TurApp.Views
             // Ordenar los turistas según la columna seleccionada
             switch (newColumn.Name)
             {
-                case "codigo":
+                case "CodigoCol":
                     codigos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Codigo.CompareTo(t2.Codigo) : t2.Codigo.CompareTo(t1.Codigo));
                     break;
-                case "codigoTransporte":
+                case "codTransporteCol":
                     codigos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.CodTransporte.CompareTo(t2.CodTransporte) : t2.CodTransporte.CompareTo(t1.CodTransporte));
                     break;
-                case "nivel":
+                case "NivelCol":
                     codigos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Nivel.CompareTo(t2.Nivel) : t2.Nivel.CompareTo(t1.Nivel));
                     break;
-                case "importe":
+                case "ImporteCol":
                     codigos.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.Importe.CompareTo(t2.Importe) : t2.Importe.CompareTo(t1.Importe));
                     break;
             }

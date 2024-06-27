@@ -32,9 +32,9 @@
             this.ActividadGrd = new System.Windows.Forms.DataGridView();
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codTransporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoActividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,9 +59,9 @@
             this.ActividadGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoCol,
             this.codTransporteCol,
-            this.Nivel,
-            this.TipoActividad,
-            this.Importe});
+            this.NivelCol,
+            this.TipoActividadCol,
+            this.ImporteCol});
             this.ActividadGrd.Location = new System.Drawing.Point(22, 19);
             this.ActividadGrd.Margin = new System.Windows.Forms.Padding(2);
             this.ActividadGrd.MultiSelect = false;
@@ -73,6 +73,8 @@
             this.ActividadGrd.Size = new System.Drawing.Size(597, 88);
             this.ActividadGrd.TabIndex = 1;
             this.ActividadGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ActividadGrd_CellContentClick_1);
+            this.ActividadGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ActividadGrd_ColumnHeaderMouseClick);
+            this.ActividadGrd.DoubleClick += new System.EventHandler(this.ActividadGrd_DoubleClick);
             // 
             // CodigoCol
             // 
@@ -89,26 +91,26 @@
             this.codTransporteCol.ReadOnly = true;
             this.codTransporteCol.Width = 150;
             // 
-            // Nivel
+            // NivelCol
             // 
-            this.Nivel.DataPropertyName = "Nivel";
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
-            this.Nivel.ReadOnly = true;
+            this.NivelCol.DataPropertyName = "Nivel";
+            this.NivelCol.HeaderText = "Nivel";
+            this.NivelCol.Name = "NivelCol";
+            this.NivelCol.ReadOnly = true;
             // 
-            // TipoActividad
+            // TipoActividadCol
             // 
-            this.TipoActividad.DataPropertyName = "CodTipoActividad";
-            this.TipoActividad.HeaderText = "Tipo Actividad";
-            this.TipoActividad.Name = "TipoActividad";
-            this.TipoActividad.ReadOnly = true;
+            this.TipoActividadCol.DataPropertyName = "CodTipoActividad";
+            this.TipoActividadCol.HeaderText = "Tipo Actividad";
+            this.TipoActividadCol.Name = "TipoActividadCol";
+            this.TipoActividadCol.ReadOnly = true;
             // 
-            // Importe
+            // ImporteCol
             // 
-            this.Importe.DataPropertyName = "Importe";
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
+            this.ImporteCol.DataPropertyName = "Importe";
+            this.ImporteCol.HeaderText = "Importe";
+            this.ImporteCol.Name = "ImporteCol";
+            this.ImporteCol.ReadOnly = true;
             // 
             // FrmActividadList
             // 
@@ -136,8 +138,8 @@
         private System.Windows.Forms.DataGridView ActividadGrd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTransporteCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivelCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActividadCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImporteCol;
     }
 }

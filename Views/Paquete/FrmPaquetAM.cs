@@ -143,10 +143,18 @@ namespace TurApp.Views
                                 paqueteActividad.FechaHoraDesde = Paquete.Fecha;
                                 paqueteActividad.FechaHoraHasta = Convert.ToDateTime(tipoPaq.Duracion);
                                 paqueteActividad.Detalle = actividad.TipoActividadObj.Descripcion;
+
+                                //Cuando agregamos el agenciaTipoPaquete se rompen a la hora de tratar de modificar: Agencia, tipoPaquete y Paquete
+
+                                /*AgenciaTipoPaquete agTipo = new AgenciaTipoPaquete();
+                                agTipo.CodAgencia = Paquete.CodAgencia;
+                                agTipo.CodTipoPaquete = Paquete.CodTipoPaquete;*/
                                 try
                                 {
                                     paqueteActividad.SaveObj();
                                     Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);
+                                    /*agTipo.SaveObj();
+                                    Logger.SaveLog(operacionLog, this.getPermisoObj.ClaseBaseForm, detalleLog);*/
                                 }
                                 catch (Exception ex)
                                 {

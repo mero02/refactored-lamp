@@ -138,7 +138,7 @@ namespace TurApp.Views
                     Actividades.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.CodTipoActividad.CompareTo(t2.CodTipoActividad) : t2.CodTipoActividad.CompareTo(t1.CodTipoActividad));
                     break;
 
-                case "TransporteCol":
+                case "codTransporteCol":
                     Actividades.Sort((t1, t2) => direction == ListSortDirection.Ascending ? t1.CodTransporte.CompareTo(t2.CodTransporte) : t2.CodTransporte.CompareTo(t1.CodTransporte));
                     break;
 
