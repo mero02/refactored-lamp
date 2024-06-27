@@ -16,7 +16,7 @@ namespace TurApp.Views
         public override event FormEvent DoCompleteOperationForm;
         private Agencia _Agencia_modif = null;
         private string AgenciaLog = "";
-
+        public string CodigoAgencia { get; set; }
         public FrmAgenciaAM()
         {
             InitializeComponent();
@@ -55,6 +55,7 @@ namespace TurApp.Views
                 {
                     this.Text = "Ingreso de nuevo Agencia...";
                     this.LocalidadCbo.SelectedIndex = -1;
+                    MisPaquetesBtn.Enabled = false;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
@@ -88,8 +89,8 @@ namespace TurApp.Views
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
             _Agencia_modif = Cli_modif;
+            CodigoAgencia = Cli_modif.Codigo.ToString();
             AgenciaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Agencia_modif);
-            // cargar cada control con informacion del Agencia....
             FormBase.ShowDataFromModel(this, Cli_modif);
             this.InvokerForm = Invoker;
             this.CancelarBtn.Click += new EventHandler(CancelarBtn_Click);
@@ -183,6 +184,23 @@ namespace TurApp.Views
         private void Telefono2Txt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void MisPaqBtn_Click(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+
+            if (!string.IsNullOrEmpty(CodigoAgencia))
+            {
+                FrmListPaqAgen frm = new FrmListPaqAgen(CodigoAgencia);
+                frm.ShowListPaqAgen(this);
+            }
+            else
+            {
+                MessageBox.Show("El código de la agencia no está disponible.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            MainView.Instance.Cursor = Cursors.Default;
         }
     }
 }

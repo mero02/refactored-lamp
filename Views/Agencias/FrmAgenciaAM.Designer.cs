@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
+            this.MisPaquetesBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -227,12 +228,24 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
+            // MisPaquetesBtn
+            // 
+            this.MisPaquetesBtn.Location = new System.Drawing.Point(34, 281);
+            this.MisPaquetesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.MisPaquetesBtn.Name = "MisPaquetesBtn";
+            this.MisPaquetesBtn.Size = new System.Drawing.Size(80, 27);
+            this.MisPaquetesBtn.TabIndex = 18;
+            this.MisPaquetesBtn.Text = "Mis Paquetes";
+            this.MisPaquetesBtn.UseVisualStyleBackColor = true;
+            this.MisPaquetesBtn.Click += new System.EventHandler(this.MisPaqBtn_Click);
+            // 
             // FrmAgenciaAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(355, 323);
+            this.Controls.Add(this.MisPaquetesBtn);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.Telefono2Txt);
@@ -281,5 +294,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
+        private System.Windows.Forms.Button MisPaquetesBtn;
     }
 }

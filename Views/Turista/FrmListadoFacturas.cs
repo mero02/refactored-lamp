@@ -44,28 +44,28 @@ namespace TurApp.Views
         }
 
         private void FacturasTuristaGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-{
-    // Desactivar temporalmente el evento para evitar recursiones infinitas
-    this.FacturasGrd.DataBindingComplete -= FacturasTuristaGrd_DataBindingComplete;
-
-    foreach (DataGridViewRow item in this.FacturasGrd.Rows)
-    {
-        var facturaTurista = item.DataBoundItem as FacturaTurista;
-        if (facturaTurista != null)
         {
-            item.Cells[0].Value = facturaTurista.Nro;
-            item.Cells[1].Value = facturaTurista.Serie;
-            item.Cells[2].Value = facturaTurista.Letra;
-            item.Cells[3].Value = facturaTurista.Fecha;
-            item.Cells[4].Value = facturaTurista.DniTurista;
-            item.Cells[5].Value = facturaTurista.FormaPagoObj.Forma; 
-            item.Cells[6].Value = facturaTurista.DetallePago;
-        }
-    }
+            // Desactivar temporalmente el evento para evitar recursiones infinitas
+            this.FacturasGrd.DataBindingComplete -= FacturasTuristaGrd_DataBindingComplete;
 
-    // Volver a activar el evento
-    this.FacturasGrd.DataBindingComplete += FacturasTuristaGrd_DataBindingComplete;
-}
+            foreach (DataGridViewRow item in this.FacturasGrd.Rows)
+            {
+                var facturaTurista = item.DataBoundItem as FacturaTurista;
+                if (facturaTurista != null)
+                {
+                    item.Cells[0].Value = facturaTurista.Nro;
+                    item.Cells[1].Value = facturaTurista.Serie;
+                    item.Cells[2].Value = facturaTurista.Letra;
+                    item.Cells[3].Value = facturaTurista.Fecha;
+                    item.Cells[4].Value = facturaTurista.DniTurista;
+                    item.Cells[5].Value = facturaTurista.FormaPagoObj.Forma; 
+                    item.Cells[6].Value = facturaTurista.DetallePago;
+                }
+            }
+
+            // Volver a activar el evento
+            this.FacturasGrd.DataBindingComplete += FacturasTuristaGrd_DataBindingComplete;
+        }
 
 
         private void _CellDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
