@@ -32,6 +32,7 @@ namespace TurApp.Views
             var TipoActividadesBindingList = new BindingList<TipoActividad>(TipoActividades);
             var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
             this.ActividadesGrd.DataSource = TipoActividadesBindingSource;
+            GuardarBtn.Enabled = false;
         }
         public override void ConfigurePermiso(PermisoAttribute perm)
         {
@@ -122,6 +123,7 @@ namespace TurApp.Views
                 // Extrae los datos de la fila seleccionada
                 string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
                 codigos.Add(codPaquete);
+                GuardarBtn.Enabled = true;
                 MessageBox.Show("Tipo actividad agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -143,6 +145,10 @@ namespace TurApp.Views
                 if (codigos.Contains(codPaquete))
                 {
                     codigos.Remove(codPaquete);
+                    if(codigos.Count == 0)
+                    {
+                        GuardarBtn.Enabled = false;
+                    }
                     MessageBox.Show("Tipo actividad quitada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -242,7 +248,7 @@ namespace TurApp.Views
             }
             if (NivelTxt.Text == "")
             {
-                MessageBox.Show("Ingrese nivel de tipo paqueted", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese nivel de tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 NivelTxt.Focus();
                 return;
             }

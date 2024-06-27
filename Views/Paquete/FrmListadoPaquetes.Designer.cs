@@ -30,9 +30,6 @@
         {
             this.ExportarBtn = new System.Windows.Forms.Button();
             this.FiltroBtn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TipoPaqueteTxt = new System.Windows.Forms.TextBox();
-            this.TipoPaqueteChk = new System.Windows.Forms.CheckBox();
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPaqueteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,8 +38,11 @@
             this.DniTuristaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DestinoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.TipoPaqueteChk = new System.Windows.Forms.CheckBox();
+            this.TipoPaqueteCbo = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ExportarBtn
@@ -65,39 +65,6 @@
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.TipoPaqueteTxt);
-            this.groupBox1.Controls.Add(this.TipoPaqueteChk);
-            this.groupBox1.Location = new System.Drawing.Point(11, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(268, 42);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            // 
-            // TipoPaqueteTxt
-            // 
-            this.TipoPaqueteTxt.Enabled = false;
-            this.TipoPaqueteTxt.Location = new System.Drawing.Point(98, 15);
-            this.TipoPaqueteTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.TipoPaqueteTxt.Name = "TipoPaqueteTxt";
-            this.TipoPaqueteTxt.Size = new System.Drawing.Size(146, 20);
-            this.TipoPaqueteTxt.TabIndex = 1;
-            // 
-            // TipoPaqueteChk
-            // 
-            this.TipoPaqueteChk.AutoSize = true;
-            this.TipoPaqueteChk.Location = new System.Drawing.Point(4, 17);
-            this.TipoPaqueteChk.Margin = new System.Windows.Forms.Padding(2);
-            this.TipoPaqueteChk.Name = "TipoPaqueteChk";
-            this.TipoPaqueteChk.Size = new System.Drawing.Size(90, 17);
-            this.TipoPaqueteChk.TabIndex = 0;
-            this.TipoPaqueteChk.Text = "Tipo Paquete";
-            this.TipoPaqueteChk.UseVisualStyleBackColor = true;
-            this.TipoPaqueteChk.CheckedChanged += new System.EventHandler(this.TipoPaqueteChk_CheckedChanged);
             // 
             // PaquetesGrd
             // 
@@ -173,6 +140,43 @@
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
             // 
+            // TipoPaqueteChk
+            // 
+            this.TipoPaqueteChk.AutoSize = true;
+            this.TipoPaqueteChk.Location = new System.Drawing.Point(17, 19);
+            this.TipoPaqueteChk.Margin = new System.Windows.Forms.Padding(2);
+            this.TipoPaqueteChk.Name = "TipoPaqueteChk";
+            this.TipoPaqueteChk.Size = new System.Drawing.Size(90, 17);
+            this.TipoPaqueteChk.TabIndex = 19;
+            this.TipoPaqueteChk.Text = "Tipo Paquete";
+            this.TipoPaqueteChk.UseVisualStyleBackColor = true;
+            this.TipoPaqueteChk.CheckedChanged += new System.EventHandler(this.TipoPaqueteChk_CheckedChanged);
+            // 
+            // TipoPaqueteCbo
+            // 
+            this.TipoPaqueteCbo.DisplayMember = "Nombre";
+            this.TipoPaqueteCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoPaqueteCbo.Enabled = false;
+            this.TipoPaqueteCbo.FormattingEnabled = true;
+            this.TipoPaqueteCbo.Location = new System.Drawing.Point(111, 17);
+            this.TipoPaqueteCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.TipoPaqueteCbo.Name = "TipoPaqueteCbo";
+            this.TipoPaqueteCbo.Size = new System.Drawing.Size(206, 21);
+            this.TipoPaqueteCbo.TabIndex = 20;
+            this.TipoPaqueteCbo.ValueMember = "Codigo";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TipoPaqueteCbo);
+            this.groupBox1.Controls.Add(this.TipoPaqueteChk);
+            this.groupBox1.Location = new System.Drawing.Point(11, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(345, 47);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmListadoPaquetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,9 +192,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Paquetes";
             this.Load += new System.EventHandler(this.FrmListadoPaquetes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,9 +203,6 @@
 
         private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.Button FiltroBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TipoPaqueteTxt;
-        private System.Windows.Forms.CheckBox TipoPaqueteChk;
         private System.Windows.Forms.DataGridView PaquetesGrd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPaqueteCol;
@@ -210,5 +211,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DniTuristaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DestinoCol;
+        private System.Windows.Forms.CheckBox TipoPaqueteChk;
+        private System.Windows.Forms.ComboBox TipoPaqueteCbo;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

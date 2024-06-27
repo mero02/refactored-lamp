@@ -52,6 +52,7 @@ namespace TurApp.Views
 
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
             FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            GuardarBtn.Enabled = false;
         }
 
         private void FrmFacturaAM_Deactivate(object sender, EventArgs e)
@@ -87,10 +88,10 @@ namespace TurApp.Views
 
         private void LetraTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            /*if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
-            }*/
+            }
         }
 
         private void LoadCombos()
@@ -309,6 +310,20 @@ namespace TurApp.Views
                 return;
             }
 
+            if (DniTuristaCbo.SelectedItem == null || string.IsNullOrEmpty(DniTuristaCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un DNI", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DniTuristaCbo.Focus();
+                return;
+            }
+
+            if (FormaPagoCbo.SelectedItem == null || string.IsNullOrEmpty(FormaPagoCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un Forma de pago", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                FormaPagoCbo.Focus();
+                return;
+            }
+
             var paquete = (Paquete)PaquetesGrd.CurrentRow.DataBoundItem;
             if (paquete == null)
             {
@@ -332,10 +347,12 @@ namespace TurApp.Views
             DetallesGrd.DataSource = detallesFactura;
 
             MessageBox.Show("Detalle agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            GuardarBtn.Enabled = true;
         }
 
         private void QuitarBtn_Click(object sender, EventArgs e)
         {
+           
             if (PaquetesGrd.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione un paquete para quitar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -374,6 +391,12 @@ namespace TurApp.Views
             {
                 MessageBox.Show("No se encontró un detalle con el código de paquete seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            if (DetallesGrd.Rows.Count == 0 || (DetallesGrd.Rows.Count == 1 && DetallesGrd.Rows[0].IsNewRow))
+            {
+                GuardarBtn.Enabled = false;
+            }
+            
         }
 
         private void DetallesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

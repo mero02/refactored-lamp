@@ -21,7 +21,6 @@ namespace TurApp.Views
         private void FrmListadoPaquetes_Load(object sender, EventArgs e)
         {
             this.PaquetesGrd.AutoGenerateColumns = false;
-            //this.PaquetesGrd.DataSource = TipoPaquete.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
             var Paquetes = Paquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var PaquetesBindingList = new BindingList<Paquete>(Paquetes);
             var PaquetesBindingSource = new BindingSource(PaquetesBindingList, null);
@@ -30,12 +29,13 @@ namespace TurApp.Views
             this.ExportarBtn.Enabled = true;
 
             this.PaquetesGrd.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(PaquetesGrd_ColumnHeaderMouseClick);
+            LoadComboBox(TipoPaquete.FindAllStatic(null, (l1, l2) => l1.Codigo.CompareTo(l2.Codigo)), this.TipoPaqueteCbo, addSeleccion: true);
 
         }
 
         private void TipoPaqueteChk_CheckedChanged(object sender, EventArgs e)
         {
-            this.TipoPaqueteTxt.Enabled = this.TipoPaqueteChk.Checked;
+            this.TipoPaqueteCbo.Enabled = this.TipoPaqueteChk.Checked;
 
         }
 
@@ -43,12 +43,12 @@ namespace TurApp.Views
         {
             string criterio = null;
 
-            if (this.TipoPaqueteChk.Checked && this.TipoPaqueteChk != null)
+            if (this.TipoPaqueteChk.Checked && this.TipoPaqueteCbo.SelectedIndex != -1)
             {
-                criterio = String.Format("cod_tipo_paquete = '{0}'", TipoPaqueteTxt.Text);
+                criterio = "cod_tipo_paquete = " + (TipoPaqueteCbo.SelectedValue as TipoPaquete).Codigo;
             }
 
-            this.PaquetesGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.CodTipoPaquete).CompareTo(p2.CodTipoPaquete));
+            this.PaquetesGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));
 
         }
 
