@@ -170,7 +170,28 @@ namespace TurApp.Views
                     if (item.GetType() == typeof(DateTimePicker))
                     {
                         if (item.Tag.ToString() == prop.Name)
-                          (item as DateTimePicker).Value= data;
+                        {
+                            DateTime dateValue;
+                            string dateString = data.ToString(); // Convertir data a string
+
+                            if (DateTime.TryParse(dateString, out dateValue))
+                            {
+                                // Verificar que el valor esté dentro del rango permitido
+                                if (dateValue >= (item as DateTimePicker).MinDate && dateValue <= (item as DateTimePicker).MaxDate)
+                                {
+                                    (item as DateTimePicker).Value = dateValue;
+                                }
+                                else
+                                {
+                                    // Asignar un valor por defecto dentro del rango permitido si está fuera del rango
+                                    (item as DateTimePicker).Value = (item as DateTimePicker).MinDate;
+                                }
+                            }
+                            else
+                            {
+                                (item as DateTimePicker).Value = DateTime.Now; 
+                            }
+                        }
                     }
                     if (item.GetType() == typeof(CheckBox))
                     {
@@ -226,7 +247,7 @@ namespace TurApp.Views
                                     prop.SetValue(obj, Convert.ChangeType(newValue, prop.PropertyType), null);
                                 }
                             }
-                            else if (item is ComboBox && operacion == FrmOperacion.frmAlta)
+                            else if (item is ComboBox /*&& operacion == FrmOperacion.frmAlta*/)
                             {
                                 var comboBox = (ComboBox)item;
                                 object selectedValue = comboBox.SelectedValue ?? comboBox.Text;

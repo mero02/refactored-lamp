@@ -60,11 +60,32 @@ namespace TurApp.Views
             this.Cursor = Cursors.Default;
             if (ev.Status == TipoOperacionStatus.stOK)
             {
-                var selAnt = PaquetesGrd.SelectedRows[0].Index;
-                this.PaquetesGrd.DataSource = Paquete.FindAllStatic(_criterio, (e1, e2) => e1.Codigo.CompareTo(e2.Codigo));
-                PaquetesGrd.Rows[selAnt].Selected = true;
-                MessageBox.Show("Paquete actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    // Guarda el índice seleccionado actualmente
+                    int selAnt = PaquetesGrd.SelectedRows[0].Index;
+
+                    // Actualiza la fuente de datos
+                    this.PaquetesGrd.DataSource = Paquete.FindAllStatic(_criterio, delegate(Paquete e1, Paquete e2) { return e1.Codigo.CompareTo(e2.Codigo); });
+
+                    // Verifica que el índice es válido antes de seleccionar la fila
+                    if (selAnt >= 0 && selAnt < PaquetesGrd.Rows.Count)
+                    {
+                        PaquetesGrd.Rows[selAnt].Selected = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Muestra un mensaje si ocurre una excepción
+                    MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Muestra el mensaje de éxito
+                    MessageBox.Show("Paquete actualizado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void PaquetesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

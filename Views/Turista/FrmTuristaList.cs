@@ -76,11 +76,32 @@ namespace TurApp.Views
             this.Cursor = Cursors.Default;
             if (ev.Status == TipoOperacionStatus.stOK)
             {
-                var selAnt = TuristasGrd.SelectedRows[0].Index;
-                this.TuristasGrd.DataSource = Turista.FindAllStatic(_criterio, (e1, e2) => e1.NroDocumento.CompareTo(e2.NroDocumento));
-                TuristasGrd.Rows[selAnt].Selected = true;
-                MessageBox.Show("Turista actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    // Guarda el índice seleccionado actualmente
+                    int selAnt = TuristasGrd.SelectedRows[0].Index;
+
+                    // Actualiza la fuente de datos
+                    this.TuristasGrd.DataSource = Turista.FindAllStatic(_criterio, delegate(Turista e1, Turista e2) { return e1.NroDocumento.CompareTo(e2.NroDocumento); });
+
+                    // Verifica que el índice es válido antes de seleccionar la fila
+                    if (selAnt >= 0 && selAnt < TuristasGrd.Rows.Count)
+                    {
+                        TuristasGrd.Rows[selAnt].Selected = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Muestra un mensaje si ocurre una excepción
+                    MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Muestra el mensaje de éxito
+                    MessageBox.Show("Turista actualizado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void TuristasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

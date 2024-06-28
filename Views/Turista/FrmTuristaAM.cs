@@ -175,13 +175,13 @@ namespace TurApp.Views
         public void ShowModificarTurista(FormBase Invoker, Turista Tur_modif)
         {
             DniTxt.Enabled = false;
-            PaisCbo.Enabled = false;
+            //PaisCbo.Enabled = false;
             ShowInfoTuristaInForm(Tur_modif, Invoker);
         }
         public void ShowModificarTurista(Turista Tur_modif)
         {
             DniTxt.Enabled = false;
-            PaisCbo.Enabled = false;
+            //PaisCbo.Enabled = false;
             ShowInfoTuristaInForm(Tur_modif, null);
         }
         private void ShowInfoTuristaInForm(Turista Tur_modif, FormBase Invoker)
