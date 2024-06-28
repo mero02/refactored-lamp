@@ -60,6 +60,7 @@
             this.TuristasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AgenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.transportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ActividadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.FormaPagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,10 +71,9 @@
             this.tipoPaqueteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Facturar_mnu_top = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AcercaDe_mnu = new System.Windows.Forms.ToolStripMenuItem();
+            this.AcercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.StatusInfoUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.transportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.SuspendLayout();
@@ -92,7 +92,7 @@
             this.FormaPagoToolStripMenuItem,
             this.Listados_mnu_top,
             this.Facturar_mnu_top,
-            this.AcercaDe_mnu});
+            this.AcercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -322,7 +322,7 @@
             // ingresoToolStripMenuItem
             // 
             this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
-            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ingresoToolStripMenuItem.Tag = "AltaFormaPago";
             this.ingresoToolStripMenuItem.Text = "Ingreso";
             this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.FormaPagoAM_mnu_Click);
@@ -330,7 +330,7 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormaPago_mnu_Click);
@@ -378,6 +378,14 @@
             this.localidadesToolStripMenuItem1.Tag = "ConsultaLocalidad";
             this.localidadesToolStripMenuItem1.Text = "Localidades";
             this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.localidadesToolStripMenuItem1_Click);
+            // 
+            // transportesToolStripMenuItem
+            // 
+            this.transportesToolStripMenuItem.Name = "transportesToolStripMenuItem";
+            this.transportesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.transportesToolStripMenuItem.Tag = "ConsultaLocalidad";
+            this.transportesToolStripMenuItem.Text = "Transportes";
+            this.transportesToolStripMenuItem.Click += new System.EventHandler(this.TransportesToolStripMenuItem1_Click);
             // 
             // ActividadesToolStripMenuItem1
             // 
@@ -455,16 +463,18 @@
             // ingresoToolStripMenuItem1
             // 
             this.ingresoToolStripMenuItem1.Name = "ingresoToolStripMenuItem1";
-            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ingresoToolStripMenuItem1.Tag = "Facturar";
             this.ingresoToolStripMenuItem1.Text = "Ingreso";
             this.ingresoToolStripMenuItem1.Click += new System.EventHandler(this.FacturaAM_mnu_Click);
             // 
-            // AcercaDe_mnu
+            // AcercaDeToolStripMenuItem
             // 
-            this.AcercaDe_mnu.Name = "AcercaDe_mnu";
-            this.AcercaDe_mnu.Size = new System.Drawing.Size(80, 20);
-            this.AcercaDe_mnu.Text = "Acerca de...";
+            this.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem";
+            this.AcercaDeToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.AcercaDeToolStripMenuItem.Tag = "Listado";
+            this.AcercaDeToolStripMenuItem.Text = "Acerca de...";
+            this.AcercaDeToolStripMenuItem.Click += new System.EventHandler(this.AcercaDeMnu_Click);
             // 
             // status
             // 
@@ -481,14 +491,6 @@
             // 
             this.StatusInfoUser.Name = "StatusInfoUser";
             this.StatusInfoUser.Size = new System.Drawing.Size(0, 17);
-            // 
-            // transportesToolStripMenuItem
-            // 
-            this.transportesToolStripMenuItem.Name = "transportesToolStripMenuItem";
-            this.transportesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.transportesToolStripMenuItem.Tag = "ConsultaLocalidad";
-            this.transportesToolStripMenuItem.Text = "Transportes";
-            this.transportesToolStripMenuItem.Click += new System.EventHandler(this.TransportesToolStripMenuItem1_Click);
             // 
             // MainView
             // 
@@ -552,7 +554,7 @@
         private System.Windows.Forms.ToolStripMenuItem BuscarActividad_mnu;
         private System.Windows.Forms.ToolStripMenuItem BuscarPaquete_mnu;
         private System.Windows.Forms.ToolStripMenuItem BuscarTipoPaquete_mnu;
-        private System.Windows.Forms.ToolStripMenuItem AcercaDe_mnu;
+        private System.Windows.Forms.ToolStripMenuItem AcercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FormaPagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;

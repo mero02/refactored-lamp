@@ -370,5 +370,11 @@ namespace TurApp.Views
              frm.Show();
          }
 
+         private void AcercaDeMnu_Click(object sender, EventArgs e)
+         {
+             FrmAcercaDe frm = new FrmAcercaDe();
+             frm.Show();
+         }
+
     }
 }
