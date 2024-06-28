@@ -47,6 +47,7 @@
             this.DominioTxt.Size = new System.Drawing.Size(80, 20);
             this.DominioTxt.TabIndex = 2;
             this.DominioTxt.Tag = "Dominio";
+            this.DominioTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DominioTxt_KeyPress);
             // 
             // DniLbl
             // 
@@ -66,6 +67,7 @@
             this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
             this.ImporteTxt.TabIndex = 6;
             this.ImporteTxt.Tag = "Importe";
+            this.ImporteTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ImporteTxt_KeyPress);
             // 
             // DomicilioLbl
             // 
@@ -81,11 +83,12 @@
             // 
             this.DescripcionTxt.Location = new System.Drawing.Point(91, 69);
             this.DescripcionTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.DescripcionTxt.MaxLength = 90;
+            this.DescripcionTxt.MaxLength = 150;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(166, 20);
             this.DescripcionTxt.TabIndex = 4;
             this.DescripcionTxt.Tag = "Descripcion";
+            this.DescripcionTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTxt_KeyPress);
             // 
             // NombresLbl
             // 

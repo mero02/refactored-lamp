@@ -135,19 +135,25 @@ namespace TurApp.Views
 
             if (ImporteTxt.Text == "")
             {
-                MessageBox.Show("Ingrese duracion del tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese el importe de la actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 ImporteTxt.Focus();
                 return;
             }
-            if (TransporteCbo.Text == "")
+
+            if (TransporteCbo.SelectedItem == null || string.IsNullOrEmpty(TransporteCbo.SelectedItem.ToString()))
             {
-                MessageBox.Show("Ingrese nivel de tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un Transporte", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TransporteCbo.Focus();
                 return;
             }
-            // validar...
-            //.....
-            //....
+
+            if (TipoActividadCbo.SelectedItem == null || string.IsNullOrEmpty(TipoActividadCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un Tipo actividad", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TipoActividadCbo.Focus();
+                return;
+            }
+
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Actividad = new Actividad();
@@ -206,6 +212,22 @@ namespace TurApp.Views
         private void TipoActividadCbo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void NivelTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            } 
+        }
+
+        private void ImporteTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            } 
         }
 
         

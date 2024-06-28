@@ -32,23 +32,24 @@
             this.NombreLbl = new System.Windows.Forms.Label();
             this.NivelTxt = new System.Windows.Forms.TextBox();
             this.NivelLbl = new System.Windows.Forms.Label();
-            this.DuracionTxt = new System.Windows.Forms.TextBox();
             this.DuracionLbl = new System.Windows.Forms.Label();
             this.DescripcionTxt = new System.Windows.Forms.TextBox();
             this.DescripcionLbl = new System.Windows.Forms.Label();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.CancelarBtn = new System.Windows.Forms.Button();
+            this.DuracionTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NombreTxt
             // 
             this.NombreTxt.Location = new System.Drawing.Point(103, 26);
             this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.NombreTxt.MaxLength = 15;
+            this.NombreTxt.MaxLength = 60;
             this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(80, 20);
+            this.NombreTxt.Size = new System.Drawing.Size(166, 20);
             this.NombreTxt.TabIndex = 2;
             this.NombreTxt.Tag = "Nombre";
+            this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
             // NombreLbl
             // 
@@ -68,6 +69,7 @@
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
             this.NivelTxt.TabIndex = 8;
             this.NivelTxt.Tag = "Nivel";
+            this.NivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelTxt_KeyPress);
             // 
             // NivelLbl
             // 
@@ -78,15 +80,6 @@
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
             this.NivelLbl.TabIndex = 7;
             this.NivelLbl.Text = "&Nivel";
-            // 
-            // DuracionTxt
-            // 
-            this.DuracionTxt.Location = new System.Drawing.Point(103, 90);
-            this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.DuracionTxt.Name = "DuracionTxt";
-            this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DuracionTxt.TabIndex = 6;
-            this.DuracionTxt.Tag = "Duracion";
             // 
             // DuracionLbl
             // 
@@ -102,11 +95,12 @@
             // 
             this.DescripcionTxt.Location = new System.Drawing.Point(103, 55);
             this.DescripcionTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.DescripcionTxt.MaxLength = 90;
+            this.DescripcionTxt.MaxLength = 250;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(166, 20);
             this.DescripcionTxt.TabIndex = 4;
             this.DescripcionTxt.Tag = "Descripcion";
+            this.DescripcionTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTxt_KeyPress);
             // 
             // DescripcionLbl
             // 
@@ -139,19 +133,29 @@
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
+            // DuracionTxt
+            // 
+            this.DuracionTxt.Location = new System.Drawing.Point(103, 87);
+            this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.DuracionTxt.MaxLength = 250;
+            this.DuracionTxt.Name = "DuracionTxt";
+            this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
+            this.DuracionTxt.TabIndex = 6;
+            this.DuracionTxt.Tag = "Duracion";
+            // 
             // FrmTipoActividadAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(325, 223);
+            this.Controls.Add(this.DuracionTxt);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.NombreTxt);
             this.Controls.Add(this.NombreLbl);
             this.Controls.Add(this.NivelTxt);
             this.Controls.Add(this.NivelLbl);
-            this.Controls.Add(this.DuracionTxt);
             this.Controls.Add(this.DuracionLbl);
             this.Controls.Add(this.DescripcionTxt);
             this.Controls.Add(this.DescripcionLbl);
@@ -173,11 +177,11 @@
         private System.Windows.Forms.Label NombreLbl;
         private System.Windows.Forms.TextBox NivelTxt;
         private System.Windows.Forms.Label NivelLbl;
-        private System.Windows.Forms.TextBox DuracionTxt;
         private System.Windows.Forms.Label DuracionLbl;
         private System.Windows.Forms.TextBox DescripcionTxt;
         private System.Windows.Forms.Label DescripcionLbl;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.Button CancelarBtn;
+        private System.Windows.Forms.TextBox DuracionTxt;
     }
 }

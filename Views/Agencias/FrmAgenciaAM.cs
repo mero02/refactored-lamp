@@ -38,7 +38,6 @@ namespace TurApp.Views
         {
             this.LocalidadCbo.DataSource = Localidad.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
 
-            //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
         }
         public override FrmOperacion OperacionForm
         {
@@ -115,13 +114,59 @@ namespace TurApp.Views
             string errMsj = "";
             string operacionLog = "";
             string detalleLog = "";
-            MainView.Instance.Cursor = Cursors.WaitCursor;  
+            MainView.Instance.Cursor = Cursors.WaitCursor;
 
             if (NombreTxt.Text == "")
             {
-                MessageBox.Show("Por favor, ingresa un nombre.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Salir del evento si la validación falla
+                MessageBox.Show("Ingrese Nombre", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NombreTxt.Focus();
+                return;
             }
+
+            if (CalleTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Calle", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CalleTxt.Focus();
+                return;
+            }
+
+            if (NroTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Numero", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NroTxt.Focus();
+                return;
+            }
+
+            if (PisoTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Piso", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                PisoTxt.Focus();
+                return;
+            }
+
+            if (DptoTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Departamento", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DptoTxt.Focus();
+                return;
+            }
+
+            if (LocalidadCbo.SelectedItem == null || string.IsNullOrEmpty(LocalidadCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese una Localidad", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LocalidadCbo.Focus();
+                return;
+            }
+
+            if (Telefono1Txt.Text == "")
+            {
+                MessageBox.Show("Ingrese un Telefono", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Telefono1Txt.Focus();
+                return;
+            }
+
+         
+
             
             if (OperacionForm == FrmOperacion.frmAlta)
             {
@@ -201,6 +246,54 @@ namespace TurApp.Views
             }
 
             MainView.Instance.Cursor = Cursors.Default;
+        }
+
+        private void NombreTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CalleTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NroTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PisoTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Telefono1Txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Telefono2Txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

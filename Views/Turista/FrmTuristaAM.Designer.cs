@@ -73,6 +73,7 @@
             // ObservacionesTxt
             // 
             this.ObservacionesTxt.Location = new System.Drawing.Point(18, 188);
+            this.ObservacionesTxt.MaxLength = 200;
             this.ObservacionesTxt.Multiline = true;
             this.ObservacionesTxt.Name = "ObservacionesTxt";
             this.ObservacionesTxt.Size = new System.Drawing.Size(268, 83);
@@ -127,6 +128,7 @@
             // 
             this.TelefonoTxt.Location = new System.Drawing.Point(74, 119);
             this.TelefonoTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.TelefonoTxt.MaxLength = 50;
             this.TelefonoTxt.Name = "TelefonoTxt";
             this.TelefonoTxt.Size = new System.Drawing.Size(166, 20);
             this.TelefonoTxt.TabIndex = 7;
@@ -147,6 +149,7 @@
             // 
             this.DomicilioTxt.Location = new System.Drawing.Point(74, 86);
             this.DomicilioTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.DomicilioTxt.MaxLength = 150;
             this.DomicilioTxt.Name = "DomicilioTxt";
             this.DomicilioTxt.Size = new System.Drawing.Size(166, 20);
             this.DomicilioTxt.TabIndex = 5;

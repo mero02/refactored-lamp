@@ -81,6 +81,7 @@
             this.NivelTxt.Size = new System.Drawing.Size(149, 20);
             this.NivelTxt.TabIndex = 6;
             this.NivelTxt.Tag = "Nivel";
+            this.NivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelTxt_KeyPress);
             // 
             // DniTuristaLbl
             // 
@@ -156,9 +157,10 @@
             // FechaPaqueteTime
             // 
             this.FechaPaqueteTime.CustomFormat = "yyyy-mm-dd";
+            this.FechaPaqueteTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaPaqueteTime.Location = new System.Drawing.Point(106, 134);
             this.FechaPaqueteTime.Name = "FechaPaqueteTime";
-            this.FechaPaqueteTime.Size = new System.Drawing.Size(200, 20);
+            this.FechaPaqueteTime.Size = new System.Drawing.Size(105, 20);
             this.FechaPaqueteTime.TabIndex = 8;
             this.FechaPaqueteTime.Tag = "Fecha";
             // 

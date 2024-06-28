@@ -63,19 +63,23 @@
             // 
             this.NombreTxt.Location = new System.Drawing.Point(75, 10);
             this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreTxt.MaxLength = 90;
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(192, 20);
             this.NombreTxt.TabIndex = 1;
             this.NombreTxt.Tag = "Nombre";
+            this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
             // 
             // CalleTxt
             // 
             this.CalleTxt.Location = new System.Drawing.Point(75, 43);
             this.CalleTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.CalleTxt.MaxLength = 150;
             this.CalleTxt.Name = "CalleTxt";
             this.CalleTxt.Size = new System.Drawing.Size(192, 20);
             this.CalleTxt.TabIndex = 3;
             this.CalleTxt.Tag = "Calle";
+            this.CalleTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CalleTxt_KeyPress);
             // 
             // label2
             // 
@@ -91,10 +95,12 @@
             // 
             this.NroTxt.Location = new System.Drawing.Point(75, 76);
             this.NroTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.NroTxt.MaxLength = 7;
             this.NroTxt.Name = "NroTxt";
             this.NroTxt.Size = new System.Drawing.Size(94, 20);
             this.NroTxt.TabIndex = 5;
             this.NroTxt.Tag = "Nro";
+            this.NroTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NroTxt_KeyPress);
             // 
             // label3
             // 
@@ -110,10 +116,12 @@
             // 
             this.PisoTxt.Location = new System.Drawing.Point(75, 107);
             this.PisoTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.PisoTxt.MaxLength = 7;
             this.PisoTxt.Name = "PisoTxt";
             this.PisoTxt.Size = new System.Drawing.Size(94, 20);
             this.PisoTxt.TabIndex = 7;
             this.PisoTxt.Tag = "Piso";
+            this.PisoTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PisoTxt_KeyPress);
             // 
             // label4
             // 
@@ -152,10 +160,12 @@
             // 
             this.Telefono1Txt.Location = new System.Drawing.Point(75, 209);
             this.Telefono1Txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Telefono1Txt.MaxLength = 20;
             this.Telefono1Txt.Name = "Telefono1Txt";
             this.Telefono1Txt.Size = new System.Drawing.Size(94, 20);
             this.Telefono1Txt.TabIndex = 13;
             this.Telefono1Txt.Tag = "Telefono1";
+            this.Telefono1Txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono1Txt_KeyPress);
             // 
             // label6
             // 
@@ -191,11 +201,13 @@
             // 
             this.Telefono2Txt.Location = new System.Drawing.Point(75, 243);
             this.Telefono2Txt.Margin = new System.Windows.Forms.Padding(2);
+            this.Telefono2Txt.MaxLength = 20;
             this.Telefono2Txt.Name = "Telefono2Txt";
             this.Telefono2Txt.Size = new System.Drawing.Size(94, 20);
             this.Telefono2Txt.TabIndex = 15;
             this.Telefono2Txt.Tag = "Telefono2";
             this.Telefono2Txt.TextChanged += new System.EventHandler(this.Telefono2Txt_TextChanged);
+            this.Telefono2Txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Telefono2Txt_KeyPress);
             // 
             // label8
             // 

@@ -52,7 +52,7 @@
             // 
             this.FormaPagoTxt.Location = new System.Drawing.Point(74, 22);
             this.FormaPagoTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.FormaPagoTxt.MaxLength = 15;
+            this.FormaPagoTxt.MaxLength = 50;
             this.FormaPagoTxt.Name = "FormaPagoTxt";
             this.FormaPagoTxt.Size = new System.Drawing.Size(160, 20);
             this.FormaPagoTxt.TabIndex = 2;

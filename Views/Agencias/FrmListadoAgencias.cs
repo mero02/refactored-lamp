@@ -40,22 +40,31 @@ namespace TurApp.Views
 
         private void AgenciasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-
+            // Desactivar temporalmente el evento para evitar recursiones infinitas
             this.AgenciasGrd.DataBindingComplete -= AgenciasGrd_DataBindingComplete;
 
-            try
+            foreach (DataGridViewRow item in this.AgenciasGrd.Rows)
             {
-                for (int i = 0; i < this.AgenciasGrd.Rows.Count; ++i)
+                var agencia = item.DataBoundItem as Agencia;
+                if (agencia != null)
                 {
-                    DataGridViewRow item = this.AgenciasGrd.Rows[i];
-                    item.Cells[0].Value = (item.DataBoundItem as Agencia).Codigo;
-                    item.Cells[6].Value = (item.DataBoundItem as Agencia).LocalidadObj.Nombre;
+                    item.Cells[0].Value = agencia.Codigo;
+                    item.Cells[1].Value = agencia.Nombre;
+                    item.Cells[2].Value = agencia.Calle;
+                    item.Cells[3].Value = agencia.Nro;
+                    item.Cells[4].Value = agencia.Piso;
+                    item.Cells[5].Value = agencia.Dpto;
+                    item.Cells[6].Value = agencia.LocalidadObj.Nombre;
+                    item.Cells[7].Value = agencia.Telefono1;
+                    if (agencia.Telefono2 != null)
+                    {
+                        item.Cells[8].Value = agencia.Telefono2;
+                    }
                 }
             }
-            finally
-            {
-                this.AgenciasGrd.DataBindingComplete += AgenciasGrd_DataBindingComplete;
-            }
+
+            // Volver a activar el evento
+            this.AgenciasGrd.DataBindingComplete += AgenciasGrd_DataBindingComplete;
         }
 
         private void AgenciasGrd_CellContentClick(object sender, DataGridViewCellEventArgs e)

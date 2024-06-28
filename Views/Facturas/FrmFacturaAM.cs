@@ -51,7 +51,7 @@ namespace TurApp.Views
             DetallesGrd.Enabled = false;
 
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
-            FechaFacturaTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            FechaFacturaTime.CustomFormat = "yyyy-MM-dd";
             GuardarBtn.Enabled = false;
         }
 
@@ -137,24 +137,6 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            if (NumeroTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese numero", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                NumeroTxt.Focus();
-                return;
-            }
-            if (SerieTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese serie", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                SerieTxt.Focus();
-                return;
-            }
-            if (LetraTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese letra", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LetraTxt.Focus();
-                return;
-            }
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 FacturaTurista = new FacturaTurista();

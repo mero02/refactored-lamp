@@ -71,6 +71,7 @@
             this.DniTxt.Name = "DniTxt";
             this.DniTxt.Size = new System.Drawing.Size(123, 20);
             this.DniTxt.TabIndex = 2;
+            this.DniTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxt_KeyPress);
             // 
             // DniChk
             // 

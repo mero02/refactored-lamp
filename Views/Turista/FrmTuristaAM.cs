@@ -95,6 +95,34 @@ namespace TurApp.Views
                 return;
             }
 
+            if (NombreTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NombreTxt.Focus();
+                return;
+            }
+
+            if (DomicilioTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Domicilio", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DomicilioTxt.Focus();
+                return;
+            }
+
+            if (TelefonoTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese un Telefono", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TelefonoTxt.Focus();
+                return;
+            }
+
+            if (PaisCbo.SelectedItem == null || string.IsNullOrEmpty(PaisCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un Pais", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                PaisCbo.Focus();
+                return;
+            }
+
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Turista = new Turista();

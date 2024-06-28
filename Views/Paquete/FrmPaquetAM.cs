@@ -48,7 +48,7 @@ namespace TurApp.Views
 
             this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
             FechaPaqueteTime.Format = DateTimePickerFormat.Custom;
-            FechaPaqueteTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            FechaPaqueteTime.CustomFormat = "yyyy-MM-dd";
         }
        
         public override FrmOperacion OperacionForm
@@ -90,7 +90,43 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            
+            if (TipoPaqueteCbo.SelectedItem == null || string.IsNullOrEmpty(TipoPaqueteCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un Tipo paquete", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TipoPaqueteCbo.Focus();
+                return;
+            }
+
+            if (AgenciaCbo.SelectedItem == null || string.IsNullOrEmpty(AgenciaCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese un Agencia", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                AgenciaCbo.Focus();
+                return;
+            }
+
+            if (NivelTxt.Text == "")
+            {
+                MessageBox.Show("Ingrese Nivel", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NivelTxt.Focus();
+                return;
+            }
+
+
+            if (DniTuristaCbo.SelectedItem == null || string.IsNullOrEmpty(DniTuristaCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese DNI del turista", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DniTuristaCbo.Focus();
+                return;
+            }
+
+            if (CodDestinoCbo.SelectedItem == null || string.IsNullOrEmpty(CodDestinoCbo.SelectedItem.ToString()))
+            {
+                MessageBox.Show("Ingrese Destino", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CodDestinoCbo.Focus();
+                return;
+            }
+
+
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 Paquete = new Paquete();

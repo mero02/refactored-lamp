@@ -99,6 +99,7 @@
             // DetallePagoTxt
             // 
             this.DetallePagoTxt.Location = new System.Drawing.Point(19, 15);
+            this.DetallePagoTxt.MaxLength = 90;
             this.DetallePagoTxt.Multiline = true;
             this.DetallePagoTxt.Name = "DetallePagoTxt";
             this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
@@ -198,6 +199,7 @@
             // 
             this.LetraTxt.Location = new System.Drawing.Point(74, 86);
             this.LetraTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.LetraTxt.MaxLength = 1;
             this.LetraTxt.Name = "LetraTxt";
             this.LetraTxt.Size = new System.Drawing.Size(166, 20);
             this.LetraTxt.TabIndex = 6;

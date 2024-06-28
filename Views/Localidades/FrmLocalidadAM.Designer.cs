@@ -86,6 +86,7 @@
             // NombreTxt
             // 
             this.NombreTxt.Location = new System.Drawing.Point(81, 97);
+            this.NombreTxt.MaxLength = 60;
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(133, 20);
             this.NombreTxt.TabIndex = 4;

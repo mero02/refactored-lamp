@@ -102,6 +102,7 @@
             this.detalle.HeaderText = "Detalle";
             this.detalle.Name = "detalle";
             this.detalle.ReadOnly = true;
+            this.detalle.Width = 380;
             // 
             // FrmListadoAuditoria
             // 

@@ -44,6 +44,7 @@
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(182, 20);
             this.NombreTxt.TabIndex = 2;
+            this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxt_KeyPress);
             // 
             // NombreChk
             // 

@@ -116,6 +116,7 @@
             this.ImporteTxt.Size = new System.Drawing.Size(166, 20);
             this.ImporteTxt.TabIndex = 4;
             this.ImporteTxt.Tag = "Importe";
+            this.ImporteTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ImporteTxt_KeyPress);
             // 
             // ImporteLbl
             // 
@@ -136,6 +137,7 @@
             this.NivelTxt.Size = new System.Drawing.Size(166, 20);
             this.NivelTxt.TabIndex = 2;
             this.NivelTxt.Tag = "Nivel";
+            this.NivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelTxt_KeyPress);
             // 
             // NivelLbl
             // 
