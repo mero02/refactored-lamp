@@ -255,7 +255,7 @@ namespace TurApp.Views
                                 DateTime newValue = (item as DateTimePicker).Value;
                                 if (operacion == FrmOperacion.frmAlta || (data != null && !newValue.Equals(data)))
                                 {
-                                    prop.SetValue(obj, newValue, null);
+                                    prop.SetValue(obj, Convert.ChangeType((item as DateTimePicker).Value, prop.PropertyType), null);
                                 }
                             }
                             else if (item is CheckBox)

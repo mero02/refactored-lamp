@@ -33,6 +33,10 @@ namespace TurApp.Views
             var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
             this.ActividadesGrd.DataSource = TipoActividadesBindingSource;
             GuardarBtn.Enabled = false;
+
+            DuracionTime.Format = DateTimePickerFormat.Custom;
+            DuracionTime.CustomFormat = "hh:mm:ss";
+            DuracionTime.ShowUpDown = true;
         }
         public override void ConfigurePermiso(PermisoAttribute perm)
         {
@@ -201,11 +205,6 @@ namespace TurApp.Views
 
         }
 
-        private void DuracionTxt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //Implementar
-        }
-
         private void NivelTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -240,12 +239,6 @@ namespace TurApp.Views
                 return;
             }
 
-            if (DuracionTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese duracion de tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DuracionTxt.Focus();
-                return;
-            }
             if (NivelTxt.Text == "")
             {
                 MessageBox.Show("Ingrese nivel de tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

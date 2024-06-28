@@ -67,7 +67,9 @@ namespace TurApp.Views
         }
         private void FrmTipoActividadAM_Load(object sender, EventArgs e)
         {
-
+            DuracionTime.Format = DateTimePickerFormat.Custom;
+            DuracionTime.CustomFormat = "hh:mm:ss";
+            DuracionTime.ShowUpDown = true;
         }
 
         private void CancelarBtn_Click(object sender, EventArgs e)
@@ -96,12 +98,6 @@ namespace TurApp.Views
                 return;
             }
 
-            if (DuracionTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese duracion del tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                DuracionTxt.Focus();
-                return;
-            }
             if (NivelTxt.Text == "")
             {
                 MessageBox.Show("Ingrese nivel de tipo actividad", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

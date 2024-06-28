@@ -32,7 +32,6 @@
             this.NombreLbl = new System.Windows.Forms.Label();
             this.NivelTxt = new System.Windows.Forms.TextBox();
             this.NivelLbl = new System.Windows.Forms.Label();
-            this.DuracionTxt = new System.Windows.Forms.TextBox();
             this.DuracionLbl = new System.Windows.Forms.Label();
             this.DescripcionTxt = new System.Windows.Forms.TextBox();
             this.DescripcionLbl = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.CodActCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardarBtn = new System.Windows.Forms.Button();
+            this.DuracionTime = new System.Windows.Forms.DateTimePicker();
             this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
             this.SuspendLayout();
@@ -88,16 +88,6 @@
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
             this.NivelLbl.TabIndex = 7;
             this.NivelLbl.Text = "&Nivel";
-            // 
-            // DuracionTxt
-            // 
-            this.DuracionTxt.Location = new System.Drawing.Point(80, 107);
-            this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.DuracionTxt.Name = "DuracionTxt";
-            this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DuracionTxt.TabIndex = 6;
-            this.DuracionTxt.Tag = "Duracion";
-            this.DuracionTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DuracionTxt_KeyPress);
             // 
             // DuracionLbl
             // 
@@ -214,12 +204,23 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
+            // DuracionTime
+            // 
+            this.DuracionTime.CustomFormat = "hh:mm:ss";
+            this.DuracionTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DuracionTime.Location = new System.Drawing.Point(80, 107);
+            this.DuracionTime.Name = "DuracionTime";
+            this.DuracionTime.Size = new System.Drawing.Size(120, 20);
+            this.DuracionTime.TabIndex = 28;
+            this.DuracionTime.Tag = "Duracion";
+            // 
             // FrmTipoPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(881, 366);
+            this.Controls.Add(this.DuracionTime);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.ActividadesGrupBox);
             this.Controls.Add(this.CancelarBtn);
@@ -227,7 +228,6 @@
             this.Controls.Add(this.NombreLbl);
             this.Controls.Add(this.NivelTxt);
             this.Controls.Add(this.NivelLbl);
-            this.Controls.Add(this.DuracionTxt);
             this.Controls.Add(this.DuracionLbl);
             this.Controls.Add(this.DescripcionTxt);
             this.Controls.Add(this.DescripcionLbl);
@@ -251,7 +251,6 @@
         private System.Windows.Forms.Label NombreLbl;
         private System.Windows.Forms.TextBox NivelTxt;
         private System.Windows.Forms.Label NivelLbl;
-        private System.Windows.Forms.TextBox DuracionTxt;
         private System.Windows.Forms.Label DuracionLbl;
         private System.Windows.Forms.TextBox DescripcionTxt;
         private System.Windows.Forms.Label DescripcionLbl;
@@ -263,5 +262,6 @@
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodActCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreActividadCol;
+        private System.Windows.Forms.DateTimePicker DuracionTime;
     }
 }

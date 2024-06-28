@@ -37,7 +37,7 @@
             this.DescripcionLbl = new System.Windows.Forms.Label();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.CancelarBtn = new System.Windows.Forms.Button();
-            this.DuracionTxt = new System.Windows.Forms.TextBox();
+            this.DuracionTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // NombreTxt
@@ -133,15 +133,15 @@
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
-            // DuracionTxt
+            // DuracionTime
             // 
-            this.DuracionTxt.Location = new System.Drawing.Point(103, 87);
-            this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.DuracionTxt.MaxLength = 250;
-            this.DuracionTxt.Name = "DuracionTxt";
-            this.DuracionTxt.Size = new System.Drawing.Size(166, 20);
-            this.DuracionTxt.TabIndex = 6;
-            this.DuracionTxt.Tag = "Duracion";
+            this.DuracionTime.CustomFormat = "HH:mm:ss";
+            this.DuracionTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DuracionTime.Location = new System.Drawing.Point(103, 90);
+            this.DuracionTime.Name = "DuracionTime";
+            this.DuracionTime.Size = new System.Drawing.Size(120, 20);
+            this.DuracionTime.TabIndex = 6;
+            this.DuracionTime.Tag = "Duracion";
             // 
             // FrmTipoActividadAM
             // 
@@ -149,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(325, 223);
-            this.Controls.Add(this.DuracionTxt);
+            this.Controls.Add(this.DuracionTime);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.NombreTxt);
@@ -182,6 +182,6 @@
         private System.Windows.Forms.Label DescripcionLbl;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.Button CancelarBtn;
-        private System.Windows.Forms.TextBox DuracionTxt;
+        private System.Windows.Forms.DateTimePicker DuracionTime;
     }
 }
