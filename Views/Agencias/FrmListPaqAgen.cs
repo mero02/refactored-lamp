@@ -63,5 +63,20 @@ namespace TurApp.Views
                 this.PaquetesGrd.DataBindingComplete += PaquetesGrd_DataBindingComplete;
             }
         }
+
+        private void PaquetesGrd_CellDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = PaquetesGrd.Rows[e.RowIndex];
+
+                string codigo = row.Cells["CodigoCol"].Value.ToString();
+
+                FrmListActPaq frm = new FrmListActPaq(codigo);
+
+                frm.ShowListActPaq(this);
+
+            }
+        }
     }
 }

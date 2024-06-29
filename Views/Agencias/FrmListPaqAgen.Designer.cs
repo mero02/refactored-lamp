@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
-            this.CerrarBtn = new System.Windows.Forms.Button();
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPaqueteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +36,7 @@
             this.DniTuristaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DestinoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CerrarBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,17 +63,8 @@
             this.PaquetesGrd.ShowEditingIcon = false;
             this.PaquetesGrd.Size = new System.Drawing.Size(743, 226);
             this.PaquetesGrd.TabIndex = 1;
+            this.PaquetesGrd.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PaquetesGrd_CellDoubleClick);
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
-            // 
-            // CerrarBtn
-            // 
-            this.CerrarBtn.Location = new System.Drawing.Point(670, 242);
-            this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(66, 32);
-            this.CerrarBtn.TabIndex = 2;
-            this.CerrarBtn.Text = "Cerrar";
-            this.CerrarBtn.UseVisualStyleBackColor = true;
-            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // CodigoCol
             // 
@@ -124,6 +115,16 @@
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
             this.DestinoCol.Width = 200;
+            // 
+            // CerrarBtn
+            // 
+            this.CerrarBtn.Location = new System.Drawing.Point(670, 242);
+            this.CerrarBtn.Name = "CerrarBtn";
+            this.CerrarBtn.Size = new System.Drawing.Size(66, 32);
+            this.CerrarBtn.TabIndex = 2;
+            this.CerrarBtn.Text = "Cerrar";
+            this.CerrarBtn.UseVisualStyleBackColor = true;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // FrmListPaqAgen
             // 

@@ -43,7 +43,6 @@ namespace TurApp.Views
         {
             LoadComboBox(TipoPaquete.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.TipoPaqueteCbo, addSeleccion: true);
             LoadComboBox(Agencia.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.AgenciaCbo, addSeleccion: true);
-            //LoadComboBox(Turista.FindAllStatic(null, (l1, l2) => l1.NroDocumento.CompareTo(l2.NroDocumento)), this.DniTuristaCbo, addSeleccion: true);
             LoadComboBox(Destino.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.CodDestinoCbo, addSeleccion: true);
 
             this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));

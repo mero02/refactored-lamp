@@ -22,8 +22,7 @@ namespace TurApp.Views
         private void FrmListadoTipoPaquete_Load(object sender, EventArgs e)
         {
             this.TipoPaquetesGrd.AutoGenerateColumns = false;
-            // this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
-            var TipoPaquetes = TipoPaquete .FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var TipoPaquetes = TipoPaquete.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var TipoPaquetesBindingList = new BindingList<TipoPaquete>(TipoPaquetes);
             var TipoPaquetesBindingSource = new BindingSource(TipoPaquetesBindingList, null);
             this.TipoPaquetesGrd.DataSource = TipoPaquetesBindingSource;
