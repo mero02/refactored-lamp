@@ -77,6 +77,7 @@ namespace TurApp.Views
                 {
                     DataGridViewRow item = this.TipoPaquetesGrd.Rows[i];
                     item.Cells[1].Value = (item.DataBoundItem as TipoPaquete).Nombre;
+                    item.Cells[3].Value = (item.DataBoundItem as TipoPaquete).Duracion;
                 }
             }
 

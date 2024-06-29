@@ -14,6 +14,7 @@ namespace TurApp.Views
     {
         private string _criterio = null;
         private List<TipoActividad> _listado;
+        private bool isDataBindingComplete = false;
         public FrmTipoActividadList()
         {
             InitializeComponent();
@@ -39,10 +40,34 @@ namespace TurApp.Views
        
         private void TipoActividadGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            for (int i = 0; i < this.TipoActividadGrd.Rows.Count; ++i)
+            // Verificar si el evento ya se está ejecutando
+            if (isDataBindingComplete) return;
+
+            // Marcar que el evento está en ejecución
+            isDataBindingComplete = true;
+
+            try
             {
-                DataGridViewRow item = this.TipoActividadGrd.Rows[i];
-                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Duracion;
+                for (int i = 0; i < this.TipoActividadGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.TipoActividadGrd.Rows[i];
+                    string duracionString = (item.DataBoundItem as TipoActividad).Duracion;
+
+                    DateTime duracion;
+                    if (DateTime.TryParse(duracionString, out duracion))
+                    {
+                        item.Cells[3].Value = duracion.ToString("HH:mm");
+                    }
+                    else
+                    {
+                        item.Cells[3].Value = duracionString;
+                    }
+                }
+            }
+            finally
+            {
+                // Marcar que el evento ha terminado de ejecutarse
+                isDataBindingComplete = false;
             }
         }
         void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
@@ -65,7 +90,6 @@ namespace TurApp.Views
                 frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
                 frm.ShowModificarTipoActividad(this, (this.TipoActividadGrd.SelectedRows[0].DataBoundItem as TipoActividad));
             }
-
         }
 
         private void CerrarBtn_Click(object sender, EventArgs e)

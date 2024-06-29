@@ -14,6 +14,7 @@ namespace TurApp.Views
 {
     public partial class FrmListadoTipoActividad : FormBase
     {
+        private bool isDataBindingComplete = false;
         public FrmListadoTipoActividad()
         {
             InitializeComponent();
@@ -170,6 +171,39 @@ namespace TurApp.Views
             FrmTipoActividadAM frmpac = new FrmTipoActividadAM();
             TipoActividad pac = (this.TipoActividadGrd.SelectedRows[0].DataBoundItem as TipoActividad);
             frmpac.ShowModificarTipoActividad(pac);
+        }
+
+        private void TipoActividadGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            // Verificar si el evento ya se está ejecutando
+            if (isDataBindingComplete) return;
+
+            // Marcar que el evento está en ejecución
+            isDataBindingComplete = true;
+
+            try
+            {
+                for (int i = 0; i < this.TipoActividadGrd.Rows.Count; ++i)
+                {
+                    DataGridViewRow item = this.TipoActividadGrd.Rows[i];
+                    string duracionString = (item.DataBoundItem as TipoActividad).Duracion;
+
+                    DateTime duracion;
+                    if (DateTime.TryParse(duracionString, out duracion))
+                    {
+                        item.Cells[3].Value = duracion.ToString("HH:mm");
+                    }
+                    else
+                    {
+                        item.Cells[3].Value = duracionString;
+                    }
+                }
+            }
+            finally
+            {
+                // Marcar que el evento ha terminado de ejecutarse
+                isDataBindingComplete = false;
+            }
         }
 
         

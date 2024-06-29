@@ -70,6 +70,7 @@
             this.TipoActividadGrd.ShowEditingIcon = false;
             this.TipoActividadGrd.Size = new System.Drawing.Size(640, 191);
             this.TipoActividadGrd.TabIndex = 1;
+            this.TipoActividadGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TipoActividadGrd_DataBindingComplete);
             this.TipoActividadGrd.DoubleClick += new System.EventHandler(this.TipoActividadGrd_DoubleClick);
             // 
             // CodigoCol
