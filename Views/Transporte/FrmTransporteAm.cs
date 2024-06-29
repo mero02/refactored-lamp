@@ -57,16 +57,16 @@ namespace TurApp.Views
                 base.OperacionForm = value;
                 if (value == FrmOperacion.frmAlta)
                 {
-                    this.Text = "Ingreso de nueva Localidad...";
+                    this.Text = "Ingreso de nuevo Transporte...";
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
-                    this.Text = "Actualizacion de datos de Localidad...";
+                    this.Text = "Actualizacion de datos de Transporte...";
 
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
-                    this.Text = "Consulta de datos de Localidad...";
+                    this.Text = "Consulta de datos de Transporte...";
                     this.GuardarBtn.Visible = false;
                 }
             }

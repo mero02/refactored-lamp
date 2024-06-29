@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
+            this.CerrarBtn = new System.Windows.Forms.Button();
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPaqueteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,7 +37,6 @@
             this.DniTuristaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DestinoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CerrarBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +65,23 @@
             this.PaquetesGrd.TabIndex = 1;
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
             // 
+            // CerrarBtn
+            // 
+            this.CerrarBtn.Location = new System.Drawing.Point(670, 242);
+            this.CerrarBtn.Name = "CerrarBtn";
+            this.CerrarBtn.Size = new System.Drawing.Size(66, 32);
+            this.CerrarBtn.TabIndex = 2;
+            this.CerrarBtn.Text = "Cerrar";
+            this.CerrarBtn.UseVisualStyleBackColor = true;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            // 
             // CodigoCol
             // 
             this.CodigoCol.DataPropertyName = "Codigo";
             this.CodigoCol.HeaderText = "Codigo";
             this.CodigoCol.Name = "CodigoCol";
             this.CodigoCol.ReadOnly = true;
+            this.CodigoCol.Width = 50;
             // 
             // TipoPaqueteCol
             // 
@@ -104,22 +115,15 @@
             this.NivelCol.HeaderText = "Nivel";
             this.NivelCol.Name = "NivelCol";
             this.NivelCol.ReadOnly = true;
+            this.NivelCol.Width = 50;
             // 
             // DestinoCol
             // 
+            this.DestinoCol.DataPropertyName = "Destino";
             this.DestinoCol.HeaderText = "Destino";
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
-            // 
-            // CerrarBtn
-            // 
-            this.CerrarBtn.Location = new System.Drawing.Point(670, 242);
-            this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(66, 32);
-            this.CerrarBtn.TabIndex = 2;
-            this.CerrarBtn.Text = "Cerrar";
-            this.CerrarBtn.UseVisualStyleBackColor = true;
-            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
+            this.DestinoCol.Width = 200;
             // 
             // FrmListPaqAgen
             // 
@@ -142,6 +146,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView PaquetesGrd;
+        private System.Windows.Forms.Button CerrarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPaqueteCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn AgenciaCol;
@@ -149,6 +154,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DniTuristaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DestinoCol;
-        private System.Windows.Forms.Button CerrarBtn;
     }
 }

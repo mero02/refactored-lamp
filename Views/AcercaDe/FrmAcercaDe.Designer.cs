@@ -33,6 +33,8 @@
             // 
             // textBoxAcercaDe
             // 
+            this.textBoxAcercaDe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxAcercaDe.ForeColor = System.Drawing.SystemColors.MenuText;
             this.textBoxAcercaDe.Location = new System.Drawing.Point(12, 12);
             this.textBoxAcercaDe.Name = "textBoxAcercaDe";
             this.textBoxAcercaDe.ReadOnly = true;

@@ -20,7 +20,7 @@ namespace TurApp.Views
 
         private void FrmAcercaDe_Load(object sender, EventArgs e)
         {
-            string textoAcercaDe = "Acerca de TurGest v1.0\n\n" +
+            string textoAcercaDe = "Acerca de Grupo 4\n\n" +
                                    "TurGest es un software de gestión integral para empresas de turismo.\n\n" +
                                    "Versión: 1.0\n\n" +
                                    "Desarrollado por:\n" +

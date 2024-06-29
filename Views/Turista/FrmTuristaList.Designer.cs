@@ -36,13 +36,15 @@
             this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ObsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(676, 289);
+            this.CerrarBtn.Location = new System.Drawing.Point(718, 289);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
@@ -58,7 +60,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 266);
+            this.groupBox1.Size = new System.Drawing.Size(799, 266);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -76,7 +78,9 @@
             this.Nombre,
             this.Dni,
             this.Domicilio,
-            this.Pais});
+            this.Pais,
+            this.TelCol,
+            this.ObsCol});
             this.TuristasGrd.Location = new System.Drawing.Point(4, 17);
             this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TuristasGrd.MultiSelect = false;
@@ -84,7 +88,7 @@
             this.TuristasGrd.ReadOnly = true;
             this.TuristasGrd.RowTemplate.Height = 24;
             this.TuristasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TuristasGrd.Size = new System.Drawing.Size(743, 237);
+            this.TuristasGrd.Size = new System.Drawing.Size(786, 237);
             this.TuristasGrd.TabIndex = 0;
             this.TuristasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
             this.TuristasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TuristasGrd_ColumnHeaderMouseClick);
@@ -115,7 +119,6 @@
             this.Domicilio.Name = "Domicilio";
             this.Domicilio.ReadOnly = true;
             this.Domicilio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Domicilio.Width = 150;
             // 
             // Pais
             // 
@@ -123,14 +126,29 @@
             this.Pais.HeaderText = "Pais";
             this.Pais.Name = "Pais";
             this.Pais.ReadOnly = true;
-            this.Pais.Width = 140;
+            this.Pais.Width = 80;
+            // 
+            // TelCol
+            // 
+            this.TelCol.DataPropertyName = "Telefono";
+            this.TelCol.HeaderText = "Telefono";
+            this.TelCol.Name = "TelCol";
+            this.TelCol.ReadOnly = true;
+            // 
+            // ObsCol
+            // 
+            this.ObsCol.DataPropertyName = "Observaciones";
+            this.ObsCol.HeaderText = "Observacion";
+            this.ObsCol.Name = "ObsCol";
+            this.ObsCol.ReadOnly = true;
+            this.ObsCol.Width = 250;
             // 
             // FrmTuristaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(770, 327);
+            this.ClientSize = new System.Drawing.Size(807, 327);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -155,5 +173,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Dni;
         private System.Windows.Forms.DataGridViewTextBoxColumn Domicilio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObsCol;
     }
 }

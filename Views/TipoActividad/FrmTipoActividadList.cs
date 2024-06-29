@@ -42,7 +42,7 @@ namespace TurApp.Views
             for (int i = 0; i < this.TipoActividadGrd.Rows.Count; ++i)
             {
                 DataGridViewRow item = this.TipoActividadGrd.Rows[i];
-                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Nombre;
+                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Duracion;
             }
         }
         void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)

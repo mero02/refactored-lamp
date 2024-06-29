@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.FormaPagoGrd = new System.Windows.Forms.DataGridView();
-            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FormaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FormaPagoTxt = new System.Windows.Forms.TextBox();
             this.FormaPagoChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FormaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.FormaPagoGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,27 +56,12 @@
             this.FormaPagoGrd.RowTemplate.Height = 24;
             this.FormaPagoGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FormaPagoGrd.ShowEditingIcon = false;
-            this.FormaPagoGrd.Size = new System.Drawing.Size(826, 384);
+            this.FormaPagoGrd.Size = new System.Drawing.Size(453, 202);
             this.FormaPagoGrd.TabIndex = 3;
             this.FormaPagoGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FormaPagoGrd_CellContentClick);
             this.FormaPagoGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FormaPagoGrd_ColumnHeaderMouseClick);
             this.FormaPagoGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FormaPagoGrd_DataBindingComplete);
             this.FormaPagoGrd.DoubleClick += new System.EventHandler(this.FormaPagoGrd_DoubleClick);
-            // 
-            // CodigoCol
-            // 
-            this.CodigoCol.DataPropertyName = "Codigo";
-            this.CodigoCol.HeaderText = "Codigo";
-            this.CodigoCol.Name = "CodigoCol";
-            this.CodigoCol.ReadOnly = true;
-            // 
-            // FormaCol
-            // 
-            this.FormaCol.DataPropertyName = "Forma";
-            this.FormaCol.HeaderText = "Forma de pago";
-            this.FormaCol.Name = "FormaCol";
-            this.FormaCol.ReadOnly = true;
-            this.FormaCol.Width = 150;
             // 
             // groupBox1
             // 
@@ -113,7 +98,7 @@
             // 
             // FiltroBtn
             // 
-            this.FiltroBtn.Location = new System.Drawing.Point(709, 11);
+            this.FiltroBtn.Location = new System.Drawing.Point(386, 11);
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
@@ -124,7 +109,7 @@
             // 
             // ExportarBtn
             // 
-            this.ExportarBtn.Location = new System.Drawing.Point(724, 443);
+            this.ExportarBtn.Location = new System.Drawing.Point(378, 261);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
             this.ExportarBtn.TabIndex = 4;
@@ -132,12 +117,27 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            // 
+            // FormaCol
+            // 
+            this.FormaCol.DataPropertyName = "Forma";
+            this.FormaCol.HeaderText = "Forma de pago";
+            this.FormaCol.Name = "FormaCol";
+            this.FormaCol.ReadOnly = true;
+            this.FormaCol.Width = 300;
+            // 
             // FrmListadoFormaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(860, 493);
+            this.ClientSize = new System.Drawing.Size(493, 296);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);

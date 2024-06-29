@@ -97,7 +97,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmActividadBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Buscar Actividad";
+            this.Text = "Busqueda de Actividad";
             this.Load += new System.EventHandler(this.FrmActividadBusq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

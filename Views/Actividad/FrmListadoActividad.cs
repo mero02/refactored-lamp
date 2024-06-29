@@ -20,6 +20,7 @@ namespace TurApp.Views
 
         private void FrmListadoActividad_Load(object sender, EventArgs e)
         {
+            LoadComboBox(TipoActividad.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.TipoActividadCbo, addSeleccion: true);
             this.ActividadGrd.AutoGenerateColumns = false;
             var Actividades = Actividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var ActividadesBindingList = new BindingList<Actividad>(Actividades);
@@ -41,12 +42,11 @@ namespace TurApp.Views
         {
             string criterio = null;
 
-            if (this.TipoActividadChk.Checked && this.TipoActividadChk != null)
+            if (this.TipoActividadChk.Checked && this.TipoActividadCbo.SelectedIndex != -1)
             {
-                criterio = String.Format("Tipo Actividad = '{0}'", TipoActividadTxt.Text);
+                   criterio = "cod_tipo_actividad = " + (TipoActividadCbo.SelectedValue as TipoActividad).Codigo;
             }
-
-            this.ActividadGrd.DataSource = Paquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));
+            this.ActividadGrd.DataSource = Actividad.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));
 
         }
 
@@ -169,13 +169,23 @@ namespace TurApp.Views
 
         private void TipoActividadChk_CheckedChanged(object sender, EventArgs e)
         {
-            this.TipoActividadTxt.Enabled = this.TipoActividadChk.Checked;
+            this.TipoActividadCbo.Enabled = TipoActividadChk.Checked;
         }
+
         private void ActividadGrd_DoubleClick(object sender, EventArgs e)
         {
             FrmActividadAM frmpac = new FrmActividadAM();
             Actividad actividad = (this.ActividadGrd.SelectedRows[0].DataBoundItem as Actividad);
             frmpac.ShowModificarActividad(actividad);
+        }
+
+        private void ActividadesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow rw in this.ActividadGrd.Rows)
+            {
+                rw.Cells[1].Value = (rw.DataBoundItem as Actividad).TransporteObj.Descripcion;
+                rw.Cells[3].Value = (rw.DataBoundItem as Actividad).TipoActividadObj.Nombre;
+            }
         }
     }
 }

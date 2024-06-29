@@ -75,11 +75,32 @@ namespace TurApp.Views
             this.Cursor = Cursors.Default;
             if (ev.Status == TipoOperacionStatus.stOK)
             {
-                var selAnt = AgenciasGrd.SelectedRows[0].Index;
-                this.AgenciasGrd.DataSource = Agencia.FindAllStatic(_criterio, (e1, e2) => e1.Codigo.CompareTo(e2.Codigo));
-                AgenciasGrd.Rows[selAnt].Selected = true;
-                MessageBox.Show("Agencia actualizado", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    // Guarda el índice seleccionado actualmente
+                    int selAnt = AgenciasGrd.SelectedRows[0].Index;
+
+                    // Actualiza la fuente de datos
+                    this.AgenciasGrd.DataSource = Agencia.FindAllStatic(_criterio, delegate(Agencia e1, Agencia e2) { return e1.Codigo.CompareTo(e2.Codigo); });
+
+                    // Verifica que el índice es válido antes de seleccionar la fila
+                    if (selAnt >= 0 && selAnt < AgenciasGrd.Rows.Count)
+                    {
+                        AgenciasGrd.Rows[selAnt].Selected = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Muestra un mensaje si ocurre una excepción
+                    MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Muestra el mensaje de éxito
+                    MessageBox.Show("Agencia actualizado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void AgenciasGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

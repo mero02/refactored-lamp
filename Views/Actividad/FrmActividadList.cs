@@ -116,5 +116,16 @@ namespace TurApp.Views
         {
             this.Close();
         }
+
+        private void ActividadGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            for (int i = 0; i < this.ActividadGrd.Rows.Count; ++i)
+            {
+                DataGridViewRow item = this.ActividadGrd.Rows[i];
+                Actividad ag = item.DataBoundItem as Actividad;
+                item.Cells[1].Value = ag.TransporteObj.Descripcion;
+                item.Cells[3].Value = ag.TipoActividadObj.Nombre;
+            }
+        }
     }
 }

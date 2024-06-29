@@ -112,18 +112,17 @@ namespace TurApp.Views
                 LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
-                    this.Text = "Ingreso de nuevo Turista...";
                     this.DniTuristaCbo.SelectedIndex = -1;
                     this.FormaPagoCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
-                    this.Text = "Actualizacion de datos de Turista...";
+                    this.Text = "Actualizacion de datos de Factura...";
 
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
-                    this.Text = "Consulta de datos de Turista...";
+                    this.Text = "Consulta de datos de Factura...";
                     this.GuardarBtn.Visible = false;
                 }
             }

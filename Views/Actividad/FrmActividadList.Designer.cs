@@ -40,7 +40,7 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(275, 111);
+            this.CerrarBtn.Location = new System.Drawing.Point(227, 111);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(77, 27);
@@ -70,10 +70,11 @@
             this.ActividadGrd.RowTemplate.Height = 24;
             this.ActividadGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadGrd.ShowEditingIcon = false;
-            this.ActividadGrd.Size = new System.Drawing.Size(597, 88);
+            this.ActividadGrd.Size = new System.Drawing.Size(497, 88);
             this.ActividadGrd.TabIndex = 1;
             this.ActividadGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ActividadGrd_CellContentClick_1);
             this.ActividadGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ActividadGrd_ColumnHeaderMouseClick);
+            this.ActividadGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadGrd_DataBindingComplete);
             this.ActividadGrd.DoubleClick += new System.EventHandler(this.ActividadGrd_DoubleClick);
             // 
             // CodigoCol
@@ -82,10 +83,11 @@
             this.CodigoCol.HeaderText = "Codigo";
             this.CodigoCol.Name = "CodigoCol";
             this.CodigoCol.ReadOnly = true;
+            this.CodigoCol.Width = 50;
             // 
             // codTransporteCol
             // 
-            this.codTransporteCol.DataPropertyName = "CodTransporte";
+            this.codTransporteCol.DataPropertyName = "Transporte";
             this.codTransporteCol.HeaderText = "Transporte";
             this.codTransporteCol.Name = "codTransporteCol";
             this.codTransporteCol.ReadOnly = true;
@@ -97,10 +99,11 @@
             this.NivelCol.HeaderText = "Nivel";
             this.NivelCol.Name = "NivelCol";
             this.NivelCol.ReadOnly = true;
+            this.NivelCol.Width = 50;
             // 
             // TipoActividadCol
             // 
-            this.TipoActividadCol.DataPropertyName = "CodTipoActividad";
+            this.TipoActividadCol.DataPropertyName = "TipoActividad";
             this.TipoActividadCol.HeaderText = "Tipo Actividad";
             this.TipoActividadCol.Name = "TipoActividadCol";
             this.TipoActividadCol.ReadOnly = true;
@@ -117,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(633, 147);
+            this.ClientSize = new System.Drawing.Size(528, 147);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.ActividadGrd);
             this.Margin = new System.Windows.Forms.Padding(2);

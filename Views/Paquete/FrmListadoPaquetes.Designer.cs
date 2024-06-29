@@ -31,6 +31,9 @@
             this.ExportarBtn = new System.Windows.Forms.Button();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
+            this.TipoPaqueteChk = new System.Windows.Forms.CheckBox();
+            this.TipoPaqueteCbo = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CodigoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPaqueteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +41,6 @@
             this.DniTuristaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DestinoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPaqueteChk = new System.Windows.Forms.CheckBox();
-            this.TipoPaqueteCbo = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,52 +94,6 @@
             this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.PaquetesGrd_DataBindingComplete);
             this.PaquetesGrd.DoubleClick += new System.EventHandler(this.PaquetesGrd_DoubleClick);
             // 
-            // CodigoCol
-            // 
-            this.CodigoCol.DataPropertyName = "Codigo";
-            this.CodigoCol.HeaderText = "Codigo";
-            this.CodigoCol.Name = "CodigoCol";
-            this.CodigoCol.ReadOnly = true;
-            // 
-            // TipoPaqueteCol
-            // 
-            this.TipoPaqueteCol.HeaderText = "TipoPaquete";
-            this.TipoPaqueteCol.Name = "TipoPaqueteCol";
-            this.TipoPaqueteCol.ReadOnly = true;
-            // 
-            // AgenciaCol
-            // 
-            this.AgenciaCol.HeaderText = "Agencia";
-            this.AgenciaCol.Name = "AgenciaCol";
-            this.AgenciaCol.ReadOnly = true;
-            // 
-            // FechaCol
-            // 
-            this.FechaCol.DataPropertyName = "Fecha";
-            this.FechaCol.HeaderText = "Fecha";
-            this.FechaCol.Name = "FechaCol";
-            this.FechaCol.ReadOnly = true;
-            // 
-            // DniTuristaCol
-            // 
-            this.DniTuristaCol.DataPropertyName = "DniTurista";
-            this.DniTuristaCol.HeaderText = "Dni Turista";
-            this.DniTuristaCol.Name = "DniTuristaCol";
-            this.DniTuristaCol.ReadOnly = true;
-            // 
-            // NivelCol
-            // 
-            this.NivelCol.DataPropertyName = "Nivel";
-            this.NivelCol.HeaderText = "Nivel";
-            this.NivelCol.Name = "NivelCol";
-            this.NivelCol.ReadOnly = true;
-            // 
-            // DestinoCol
-            // 
-            this.DestinoCol.HeaderText = "Destino";
-            this.DestinoCol.Name = "DestinoCol";
-            this.DestinoCol.ReadOnly = true;
-            // 
             // TipoPaqueteChk
             // 
             this.TipoPaqueteChk.AutoSize = true;
@@ -177,6 +131,56 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
+            // CodigoCol
+            // 
+            this.CodigoCol.DataPropertyName = "Codigo";
+            this.CodigoCol.HeaderText = "Codigo";
+            this.CodigoCol.Name = "CodigoCol";
+            this.CodigoCol.ReadOnly = true;
+            this.CodigoCol.Width = 50;
+            // 
+            // TipoPaqueteCol
+            // 
+            this.TipoPaqueteCol.HeaderText = "TipoPaquete";
+            this.TipoPaqueteCol.Name = "TipoPaqueteCol";
+            this.TipoPaqueteCol.ReadOnly = true;
+            // 
+            // AgenciaCol
+            // 
+            this.AgenciaCol.HeaderText = "Agencia";
+            this.AgenciaCol.Name = "AgenciaCol";
+            this.AgenciaCol.ReadOnly = true;
+            // 
+            // FechaCol
+            // 
+            this.FechaCol.DataPropertyName = "Fecha";
+            this.FechaCol.HeaderText = "Fecha";
+            this.FechaCol.Name = "FechaCol";
+            this.FechaCol.ReadOnly = true;
+            // 
+            // DniTuristaCol
+            // 
+            this.DniTuristaCol.DataPropertyName = "DniTurista";
+            this.DniTuristaCol.HeaderText = "Dni Turista";
+            this.DniTuristaCol.Name = "DniTuristaCol";
+            this.DniTuristaCol.ReadOnly = true;
+            // 
+            // NivelCol
+            // 
+            this.NivelCol.DataPropertyName = "Nivel";
+            this.NivelCol.HeaderText = "Nivel";
+            this.NivelCol.Name = "NivelCol";
+            this.NivelCol.ReadOnly = true;
+            this.NivelCol.Width = 50;
+            // 
+            // DestinoCol
+            // 
+            this.DestinoCol.DataPropertyName = "Destino";
+            this.DestinoCol.HeaderText = "Destino";
+            this.DestinoCol.Name = "DestinoCol";
+            this.DestinoCol.ReadOnly = true;
+            this.DestinoCol.Width = 200;
+            // 
             // FrmListadoPaquetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +208,9 @@
         private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.DataGridView PaquetesGrd;
+        private System.Windows.Forms.CheckBox TipoPaqueteChk;
+        private System.Windows.Forms.ComboBox TipoPaqueteCbo;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPaqueteCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn AgenciaCol;
@@ -211,8 +218,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DniTuristaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NivelCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DestinoCol;
-        private System.Windows.Forms.CheckBox TipoPaqueteChk;
-        private System.Windows.Forms.ComboBox TipoPaqueteCbo;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -62,7 +62,7 @@
             // 
             // TipoActividadCbo
             // 
-            this.TipoActividadCbo.DisplayMember = "Descripcion";
+            this.TipoActividadCbo.DisplayMember = "Nombre";
             this.TipoActividadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoActividadCbo.FormattingEnabled = true;
             this.TipoActividadCbo.Location = new System.Drawing.Point(88, 115);

@@ -72,12 +72,10 @@ namespace TurApp.Views
         // Notificara al Invocador que recargue algun cambio de datos.
         public void ShowModificarAgencia(FormBase Invoker, Agencia Pac_modif)
         {
-            LocalidadCbo.Enabled = false;
             ShowInfoAgenciaInForm(Pac_modif, Invoker);
         }
         public void ShowModificarAgencia(Agencia Pac_modif)
         {
-            LocalidadCbo.Enabled = false;
             ShowInfoAgenciaInForm(Pac_modif, null);
         }
         private void CancelarBtn_Click(object sender, EventArgs e)

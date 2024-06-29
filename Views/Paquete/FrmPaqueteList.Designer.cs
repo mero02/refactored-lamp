@@ -83,6 +83,7 @@
             this.CodigoCol.HeaderText = "Codigo";
             this.CodigoCol.Name = "CodigoCol";
             this.CodigoCol.ReadOnly = true;
+            this.CodigoCol.Width = 50;
             // 
             // TipoPaqueteCol
             // 
@@ -116,13 +117,14 @@
             this.NivelCol.HeaderText = "Nivel";
             this.NivelCol.Name = "NivelCol";
             this.NivelCol.ReadOnly = true;
+            this.NivelCol.Width = 50;
             // 
             // DestinoCol
             // 
             this.DestinoCol.HeaderText = "Destino";
             this.DestinoCol.Name = "DestinoCol";
             this.DestinoCol.ReadOnly = true;
-            this.DestinoCol.Width = 150;
+            this.DestinoCol.Width = 200;
             // 
             // FrmPaqueteList
             // 

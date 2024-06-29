@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.TuristasGrd = new System.Windows.Forms.DataGridView();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaisCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ApellidoTxt = new System.Windows.Forms.TextBox();
             this.NombreChk = new System.Windows.Forms.CheckBox();
@@ -40,6 +37,12 @@
             this.PaisCbo = new System.Windows.Forms.ComboBox();
             this.PaisChk = new System.Windows.Forms.CheckBox();
             this.ExportarBtn = new System.Windows.Forms.Button();
+            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaisCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ObsCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,7 +56,10 @@
             this.TuristasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DniCol,
             this.NombreCol,
-            this.PaisCol});
+            this.PaisCol,
+            this.DomCol,
+            this.TelCol,
+            this.ObsCol});
             this.TuristasGrd.Location = new System.Drawing.Point(9, 69);
             this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TuristasGrd.MultiSelect = false;
@@ -68,28 +74,6 @@
             this.TuristasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TuristasGrd_ColumnHeaderMouseClick);
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
             this.TuristasGrd.DoubleClick += new System.EventHandler(this.TuristasGrd_DoubleClick);
-            // 
-            // DniCol
-            // 
-            this.DniCol.DataPropertyName = "NroDocumento";
-            this.DniCol.HeaderText = "Dni";
-            this.DniCol.Name = "DniCol";
-            this.DniCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.DataPropertyName = "Nombres";
-            this.NombreCol.HeaderText = "Nombres";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
-            // 
-            // PaisCol
-            // 
-            this.PaisCol.DataPropertyName = "Pais";
-            this.PaisCol.HeaderText = "Pais";
-            this.PaisCol.Name = "PaisCol";
-            this.PaisCol.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -182,6 +166,51 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
+            // DniCol
+            // 
+            this.DniCol.DataPropertyName = "NroDocumento";
+            this.DniCol.HeaderText = "Dni";
+            this.DniCol.Name = "DniCol";
+            this.DniCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.DataPropertyName = "Nombres";
+            this.NombreCol.HeaderText = "Nombres";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 150;
+            // 
+            // PaisCol
+            // 
+            this.PaisCol.DataPropertyName = "Pais";
+            this.PaisCol.HeaderText = "Pais";
+            this.PaisCol.Name = "PaisCol";
+            this.PaisCol.ReadOnly = true;
+            this.PaisCol.Width = 80;
+            // 
+            // DomCol
+            // 
+            this.DomCol.DataPropertyName = "Domicilio";
+            this.DomCol.HeaderText = "Domicilo";
+            this.DomCol.Name = "DomCol";
+            this.DomCol.ReadOnly = true;
+            // 
+            // TelCol
+            // 
+            this.TelCol.DataPropertyName = "Telefono";
+            this.TelCol.HeaderText = "Telefono";
+            this.TelCol.Name = "TelCol";
+            this.TelCol.ReadOnly = true;
+            // 
+            // ObsCol
+            // 
+            this.ObsCol.DataPropertyName = "Observaciones";
+            this.ObsCol.HeaderText = "Observaciones";
+            this.ObsCol.Name = "ObsCol";
+            this.ObsCol.ReadOnly = true;
+            this.ObsCol.Width = 250;
+            // 
             // FrmListadoTuristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,9 +247,12 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox PaisCbo;
         private System.Windows.Forms.CheckBox PaisChk;
+        private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaisCol;
-        private System.Windows.Forms.Button ExportarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DomCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObsCol;
     }
 }

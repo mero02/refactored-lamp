@@ -35,13 +35,15 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel1Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel2Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AgenciasGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(488, 295);
+            this.CerrarBtn.Location = new System.Drawing.Point(606, 300);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
@@ -57,7 +59,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(554, 266);
+            this.groupBox1.Size = new System.Drawing.Size(684, 266);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -74,7 +76,9 @@
             this.AgenciasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Domicilio,
-            this.Localidad});
+            this.Localidad,
+            this.Tel1Col,
+            this.Tel2Col});
             this.AgenciasGrd.Location = new System.Drawing.Point(4, 17);
             this.AgenciasGrd.Margin = new System.Windows.Forms.Padding(2);
             this.AgenciasGrd.MultiSelect = false;
@@ -82,7 +86,7 @@
             this.AgenciasGrd.ReadOnly = true;
             this.AgenciasGrd.RowTemplate.Height = 24;
             this.AgenciasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AgenciasGrd.Size = new System.Drawing.Size(520, 237);
+            this.AgenciasGrd.Size = new System.Drawing.Size(666, 237);
             this.AgenciasGrd.TabIndex = 0;
             this.AgenciasGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.AgenciasGrd_ColumnHeaderMouseClick);
             this.AgenciasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciasGrd_DataBindingComplete);
@@ -113,12 +117,26 @@
             this.Localidad.ReadOnly = true;
             this.Localidad.Width = 140;
             // 
+            // Tel1Col
+            // 
+            this.Tel1Col.DataPropertyName = "Telefono1";
+            this.Tel1Col.HeaderText = "Telefono 1";
+            this.Tel1Col.Name = "Tel1Col";
+            this.Tel1Col.ReadOnly = true;
+            // 
+            // Tel2Col
+            // 
+            this.Tel2Col.DataPropertyName = "Telefono2";
+            this.Tel2Col.HeaderText = "Telefono 2";
+            this.Tel2Col.Name = "Tel2Col";
+            this.Tel2Col.ReadOnly = true;
+            // 
             // FrmAgenciaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(586, 338);
+            this.ClientSize = new System.Drawing.Size(704, 338);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -141,5 +159,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Domicilio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Localidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel1Col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel2Col;
     }
 }

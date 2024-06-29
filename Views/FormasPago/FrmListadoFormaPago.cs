@@ -27,7 +27,7 @@ namespace TurApp.Views
         {
             this.FormaPagoGrd.AutoGenerateColumns = false;
            // this.FormaPagoGrd.DataSource = FormaPago.FindAllStatic(null, (p1, p2) => (p1.Forma).CompareTo(p2.Forma));
-            var Formas = FormaPago.FindAllStatic(null, (p1, p2) => p1.Forma.CompareTo(p2.Forma));
+            var Formas = FormaPago.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var FormasBindingList = new BindingList<FormaPago>(Formas);
             var FormasBindingSource = new BindingSource(FormasBindingList, null);
             this.FormaPagoGrd.DataSource = FormasBindingSource;

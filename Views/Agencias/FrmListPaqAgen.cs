@@ -55,7 +55,7 @@ namespace TurApp.Views
                     item.Cells[0].Value = (item.DataBoundItem as Paquete).Codigo;
                     item.Cells[1].Value = (item.DataBoundItem as Paquete).TipoPaqueteObj.Nombre;
                     item.Cells[2].Value = (item.DataBoundItem as Paquete).AgenciaObj.Nombre;
-                    item.Cells[6].Value = (item.DataBoundItem as Paquete).CodDestino;
+                    item.Cells[6].Value = (item.DataBoundItem as Paquete).DestinoObj.Nombre;
                 }
             }
             finally

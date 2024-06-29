@@ -22,8 +22,7 @@ namespace TurApp.Views
         private void FrmListadoTipoActividad_Load(object sender, EventArgs e)
         {
             this.TipoActividadGrd.AutoGenerateColumns = false;
-            // this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic(null, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
-            var TipoActividades = TipoActividad.FindAllStatic(null, (p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
+            var TipoActividades = TipoActividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var TipoActividadesBindingList = new BindingList<TipoActividad>(TipoActividades);
             var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
             this.TipoActividadGrd.DataSource = TipoActividadesBindingSource;
