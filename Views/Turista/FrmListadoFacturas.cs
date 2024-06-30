@@ -33,6 +33,7 @@ namespace TurApp.Views
             var bindingList = new BindingList<FacturaTurista>(lista);
             var source = new BindingSource(bindingList, null);
             this.FacturasGrd.DataSource = source;
+            Invoker.Close();
             this.MdiParent = MainView.Instance;
             this.Show();
         }
