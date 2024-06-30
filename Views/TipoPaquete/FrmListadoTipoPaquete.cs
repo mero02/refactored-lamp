@@ -78,6 +78,7 @@ namespace TurApp.Views
         {
             FrmTipoPaqueteAM frmpac = new FrmTipoPaqueteAM();
             TipoPaquete pac = (this.TipoPaquetesGrd.SelectedRows[0].DataBoundItem as TipoPaquete);
+            frmpac.Modificacion(pac);
             frmpac.ShowModificarTipoPaquete(pac);
         }
 

@@ -16,6 +16,7 @@ namespace TurApp.db
         private string _descripcion;
         private string _duracion;
         private int _nivel;
+        private List<TipoActividad> listaActividades = new List<TipoActividad>();
         
         #endregion
 
@@ -54,6 +55,12 @@ namespace TurApp.db
         {
             get { return _nivel; }
             set { _nivel = value; }
+        }
+
+        public List<TipoActividad> ListaActividades
+        {
+            get { return listaActividades; }
+            set { listaActividades = value; }
         }
         #endregion        
     }

@@ -23,12 +23,16 @@ namespace TurApp.Views
         public FrmTipoPaqueteAM()
         {
             InitializeComponent();
-            Modificacion();
         }
 
-        public void Modificacion()
+        public void Modificacion(TipoPaquete pac)
         {
+            BindingList<TipoActividad> bindingListActividades = new BindingList<TipoActividad>(pac.ListaActividades);
 
+            tiposActividades = bindingListActividades;
+
+            ActividadesAgregadasGrd.DataSource = null;
+            ActividadesAgregadasGrd.DataSource = tiposActividades;
         }
 
         private void FrmTipoPaqueteAM_Load(object sender, EventArgs e)
