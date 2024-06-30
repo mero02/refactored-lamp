@@ -29,7 +29,6 @@ namespace TurApp.Views
             var bindingList = new BindingList<Actividad>(listaActividades);
             var source = new BindingSource(bindingList, null);
             this.ActividadesGrd.DataSource = source;
-            InvokerForm.Close();
             this.MdiParent = MainView.Instance;
             this.Show();
         }

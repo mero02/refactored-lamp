@@ -36,19 +36,21 @@
             this.DescripcionTxt = new System.Windows.Forms.TextBox();
             this.DescripcionLbl = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
-            this.ActividadesGrupBox = new System.Windows.Forms.GroupBox();
-            this.QuitarBtn = new System.Windows.Forms.Button();
-            this.AgregarBtn = new System.Windows.Forms.Button();
-            this.ActividadesGrd = new System.Windows.Forms.DataGridView();
-            this.CodActCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.DuracionTime = new System.Windows.Forms.DateTimePicker();
+            this.ActividadesGrd = new System.Windows.Forms.DataGridView();
+            this.AgregarBtn = new System.Windows.Forms.Button();
+            this.QuitarBtn = new System.Windows.Forms.Button();
+            this.ActividadesGrupBox = new System.Windows.Forms.GroupBox();
             this.ActividadesAgregadasGrd = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActividadesGrupBox.SuspendLayout();
+            this.CodActCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DuracionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
+            this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,70 +137,6 @@
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
-            // ActividadesGrupBox
-            // 
-            this.ActividadesGrupBox.Controls.Add(this.ActividadesAgregadasGrd);
-            this.ActividadesGrupBox.Controls.Add(this.QuitarBtn);
-            this.ActividadesGrupBox.Controls.Add(this.AgregarBtn);
-            this.ActividadesGrupBox.Controls.Add(this.ActividadesGrd);
-            this.ActividadesGrupBox.Location = new System.Drawing.Point(353, 5);
-            this.ActividadesGrupBox.Name = "ActividadesGrupBox";
-            this.ActividadesGrupBox.Size = new System.Drawing.Size(452, 521);
-            this.ActividadesGrupBox.TabIndex = 27;
-            this.ActividadesGrupBox.TabStop = false;
-            this.ActividadesGrupBox.Text = "Actividades";
-            // 
-            // QuitarBtn
-            // 
-            this.QuitarBtn.Location = new System.Drawing.Point(233, 262);
-            this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.QuitarBtn.Name = "QuitarBtn";
-            this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
-            this.QuitarBtn.TabIndex = 11;
-            this.QuitarBtn.Text = "&Quitar";
-            this.QuitarBtn.UseVisualStyleBackColor = true;
-            this.QuitarBtn.Click += new System.EventHandler(this.QuitarBtn_Click);
-            // 
-            // AgregarBtn
-            // 
-            this.AgregarBtn.Location = new System.Drawing.Point(123, 262);
-            this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AgregarBtn.Name = "AgregarBtn";
-            this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
-            this.AgregarBtn.TabIndex = 10;
-            this.AgregarBtn.Text = "&Agregar";
-            this.AgregarBtn.UseVisualStyleBackColor = true;
-            this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
-            // 
-            // ActividadesGrd
-            // 
-            this.ActividadesGrd.AllowUserToAddRows = false;
-            this.ActividadesGrd.AllowUserToDeleteRows = false;
-            this.ActividadesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ActividadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodActCol,
-            this.NombreActividadCol});
-            this.ActividadesGrd.Location = new System.Drawing.Point(17, 26);
-            this.ActividadesGrd.MultiSelect = false;
-            this.ActividadesGrd.Name = "ActividadesGrd";
-            this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ActividadesGrd.Size = new System.Drawing.Size(397, 216);
-            this.ActividadesGrd.TabIndex = 9;
-            this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadedsGrd_DataBindingComplete);
-            // 
-            // CodActCol
-            // 
-            this.CodActCol.DataPropertyName = "Codigo";
-            this.CodActCol.HeaderText = "Codigo";
-            this.CodActCol.Name = "CodActCol";
-            // 
-            // NombreActividadCol
-            // 
-            this.NombreActividadCol.DataPropertyName = "Nombre";
-            this.NombreActividadCol.HeaderText = "Nombre Actividad";
-            this.NombreActividadCol.Name = "NombreActividadCol";
-            this.NombreActividadCol.Width = 250;
-            // 
             // GuardarBtn
             // 
             this.GuardarBtn.Location = new System.Drawing.Point(99, 437);
@@ -219,6 +157,59 @@
             this.DuracionTime.TabIndex = 28;
             this.DuracionTime.Tag = "Duracion";
             // 
+            // ActividadesGrd
+            // 
+            this.ActividadesGrd.AllowUserToAddRows = false;
+            this.ActividadesGrd.AllowUserToDeleteRows = false;
+            this.ActividadesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ActividadesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CodActCol,
+            this.NombreActividadCol,
+            this.DuracionCol,
+            this.NivelCol});
+            this.ActividadesGrd.Location = new System.Drawing.Point(17, 26);
+            this.ActividadesGrd.MultiSelect = false;
+            this.ActividadesGrd.Name = "ActividadesGrd";
+            this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ActividadesGrd.Size = new System.Drawing.Size(463, 216);
+            this.ActividadesGrd.TabIndex = 9;
+            this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.ActividadedsGrd_DataBindingComplete);
+            // 
+            // AgregarBtn
+            // 
+            this.AgregarBtn.Location = new System.Drawing.Point(123, 262);
+            this.AgregarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AgregarBtn.Name = "AgregarBtn";
+            this.AgregarBtn.Size = new System.Drawing.Size(59, 27);
+            this.AgregarBtn.TabIndex = 10;
+            this.AgregarBtn.Text = "&Agregar";
+            this.AgregarBtn.UseVisualStyleBackColor = true;
+            this.AgregarBtn.Click += new System.EventHandler(this.AgregarBtn_Click);
+            // 
+            // QuitarBtn
+            // 
+            this.QuitarBtn.Location = new System.Drawing.Point(233, 262);
+            this.QuitarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.QuitarBtn.Name = "QuitarBtn";
+            this.QuitarBtn.Size = new System.Drawing.Size(59, 27);
+            this.QuitarBtn.TabIndex = 11;
+            this.QuitarBtn.Text = "&Quitar";
+            this.QuitarBtn.UseVisualStyleBackColor = true;
+            this.QuitarBtn.Click += new System.EventHandler(this.QuitarBtn_Click);
+            // 
+            // ActividadesGrupBox
+            // 
+            this.ActividadesGrupBox.Controls.Add(this.ActividadesAgregadasGrd);
+            this.ActividadesGrupBox.Controls.Add(this.QuitarBtn);
+            this.ActividadesGrupBox.Controls.Add(this.AgregarBtn);
+            this.ActividadesGrupBox.Controls.Add(this.ActividadesGrd);
+            this.ActividadesGrupBox.Location = new System.Drawing.Point(353, 5);
+            this.ActividadesGrupBox.Name = "ActividadesGrupBox";
+            this.ActividadesGrupBox.Size = new System.Drawing.Size(495, 521);
+            this.ActividadesGrupBox.TabIndex = 27;
+            this.ActividadesGrupBox.TabStop = false;
+            this.ActividadesGrupBox.Text = "Actividades";
+            // 
             // ActividadesAgregadasGrd
             // 
             this.ActividadesAgregadasGrd.AllowUserToAddRows = false;
@@ -230,8 +221,9 @@
             this.ActividadesAgregadasGrd.Location = new System.Drawing.Point(17, 299);
             this.ActividadesAgregadasGrd.MultiSelect = false;
             this.ActividadesAgregadasGrd.Name = "ActividadesAgregadasGrd";
+            this.ActividadesAgregadasGrd.ReadOnly = true;
             this.ActividadesAgregadasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ActividadesAgregadasGrd.Size = new System.Drawing.Size(397, 216);
+            this.ActividadesAgregadasGrd.Size = new System.Drawing.Size(394, 216);
             this.ActividadesAgregadasGrd.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -239,20 +231,47 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Codigo";
             this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Actividad";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 250;
+            // 
+            // CodActCol
+            // 
+            this.CodActCol.DataPropertyName = "Codigo";
+            this.CodActCol.HeaderText = "Codigo";
+            this.CodActCol.Name = "CodActCol";
+            // 
+            // NombreActividadCol
+            // 
+            this.NombreActividadCol.DataPropertyName = "Nombre";
+            this.NombreActividadCol.HeaderText = "Nombre Actividad";
+            this.NombreActividadCol.Name = "NombreActividadCol";
+            this.NombreActividadCol.Width = 120;
+            // 
+            // DuracionCol
+            // 
+            this.DuracionCol.DataPropertyName = "Duracion";
+            this.DuracionCol.HeaderText = "Duracion";
+            this.DuracionCol.Name = "DuracionCol";
+            // 
+            // NivelCol
+            // 
+            this.NivelCol.DataPropertyName = "Nivel";
+            this.NivelCol.HeaderText = "Nivel";
+            this.NivelCol.Name = "NivelCol";
             // 
             // FrmTipoPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(836, 538);
+            this.ClientSize = new System.Drawing.Size(869, 538);
             this.Controls.Add(this.DuracionTime);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.ActividadesGrupBox);
@@ -271,8 +290,8 @@
             this.Text = "Ingreso Tipo Paquete";
             this.Deactivate += new System.EventHandler(this.FrmTipoPaqueteAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);
-            this.ActividadesGrupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
+            this.ActividadesGrupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,16 +308,18 @@
         private System.Windows.Forms.TextBox DescripcionTxt;
         private System.Windows.Forms.Label DescripcionLbl;
         private System.Windows.Forms.Button CancelarBtn;
-        private System.Windows.Forms.GroupBox ActividadesGrupBox;
-        private System.Windows.Forms.DataGridView ActividadesGrd;
-        private System.Windows.Forms.Button QuitarBtn;
-        private System.Windows.Forms.Button AgregarBtn;
         private System.Windows.Forms.Button GuardarBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodActCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreActividadCol;
         private System.Windows.Forms.DateTimePicker DuracionTime;
+        private System.Windows.Forms.DataGridView ActividadesGrd;
+        private System.Windows.Forms.Button AgregarBtn;
+        private System.Windows.Forms.Button QuitarBtn;
+        private System.Windows.Forms.GroupBox ActividadesGrupBox;
         private System.Windows.Forms.DataGridView ActividadesAgregadasGrd;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodActCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreActividadCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DuracionCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NivelCol;
     }
 }
