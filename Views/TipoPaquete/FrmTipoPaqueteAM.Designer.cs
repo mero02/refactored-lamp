@@ -36,7 +36,7 @@
             this.DescripcionTxt = new System.Windows.Forms.TextBox();
             this.DescripcionLbl = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+
             this.ActividadesGrupBox = new System.Windows.Forms.GroupBox();
             this.ActividadesAgregadasGrd = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.DuracionTime = new System.Windows.Forms.DateTimePicker();
-=======
+
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.DuracionTime = new System.Windows.Forms.DateTimePicker();
             this.ActividadesGrd = new System.Windows.Forms.DataGridView();
@@ -63,7 +63,7 @@
             this.DuracionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NivelCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
->>>>>>> 7c8ca9d2f64144da9693c7d107d5ca4ea09a1736
+
             this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
@@ -152,7 +152,7 @@
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
-<<<<<<< HEAD
+
             // ActividadesGrupBox
             // 
             this.ActividadesGrupBox.Controls.Add(this.ActividadesAgregadasGrd);
@@ -251,8 +251,7 @@
             this.NombreActividadCol.ReadOnly = true;
             this.NombreActividadCol.Width = 250;
             // 
-=======
->>>>>>> 7c8ca9d2f64144da9693c7d107d5ca4ea09a1736
+
             // GuardarBtn
             // 
             this.GuardarBtn.Location = new System.Drawing.Point(99, 437);
@@ -273,8 +272,7 @@
             this.DuracionTime.TabIndex = 28;
             this.DuracionTime.Tag = "Duracion";
             // 
-<<<<<<< HEAD
-=======
+
             // ActividadesGrd
             // 
             this.ActividadesGrd.AllowUserToAddRows = false;
@@ -384,7 +382,7 @@
             this.NivelCol.HeaderText = "Nivel";
             this.NivelCol.Name = "NivelCol";
             // 
->>>>>>> 7c8ca9d2f64144da9693c7d107d5ca4ea09a1736
+
             // FrmTipoPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,10 +407,9 @@
             this.Text = "Ingreso Tipo Paquete";
             this.Deactivate += new System.EventHandler(this.FrmTipoPaqueteAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);
-<<<<<<< HEAD
-=======
+
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
->>>>>>> 7c8ca9d2f64144da9693c7d107d5ca4ea09a1736
+
             this.ActividadesGrupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
