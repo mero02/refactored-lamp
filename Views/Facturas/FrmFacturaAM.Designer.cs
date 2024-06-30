@@ -30,8 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LetraCbo = new System.Windows.Forms.ComboBox();
-            this.Detalle = new System.Windows.Forms.GroupBox();
-            this.DetallePagoTxt = new System.Windows.Forms.TextBox();
             this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
             this.FechaFacturaTime = new System.Windows.Forms.DateTimePicker();
             this.FormaPagolbl = new System.Windows.Forms.Label();
@@ -56,8 +54,8 @@
             this.CodPaqCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAgenciaCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImporteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DetallePagoTxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.Detalle.SuspendLayout();
             this.PaquetesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
@@ -65,8 +63,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DetallePagoTxt);
             this.groupBox1.Controls.Add(this.LetraCbo);
-            this.groupBox1.Controls.Add(this.Detalle);
             this.groupBox1.Controls.Add(this.FormaPagoCbo);
             this.groupBox1.Controls.Add(this.FechaFacturaTime);
             this.groupBox1.Controls.Add(this.FormaPagolbl);
@@ -96,26 +94,6 @@
             this.LetraCbo.Size = new System.Drawing.Size(80, 21);
             this.LetraCbo.TabIndex = 30;
             this.LetraCbo.Tag = "Letra";
-            // 
-            // Detalle
-            // 
-            this.Detalle.Controls.Add(this.DetallePagoTxt);
-            this.Detalle.Location = new System.Drawing.Point(5, 222);
-            this.Detalle.Name = "Detalle";
-            this.Detalle.Size = new System.Drawing.Size(305, 104);
-            this.Detalle.TabIndex = 29;
-            this.Detalle.TabStop = false;
-            this.Detalle.Text = "Detalle";
-            // 
-            // DetallePagoTxt
-            // 
-            this.DetallePagoTxt.Location = new System.Drawing.Point(19, 15);
-            this.DetallePagoTxt.MaxLength = 90;
-            this.DetallePagoTxt.Multiline = true;
-            this.DetallePagoTxt.Name = "DetallePagoTxt";
-            this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
-            this.DetallePagoTxt.TabIndex = 13;
-            this.DetallePagoTxt.Tag = "DetallePago";
             // 
             // FormaPagoCbo
             // 
@@ -366,6 +344,16 @@
             this.ImporteCol.HeaderText = "Importe";
             this.ImporteCol.Name = "ImporteCol";
             // 
+            // DetallePagoTxt
+            // 
+            this.DetallePagoTxt.Location = new System.Drawing.Point(13, 231);
+            this.DetallePagoTxt.MaxLength = 90;
+            this.DetallePagoTxt.Multiline = true;
+            this.DetallePagoTxt.Name = "DetallePagoTxt";
+            this.DetallePagoTxt.Size = new System.Drawing.Size(268, 83);
+            this.DetallePagoTxt.TabIndex = 31;
+            this.DetallePagoTxt.Tag = "DetallePago";
+            // 
             // FrmFacturaAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,8 +373,6 @@
             this.Load += new System.EventHandler(this.FrmFacturaAM_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.Detalle.ResumeLayout(false);
-            this.Detalle.PerformLayout();
             this.PaquetesGrupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DetallesGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
@@ -407,7 +393,6 @@
         private System.Windows.Forms.Label SerieLbl;
         private System.Windows.Forms.DateTimePicker FechaFacturaTime;
         private System.Windows.Forms.Label FormaPagolbl;
-        private System.Windows.Forms.TextBox DetallePagoTxt;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
         private System.Windows.Forms.ComboBox FormaPagoCbo;
@@ -422,7 +407,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NroCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImpCol;
-        private System.Windows.Forms.GroupBox Detalle;
         private System.Windows.Forms.ComboBox LetraCbo;
+        private System.Windows.Forms.TextBox DetallePagoTxt;
     }
 }
