@@ -117,7 +117,7 @@
             this.FormaPagoCbo.Size = new System.Drawing.Size(157, 21);
             this.FormaPagoCbo.TabIndex = 12;
             this.FormaPagoCbo.Tag = "CodFormaPago";
-            this.FormaPagoCbo.ValueMember = "Id";
+            this.FormaPagoCbo.ValueMember = "Codigo";
             this.FormaPagoCbo.SelectedIndexChanged += new System.EventHandler(this.FormaPagoCbo_SelectedIndexChanged);
             // 
             // FechaFacturaTime
@@ -163,7 +163,7 @@
             // 
             // DniTuristaCbo
             // 
-            this.DniTuristaCbo.DisplayMember = "NroDocumento";
+            this.DniTuristaCbo.DisplayMember = "Nombre";
             this.DniTuristaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DniTuristaCbo.FormattingEnabled = true;
             this.DniTuristaCbo.Location = new System.Drawing.Point(74, 150);
