@@ -49,6 +49,7 @@ namespace TurApp.Views
             {
                 MainView.Instance.Cursor = Cursors.WaitCursor;
                 FrmTipoPaqueteAM frm = new FrmTipoPaqueteAM();
+                frm.Modificacion(this.TipoPaquetesGrd.SelectedRows[0].DataBoundItem as TipoPaquete);
                 frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
                 frm.ShowModificarTipoPaquete(this, (this.TipoPaquetesGrd.SelectedRows[0].DataBoundItem as TipoPaquete));
             }

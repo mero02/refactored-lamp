@@ -23,14 +23,23 @@ namespace TurApp.Views
         public FrmTipoPaqueteAM()
         {
             InitializeComponent();
+            ActividadesAgregadasGrd.Enabled = false;
         }
 
         public void Modificacion(TipoPaquete pac)
         {
-            BindingList<TipoActividad> bindingListActividades = new BindingList<TipoActividad>(pac.ListaActividades);
-
-            tiposActividades = bindingListActividades;
-
+            var Actividades = TipoPaqueteTipoActividad.FindAllStatic(null, (p1, p2) => p1.CodTipoPaquete.CompareTo(p2.CodTipoPaquete));
+           
+            foreach (TipoPaqueteTipoActividad itm in Actividades)
+            {
+                TipoActividad tipoAct = new TipoActividad();
+                if (pac.Codigo == itm.CodTipoPaquete)
+                {
+                    tipoAct.FindbyKey(itm.CodTipoActividad);
+                    tiposActividades.Add(tipoAct);
+                }
+            }
+            this.ActividadesAgregadasGrd.AutoGenerateColumns = false;
             ActividadesAgregadasGrd.DataSource = null;
             ActividadesAgregadasGrd.DataSource = tiposActividades;
         }
@@ -214,6 +223,18 @@ namespace TurApp.Views
                     DataGridViewRow item = this.ActividadesGrd.Rows[i];
                     item.Cells[0].Value = (item.DataBoundItem as TipoActividad).Codigo;
                     item.Cells[1].Value = (item.DataBoundItem as TipoActividad).Nombre;
+
+                    string duracionString = (item.DataBoundItem as TipoActividad).Duracion;
+
+                    DateTime duracion;
+                    if (DateTime.TryParse(duracionString, out duracion))
+                    {
+                        item.Cells[2].Value = duracion.ToString("HH:mm");
+                    }
+                    else
+                    {
+                        item.Cells[2].Value = duracionString;
+                    }
                 }
             }
             finally

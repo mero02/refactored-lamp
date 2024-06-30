@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LetraCbo = new System.Windows.Forms.ComboBox();
             this.Detalle = new System.Windows.Forms.GroupBox();
             this.DetallePagoTxt = new System.Windows.Forms.TextBox();
             this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,6 @@
             this.DniTuristaCbo = new System.Windows.Forms.ComboBox();
             this.DniTuristaLbl = new System.Windows.Forms.Label();
             this.FechaLbl = new System.Windows.Forms.Label();
-            this.LetraTxt = new System.Windows.Forms.TextBox();
             this.LetraLbl = new System.Windows.Forms.Label();
             this.SerieTxt = new System.Windows.Forms.TextBox();
             this.SerieLbl = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LetraCbo);
             this.groupBox1.Controls.Add(this.Detalle);
             this.groupBox1.Controls.Add(this.FormaPagoCbo);
             this.groupBox1.Controls.Add(this.FechaFacturaTime);
@@ -74,7 +75,6 @@
             this.groupBox1.Controls.Add(this.DniTuristaCbo);
             this.groupBox1.Controls.Add(this.DniTuristaLbl);
             this.groupBox1.Controls.Add(this.FechaLbl);
-            this.groupBox1.Controls.Add(this.LetraTxt);
             this.groupBox1.Controls.Add(this.LetraLbl);
             this.groupBox1.Controls.Add(this.SerieTxt);
             this.groupBox1.Controls.Add(this.SerieLbl);
@@ -85,6 +85,17 @@
             this.groupBox1.Size = new System.Drawing.Size(292, 319);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // LetraCbo
+            // 
+            this.LetraCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LetraCbo.FormattingEnabled = true;
+            this.LetraCbo.Location = new System.Drawing.Point(74, 86);
+            this.LetraCbo.Margin = new System.Windows.Forms.Padding(2);
+            this.LetraCbo.Name = "LetraCbo";
+            this.LetraCbo.Size = new System.Drawing.Size(80, 21);
+            this.LetraCbo.TabIndex = 30;
+            this.LetraCbo.Tag = "Letra";
             // 
             // Detalle
             // 
@@ -194,17 +205,6 @@
             this.FechaLbl.Size = new System.Drawing.Size(37, 13);
             this.FechaLbl.TabIndex = 7;
             this.FechaLbl.Text = "&Fecha";
-            // 
-            // LetraTxt
-            // 
-            this.LetraTxt.Location = new System.Drawing.Point(74, 86);
-            this.LetraTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.LetraTxt.MaxLength = 1;
-            this.LetraTxt.Name = "LetraTxt";
-            this.LetraTxt.Size = new System.Drawing.Size(166, 20);
-            this.LetraTxt.TabIndex = 6;
-            this.LetraTxt.Tag = "Letra";
-            this.LetraTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LetraTxt_KeyPress);
             // 
             // LetraLbl
             // 
@@ -402,7 +402,6 @@
         private System.Windows.Forms.ComboBox DniTuristaCbo;
         private System.Windows.Forms.Label DniTuristaLbl;
         private System.Windows.Forms.Label FechaLbl;
-        private System.Windows.Forms.TextBox LetraTxt;
         private System.Windows.Forms.Label LetraLbl;
         private System.Windows.Forms.TextBox SerieTxt;
         private System.Windows.Forms.Label SerieLbl;
@@ -424,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImpCol;
         private System.Windows.Forms.GroupBox Detalle;
+        private System.Windows.Forms.ComboBox LetraCbo;
     }
 }

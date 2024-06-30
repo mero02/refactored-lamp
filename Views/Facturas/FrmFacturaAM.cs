@@ -50,6 +50,17 @@ namespace TurApp.Views
             this.DetallesGrd.DataSource = detallesFactura;
             DetallesGrd.Enabled = false;
 
+            // Limpiar cualquier elemento existente
+            LetraCbo.Items.Clear();
+
+            // Agregar elementos al ComboBox
+            LetraCbo.Items.Add("A");
+            LetraCbo.Items.Add("B");
+            LetraCbo.Items.Add("C");
+
+            // Opcional: Seleccionar el primer elemento por defecto
+            LetraCbo.SelectedIndex = 0;
+
             FechaFacturaTime.Format = DateTimePickerFormat.Custom;
             FechaFacturaTime.CustomFormat = "yyyy-MM-dd";
             GuardarBtn.Enabled = false;
@@ -284,10 +295,10 @@ namespace TurApp.Views
                 return;
             }
 
-            if (string.IsNullOrEmpty(LetraTxt.Text))
+            if (LetraCbo.SelectedItem == null || string.IsNullOrEmpty(LetraCbo.SelectedItem.ToString()))
             {
-                MessageBox.Show("Ingrese una letra válida", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LetraTxt.Focus();
+                MessageBox.Show("Ingrese una Letra", "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LetraCbo.Focus();
                 return;
             }
 
@@ -318,7 +329,7 @@ namespace TurApp.Views
             {
                 NroFactura = nroFactura,
                 SerieFactura = serieFactura,
-                LetraFactura = LetraTxt.Text,
+                LetraFactura = LetraCbo.SelectedItem.ToString(),
                 NroRenglon = renglon,
                 CodPaquete = paquete.Codigo,
                 Importe = getImporte(paquete.Codigo)
