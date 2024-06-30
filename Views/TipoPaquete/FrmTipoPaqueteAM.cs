@@ -15,6 +15,7 @@ namespace TurApp.Views
     public partial class FrmTipoPaqueteAM : FormBase
     {
         private BindingList<TipoActividad> tiposActividades = new BindingList<TipoActividad>();
+        
         public override event FormEvent DoCompleteOperationForm;
         private TipoPaquete _Tipo_Paquete_modif = null;
         private string TipoPaqueteLog = "";
@@ -22,19 +23,25 @@ namespace TurApp.Views
         public FrmTipoPaqueteAM()
         {
             InitializeComponent();
-            ActividadesAgregadasGrd.DataSource = tiposActividades;
-            ActividadesAgregadasGrd.AllowUserToAddRows = false;
+            Modificacion();
+        }
+
+        public void Modificacion()
+        {
+
         }
 
         private void FrmTipoPaqueteAM_Load(object sender, EventArgs e)
         {
-            this.GuardarBtn.Enabled = true;
+            
             this.ActividadesGrd.AutoGenerateColumns = false;
             this.ActividadesAgregadasGrd.AutoGenerateColumns = false;
+            
             var TipoActividades = TipoActividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var TipoActividadesBindingList = new BindingList<TipoActividad>(TipoActividades);
             var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
             this.ActividadesGrd.DataSource = TipoActividadesBindingSource;
+
             GuardarBtn.Enabled = false;
 
             DuracionTime.Format = DateTimePickerFormat.Custom;
@@ -203,7 +210,6 @@ namespace TurApp.Views
                     DataGridViewRow item = this.ActividadesGrd.Rows[i];
                     item.Cells[0].Value = (item.DataBoundItem as TipoActividad).Codigo;
                     item.Cells[1].Value = (item.DataBoundItem as TipoActividad).Nombre;
-
                 }
             }
             finally
