@@ -175,7 +175,7 @@
             this.CodDestinoCbo.Size = new System.Drawing.Size(157, 21);
             this.CodDestinoCbo.TabIndex = 12;
             this.CodDestinoCbo.Tag = "CodDestino";
-            this.CodDestinoCbo.ValueMember = "Id";
+            this.CodDestinoCbo.ValueMember = "Codigo";
             // 
             // DniTuristaCbo
             // 
@@ -201,7 +201,7 @@
             this.AgenciaCbo.Size = new System.Drawing.Size(151, 21);
             this.AgenciaCbo.TabIndex = 4;
             this.AgenciaCbo.Tag = "CodAgencia";
-            this.AgenciaCbo.ValueMember = "Id";
+            this.AgenciaCbo.ValueMember = "Codigo";
             // 
             // TipoPaqueteCbo
             // 
@@ -214,7 +214,7 @@
             this.TipoPaqueteCbo.Size = new System.Drawing.Size(151, 21);
             this.TipoPaqueteCbo.TabIndex = 2;
             this.TipoPaqueteCbo.Tag = "CodTipoPaquete";
-            this.TipoPaqueteCbo.ValueMember = "Id";
+            this.TipoPaqueteCbo.ValueMember = "Codigo";
             // 
             // FrmPaqueteAM
             // 

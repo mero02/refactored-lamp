@@ -41,15 +41,18 @@ namespace TurApp.Views
 
         private void FrmPaquetAM_Load(object sender, EventArgs e)
         {
-            LoadComboBox(TipoPaquete.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.TipoPaqueteCbo, addSeleccion: true);
-            LoadComboBox(Agencia.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.AgenciaCbo, addSeleccion: true);
-            LoadComboBox(Destino.FindAllStatic(null, (l1, l2) => l1.Nombre.CompareTo(l2.Nombre)), this.CodDestinoCbo, addSeleccion: true);
-
             this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
             FechaPaqueteTime.Format = DateTimePickerFormat.Custom;
             FechaPaqueteTime.CustomFormat = "yyyy-MM-dd";
         }
-       
+
+        private void LoadCombos()
+        {
+            this.TipoPaqueteCbo.DataSource = TipoPaquete.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+            this.AgenciaCbo.DataSource = Agencia.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+            this.CodDestinoCbo.DataSource = Destino.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+        }
+
         public override FrmOperacion OperacionForm
         {
             get
@@ -59,6 +62,7 @@ namespace TurApp.Views
             set
             {
                 base.OperacionForm = value;
+                LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
                     this.Text = "Ingreso de nuevo Paquete...";

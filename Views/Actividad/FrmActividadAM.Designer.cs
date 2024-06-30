@@ -71,7 +71,7 @@
             this.TipoActividadCbo.Size = new System.Drawing.Size(157, 21);
             this.TipoActividadCbo.TabIndex = 8;
             this.TipoActividadCbo.Tag = "CodTipoActividad";
-            this.TipoActividadCbo.ValueMember = "Id";
+            this.TipoActividadCbo.ValueMember = "Codigo";
             this.TipoActividadCbo.SelectedIndexChanged += new System.EventHandler(this.TipoActividadCbo_SelectedIndexChanged);
             // 
             // label1
@@ -96,7 +96,7 @@
             this.TransporteCbo.Size = new System.Drawing.Size(157, 21);
             this.TransporteCbo.TabIndex = 6;
             this.TransporteCbo.Tag = "CodTransporte";
-            this.TransporteCbo.ValueMember = "Id";
+            this.TransporteCbo.ValueMember = "Codigo";
             // 
             // TransporteLbl
             // 

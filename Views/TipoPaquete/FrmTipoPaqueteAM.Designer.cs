@@ -37,6 +37,9 @@
             this.DescripcionLbl = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrupBox = new System.Windows.Forms.GroupBox();
+            this.ActividadesAgregadasGrd = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuitarBtn = new System.Windows.Forms.Button();
             this.AgregarBtn = new System.Windows.Forms.Button();
             this.ActividadesGrd = new System.Windows.Forms.DataGridView();
@@ -44,12 +47,9 @@
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.DuracionTime = new System.Windows.Forms.DateTimePicker();
-            this.ActividadesAgregadasGrd = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActividadesGrupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreTxt
@@ -148,6 +148,37 @@
             this.ActividadesGrupBox.TabStop = false;
             this.ActividadesGrupBox.Text = "Actividades";
             // 
+            // ActividadesAgregadasGrd
+            // 
+            this.ActividadesAgregadasGrd.AllowUserToAddRows = false;
+            this.ActividadesAgregadasGrd.AllowUserToDeleteRows = false;
+            this.ActividadesAgregadasGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ActividadesAgregadasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.ActividadesAgregadasGrd.Location = new System.Drawing.Point(17, 299);
+            this.ActividadesAgregadasGrd.MultiSelect = false;
+            this.ActividadesAgregadasGrd.Name = "ActividadesAgregadasGrd";
+            this.ActividadesAgregadasGrd.ReadOnly = true;
+            this.ActividadesAgregadasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ActividadesAgregadasGrd.Size = new System.Drawing.Size(397, 216);
+            this.ActividadesAgregadasGrd.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Codigo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Actividad";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 250;
+            // 
             // QuitarBtn
             // 
             this.QuitarBtn.Location = new System.Drawing.Point(233, 262);
@@ -181,6 +212,7 @@
             this.ActividadesGrd.Location = new System.Drawing.Point(17, 26);
             this.ActividadesGrd.MultiSelect = false;
             this.ActividadesGrd.Name = "ActividadesGrd";
+            this.ActividadesGrd.ReadOnly = true;
             this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ActividadesGrd.Size = new System.Drawing.Size(397, 216);
             this.ActividadesGrd.TabIndex = 9;
@@ -191,12 +223,14 @@
             this.CodActCol.DataPropertyName = "Codigo";
             this.CodActCol.HeaderText = "Codigo";
             this.CodActCol.Name = "CodActCol";
+            this.CodActCol.ReadOnly = true;
             // 
             // NombreActividadCol
             // 
             this.NombreActividadCol.DataPropertyName = "Nombre";
             this.NombreActividadCol.HeaderText = "Nombre Actividad";
             this.NombreActividadCol.Name = "NombreActividadCol";
+            this.NombreActividadCol.ReadOnly = true;
             this.NombreActividadCol.Width = 250;
             // 
             // GuardarBtn
@@ -218,34 +252,6 @@
             this.DuracionTime.Size = new System.Drawing.Size(120, 20);
             this.DuracionTime.TabIndex = 28;
             this.DuracionTime.Tag = "Duracion";
-            // 
-            // ActividadesAgregadasGrd
-            // 
-            this.ActividadesAgregadasGrd.AllowUserToAddRows = false;
-            this.ActividadesAgregadasGrd.AllowUserToDeleteRows = false;
-            this.ActividadesAgregadasGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ActividadesAgregadasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.ActividadesAgregadasGrd.Location = new System.Drawing.Point(17, 299);
-            this.ActividadesAgregadasGrd.MultiSelect = false;
-            this.ActividadesAgregadasGrd.Name = "ActividadesAgregadasGrd";
-            this.ActividadesAgregadasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ActividadesAgregadasGrd.Size = new System.Drawing.Size(397, 216);
-            this.ActividadesAgregadasGrd.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Codigo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Actividad";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 250;
             // 
             // FrmTipoPaqueteAM
             // 
@@ -272,8 +278,8 @@
             this.Deactivate += new System.EventHandler(this.FrmTipoPaqueteAM_Deactivate);
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);
             this.ActividadesGrupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

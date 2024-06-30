@@ -112,7 +112,7 @@
             this.PaisCbo.Size = new System.Drawing.Size(157, 21);
             this.PaisCbo.TabIndex = 9;
             this.PaisCbo.Tag = "CodPais";
-            this.PaisCbo.ValueMember = "Id";
+            this.PaisCbo.ValueMember = "Codigo";
             // 
             // LocalidadLbl
             // 

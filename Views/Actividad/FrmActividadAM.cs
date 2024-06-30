@@ -35,6 +35,7 @@ namespace TurApp.Views
                 }
             }
         }
+
         public override FrmOperacion OperacionForm
         {
             get
