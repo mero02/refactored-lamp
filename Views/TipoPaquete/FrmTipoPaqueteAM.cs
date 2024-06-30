@@ -14,7 +14,7 @@ namespace TurApp.Views
     [Permiso(ClaseBaseForm = "Tipo Paquete", FuncionPermiso = "AltaTipoPaquete,ModificaTipoPaquete,ConsultaTipoPaquete", RolUsuario = "administrador,operadorTurno,consulta,operador")]
     public partial class FrmTipoPaqueteAM : FormBase
     {
-        List<string> codigos = new List<string>();
+        private BindingList<TipoActividad> tiposActividades = new BindingList<TipoActividad>();
         public override event FormEvent DoCompleteOperationForm;
         private TipoPaquete _Tipo_Paquete_modif = null;
         private string TipoPaqueteLog = "";
@@ -22,12 +22,15 @@ namespace TurApp.Views
         public FrmTipoPaqueteAM()
         {
             InitializeComponent();
+            ActividadesAgregadasGrd.DataSource = tiposActividades;
+            ActividadesAgregadasGrd.AllowUserToAddRows = false;
         }
 
         private void FrmTipoPaqueteAM_Load(object sender, EventArgs e)
         {
             this.GuardarBtn.Enabled = true;
             this.ActividadesGrd.AutoGenerateColumns = false;
+            this.ActividadesAgregadasGrd.AutoGenerateColumns = false;
             var TipoActividades = TipoActividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
             var TipoActividadesBindingList = new BindingList<TipoActividad>(TipoActividades);
             var TipoActividadesBindingSource = new BindingSource(TipoActividadesBindingList, null);
@@ -120,20 +123,48 @@ namespace TurApp.Views
 
         private void AgregarBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(NombreTxt.Text))
+            {
+                MessageBox.Show("Ingrese Nombre", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NombreTxt.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(DescripcionTxt.Text))
+            {
+                MessageBox.Show("Ingrese Descripcion", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DescripcionTxt.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(NivelTxt.Text))
+            {
+                MessageBox.Show("Ingrese Nivel", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NivelTxt.Focus();
+                return;
+            }
+
+
             if (ActividadesGrd.SelectedRows.Count > 0) // Verifica que hay una fila seleccionada
             {
                 DataGridViewRow selectedRow = ActividadesGrd.SelectedRows[0];
 
                 // Extrae los datos de la fila seleccionada
-                string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
-                codigos.Add(codPaquete);
-                GuardarBtn.Enabled = true;
+                string codTipoAct = selectedRow.Cells["CodActCol"].Value.ToString();
+                //codigos.Add(codTipoPaq); 
+                TipoActividad tipoAct = new TipoActividad();
+                tiposActividades.Add(tipoAct.FindbyKey(codTipoAct));
+               
+                ActividadesAgregadasGrd.DataSource = null;
+                ActividadesAgregadasGrd.DataSource = tiposActividades;
                 MessageBox.Show("Tipo actividad agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GuardarBtn.Enabled = true;
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona una fila primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }         
+            }
+            
         }
 
         private void QuitarBtn_Click(object sender, EventArgs e)
@@ -143,29 +174,24 @@ namespace TurApp.Views
                 DataGridViewRow selectedRow = ActividadesGrd.SelectedRows[0];
 
                 // Extrae los datos de la fila seleccionada
-                string codPaquete = selectedRow.Cells["CodActCol"].Value.ToString();
+                string codTipoAct = selectedRow.Cells["CodActCol"].Value.ToString();
+                TipoActividad tipoAct = tiposActividades.FirstOrDefault(t => t.Codigo == int.Parse(codTipoAct));
 
-                // Verifica si el código está en la lista y lo elimina
-                if (codigos.Contains(codPaquete))
+                if (tipoAct != null)
                 {
-                    codigos.Remove(codPaquete);
-                    if(codigos.Count == 0)
+                    tiposActividades.Remove(tipoAct);
+                    if (tiposActividades.Count == 0)
                     {
                         GuardarBtn.Enabled = false;
                     }
-                    MessageBox.Show("Tipo actividad quitada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tipo actividad quitado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("El código no se encuentra en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El tipo de actividad seleccionado no se encuentra en la lista.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona una fila primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
-
         private void ActividadedsGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.ActividadesGrd.DataBindingComplete -= ActividadedsGrd_DataBindingComplete;
@@ -293,13 +319,11 @@ namespace TurApp.Views
                 InvokerForm.Reload();
             }
 
-            foreach (string codigo in codigos)
+            foreach (TipoActividad act in tiposActividades)
             {
                 TipoPaqueteTipoActividad TipoPactipoAct = new TipoPaqueteTipoActividad();
                 TipoPactipoAct.CodTipoPaquete = TipoPaquete.Codigo;
-                TipoActividad tipoAct = new TipoActividad();
-                tipoAct.FindbyKey(codigo);
-                TipoPactipoAct.CodTipoActividad = tipoAct.Codigo;
+                TipoPactipoAct.CodTipoActividad = act.Codigo;
                 try
                 {
                     TipoPactipoAct.SaveObj();

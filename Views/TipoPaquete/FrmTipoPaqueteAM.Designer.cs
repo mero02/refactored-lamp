@@ -44,17 +44,21 @@
             this.NombreActividadCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.DuracionTime = new System.Windows.Forms.DateTimePicker();
+            this.ActividadesAgregadasGrd = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActividadesGrupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreTxt
             // 
-            this.NombreTxt.Location = new System.Drawing.Point(80, 43);
+            this.NombreTxt.Location = new System.Drawing.Point(99, 120);
             this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTxt.MaxLength = 15;
             this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(80, 20);
+            this.NombreTxt.Size = new System.Drawing.Size(120, 20);
             this.NombreTxt.TabIndex = 2;
             this.NombreTxt.Tag = "Nombre";
             this.NombreTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreTxt_KeyPress);
@@ -62,7 +66,7 @@
             // NombreLbl
             // 
             this.NombreLbl.AutoSize = true;
-            this.NombreLbl.Location = new System.Drawing.Point(16, 43);
+            this.NombreLbl.Location = new System.Drawing.Point(35, 123);
             this.NombreLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NombreLbl.Name = "NombreLbl";
             this.NombreLbl.Size = new System.Drawing.Size(44, 13);
@@ -71,10 +75,10 @@
             // 
             // NivelTxt
             // 
-            this.NivelTxt.Location = new System.Drawing.Point(80, 140);
+            this.NivelTxt.Location = new System.Drawing.Point(99, 304);
             this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.Name = "NivelTxt";
-            this.NivelTxt.Size = new System.Drawing.Size(166, 20);
+            this.NivelTxt.Size = new System.Drawing.Size(74, 20);
             this.NivelTxt.TabIndex = 8;
             this.NivelTxt.Tag = "Nivel";
             this.NivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelTxt_KeyPress);
@@ -82,7 +86,7 @@
             // NivelLbl
             // 
             this.NivelLbl.AutoSize = true;
-            this.NivelLbl.Location = new System.Drawing.Point(16, 141);
+            this.NivelLbl.Location = new System.Drawing.Point(35, 307);
             this.NivelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NivelLbl.Name = "NivelLbl";
             this.NivelLbl.Size = new System.Drawing.Size(31, 13);
@@ -92,7 +96,7 @@
             // DuracionLbl
             // 
             this.DuracionLbl.AutoSize = true;
-            this.DuracionLbl.Location = new System.Drawing.Point(16, 107);
+            this.DuracionLbl.Location = new System.Drawing.Point(29, 243);
             this.DuracionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DuracionLbl.Name = "DuracionLbl";
             this.DuracionLbl.Size = new System.Drawing.Size(50, 13);
@@ -101,7 +105,7 @@
             // 
             // DescripcionTxt
             // 
-            this.DescripcionTxt.Location = new System.Drawing.Point(80, 72);
+            this.DescripcionTxt.Location = new System.Drawing.Point(99, 170);
             this.DescripcionTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DescripcionTxt.MaxLength = 90;
             this.DescripcionTxt.Name = "DescripcionTxt";
@@ -113,7 +117,7 @@
             // DescripcionLbl
             // 
             this.DescripcionLbl.AutoSize = true;
-            this.DescripcionLbl.Location = new System.Drawing.Point(16, 72);
+            this.DescripcionLbl.Location = new System.Drawing.Point(29, 170);
             this.DescripcionLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DescripcionLbl.Name = "DescripcionLbl";
             this.DescripcionLbl.Size = new System.Drawing.Size(63, 13);
@@ -122,7 +126,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(187, 267);
+            this.CancelarBtn.Location = new System.Drawing.Point(187, 437);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
@@ -133,12 +137,13 @@
             // 
             // ActividadesGrupBox
             // 
+            this.ActividadesGrupBox.Controls.Add(this.ActividadesAgregadasGrd);
             this.ActividadesGrupBox.Controls.Add(this.QuitarBtn);
             this.ActividadesGrupBox.Controls.Add(this.AgregarBtn);
             this.ActividadesGrupBox.Controls.Add(this.ActividadesGrd);
             this.ActividadesGrupBox.Location = new System.Drawing.Point(353, 5);
             this.ActividadesGrupBox.Name = "ActividadesGrupBox";
-            this.ActividadesGrupBox.Size = new System.Drawing.Size(452, 320);
+            this.ActividadesGrupBox.Size = new System.Drawing.Size(452, 521);
             this.ActividadesGrupBox.TabIndex = 27;
             this.ActividadesGrupBox.TabStop = false;
             this.ActividadesGrupBox.Text = "Actividades";
@@ -196,7 +201,7 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(99, 267);
+            this.GuardarBtn.Location = new System.Drawing.Point(99, 437);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(61, 27);
             this.GuardarBtn.TabIndex = 12;
@@ -208,18 +213,46 @@
             // 
             this.DuracionTime.CustomFormat = "hh:mm:ss";
             this.DuracionTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DuracionTime.Location = new System.Drawing.Point(80, 107);
+            this.DuracionTime.Location = new System.Drawing.Point(99, 237);
             this.DuracionTime.Name = "DuracionTime";
             this.DuracionTime.Size = new System.Drawing.Size(120, 20);
             this.DuracionTime.TabIndex = 28;
             this.DuracionTime.Tag = "Duracion";
+            // 
+            // ActividadesAgregadasGrd
+            // 
+            this.ActividadesAgregadasGrd.AllowUserToAddRows = false;
+            this.ActividadesAgregadasGrd.AllowUserToDeleteRows = false;
+            this.ActividadesAgregadasGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ActividadesAgregadasGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.ActividadesAgregadasGrd.Location = new System.Drawing.Point(17, 299);
+            this.ActividadesAgregadasGrd.MultiSelect = false;
+            this.ActividadesAgregadasGrd.Name = "ActividadesAgregadasGrd";
+            this.ActividadesAgregadasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ActividadesAgregadasGrd.Size = new System.Drawing.Size(397, 216);
+            this.ActividadesAgregadasGrd.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Codigo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Actividad";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 250;
             // 
             // FrmTipoPaqueteAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(881, 366);
+            this.ClientSize = new System.Drawing.Size(836, 538);
             this.Controls.Add(this.DuracionTime);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.ActividadesGrupBox);
@@ -240,6 +273,7 @@
             this.Load += new System.EventHandler(this.FrmTipoPaqueteAM_Load);
             this.ActividadesGrupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActividadesAgregadasGrd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +297,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodActCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreActividadCol;
         private System.Windows.Forms.DateTimePicker DuracionTime;
+        private System.Windows.Forms.DataGridView ActividadesAgregadasGrd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
