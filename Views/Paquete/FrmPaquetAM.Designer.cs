@@ -188,7 +188,7 @@
             this.DniTuristaCbo.Size = new System.Drawing.Size(157, 21);
             this.DniTuristaCbo.TabIndex = 10;
             this.DniTuristaCbo.Tag = "DniTurista";
-            this.DniTuristaCbo.ValueMember = "Id";
+            this.DniTuristaCbo.ValueMember = "NroDocumento";
             // 
             // AgenciaCbo
             // 

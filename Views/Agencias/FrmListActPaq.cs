@@ -21,8 +21,8 @@ namespace TurApp.Views
 
         public void ShowListActPaq(FormBase Invoker)
         {
-            string criterio = String.Format("cod_tipo_paquete = '{0}' ", cod_paquete);
-            var lista = TipoPaqueteTipoActividad.FindAllStatic(criterio, (p1, p2) => (p1.CodTipoPaquete).CompareTo(p2.CodTipoPaquete));
+            string criterio = String.Format("cod_paquete = '{0}' ", cod_paquete);
+            var lista = PaqueteActividad.FindAllStatic(criterio, (p1, p2) => (p1.CodPaquete).CompareTo(p2.CodPaquete));
             var listaActividades = getActividades(lista);
             this.InvokerForm = Invoker;
             this.ActividadesGrd.AutoGenerateColumns = false;
@@ -33,16 +33,16 @@ namespace TurApp.Views
             this.Show();
         }
 
-        private List<Actividad> getActividades(List<TipoPaqueteTipoActividad> lista){
+        private List<Actividad> getActividades(List<PaqueteActividad> lista){
             var actividades = new List<Actividad>();
             var actividadesTodas = Actividad.FindAllStatic(null, (p1, p2) => p1.Codigo.CompareTo(p2.Codigo));
 
-            foreach (TipoPaqueteTipoActividad tipoPtipoA in lista)
+            foreach (PaqueteActividad tipoPtipoA in lista)
             {
-                var codigo_actividad = tipoPtipoA.CodTipoActividad;
+                var codigo_actividad = tipoPtipoA.CodActividad;
                 foreach (Actividad actividad in actividadesTodas)
                 {
-                    if (codigo_actividad == actividad.CodTipoActividad) {
+                    if (codigo_actividad == actividad.Codigo) {
                         actividades.Add(actividad);
                     }
                 }

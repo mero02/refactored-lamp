@@ -93,9 +93,9 @@ namespace TurApp.Views
             this.LocalidadCbo.Enabled = this.LocalidadChk.Checked;
         }
 
-        private void DniTxt_KeyPress(object sender, KeyPressEventArgs e)
+        private void NombreTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }

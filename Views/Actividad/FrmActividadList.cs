@@ -39,10 +39,45 @@ namespace TurApp.Views
         }
         private void ActividadGrd_DoubleClick(object sender, EventArgs e)
         {
-            MainView.Instance.Cursor = Cursors.WaitCursor;
-            FrmActividadAM frmpac = new FrmActividadAM();
-            Actividad pac = (this.ActividadGrd.SelectedRows[0].DataBoundItem as Actividad);
-            frmpac.ShowModificarActividad(pac);
+            if (this.ActividadGrd.SelectedRows.Count > 0)
+            {
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmActividadAM frm = new FrmActividadAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarActividad(this, (this.ActividadGrd.SelectedRows[0].DataBoundItem as Actividad));
+            }
+        }
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev)
+        {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK)
+            {
+                try
+                {
+                    // Guarda el índice seleccionado actualmente
+                    int selAnt = ActividadGrd.SelectedRows[0].Index;
+
+                    // Actualiza la fuente de datos
+                    this.ActividadGrd.DataSource = Actividad.FindAllStatic(_criterio, delegate(Actividad e1, Actividad e2) { return e1.Codigo.CompareTo(e2.Codigo); });
+
+                    // Verifica que el índice es válido antes de seleccionar la fila
+                    if (selAnt >= 0 && selAnt < ActividadGrd.Rows.Count)
+                    {
+                        ActividadGrd.Rows[selAnt].Selected = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Muestra un mensaje si ocurre una excepción
+                    MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Muestra el mensaje de éxito
+                    MessageBox.Show("Paquete actualizado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            this.Cursor = Cursors.Default;
         }
        
 
