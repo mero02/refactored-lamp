@@ -41,7 +41,6 @@ namespace TurApp.Views
 
         private void FrmPaquetAM_Load(object sender, EventArgs e)
         {
-            this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
             FechaPaqueteTime.Format = DateTimePickerFormat.Custom;
             FechaPaqueteTime.CustomFormat = "yyyy-MM-dd";
         }
@@ -51,6 +50,7 @@ namespace TurApp.Views
             this.TipoPaqueteCbo.DataSource = TipoPaquete.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
             this.AgenciaCbo.DataSource = Agencia.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
             this.CodDestinoCbo.DataSource = Destino.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
+            this.DniTuristaCbo.DataSource = Turista.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
         }
 
         public override FrmOperacion OperacionForm
@@ -66,6 +66,10 @@ namespace TurApp.Views
                 if (value == FrmOperacion.frmAlta)
                 {
                     this.Text = "Ingreso de nuevo Paquete...";
+                    this.TipoPaqueteCbo.SelectedIndex = -1;
+                    this.AgenciaCbo.SelectedIndex = -1;
+                    this.CodDestinoCbo.SelectedIndex = -1;
+                    this.DniTuristaCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
